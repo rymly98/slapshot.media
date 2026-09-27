@@ -161,7 +161,7 @@ td{white-space:nowrap}
   </header>
 
   <div class="tabs" role="tablist" aria-label="Sections">
-    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">About</button>
+    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">The Model</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
@@ -187,14 +187,16 @@ td{white-space:nowrap}
 
   <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
     <div class="hero">
-      <span class="kick">Slapshot Media</span>
-      <p class="big">Our numbers.<br><span>Not theirs.</span></p>
-      <p class="muted">An in-house model that calls every NHL game, every night.</p>
+      <span class="kick">The Model</span>
+      <p class="big">Goals win games.<br><span>So we project them.</span></p>
+      <p class="muted">Every NHL game gets a projected score and a win % from our own model, built in-house.</p>
     </div>
     <div class="pillars">
-      <div class="pil"><span class="n">01</span><b>Built in-house</b><span>Our own goals-based model. No borrowed lines.</span></div>
-      <div class="pil"><span class="n">02</span><b>Every game</b><span>Fresh odds for the full slate, every day of the season.</span></div>
-      <div class="pil"><span class="n">03</span><b>Every result</b><span>Tracked against the books all season. No hiding losses.</span></div>
+      <div class="pil"><span class="n">01</span><b>Home vs road</b><span>Teams play different at home and away. We use split numbers, not season totals.</span></div>
+      <div class="pil"><span class="n">02</span><b>Offense meets defense</b><span>Each team's scoring is weighed against what the other side gives up. That gives a projected score.</span></div>
+      <div class="pil"><span class="n">03</span><b>Score to odds</b><span>The projected score becomes a win % for each team. Higher % is our pick.</span></div>
+      <div class="pil"><span class="n">04</span><b>Levels up all season</b><span>Early on it leans on how teams finished last year. As games pile up, it switches to this season.</span></div>
+      <div class="pil"><span class="n">05</span><b>Tracked vs the books</b><span>Every pick is logged against Vegas, Europe and Boston. No hiding losses.</span></div>
     </div>
     <p class="follow">Daily odds on TikTok &amp; Instagram · <b>@SLAPSHOT.MEDIA</b></p>
   </section>
