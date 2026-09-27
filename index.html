@@ -71,6 +71,7 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .pil span:last-child{color:var(--muted)}
 .follow{text-align:center;color:var(--muted);font-family:var(--num);font-size:18px;letter-spacing:.04em;margin:8px 0 0}
 .follow b{color:#fff}
+.recnote{margin:12px 0 0;color:var(--muted);text-align:center;font-size:16px}
 .recbox{background:var(--maroon-soft);border:1px solid var(--maroon);border-radius:10px}
 .recbox>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;flex-wrap:wrap}
 .recbox>summary::-webkit-details-marker{display:none}
@@ -172,6 +173,8 @@ td{white-space:nowrap}
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
     <div class="head2"><h2>Todays Odds</h2><span class="muted">Tue Sep 29 · Opening night · 5 games · times ET</span></div>
+    <div class="list" data-day="tue"></div>
+    <p class="recnote">Every pick gets tracked against the books, win or lose. Here's how the model is doing.</p>
     <details class="recbox" id="record">
       <summary><span class="rt">Slapshot record</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span><span class="arr">▾</span></span></summary>
       <div class="recbody">
@@ -190,7 +193,6 @@ td{white-space:nowrap}
     </div>
       </div>
     </details>
-    <div class="list" data-day="tue"></div>
   </section>
 </div>
 
