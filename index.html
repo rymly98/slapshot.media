@@ -71,6 +71,16 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .pil span:last-child{color:var(--muted)}
 .follow{text-align:center;color:var(--muted);font-family:var(--num);font-size:18px;letter-spacing:.04em;margin:8px 0 0}
 .follow b{color:#fff}
+.recbox{background:var(--maroon-soft);border:1px solid var(--maroon);border-radius:10px}
+.recbox>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;flex-wrap:wrap}
+.recbox>summary::-webkit-details-marker{display:none}
+.recbox>summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.recbox .rt{font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em}
+.recbox .rs{display:flex;gap:18px;font-family:var(--num);font-weight:700;font-size:20px;font-variant-numeric:tabular-nums;align-items:center}
+.recbox .rs small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.recbox .rs .arr{font-size:16px;color:var(--muted);transition:transform .2s}
+.recbox[open] .rs .arr{transform:rotate(180deg)}
+.recbody{display:grid;gap:16px;padding:0 16px 16px}
 .nums{border-top:1px solid var(--line);padding-top:10px}
 .nums summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em;
   display:flex;justify-content:center;align-items:center;gap:8px;text-shadow:2px 2px 0 var(--maroon-deep)}
@@ -160,16 +170,11 @@ td{white-space:nowrap}
     <h1>Slapshot Media</h1>
   </header>
 
-  <div class="tabs" role="tablist" aria-label="Sections">
-    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">The Model</button>
-  </div>
-
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
     <div class="head2"><h2>Todays Odds</h2><span class="muted">Tue Sep 29 · Opening night · 5 games · times ET</span></div>
-    <div class="list" data-day="tue"></div>
-  </section>
-
-  <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
+    <details class="recbox" id="record">
+      <summary><span class="rt">Slapshot record</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span><span class="arr">▾</span></span></summary>
+      <div class="recbody">
     <div class="scoreboard" id="scoreboard"></div>
     <div class="chartcard">
       <div class="head2"><h2>Win % over the season</h2><span class="muted" id="chartnote">Slapshot vs the books</span></div>
@@ -183,20 +188,9 @@ td{white-space:nowrap}
         <tbody id="log"></tbody>
       </table>
     </div>
-  </section>
-
-  <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
-    <div class="hero">
-      <span class="kick">The Model</span>
-      <p class="big">No gut calls.<br><span>Just math.</span></p>
-      <p class="muted">Every game, the model spits out a score and a win %. That's the pick.</p>
-    </div>
-    <div class="pillars">
-      <div class="pil"><span class="n">01</span><b>Home &amp; road</b><span>Where a team plays matters. The model knows.</span></div>
-      <div class="pil"><span class="n">02</span><b>Goals in, goals out</b><span>What you score vs what they give up.</span></div>
-      <div class="pil"><span class="n">03</span><b>Receipts</b><span>Every pick tracked vs the books. Check the Record.</span></div>
-    </div>
-    <p class="follow">Daily odds on TikTok &amp; Instagram · <b>@SLAPSHOT.MEDIA</b></p>
+      </div>
+    </details>
+    <div class="list" data-day="tue"></div>
   </section>
 </div>
 
@@ -280,6 +274,9 @@ const R=[];
 const SRC=[["s","Slapshot","#e66767"],["V","Vegas","#3987e5"],["E","Europe","#199e70"],["B","Boston","#c98500"]];
 function tally(rows,k){let w=0,l=0;for(const r of rows){if(!r[k])continue;r[k]===r.w?w++:l++;}return{w,l,p:w+l?w/(w+l)*100:null};}
 function renderRecord(){
+  const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
+  document.getElementById("ry").textContent=last?`${ty.w}–${ty.l}`:"—";
+  document.getElementById("rsea").textContent=`${ts.w}–${ts.l}`;
   document.getElementById("scoreboard").innerHTML=SRC.map(([k,n],i)=>{const t=tally(R,k);
     return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
   const dis=R.filter(r=>r.s&&["V","E","B"].every(k=>r[k]&&r[k]!==r.s)).length;
@@ -322,12 +319,7 @@ function drawChart(){
 }
 renderRecord();
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
-const tabs=[...document.querySelectorAll(".tab")];
-tabs.forEach(t=>t.addEventListener("click",()=>{
-  tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});
-  if(t.id==="tab-record")drawChart();
-  if(window.gtag)gtag("event","tab_view",{tab:t.textContent.trim()});
-}));
+document.getElementById("record").addEventListener("toggle",e=>{if(e.target.open){drawChart();if(window.gtag)gtag("event","record_open");}});
 </script>
 </body>
 </html>
