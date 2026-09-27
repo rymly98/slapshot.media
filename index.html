@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Slapshot Media: NHL odds from our own model, every game, tracked against the books all season.">
+<meta property="og:title" content="Slapshot Media">
+<meta property="og:description" content="NHL odds from our own model, tracked vs the books all season.">
+<!--ANALYTICS-->
+<title>Slapshot Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Single dark look, matched to the Slapshot "Todays Odds" graphics */
+:root{
+  color-scheme:dark;
+  --bg:#121315; --panel:#1C1D20; --panel-2:#24252A; --ink:#FFFFFF; --muted:#A3A6AD; --line:#303238;
+  --maroon:#8E1F2B; --maroon-deep:#5E121B; --maroon-soft:#2E1519; --slate:#2A2D33;
+  --display:"Anton","Bebas Neue","Arial Narrow",Impact,sans-serif;
+  --num:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
+  background-image:radial-gradient(1200px 500px at 50% -120px,#23252b 0%,var(--bg) 70%)}
+.wrap{max-width:860px;margin:0 auto;padding-inline:16px;padding-block:28px 48px;display:grid;gap:22px}
+.brand{text-align:center;display:grid;gap:4px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,11vw,92px);line-height:.92;text-transform:uppercase;margin:0;letter-spacing:.01em;
+  text-shadow:3px 3px 0 var(--maroon-deep),-1px -1px 0 var(--maroon-deep),1px -1px 0 var(--maroon-deep),-1px 1px 0 var(--maroon-deep)}
+.sub{font-family:var(--display);font-size:clamp(20px,4.5vw,30px);text-transform:uppercase;letter-spacing:.02em;margin:0;
+  text-shadow:2px 2px 0 var(--maroon-deep)}
+.tabs{display:flex;justify-content:center;gap:6px}
+.tab{font:inherit;font-family:var(--display);font-size:20px;letter-spacing:.04em;text-transform:uppercase;background:var(--panel);color:var(--muted);
+  border:1px solid var(--line);border-radius:8px;padding:8px 22px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--maroon);border-color:var(--maroon);color:#fff}
+.tab:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.head2{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppercase;margin:0;text-shadow:2px 2px 0 var(--maroon-deep)}
+.muted{color:var(--muted);font-size:13px}
+.list{display:grid;gap:12px}
+.game{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:12px}
+.matchup{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px}
+.side{display:grid;gap:0;min-width:64px}
+.side.r{text-align:right;justify-items:end}
+.side{grid-auto-flow:column;align-items:center;gap:8px}
+.logo{width:52px;height:52px;display:block;object-fit:contain}
+@media (max-width:520px){
+  .matchup{gap:8px}
+  .matchup .logo{width:38px;height:38px}
+  .matchup .pct{font-size:21px}
+  .side{gap:5px;min-width:0}
+}
+.nums{border-top:1px solid var(--line);padding-top:10px}
+.nums summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em;
+  display:flex;justify-content:center;align-items:center;gap:8px;text-shadow:2px 2px 0 var(--maroon-deep)}
+.nums summary::-webkit-details-marker{display:none}
+.nums summary::after{content:"▾";font-size:16px;color:var(--muted);transition:transform .2s}
+.nums[open] summary::after{transform:rotate(180deg)}
+.nums summary:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:4px}
+.ntable{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;row-gap:6px;column-gap:18px;max-width:420px;margin:12px auto 4px}
+.ntable .nh{justify-self:center}.ntable .nh .logo{width:48px;height:48px}
+.nl{font-family:var(--display);font-size:17px;text-transform:uppercase;color:var(--muted);text-align:center;letter-spacing:.03em}
+.nv{font-family:var(--num);font-weight:700;font-size:26px;text-align:center;font-variant-numeric:tabular-nums;color:#C9CBD0}
+.nv.best{color:#fff;text-shadow:2px 2px 0 var(--maroon-deep)}
+.abbr{font-family:var(--display);font-size:26px;line-height:1}
+.pct{font-family:var(--num);font-weight:700;font-size:30px;line-height:1.05;font-variant-numeric:tabular-nums}
+.bar{display:flex;height:30px;border-radius:3px;overflow:hidden}
+.bar span{display:block;height:100%}
+.meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:13px;color:var(--muted)}
+.picks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pick{border-radius:8px;padding:10px 12px;display:grid;gap:0}
+.pick .who{font-family:var(--num);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.pick .val{font-family:var(--display);font-size:24px;letter-spacing:.02em}
+.me{background:var(--maroon-soft);border:1px solid var(--maroon)}
+.dk{background:var(--slate);border:1px solid var(--line)}
+.pending{color:var(--muted);font-family:var(--num)!important;font-weight:600;font-size:20px!important}
+.scoreboard{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.book{background:var(--slate);border:1px solid var(--line);border-radius:8px;padding:8px 10px;display:grid;gap:0;text-align:center}
+.book .who{font-family:var(--num);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.book .val{font-family:var(--display);font-size:20px}
+.book .val.pending{font-family:var(--num);font-weight:600;font-size:15px;color:var(--muted)}
+.card .rec{font-size:clamp(30px,6vw,44px);white-space:nowrap}
+@media (max-width:620px){.scoreboard{grid-template-columns:repeat(3,1fr)}.scoreboard .card.mine{grid-column:1/-1}.card{padding:12px 8px}}
+td{white-space:nowrap}
+@media (max-width:420px){.books{gap:6px}.book .val{font-size:17px}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:2px;text-align:center}
+.card.mine{border-color:var(--maroon);background:var(--maroon-soft)}
+.card .who{font-family:var(--num);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.card .rec{font-family:var(--display);font-size:64px;line-height:1;font-variant-numeric:tabular-nums;text-shadow:3px 3px 0 var(--maroon-deep)}
+.tablewrap{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:auto;max-height:460px}
+table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums;min-width:520px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--num);font-weight:600;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+tr:last-child td{border-bottom:0}
+.empty td{color:var(--muted);text-align:center;padding:22px}
+.tabs{flex-wrap:wrap}
+.prose p{margin:0;max-width:65ch}
+.prose b{font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:4px;align-content:start;font-size:14px}
+.step .m{font-family:var(--display);font-size:20px;text-transform:uppercase;color:var(--muted)}
+.step.on{border-color:var(--maroon);background:var(--maroon-soft)}
+.step.on .m{color:#fff}
+@media (max-width:620px){.steps{grid-template-columns:1fr}.tab{padding:8px 14px;font-size:17px}}
+.chartcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:10px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--num);font-weight:600;font-size:14px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:3px;border-radius:2px;display:inline-block}
+.chartwrap{position:relative;width:100%}
+.chartwrap svg{display:block;width:100%;height:auto;overflow:visible}
+.chartwrap .axis{fill:var(--muted);font-family:var(--num);font-size:12px}
+.chartwrap .grid{stroke:var(--line);stroke-width:1}
+.chartwrap .ref{stroke:#5a5d66;stroke-width:1;stroke-dasharray:4 4}
+.chartwrap .empty{fill:var(--muted);font-family:var(--body);font-size:14px}
+.tip{position:absolute;pointer-events:none;background:#0d0e10;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px;min-width:150px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.tip b{display:block;font-family:var(--num);font-size:14px;margin-bottom:4px}
+.tip div{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.tip div span:first-child{display:inline-flex;align-items:center;gap:6px;color:var(--muted)}
+.tip i{width:10px;height:3px;border-radius:2px;display:inline-block}
+td.w{color:#fff} td.l{color:var(--muted);text-decoration:line-through} td .ok{font-family:var(--num);font-weight:700}
+.post{margin:0;justify-self:center;width:100%;max-width:480px}
+.post img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+.note{font-size:12.5px;color:var(--muted);max-width:70ch;margin:0}
+@media (max-width:520px){
+  .picks{grid-template-columns:1fr}
+  .pct{font-size:24px} .abbr{font-size:22px}
+  .card .rec{font-size:clamp(30px,6vw,44px);white-space:nowrap}
+@media (max-width:620px){.scoreboard{grid-template-columns:repeat(3,1fr)}.scoreboard .card.mine{grid-column:1/-1}.card{padding:12px 8px}}
+td{white-space:nowrap}
+}
+@media (prefers-reduced-motion:no-preference){.bar span{transition:width .4s ease}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="brand">
+    <h1>Slapshot Media</h1>
+    <p class="sub">NHL odds from our own model · tracked vs the books all season</p>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Tue Sep 29</button>    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>    <button class="tab" role="tab" id="tab-method" aria-controls="method" aria-selected="false" type="button">The Model</button>
+    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">About</button>
+  </div>
+
+  <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
+    <div class="head2"><h2>Sep 29, 2026</h2><span class="muted">Opening night · 5 games · times ET</span></div>
+    <div class="list" data-day="tue"></div>
+  </section>
+
+  <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
+    <div class="scoreboard" id="scoreboard"></div>
+    <div class="chartcard">
+      <div class="head2"><h2>Win % over the season</h2><span class="muted" id="chartnote">Slapshot vs the books</span></div>
+      <div class="legend" id="legend"></div>
+      <div class="chartwrap" id="chart"></div>
+    </div>
+    <div class="head2"><h2>Game log</h2><span class="muted" id="disagree">Games where Slapshot went against the books: 0</span></div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>Europe</th><th>Boston</th><th>Final</th></tr></thead>
+        <tbody id="log"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="method" role="tabpanel" aria-labelledby="tab-method" class="list" hidden>
+    <h2>How the model works</h2>
+    <div class="game prose">
+      <p>Every game, the model predicts goals for each team using home and road splits.</p>
+      <p><b>Away team goals</b> = average of the away team's road goals scored per game and the home team's home goals allowed per game.</p>
+      <p><b>Home team goals</b> = average of the home team's home goals scored per game and the away team's road goals allowed per game.</p>
+      <p><b>Win odds</b> = each team's predicted goals ÷ total goals in the game.</p>
+    </div>
+    <h2>What data we use</h2>
+    <div class="steps">
+      <div class="step on"><span class="m">October</span><span>Last season's home/road numbers from January on. Early-season samples are too small, so we use how teams finished.</span></div>
+      <div class="step"><span class="m">November</span><span>This season's overall goals for and against per game. Enough games to trust the averages, not enough to split them.</span></div>
+      <div class="step"><span class="m">December on</span><span>This season's full home/road splits. The model at full strength.</span></div>
+    </div>
+  </section>
+
+  <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
+    <h2>About Slapshot Media</h2>
+    <div class="game prose">
+      <p>Slapshot Media is a hockey media and analytics project. We post our model's odds for every NHL game, every day, and track the record against the favorites at three books, Vegas, Europe and Boston, so you can see who's right more often.</p>
+      <p>No hiding losses. Every pick is logged the morning after the game.</p>
+      <p class="muted">Follow for daily odds on TikTok and Instagram.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+const colors={FLA:"#0B2A5B",CAR:"#CE1126",CHI:"#CF0A2C",VGK:"#B4975A",NYR:"#0038A8",BOS:"#FFB81C",
+  VAN:"#00205B",EDM:"#FF4C00",MTL:"#AF1E2D",TOR:"#FFFFFF",BUF:"#003087",OTT:"#C52032",WSH:"#C8102E",TBL:"#002868",
+  PHI:"#F74902",PIT:"#FCB514",UTA:"#6CACE4",CBJ:"#002654",SEA:"#99D9D9",NJD:"#CE1126",NYI:"#00539B",DAL:"#006847",
+  NSH:"#FFB81C",MIN:"#154734",STL:"#002F87",COL:"#6F263D",CGY:"#D2001C",LAK:"#A2AAAD",SJS:"#006D75"};
+/* Slapshot formula, October rule: last season's home/road splits from Jan 1 on.
+   b = each book's favorite ["TEAM","moneyline"] keyed V (Vegas), E (Europe), B (Boston); missing = line pending */
+const days={
+ tue:[
+  {t:"5:00 PM",a:"FLA",h:"CAR",ag:2.87,hg:4.14,ap:41.0,hp:59.0,b:{V:["CAR","-130"],E:["CAR","-132"],B:["CAR","-130"]}},
+  {t:"7:00 PM",a:"MTL",h:"TOR",ag:3.80,hg:3.02,ap:55.7,hp:44.3,b:{V:["Pick'em","-110"],E:["TOR","-115"],B:["TOR","-115"]}},
+  {t:"8:00 PM",a:"NYR",h:"BOS",ag:2.66,hg:3.90,ap:40.5,hp:59.5,b:{V:["BOS","-125"],E:["BOS","-118"],B:["BOS","-120"]}},
+  {t:"10:00 PM",a:"VAN",h:"EDM",ag:2.79,hg:3.89,ap:41.8,hp:58.2,b:{V:["EDM","-275"],E:["EDM","-280"],B:["EDM","-265"]}},
+  {t:"10:30 PM",a:"CHI",h:"VGK",ag:2.43,hg:3.45,ap:41.3,hp:58.7,b:{V:["VGK","-250"],E:["VGK","-260"],B:["VGK","-265"]}}],
+ sat:[
+  {t:"7:00 PM",a:"CHI",h:"BUF",ag:2.69,hg:3.48,ap:43.6,hp:56.4,b:{}},
+  {t:"7:00 PM",a:"OTT",h:"TOR",ag:3.67,hg:3.05,ap:54.7,hp:45.3,b:{}},
+  {t:"7:00 PM",a:"WSH",h:"TBL",ag:2.81,hg:3.63,ap:43.7,hp:56.3,b:{}},
+  {t:"7:00 PM",a:"CAR",h:"PHI",ag:3.13,hg:2.51,ap:55.5,hp:44.5,b:{}},
+  {t:"7:00 PM",a:"MTL",h:"PIT",ag:3.45,hg:3.45,ap:50.0,hp:50.0,b:{}},
+  {t:"7:00 PM",a:"UTA",h:"CBJ",ag:3.27,hg:3.14,ap:51.0,hp:49.0,b:{}},
+  {t:"7:00 PM",a:"SEA",h:"EDM",ag:2.84,hg:3.34,ap:46.0,hp:54.0,b:{}},
+  {t:"7:30 PM",a:"NJD",h:"NYI",ag:2.95,hg:3.12,ap:48.6,hp:51.4,b:{}},
+  {t:"8:00 PM",a:"DAL",h:"NSH",ag:3.20,hg:3.03,ap:51.3,hp:48.7,b:{}},
+  {t:"8:00 PM",a:"BOS",h:"MIN",ag:2.94,hg:3.41,ap:46.3,hp:53.7,b:{}},
+  {t:"9:00 PM",a:"STL",h:"COL",ag:3.07,hg:3.11,ap:49.6,hp:50.4,b:{}},
+  {t:"10:00 PM",a:"CGY",h:"VAN",ag:3.04,hg:3.11,ap:49.4,hp:50.6,b:{}},
+  {t:"10:00 PM",a:"LAK",h:"SJS",ag:3.25,hg:3.02,ap:51.8,hp:48.2,b:{}}]
+};
+const logo=t=>`<img class="logo" src="tl/${t}.png" alt="${t}" width="104" height="104">`;
+/* 2025-26 regular season, NHL stats: W, L, OTL, GF/G, GA/G, PP%, PK% */
+const S={WSH:[43,30,9,3.18,2.90,17.8,80.1],NJD:[42,37,3,2.76,3.09,22.0,79.3],VGK:[39,26,17,3.22,2.95,24.6,81.4],VAN:[25,49,8,2.56,3.83,21.8,71.5],
+ ANA:[43,33,6,3.23,3.51,18.6,76.4],STL:[37,33,12,2.80,3.10,17.6,76.7],DAL:[50,20,12,3.33,2.71,28.6,80.3],DET:[41,31,10,2.91,3.10,22.6,77.1],
+ OTT:[44,27,11,3.35,2.99,24.0,75.7],WPG:[35,35,12,2.79,3.12,18.5,77.6],COL:[55,16,11,3.63,2.40,17.1,84.6],NSH:[38,34,10,2.95,3.26,23.1,81.7],
+ BOS:[45,27,10,3.27,3.01,23.4,77.0],CBJ:[40,30,12,3.00,3.06,18.9,76.0],CHI:[29,39,14,2.56,3.29,16.9,83.6],CGY:[34,39,9,2.54,3.12,16.2,80.4],
+ TBL:[50,26,6,3.49,2.79,20.7,82.6],PIT:[41,25,16,3.54,3.15,24.1,81.4],MTL:[48,24,10,3.40,3.06,23.1,78.2],SJS:[39,35,8,3.04,3.54,21.2,76.4],
+ NYR:[34,39,9,2.87,3.04,24.7,79.9],NYI:[43,34,5,2.79,2.88,16.5,80.8],LAK:[35,27,20,2.68,2.90,17.0,74.6],SEA:[34,37,11,2.73,3.13,19.5,72.2],
+ UTA:[43,33,6,3.27,2.93,20.0,78.1],MIN:[46,24,12,3.27,2.87,25.2,79.8],BUF:[50,23,9,3.45,2.93,19.5,81.9],CAR:[53,22,7,3.55,2.88,24.9,80.5],
+ PHI:[43,27,12,2.93,2.91,15.7,77.6],EDM:[41,30,11,3.44,3.23,30.6,77.8],FLA:[40,38,4,3.00,3.34,19.5,81.0],TOR:[32,36,14,3.07,3.60,21.3,81.2]};
+function numbers(a,h){
+  const A=S[a],H=S[h];
+  const pts=x=>x[0]*2+x[2];
+  const rows=[
+    ["Record",`${A[0]}-${A[1]}-${A[2]}`,`${H[0]}-${H[1]}-${H[2]}`,pts(A),pts(H),true],
+    ["GF/G",A[3].toFixed(2),H[3].toFixed(2),A[3],H[3],true],
+    ["GA/G",A[4].toFixed(2),H[4].toFixed(2),A[4],H[4],false],
+    ["PP%",A[5].toFixed(1)+"%",H[5].toFixed(1)+"%",A[5],H[5],true],
+    ["PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true]];
+  return `<details class="nums"><summary>The Numbers</summary>
+    <div class="ntable">
+      <span class="nh">${logo(a)}</span><span class="nl">2025-26</span><span class="nh">${logo(h)}</span>
+      ${rows.map(([l,av,hv,an,hn,up])=>{const aw=up?an>hn:an<hn, hw=up?hn>an:hn<an;
+        return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`}).join("")}
+    </div></details>`;
+}
+document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
+  const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
+  const books=[["V","Vegas"],["E","Europe"],["B","Boston"]].map(([k,n])=>{const x=g.b&&g.b[k];
+    return `<div class="book"><span class="who">${n}</span>${x?`<span class="val">${x[0]} ${x[1]}</span>`:`<span class="val pending">Line pending</span>`}</div>`}).join("");
+  return `<article class="game">
+    <div class="matchup">
+      <div class="side"><span class="pct">${g.ap.toFixed(1)}%</span>${logo(g.a)}</div>
+      <div class="bar" role="img" aria-label="${g.a} ${g.ap.toFixed(1)}% vs ${g.h} ${g.hp.toFixed(1)}%">
+        <span style="width:${g.ap.toFixed(1)}%;background:${colors[g.a]}"></span><span style="width:${g.hp.toFixed(1)}%;background:${colors[g.h]}"></span>
+      </div>
+      <div class="side r">${logo(g.h)}<span class="pct">${g.hp.toFixed(1)}%</span></div>
+    </div>
+    <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
+    <div class="books" aria-label="Favorite at each book">${books}</div>
+    </div>
+    <div class="meta"><span>${g.a} @ ${g.h} · proj. ${g.ag.toFixed(2)} – ${g.hg.toFixed(2)}</span><span>${g.t}</span></div>
+    ${numbers(g.a,g.h)}
+  </article>`}).join("");});
+/* ===== Record: every finished game. Add one object per game; everything below is computed from it.
+   {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}
+   s = Slapshot pick, V/E/B = each book's favorite (null = pick'em, no pick), w = winner, f = final score */
+const R=[];
+const SRC=[["s","Slapshot","#e66767"],["V","Vegas","#3987e5"],["E","Europe","#199e70"],["B","Boston","#c98500"]];
+function tally(rows,k){let w=0,l=0;for(const r of rows){if(!r[k])continue;r[k]===r.w?w++:l++;}return{w,l,p:w+l?w/(w+l)*100:null};}
+function renderRecord(){
+  document.getElementById("scoreboard").innerHTML=SRC.map(([k,n],i)=>{const t=tally(R,k);
+    return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
+  const dis=R.filter(r=>r.s&&["V","E","B"].every(k=>r[k]&&r[k]!==r.s)).length;
+  document.getElementById("disagree").textContent=`Games where Slapshot went against the books: ${dis}`;
+  const cell=(r,k)=>!r[k]?`<td class="muted">Pick'em</td>`:`<td class="${r[k]===r.w?"w":"l"}">${r[k]}</td>`;
+  document.getElementById("log").innerHTML=R.length?[...R].reverse().map(r=>`<tr><td>${r.d.slice(5).replace("-","/")}</td><td>${r.a} @ ${r.h}</td>${cell(r,"s")}${cell(r,"V")}${cell(r,"E")}${cell(r,"B")}<td>${r.f}</td></tr>`).join("")
+    :`<tr class="empty"><td colspan="7">Season starts Tuesday. Results are logged the morning after each game.</td></tr>`;
+  document.getElementById("legend").innerHTML=SRC.map(([k,n,c])=>`<span><i style="background:${c}"></i>${n}</span>`).join("");
+  drawChart();
+}
+function drawChart(){
+  const el=document.getElementById("chart"),W=Math.max(300,Math.round(el.clientWidth||760)),H=W<520?240:300,m={l:40,r:W<520?92:92,t:12,b:28};
+  const days=[...new Set(R.map(r=>r.d))].sort();
+  const series=SRC.map(([k,n,c])=>({k,n,c,pts:days.map(d=>{const t=tally(R.filter(r=>r.d<=d),k);return t.p;})}));
+  let lo=40,hi=60;series.forEach(s=>s.pts.forEach(v=>{if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v);}}));
+  lo=Math.max(0,Math.floor((lo-5)/10)*10);hi=Math.min(100,Math.ceil((hi+5)/10)*10);
+  const iw=W-m.l-m.r,ih=H-m.t-m.b,x=i=>m.l+(days.length<2?iw/2:i*iw/(days.length-1)),y=v=>m.t+ih-(v-lo)/(hi-lo)*ih;
+  let g="";for(let v=lo;v<=hi;v+=10){g+=`<line class="grid" x1="${m.l}" x2="${W-m.r}" y1="${y(v)}" y2="${y(v)}"/><text class="axis" x="${m.l-8}" y="${y(v)+4}" text-anchor="end">${v}%</text>`;}
+  if(lo<50&&hi>50)g+=`<line class="ref" x1="${m.l}" x2="${W-m.r}" y1="${y(50)}" y2="${y(50)}"/>`;
+  if(!days.length){el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win percentage chart, no games yet">${g}<text class="empty" x="${m.l+iw/2}" y="${m.t+ih/2}" text-anchor="middle">The race starts after opening night, Sep 29.</text></svg>`;return;}
+  const step=Math.max(1,Math.ceil(days.length/6));
+  days.forEach((d,i)=>{if(i%step===0||i===days.length-1)g+=`<text class="axis" x="${x(i)}" y="${H-8}" text-anchor="middle">${d.slice(5).replace("-","/")}</text>`;});
+  // lines; Slapshot drawn last so it sits on top
+  const order=[...series.slice(1),series[0]];
+  let lines="",ends=[];
+  for(const s of order){const path=s.pts.map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);if(!path.length)continue;
+    lines+=`<path d="M${path.map(p=>p.join(",")).join("L")}" fill="none" stroke="${s.c}" stroke-width="${s.k==="s"?3:2}" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const last=path[path.length-1];lines+=`<circle cx="${last[0]}" cy="${last[1]}" r="4.5" fill="${s.c}" stroke="#1C1D20" stroke-width="2"/>`;
+    ends.push({y:last[1],x:last[0],t:`${s.n} ${s.pts[s.pts.length-1].toFixed(0)}%`,c:s.c});}
+  ends.sort((a,b)=>a.y-b.y);for(let i=1;i<ends.length;i++)if(ends[i].y-ends[i-1].y<14)ends[i].y=ends[i-1].y+14;
+  const labels=ends.map(e=>`<text x="${e.x+10}" y="${e.y+4}" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="13" fill="#E6EDF3">${e.t}</text>`).join("");
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Season win percentage for Slapshot and each book by date">${g}${lines}${labels}<line id="xh" y1="${m.t}" y2="${m.t+ih}" stroke="#8C9AA8" stroke-width="1" visibility="hidden"/><rect x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent" id="hit"/></svg><div class="tip" id="tip" hidden></div>`;
+  const svg=el.querySelector("svg"),hit=el.querySelector("#hit"),xh=el.querySelector("#xh"),tip=el.querySelector("#tip");
+  const move=ev=>{const r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)*W/r.width;
+    let i=days.length<2?0:Math.round((px-m.l)/iw*(days.length-1));i=Math.max(0,Math.min(days.length-1,i));
+    xh.setAttribute("x1",x(i));xh.setAttribute("x2",x(i));xh.setAttribute("visibility","visible");
+    tip.innerHTML=`<b>${days[i].slice(5).replace("-","/")}</b>`+series.map(s=>`<div><span><i style="background:${s.c}"></i>${s.n}</span><span>${s.pts[i]==null?"—":s.pts[i].toFixed(1)+"%"}</span></div>`).join("");
+    tip.hidden=false;const tx=x(i)*r.width/W;tip.style.left=Math.min(r.width-170,Math.max(0,tx+12))+"px";tip.style.top="8px";};
+  hit.addEventListener("pointermove",move);hit.addEventListener("pointerleave",()=>{tip.hidden=true;xh.setAttribute("visibility","hidden");});
+}
+renderRecord();
+let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
+const tabs=[...document.querySelectorAll(".tab")];
+tabs.forEach(t=>t.addEventListener("click",()=>{
+  tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});
+  if(t.id==="tab-record")drawChart();
+}));
+</script>
+</body>
+</html>
