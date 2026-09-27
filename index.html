@@ -254,7 +254,7 @@ function numbers(a,h,top){
 document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
   const books=[["V","Vegas"],["E","Europe"],["B","Boston"]].map(([k,n])=>{const x=g.b&&g.b[k];
-    return `<div class="book"><span class="who">${n}</span>${x?`<span class="val">${x[0]} ${x[1]}</span>`:`<span class="val pending">Line pending</span>`}</div>`}).join("");
+    return `<div class="book"><span class="who">${n}</span>${x?`<span class="val">${x[0]}</span>`:`<span class="val pending">Pending</span>`}</div>`}).join("");
   return `<article class="game">
     <div class="matchup">
       <div class="side"><span class="pct">${g.ap.toFixed(1)}%</span>${logo(g.a)}</div>
@@ -265,7 +265,7 @@ document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.datase
     </div>
     ${numbers(g.a,g.h,`<div class="drop">
     <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
-    <div class="books" aria-label="Favorite at each book">${books}</div>
+    <div class="books" aria-label="Who each book has as the favorite">${books}</div>
     <div class="meta"><span>${g.a} @ ${g.h} · proj. ${g.ag.toFixed(2)} – ${g.hg.toFixed(2)}</span><span>${g.t}</span></div>
     </div>`)}
   </article>`}).join("");});
