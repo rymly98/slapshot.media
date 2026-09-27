@@ -84,6 +84,20 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .recbox .rs .arr{font-size:16px;color:var(--muted);transition:transform .2s}
 .recbox[open] .rs .arr{transform:rotate(180deg)}
 .recbody{display:grid;gap:16px;padding:0 16px 16px}
+.fx{display:grid;gap:10px}
+.fxrow{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--maroon);border-radius:10px;padding:16px}
+.fxn{font-family:var(--display);font-size:40px;line-height:1;color:#E0475B}
+.fxrow b{font-family:var(--display);font-weight:400;font-size:24px;text-transform:uppercase;letter-spacing:.02em}
+.fxrow p{margin:4px 0 0;font-size:17px;line-height:1.45}
+.fxrow u{text-decoration:none;color:#fff;font-weight:700;border-bottom:2px solid #E0475B}
+.ex{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 16px 14px}
+.exrow{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.exl{font-family:var(--display);font-size:19px;text-transform:uppercase;letter-spacing:.02em}
+.exm{grid-column:1;color:var(--muted);font-size:15px}
+.exv{grid-column:2;grid-row:1/3;align-self:center;font-family:var(--num);font-weight:700;font-size:30px;font-variant-numeric:tabular-nums}
+.exrow.win .exv{color:#E0475B}
+.exnote{margin:10px 0 0;font-size:15px}
+.why{margin:0;font-size:17px;line-height:1.5}
 .nums{border-top:1px solid var(--line);padding-top:10px}
 .nums summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em;
   display:flex;justify-content:center;align-items:center;gap:8px;text-shadow:2px 2px 0 var(--maroon-deep)}
@@ -205,13 +219,36 @@ td{white-space:nowrap}
   <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
     <div class="hero">
       <span class="kick">Our Model</span>
-      <p class="big">We project the goals.<br><span>That's the odds.</span></p>
+      <p class="big">Project the goals.<br><span>Get the odds.</span></p>
+      <p class="muted">One simple idea, out in the open. Here's exactly how every pick is made.</p>
     </div>
-    <div class="pillars">
-      <div class="pil"><span class="n">01</span><b>Projected goals</b><span>Every game, our model projects how many goals each team scores. That's where Todays Odds come from.</span></div>
-      <div class="pil"><span class="n">02</span><b>Posted daily</b><span>We post our odds every day on Instagram and TikTok. <b>@SLAPSHOT.MEDIA</b></span></div>
-      <div class="pil"><span class="n">03</span><b>Tracked all season</b><span>Every pick goes on the Record, win or lose.</span></div>
+
+    <div class="fx">
+      <div class="fxrow"><span class="fxn">1</span><div><b>Away goals</b><p>(Away team's <u>road</u> goals for per game + Home team's <u>home</u> goals against per game) ÷ 2</p></div></div>
+      <div class="fxrow"><span class="fxn">2</span><div><b>Home goals</b><p>(Home team's <u>home</u> goals for per game + Away team's <u>road</u> goals against per game) ÷ 2</p></div></div>
+      <div class="fxrow"><span class="fxn">3</span><div><b>Win %</b><p>Team's projected goals ÷ total goals in the game. Higher % is our pick.</p></div></div>
     </div>
+
+    <div class="head2"><h2>See it work</h2><span class="muted">Opening night · Florida @ Carolina</span></div>
+    <div class="ex">
+      <div class="exrow"><span class="exl">Florida goals</span><span class="exm">(2.65 road GF + 3.10 CAR home GA) ÷ 2</span><span class="exv">2.875</span></div>
+      <div class="exrow"><span class="exl">Carolina goals</span><span class="exm">(4.29 home GF + 4.00 FLA road GA) ÷ 2</span><span class="exv">4.145</span></div>
+      <div class="exrow"><span class="exl">Total goals</span><span class="exm">2.875 + 4.145</span><span class="exv">7.02</span></div>
+      <div class="exrow win"><span class="exl">Carolina win %</span><span class="exm">4.145 ÷ 7.02</span><span class="exv">59.0%</span></div>
+      <p class="muted exnote">Florida 41.0%. Slapshot pick: Carolina.</p>
+    </div>
+
+    <div class="head2"><h2>Why home &amp; road</h2></div>
+    <p class="why">Teams play different at home and on the road. So we only ever compare road numbers to home numbers.</p>
+
+    <div class="head2"><h2>The data</h2><span class="muted">Small samples lie, so the model levels up</span></div>
+    <div class="steps">
+      <div class="step on"><span class="m">October</span><span>Last season's home/road numbers, January 1 on.</span></div>
+      <div class="step"><span class="m">November</span><span>This season's overall goals for and against. No split yet.</span></div>
+      <div class="step"><span class="m">December on</span><span>This season's home/road splits. Full strength.</span></div>
+    </div>
+
+    <p class="follow">Every pick tracked on the Record, win or lose.<br>Posted daily on Instagram &amp; TikTok · <b>@SLAPSHOT.MEDIA</b></p>
   </section>
 </div>
 
@@ -224,7 +261,7 @@ const colors={FLA:"#0B2A5B",CAR:"#CE1126",CHI:"#CF0A2C",VGK:"#B4975A",NYR:"#0038
    b = each book's favorite ["TEAM","moneyline"] keyed V (Vegas), E (Europe), B (Boston); missing = line pending */
 const days={
  tue:[
-  {t:"5:00 PM",a:"FLA",h:"CAR",ag:2.87,hg:4.14,ap:41.0,hp:59.0,b:{V:["CAR","-130"],E:["CAR","-132"],B:["CAR","-130"]}},
+  {t:"5:00 PM",a:"FLA",h:"CAR",ag:2.875,hg:4.145,ap:41.0,hp:59.0,b:{V:["CAR","-130"],E:["CAR","-132"],B:["CAR","-130"]}},
   {t:"7:00 PM",a:"MTL",h:"TOR",ag:3.80,hg:3.02,ap:55.7,hp:44.3,b:{V:["Pick'em","-110"],E:["TOR","-115"],B:["TOR","-115"]}},
   {t:"8:00 PM",a:"NYR",h:"BOS",ag:2.66,hg:3.90,ap:40.5,hp:59.5,b:{V:["BOS","-125"],E:["BOS","-118"],B:["BOS","-120"]}},
   {t:"10:00 PM",a:"VAN",h:"EDM",ag:2.79,hg:3.89,ap:41.8,hp:58.2,b:{V:["EDM","-275"],E:["EDM","-280"],B:["EDM","-265"]}},
