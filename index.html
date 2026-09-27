@@ -62,6 +62,7 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .nums{border-top:1px solid var(--line);padding-top:10px}
 .nums summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em;
   display:flex;justify-content:center;align-items:center;gap:8px;text-shadow:2px 2px 0 var(--maroon-deep)}
+.drop{display:grid;gap:12px;margin:12px 0}
 .nums summary::-webkit-details-marker{display:none}
 .nums summary::after{content:"▾";font-size:16px;color:var(--muted);transition:transform .2s}
 .nums[open] summary::after{transform:rotate(180deg)}
@@ -145,16 +146,15 @@ td{white-space:nowrap}
 <div class="wrap">
   <header class="brand">
     <h1>Slapshot Media</h1>
-    <p class="sub">NHL odds from our own model · tracked vs the books all season</p>
   </header>
 
   <div class="tabs" role="tablist" aria-label="Sections">
-    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Tue Sep 29</button>    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>    <button class="tab" role="tab" id="tab-method" aria-controls="method" aria-selected="false" type="button">The Model</button>
+    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>    <button class="tab" role="tab" id="tab-method" aria-controls="method" aria-selected="false" type="button">The Model</button>
     <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">About</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
-    <div class="head2"><h2>Sep 29, 2026</h2><span class="muted">Opening night · 5 games · times ET</span></div>
+    <div class="head2"><h2>Todays Odds</h2><span class="muted">Tue Sep 29 · Opening night · 5 games · times ET</span></div>
     <div class="list" data-day="tue"></div>
   </section>
 
@@ -239,7 +239,7 @@ const S={WSH:[43,30,9,3.18,2.90,17.8,80.1],NJD:[42,37,3,2.76,3.09,22.0,79.3],VGK
  NYR:[34,39,9,2.87,3.04,24.7,79.9],NYI:[43,34,5,2.79,2.88,16.5,80.8],LAK:[35,27,20,2.68,2.90,17.0,74.6],SEA:[34,37,11,2.73,3.13,19.5,72.2],
  UTA:[43,33,6,3.27,2.93,20.0,78.1],MIN:[46,24,12,3.27,2.87,25.2,79.8],BUF:[50,23,9,3.45,2.93,19.5,81.9],CAR:[53,22,7,3.55,2.88,24.9,80.5],
  PHI:[43,27,12,2.93,2.91,15.7,77.6],EDM:[41,30,11,3.44,3.23,30.6,77.8],FLA:[40,38,4,3.00,3.34,19.5,81.0],TOR:[32,36,14,3.07,3.60,21.3,81.2]};
-function numbers(a,h){
+function numbers(a,h,top){
   const A=S[a],H=S[h];
   const pts=x=>x[0]*2+x[2];
   const rows=[
@@ -248,7 +248,7 @@ function numbers(a,h){
     ["GA/G",A[4].toFixed(2),H[4].toFixed(2),A[4],H[4],false],
     ["PP%",A[5].toFixed(1)+"%",H[5].toFixed(1)+"%",A[5],H[5],true],
     ["PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true]];
-  return `<details class="nums"><summary>The Numbers</summary>
+  return `<details class="nums"><summary>Odds &amp; numbers</summary>${top||""}
     <div class="ntable">
       <span class="nh">${logo(a)}</span><span class="nl">2025-26</span><span class="nh">${logo(h)}</span>
       ${rows.map(([l,av,hv,an,hn,up])=>{const aw=up?an>hn:an<hn, hw=up?hn>an:hn<an;
@@ -267,11 +267,11 @@ document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.datase
       </div>
       <div class="side r">${logo(g.h)}<span class="pct">${g.hp.toFixed(1)}%</span></div>
     </div>
+    ${numbers(g.a,g.h,`<div class="drop">
     <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
     <div class="books" aria-label="Favorite at each book">${books}</div>
-    </div>
     <div class="meta"><span>${g.a} @ ${g.h} · proj. ${g.ag.toFixed(2)} – ${g.hg.toFixed(2)}</span><span>${g.t}</span></div>
-    ${numbers(g.a,g.h)}
+    </div>`)}
   </article>`}).join("");});
 /* ===== Record: every finished game. Add one object per game; everything below is computed from it.
    {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}
