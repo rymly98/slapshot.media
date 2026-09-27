@@ -59,6 +59,18 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
   .matchup .pct{font-size:21px}
   .side{gap:5px;min-width:0}
 }
+.hero{text-align:center;padding:28px 12px 8px;display:grid;gap:10px}
+.hero .kick{font-family:var(--num);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-size:15px}
+.hero .big{font-family:var(--display);font-size:clamp(48px,12vw,84px);line-height:.95;text-transform:uppercase;margin:0;text-shadow:3px 3px 0 var(--maroon-deep)}
+.hero .big span{color:#E0475B}
+.hero .muted{margin:0;font-size:17px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.pil{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--maroon);border-radius:10px;padding:18px;display:grid;gap:6px}
+.pil .n{font-family:var(--display);font-size:30px;color:#E0475B;line-height:1}
+.pil b{font-family:var(--display);font-weight:400;font-size:24px;text-transform:uppercase;letter-spacing:.02em}
+.pil span:last-child{color:var(--muted)}
+.follow{text-align:center;color:var(--muted);font-family:var(--num);font-size:18px;letter-spacing:.04em;margin:8px 0 0}
+.follow b{color:#fff}
 .nums{border-top:1px solid var(--line);padding-top:10px}
 .nums summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em;
   display:flex;justify-content:center;align-items:center;gap:8px;text-shadow:2px 2px 0 var(--maroon-deep)}
@@ -149,8 +161,7 @@ td{white-space:nowrap}
   </header>
 
   <div class="tabs" role="tablist" aria-label="Sections">
-    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>    <button class="tab" role="tab" id="tab-method" aria-controls="method" aria-selected="false" type="button">The Model</button>
-    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">About</button>
+    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">About</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
@@ -174,29 +185,18 @@ td{white-space:nowrap}
     </div>
   </section>
 
-  <section id="method" role="tabpanel" aria-labelledby="tab-method" class="list" hidden>
-    <h2>How the model works</h2>
-    <div class="game prose">
-      <p>Every game, the model predicts goals for each team using home and road splits.</p>
-      <p><b>Away team goals</b> = average of the away team's road goals scored per game and the home team's home goals allowed per game.</p>
-      <p><b>Home team goals</b> = average of the home team's home goals scored per game and the away team's road goals allowed per game.</p>
-      <p><b>Win odds</b> = each team's predicted goals ÷ total goals in the game.</p>
-    </div>
-    <h2>What data we use</h2>
-    <div class="steps">
-      <div class="step on"><span class="m">October</span><span>Last season's home/road numbers from January on. Early-season samples are too small, so we use how teams finished.</span></div>
-      <div class="step"><span class="m">November</span><span>This season's overall goals for and against per game. Enough games to trust the averages, not enough to split them.</span></div>
-      <div class="step"><span class="m">December on</span><span>This season's full home/road splits. The model at full strength.</span></div>
-    </div>
-  </section>
-
   <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
-    <h2>About Slapshot Media</h2>
-    <div class="game prose">
-      <p>Slapshot Media is a hockey media and analytics project. We post our model's odds for every NHL game, every day, and track the record against the favorites at three books, Vegas, Europe and Boston, so you can see who's right more often.</p>
-      <p>No hiding losses. Every pick is logged the morning after the game.</p>
-      <p class="muted">Follow for daily odds on TikTok and Instagram.</p>
+    <div class="hero">
+      <span class="kick">Slapshot Media</span>
+      <p class="big">Our numbers.<br><span>Not theirs.</span></p>
+      <p class="muted">An in-house model that calls every NHL game, every night.</p>
     </div>
+    <div class="pillars">
+      <div class="pil"><span class="n">01</span><b>Built in-house</b><span>Our own goals-based model. No borrowed lines.</span></div>
+      <div class="pil"><span class="n">02</span><b>Every game</b><span>Fresh odds for the full slate, every day of the season.</span></div>
+      <div class="pil"><span class="n">03</span><b>Every result</b><span>Tracked against the books all season. No hiding losses.</span></div>
+    </div>
+    <p class="follow">Daily odds on TikTok &amp; Instagram · <b>@SLAPSHOT.MEDIA</b></p>
   </section>
 </div>
 
