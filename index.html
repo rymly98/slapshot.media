@@ -6,7 +6,14 @@
 <meta name="description" content="Slapshot Media: NHL odds from our own model, every game, tracked against the books all season.">
 <meta property="og:title" content="Slapshot Media">
 <meta property="og:description" content="NHL odds from our own model, tracked vs the books all season.">
-<!--ANALYTICS-->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8837WTYDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8837WTYDLZ');
+</script>
 <title>Slapshot Media</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -319,6 +326,7 @@ const tabs=[...document.querySelectorAll(".tab")];
 tabs.forEach(t=>t.addEventListener("click",()=>{
   tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});
   if(t.id==="tab-record")drawChart();
+  if(window.gtag)gtag("event","tab_view",{tab:t.textContent.trim()});
 }));
 </script>
 </body>
