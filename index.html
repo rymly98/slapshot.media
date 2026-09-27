@@ -84,6 +84,13 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .recbox .rs .arr{font-size:16px;color:var(--muted);transition:transform .2s}
 .recbox[open] .rs .arr{transform:rotate(180deg)}
 .recbody{display:grid;gap:16px;padding:0 16px 16px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (min-width:620px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:2px}
+.fact small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fact b{font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:.02em}
+.fact:first-child{border-color:var(--maroon);background:var(--maroon-soft)}
+.fact:first-child b{color:#E0475B;font-size:30px}
 .fx{display:grid;gap:10px}
 .fxrow{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--maroon);border-radius:10px;padding:16px}
 .fxn{font-family:var(--display);font-size:40px;line-height:1;color:#E0475B}
@@ -222,6 +229,12 @@ td{white-space:nowrap}
 
   <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
     <div class="head2"><h2>The Slapshot.Media Model</h2></div>
+    <div class="facts">
+      <div class="fact"><small>2026-27 goal</small><b>60%</b></div>
+      <div class="fact"><small>Site updated daily</small><b>6am ET</b></div>
+      <div class="fact"><small>Socials posted daily</small><b>6am ET</b></div>
+      <div class="fact"><small>Stats from</small><b>NHL.com</b></div>
+    </div>
 
     <div class="fx">
       <div class="fxrow"><span class="fxn">1</span><div><b>Away goals</b><p>(Away team's <u>road</u> goals for per game + Home team's <u>home</u> goals against per game) ÷ 2</p></div></div>
