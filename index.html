@@ -71,7 +71,9 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .pil span:last-child{color:var(--muted)}
 .follow{text-align:center;color:var(--muted);font-family:var(--num);font-size:18px;letter-spacing:.04em;margin:8px 0 0}
 .follow b{color:#fff}
+.pil span b{font-family:inherit;font-size:inherit;text-transform:none;color:#fff;font-weight:700}
 .recnote{margin:12px 0 0;color:var(--muted);text-align:center;font-size:16px}
+.recsum{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;flex-wrap:wrap}
 .recbox{background:var(--maroon-soft);border:1px solid var(--maroon);border-radius:10px}
 .recbox>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;flex-wrap:wrap}
 .recbox>summary::-webkit-details-marker{display:none}
@@ -135,7 +137,7 @@ tr:last-child td{border-bottom:0}
 .step .m{font-family:var(--display);font-size:20px;text-transform:uppercase;color:var(--muted)}
 .step.on{border-color:var(--maroon);background:var(--maroon-soft)}
 .step.on .m{color:#fff}
-@media (max-width:620px){.steps{grid-template-columns:1fr}.tab{padding:8px 14px;font-size:17px}}
+@media (max-width:620px){.steps{grid-template-columns:1fr}.tab{padding:8px 9px;font-size:14px;white-space:nowrap}.tabs{flex-wrap:nowrap;gap:4px}}
 .chartcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:10px}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--num);font-weight:600;font-size:14px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
@@ -171,13 +173,20 @@ td{white-space:nowrap}
     <h1>Slapshot Media</h1>
   </header>
 
+  <div class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>
+    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
+    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">Our Model</button>
+  </div>
+
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
     <div class="head2"><h2>Todays Odds</h2><span class="muted">Tue Sep 29 · Opening night · 5 games · times ET</span></div>
     <div class="list" data-day="tue"></div>
-    <p class="recnote">Every pick gets tracked against the books, win or lose. Here's how the model is doing.</p>
-    <details class="recbox" id="record">
-      <summary><span class="rt">Slapshot record</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span><span class="arr">▾</span></span></summary>
-      <div class="recbody">
+  </section>
+
+  <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
+    <div class="head2"><h2>Record</h2><span class="muted">Every pick tracked vs the books, win or lose</span></div>
+    <div class="recbox"><div class="recsum"><span class="rt">Slapshot</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span></span></div></div>
     <div class="scoreboard" id="scoreboard"></div>
     <div class="chartcard">
       <div class="head2"><h2>Win % over the season</h2><span class="muted" id="chartnote">Slapshot vs the books</span></div>
@@ -191,8 +200,18 @@ td{white-space:nowrap}
         <tbody id="log"></tbody>
       </table>
     </div>
-      </div>
-    </details>
+  </section>
+
+  <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
+    <div class="hero">
+      <span class="kick">Our Model</span>
+      <p class="big">We project the goals.<br><span>That's the odds.</span></p>
+    </div>
+    <div class="pillars">
+      <div class="pil"><span class="n">01</span><b>Projected goals</b><span>Every game, our model projects how many goals each team scores. That's where Todays Odds come from.</span></div>
+      <div class="pil"><span class="n">02</span><b>Posted daily</b><span>We post our odds every day on Instagram and TikTok. <b>@SLAPSHOT.MEDIA</b></span></div>
+      <div class="pil"><span class="n">03</span><b>Tracked all season</b><span>Every pick goes on the Record, win or lose.</span></div>
+    </div>
   </section>
 </div>
 
@@ -266,7 +285,7 @@ document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.datase
     ${numbers(g.a,g.h,`<div class="drop">
     <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
     <div class="books" aria-label="Who each book has as the favorite">${books}</div>
-    <div class="meta"><span>${g.a} @ ${g.h} · proj. ${g.ag.toFixed(2)} – ${g.hg.toFixed(2)}</span><span>${g.t}</span></div>
+    <div class="meta"><span>Projected goals: ${g.a} ${g.ag.toFixed(2)} – ${g.h} ${g.hg.toFixed(2)} · <b>Total ${(g.ag+g.hg).toFixed(2)}</b></span><span>${g.t}</span></div>
     </div>`)}
   </article>`}).join("");});
 /* ===== Record: every finished game. Add one object per game; everything below is computed from it.
@@ -321,7 +340,12 @@ function drawChart(){
 }
 renderRecord();
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
-document.getElementById("record").addEventListener("toggle",e=>{if(e.target.open){drawChart();if(window.gtag)gtag("event","record_open");}});
+const tabs=[...document.querySelectorAll(".tab")];
+tabs.forEach(t=>t.addEventListener("click",()=>{
+  tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});
+  if(t.id==="tab-record")drawChart();
+  if(window.gtag)gtag("event","tab_view",{tab:t.textContent.trim()});
+}));
 </script>
 </body>
 </html>
