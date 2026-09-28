@@ -133,7 +133,10 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .qrec span{display:grid;gap:0}
 .qrec small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 .qrec b{font-family:var(--display);font-weight:400;font-size:26px;color:#fff;font-variant-numeric:tabular-nums}
-.gbg{margin-top:10px}
+.gbg{margin-top:10px;scroll-margin-top:12px}
+html{scroll-behavior:smooth}
+.qjump{justify-self:center;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
+.qjump:focus-visible{outline:3px solid #fff;outline-offset:3px}
 #tue>.qc{margin-top:4px}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
@@ -237,7 +240,7 @@ td{white-space:nowrap}
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
     <div class="head2" hidden><h2>Todays Odds</h2><span class="muted" id="daylabel">Loading…</span></div>
     <div class="qc" id="quick"></div>
-    <div class="head2 gbg"><h2>Game by game</h2><span class="muted" id="gbglabel">Picks, books &amp; numbers</span></div>
+    <div class="head2 gbg" id="gbg"><h2>Game by game</h2><span class="muted" id="gbglabel">Picks, books &amp; numbers</span></div>
     <div class="list" data-day="tue" id="full"></div>
   </section>
 
@@ -352,7 +355,7 @@ function renderQuick(){
       if(!last)return `<div class="qrec"><span>Slapshot record starts after opening night</span></div>`;
       const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
       return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})()+
-    `<div class="qf">@SLAPSHOT.MEDIA</div>`;
+    `<a class="qjump" href="#gbg">Game by game details ↓</a><div class="qf">@SLAPSHOT.MEDIA</div>`;
 }
 function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
