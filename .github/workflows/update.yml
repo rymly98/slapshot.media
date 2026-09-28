@@ -3,7 +3,6 @@ name: Daily site update
 on:
   schedule:
     - cron: "53 8 * * *"    # 4:53am ET (EDT). In winter (EST) this runs at 3:53am.
-    - cron: "53 21 * * *"   # 5:53pm ET (EDT). In winter this runs at 4:53pm.
   push:
     branches: [main]
     paths: ["data/run-now.txt"]   # edit this file to force a morning run
@@ -41,7 +40,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then MODE="${{ inputs.mode }}";
           elif [ "${{ github.event_name }}" = "push" ]; then MODE=morning;
-          elif [ "${{ github.event.schedule }}" = "53 8 * * *" ]; then MODE=morning; else MODE=evening; fi
+          else MODE=morning; fi
           python scripts/update.py "$MODE" | tee result.txt
 
       - name: Publish
