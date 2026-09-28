@@ -1,6 +1,6 @@
 {
  "gameday": "2026-09-29",
- "label": "Tue Sep 29 · Opening night · 5 games · times ET",
+ "label": "Tue Sep 29 \u00b7 Opening night \u00b7 5 games \u00b7 times ET",
  "games": [
   {
    "t": "5:00 PM",
@@ -23,6 +23,37 @@
      "CAR",
      "-130"
     ]
+   },
+   "lead": {
+    "a": {
+     "g": [
+      "Reinhart",
+      29
+     ],
+     "a": [
+      "Tkachuk",
+      37
+     ],
+     "p": [
+      "Reinhart",
+      61
+     ]
+    },
+    "h": {
+     "g": [
+      "Svechnikov",
+      31
+     ],
+     "a": [
+      "Aho",
+      53
+     ],
+     "p": [
+      "Aho",
+      80
+     ]
+    },
+    "season": "2025-26"
    }
   },
   {
@@ -46,6 +77,37 @@
      "TOR",
      "-115"
     ]
+   },
+   "lead": {
+    "a": {
+     "g": [
+      "Caufield",
+      51
+     ],
+     "a": [
+      "Suzuki",
+      72
+     ],
+     "p": [
+      "Suzuki",
+      101
+     ]
+    },
+    "h": {
+     "g": [
+      "Tavares",
+      31
+     ],
+     "a": [
+      "Nylander",
+      49
+     ],
+     "p": [
+      "Nylander",
+      79
+     ]
+    },
+    "season": "2025-26"
    }
   },
   {
@@ -69,6 +131,37 @@
      "BOS",
      "-120"
     ]
+   },
+   "lead": {
+    "a": {
+     "g": [
+      "Dorofeyev",
+      37
+     ],
+     "a": [
+      "Zibanejad",
+      44
+     ],
+     "p": [
+      "Zibanejad",
+      78
+     ]
+    },
+    "h": {
+     "g": [
+      "Geekie",
+      39
+     ],
+     "a": [
+      "Pastrnak",
+      71
+     ],
+     "p": [
+      "Pastrnak",
+      100
+     ]
+    },
+    "season": "2025-26"
    }
   },
   {
@@ -92,6 +185,37 @@
      "EDM",
      "-265"
     ]
+   },
+   "lead": {
+    "a": {
+     "g": [
+      "DeBrusk",
+      23
+     ],
+     "a": [
+      "Hronek",
+      41
+     ],
+     "p": [
+      "Pettersson",
+      51
+     ]
+    },
+    "h": {
+     "g": [
+      "McDavid",
+      48
+     ],
+     "a": [
+      "McDavid",
+      90
+     ],
+     "p": [
+      "McDavid",
+      138
+     ]
+    },
+    "season": "2025-26"
    }
   },
   {
@@ -115,8 +239,40 @@
      "VGK",
      "-265"
     ]
+   },
+   "lead": {
+    "a": {
+     "g": [
+      "Bertuzzi",
+      32
+     ],
+     "a": [
+      "Kane",
+      41
+     ],
+     "p": [
+      "Bertuzzi",
+      58
+     ]
+    },
+    "h": {
+     "g": [
+      "Stone",
+      28
+     ],
+     "a": [
+      "Eichel",
+      63
+     ],
+     "p": [
+      "Eichel",
+      90
+     ]
+    },
+    "season": "2025-26"
    }
   }
  ],
- "R": []
+ "R": [],
+ "updated": "2026-09-28 18:39 ET"
 }
