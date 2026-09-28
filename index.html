@@ -42,6 +42,8 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,11vw,92px);li
 .tab{font:inherit;font-family:var(--display);font-size:20px;letter-spacing:.04em;text-transform:uppercase;background:var(--panel);color:var(--muted);
   border:1px solid var(--line);border-radius:8px;padding:8px 22px;cursor:pointer}
 .tab[aria-selected="true"]{background:var(--maroon);border-color:var(--maroon);color:#fff}
+.tabs{flex-wrap:wrap}
+.tab.wide{flex-basis:100%;font-size:22px;padding:12px 16px;border-color:var(--maroon)}
 .tab:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .head2{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
 h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppercase;margin:0;text-shadow:2px 2px 0 var(--maroon-deep)}
@@ -135,7 +137,7 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .qrec b{font-family:var(--display);font-weight:400;font-size:26px;color:#fff;font-variant-numeric:tabular-nums}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
-.qjump{justify-self:center;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
+.qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
 .qjump:focus-visible{outline:3px solid #fff;outline-offset:3px}
 #tue>.qc{margin-top:4px}
 .leaders{max-width:420px;margin:14px auto 4px;border-top:1px solid var(--line);padding-top:12px}
@@ -199,7 +201,7 @@ tr:last-child td{border-bottom:0}
 .step .m{font-family:var(--display);font-size:20px;text-transform:uppercase;color:var(--muted)}
 .step.on{border-color:var(--maroon);background:var(--maroon-soft)}
 .step.on .m{color:#fff}
-@media (max-width:620px){.steps{grid-template-columns:1fr}.tab{padding:8px 9px;font-size:14px;white-space:nowrap}.tabs{flex-wrap:nowrap;gap:4px}}
+@media (max-width:620px){.steps{grid-template-columns:1fr}.tab{padding:8px 9px;font-size:14px;white-space:nowrap;flex:1}.tabs{flex-wrap:wrap;gap:4px}.tab.wide{font-size:19px;padding:11px 12px}}
 .chartcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:10px}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--num);font-weight:600;font-size:14px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
@@ -239,12 +241,16 @@ td{white-space:nowrap}
     <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>
     <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
     <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">Our Model</button>
+    <button class="tab wide" role="tab" id="tab-games" aria-controls="games" aria-selected="false" type="button">Game by Game Details</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
     <div class="head2" hidden><h2>Todays Odds</h2><span class="muted" id="daylabel">Loading…</span></div>
     <div class="qc" id="quick"></div>
-    <div class="head2 gbg" id="gbg"><h2>Game by game</h2><span class="muted" id="gbglabel">Picks, books &amp; numbers</span></div>
+  </section>
+
+  <section id="games" role="tabpanel" aria-labelledby="tab-games" class="list" hidden>
+    <div class="head2 gbg" id="gbg"><h2>Game by Game</h2><span class="muted" id="gbglabel">Picks, books &amp; numbers</span></div>
     <div class="list" data-day="tue" id="full"></div>
   </section>
 
@@ -364,7 +370,7 @@ function renderQuick(){
       if(!last)return `<div class="qrec"><span>Slapshot record starts after opening night</span></div>`;
       const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
       return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})()+
-    `<a class="qjump" href="#gbg">Game by game details ↓</a><div class="qf">@SLAPSHOT.MEDIA</div>`;
+    `<button type="button" class="qjump" onclick="document.getElementById('tab-games').click();scrollTo(0,0)">Game by Game Details →</button><div class="qf">@SLAPSHOT.MEDIA</div>`;
 }
 function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
