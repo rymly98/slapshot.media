@@ -114,6 +114,24 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .cbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
 .cmail{font-size:14px;color:var(--muted);user-select:all}
 .contact a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.seg{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:4px;gap:4px}
+.segb{flex:1;font:inherit;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;background:transparent;color:var(--muted);border:0;border-radius:7px;padding:9px 8px;cursor:pointer}
+.segb[aria-pressed="true"]{background:var(--maroon);color:#fff}
+.segb:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.qc{border:1px solid var(--line);border-radius:14px;padding:22px 16px 16px;display:grid;gap:10px;
+  background:radial-gradient(600px 260px at 50% 0%,#3d1a21 0%,rgba(0,0,0,0) 75%),radial-gradient(700px 400px at 50% 110%,#1d2330 0%,rgba(0,0,0,0) 70%),#101114}
+.qc .qt{font-family:var(--display);font-size:clamp(40px,11vw,64px);line-height:.95;text-align:center;text-transform:uppercase;text-shadow:3px 3px 0 var(--maroon-deep)}
+.qc .qd{font-family:var(--display);font-size:20px;text-align:center;text-transform:uppercase;text-shadow:2px 2px 0 var(--maroon-deep);margin-bottom:6px}
+.qr{display:grid;grid-template-columns:52px 34px 1fr 34px 52px;align-items:center;gap:8px}
+.qr .p{font-family:var(--num);font-weight:700;font-size:19px;font-variant-numeric:tabular-nums}
+.qr .p.r{text-align:right}.qr .p.hi{color:#fff}.qr .p.lo{color:#C9CBD0}
+.qr img{width:34px;height:34px;object-fit:contain;display:block}
+.qr .qb{display:flex;height:16px;border-radius:2px;overflow:hidden}
+.qr .qb span{display:block;height:100%}
+.qc .qf{text-align:center;font-family:var(--display);font-size:16px;letter-spacing:.06em;color:var(--muted);margin-top:6px}
+.recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
+.recblurb b{color:#fff}
+@media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
 .nums{border-top:1px solid var(--line);padding-top:10px}
 .nums summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em;
   display:flex;justify-content:center;align-items:center;gap:8px;text-shadow:2px 2px 0 var(--maroon-deep)}
@@ -212,11 +230,17 @@ td{white-space:nowrap}
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
     <div class="head2"><h2>Todays Odds</h2><span class="muted" id="daylabel">Loading…</span></div>
-    <div class="list" data-day="tue"></div>
+    <div class="seg" role="group" aria-label="View">
+      <button type="button" class="segb" id="v-quick" aria-pressed="true">Quick view</button>
+      <button type="button" class="segb" id="v-full" aria-pressed="false">Details</button>
+    </div>
+    <div class="qc" id="quick"></div>
+    <div class="list" data-day="tue" id="full" hidden></div>
   </section>
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
     <div class="head2"><h2>Record</h2><span class="muted">Every pick tracked vs the books, win or lose</span></div>
+    <p class="recblurb">We track every Slapshot pick against three major sportsbooks, named by location: <b>Vegas</b>, <b>Europe</b> and <b>Boston</b>. A book's pick is the team it has as the favorite. Results are added every morning.</p>
     <div class="recbox"><div class="recsum"><span class="rt">Slapshot</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span></span></div></div>
     <div class="scoreboard" id="scoreboard"></div>
     <div class="chartcard">
@@ -281,7 +305,7 @@ td{white-space:nowrap}
 </div>
 
 <script>
-const colors={FLA:"#0B2A5B",CAR:"#CE1126",CHI:"#CF0A2C",VGK:"#B4975A",NYR:"#0038A8",BOS:"#FFB81C",
+const colors={ANA:"#F47A38",DET:"#CE1126",WPG:"#041E42",FLA:"#0B2A5B",CAR:"#CE1126",CHI:"#CF0A2C",VGK:"#B4975A",NYR:"#0038A8",BOS:"#FFB81C",
   VAN:"#00205B",EDM:"#FF4C00",MTL:"#AF1E2D",TOR:"#FFFFFF",BUF:"#003087",OTT:"#C52032",WSH:"#C8102E",TBL:"#002868",
   PHI:"#F74902",PIT:"#FCB514",UTA:"#6CACE4",CBJ:"#002654",SEA:"#99D9D9",NJD:"#CE1126",NYI:"#00539B",DAL:"#006847",
   NSH:"#FFB81C",MIN:"#154734",STL:"#002F87",COL:"#6F263D",CGY:"#D2001C",LAK:"#A2AAAD",SJS:"#006D75"};
@@ -314,7 +338,20 @@ function numbers(a,h,top){
         return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`}).join("")}
     </div></details>`;
 }
-function renderGames(){document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
+function renderQuick(){
+  const g=days.tue, lbl=(document.getElementById("daylabel").textContent||"").split(" · ")[0];
+  document.getElementById("quick").innerHTML=`<div class="qt">Todays Odds</div><div class="qd">${lbl}</div>`+
+    g.map(x=>`<div class="qr"><span class="p ${x.ap>=x.hp?"hi":"lo"}">${x.ap.toFixed(1)}%</span><img src="tl/${x.a}.png" alt="${x.a}">
+      <div class="qb" role="img" aria-label="${x.a} ${x.ap.toFixed(1)}% vs ${x.h} ${x.hp.toFixed(1)}%"><span style="width:${x.ap}%;background:${colors[x.a]}"></span><span style="width:${x.hp}%;background:${colors[x.h]}"></span></div>
+      <img src="tl/${x.h}.png" alt="${x.h}"><span class="p r ${x.hp>=x.ap?"hi":"lo"}">${x.hp.toFixed(1)}%</span></div>`).join("")+
+    `<div class="qf">@SLAPSHOT.MEDIA</div>`;
+}
+function setView(v){const q=v==="quick";document.getElementById("quick").hidden=!q;document.getElementById("full").hidden=q;
+  document.getElementById("v-quick").setAttribute("aria-pressed",q);document.getElementById("v-full").setAttribute("aria-pressed",!q);
+  if(window.gtag)gtag("event","odds_view",{view:v});}
+document.getElementById("v-quick").addEventListener("click",()=>setView("quick"));
+document.getElementById("v-full").addEventListener("click",()=>setView("full"));
+function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
   const books=[["V","Vegas"],["E","Europe"],["B","Boston"]].map(([k,n])=>{const x=g.b&&g.b[k];
     return `<div class="book"><span class="who">${n}</span>${x?`<span class="val">${x[0]}</span>`:`<span class="val pending">Pending</span>`}</div>`}).join("");
