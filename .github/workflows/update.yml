@@ -1,0 +1,59 @@
+name: Daily site update
+
+on:
+  schedule:
+    - cron: "53 8 * * *"    # 4:53am ET (EDT). In winter (EST) this runs at 3:53am.
+    - cron: "53 21 * * *"   # 5:53pm ET (EDT). In winter this runs at 4:53pm.
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "morning (results + new game day + lines) or evening (lines only)"
+        default: morning
+        type: choice
+        options: [morning, evening]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: site-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update data.json
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then MODE="${{ inputs.mode }}";
+          elif [ "${{ github.event.schedule }}" = "53 8 * * *" ]; then MODE=morning; else MODE=evening; fi
+          python scripts/update.py "$MODE" | tee result.txt
+
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet data.json; then echo "Nothing changed."; exit 0; fi
+          git config user.name "Slapshot bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "Site update: $(cat result.txt)"
+          git push
+          test "$(git rev-parse HEAD)" = "$(git ls-remote origin refs/heads/main | cut -f1)"
+          curl -fsS -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages/builds" || echo "Pages build request skipped"
+          echo "Uploaded to GitHub."
+
+      - name: Flag failures
+        run: |
+          cat result.txt
+          if grep -q FAILED result.txt; then echo "::error::$(cat result.txt)"; exit 1; fi

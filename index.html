@@ -204,7 +204,7 @@ td{white-space:nowrap}
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
-    <div class="head2"><h2>Todays Odds</h2><span class="muted">Tue Sep 29 · Opening night · 5 games · times ET</span></div>
+    <div class="head2"><h2>Todays Odds</h2><span class="muted" id="daylabel">Loading…</span></div>
     <div class="list" data-day="tue"></div>
   </section>
 
@@ -234,28 +234,7 @@ const colors={FLA:"#0B2A5B",CAR:"#CE1126",CHI:"#CF0A2C",VGK:"#B4975A",NYR:"#0038
   NSH:"#FFB81C",MIN:"#154734",STL:"#002F87",COL:"#6F263D",CGY:"#D2001C",LAK:"#A2AAAD",SJS:"#006D75"};
 /* Slapshot formula, October rule: last season's home/road splits from Jan 1 on.
    b = each book's favorite ["TEAM","moneyline"] keyed V (Vegas), E (Europe), B (Boston); missing = line pending */
-const days={
- tue:[
-  {t:"5:00 PM",a:"FLA",h:"CAR",ag:2.875,hg:4.145,ap:41.0,hp:59.0,b:{V:["CAR","-130"],E:["CAR","-132"],B:["CAR","-130"]}},
-  {t:"7:00 PM",a:"MTL",h:"TOR",ag:3.80,hg:3.02,ap:55.7,hp:44.3,b:{V:["Pick'em","-110"],E:["TOR","-115"],B:["TOR","-115"]}},
-  {t:"8:00 PM",a:"NYR",h:"BOS",ag:2.66,hg:3.90,ap:40.5,hp:59.5,b:{V:["BOS","-125"],E:["BOS","-118"],B:["BOS","-120"]}},
-  {t:"10:00 PM",a:"VAN",h:"EDM",ag:2.79,hg:3.89,ap:41.8,hp:58.2,b:{V:["EDM","-275"],E:["EDM","-280"],B:["EDM","-265"]}},
-  {t:"10:30 PM",a:"CHI",h:"VGK",ag:2.43,hg:3.45,ap:41.3,hp:58.7,b:{V:["VGK","-250"],E:["VGK","-260"],B:["VGK","-265"]}}],
- sat:[
-  {t:"7:00 PM",a:"CHI",h:"BUF",ag:2.69,hg:3.48,ap:43.6,hp:56.4,b:{}},
-  {t:"7:00 PM",a:"OTT",h:"TOR",ag:3.67,hg:3.05,ap:54.7,hp:45.3,b:{}},
-  {t:"7:00 PM",a:"WSH",h:"TBL",ag:2.81,hg:3.63,ap:43.7,hp:56.3,b:{}},
-  {t:"7:00 PM",a:"CAR",h:"PHI",ag:3.13,hg:2.51,ap:55.5,hp:44.5,b:{}},
-  {t:"7:00 PM",a:"MTL",h:"PIT",ag:3.45,hg:3.45,ap:50.0,hp:50.0,b:{}},
-  {t:"7:00 PM",a:"UTA",h:"CBJ",ag:3.27,hg:3.14,ap:51.0,hp:49.0,b:{}},
-  {t:"7:00 PM",a:"SEA",h:"EDM",ag:2.84,hg:3.34,ap:46.0,hp:54.0,b:{}},
-  {t:"7:30 PM",a:"NJD",h:"NYI",ag:2.95,hg:3.12,ap:48.6,hp:51.4,b:{}},
-  {t:"8:00 PM",a:"DAL",h:"NSH",ag:3.20,hg:3.03,ap:51.3,hp:48.7,b:{}},
-  {t:"8:00 PM",a:"BOS",h:"MIN",ag:2.94,hg:3.41,ap:46.3,hp:53.7,b:{}},
-  {t:"9:00 PM",a:"STL",h:"COL",ag:3.07,hg:3.11,ap:49.6,hp:50.4,b:{}},
-  {t:"10:00 PM",a:"CGY",h:"VAN",ag:3.04,hg:3.11,ap:49.4,hp:50.6,b:{}},
-  {t:"10:00 PM",a:"LAK",h:"SJS",ag:3.25,hg:3.02,ap:51.8,hp:48.2,b:{}}]
-};
+let days={tue:[]};
 const logo=t=>`<img class="logo" src="tl/${t}.png" alt="${t}" width="104" height="104">`;
 /* 2025-26 regular season, NHL stats: W, L, OTL, GF/G, GA/G, PP%, PK% */
 const S={WSH:[43,30,9,3.18,2.90,17.8,80.1],NJD:[42,37,3,2.76,3.09,22.0,79.3],VGK:[39,26,17,3.22,2.95,24.6,81.4],VAN:[25,49,8,2.56,3.83,21.8,71.5],
@@ -282,7 +261,7 @@ function numbers(a,h,top){
         return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`}).join("")}
     </div></details>`;
 }
-document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
+function renderGames(){document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
   const books=[["V","Vegas"],["E","Europe"],["B","Boston"]].map(([k,n])=>{const x=g.b&&g.b[k];
     return `<div class="book"><span class="who">${n}</span>${x?`<span class="val">${x[0]}</span>`:`<span class="val pending">Pending</span>`}</div>`}).join("");
@@ -299,7 +278,7 @@ document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.datase
     <div class="books" aria-label="Who each book has as the favorite">${books}</div>
     <div class="meta"><span>Projected goals: ${g.a} ${g.ag.toFixed(2)} – ${g.h} ${g.hg.toFixed(2)} · <b>Total ${(g.ag+g.hg).toFixed(2)}</b></span><span>${g.t}</span></div>
     </div>`)}
-  </article>`}).join("");});
+  </article>`}).join("");});}
 /* ===== Record: every finished game. Add one object per game; everything below is computed from it.
    {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}
    s = Slapshot pick, V/E/B = each book's favorite (null = pick'em, no pick), w = winner, f = final score */
@@ -350,7 +329,11 @@ function drawChart(){
     tip.hidden=false;const tx=x(i)*r.width/W;tip.style.left=Math.min(r.width-170,Math.max(0,tx+12))+"px";tip.style.top="8px";};
   hit.addEventListener("pointermove",move);hit.addEventListener("pointerleave",()=>{tip.hidden=true;xh.setAttribute("visibility","hidden");});
 }
-renderRecord();
+fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+  days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
+  document.getElementById("daylabel").textContent=d.label||"";
+  renderGames();renderRecord();
+}).catch(()=>{document.querySelector("[data-day]").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();});
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
 const tabs=[...document.querySelectorAll(".tab")];
 tabs.forEach(t=>t.addEventListener("click",()=>{
