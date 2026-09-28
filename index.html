@@ -138,6 +138,10 @@ html{scroll-behavior:smooth}
 .qjump{justify-self:center;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
 .qjump:focus-visible{outline:3px solid #fff;outline-offset:3px}
 #tue>.qc{margin-top:4px}
+.leaders{max-width:420px;margin:14px auto 4px;border-top:1px solid var(--line);padding-top:12px}
+.lh{text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px}
+.lgrid{display:grid;grid-template-columns:1fr auto 1fr;row-gap:8px;column-gap:12px;align-items:center}
+.lv{font-size:15px;color:#E6E7EA}.lv.r{text-align:right}.lv b{font-family:var(--num);font-size:19px;color:#fff}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -145,7 +149,7 @@ html{scroll-behavior:smooth}
 .nums summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em;
   display:flex;justify-content:center;align-items:center;gap:8px;text-shadow:2px 2px 0 var(--maroon-deep)}
 .drop{display:grid;gap:12px;margin:12px 0}
-.nums summary .hint{font-family:var(--body);font-size:13px;text-transform:none;letter-spacing:0;color:var(--muted);text-shadow:none}
+.nums summary .hint{white-space:nowrap;font-family:var(--body);font-size:13px;text-transform:none;letter-spacing:0;color:var(--muted);text-shadow:none}
 .nums summary::-webkit-details-marker{display:none}
 .nums summary::after{content:"▾";font-size:16px;color:var(--muted);transition:transform .2s}
 .nums[open] summary::after{transform:rotate(180deg)}
@@ -328,7 +332,12 @@ const S={WSH:[43,30,9,3.18,2.90,17.8,80.1],NJD:[42,37,3,2.76,3.09,22.0,79.3],VGK
  NYR:[34,39,9,2.87,3.04,24.7,79.9],NYI:[43,34,5,2.79,2.88,16.5,80.8],LAK:[35,27,20,2.68,2.90,17.0,74.6],SEA:[34,37,11,2.73,3.13,19.5,72.2],
  UTA:[43,33,6,3.27,2.93,20.0,78.1],MIN:[46,24,12,3.27,2.87,25.2,79.8],BUF:[50,23,9,3.45,2.93,19.5,81.9],CAR:[53,22,7,3.55,2.88,24.9,80.5],
  PHI:[43,27,12,2.93,2.91,15.7,77.6],EDM:[41,30,11,3.44,3.23,30.6,77.8],FLA:[40,38,4,3.00,3.34,19.5,81.0],TOR:[32,36,14,3.07,3.60,21.3,81.2]};
-function numbers(a,h,top){
+function leaders(L){
+  if(!L||!L.a||!L.h)return "";
+  const row=(k,n)=>`<span class="lv">${L.a[k][0]} <b>${L.a[k][1]}</b></span><span class="nl">${n}</span><span class="lv r">${L.h[k][0]} <b>${L.h[k][1]}</b></span>`;
+  return `<div class="leaders"><div class="lh">Team leaders · ${L.season}</div><div class="lgrid">${row("g","Goals")}${row("a","Assists")}${row("p","Points")}</div></div>`;
+}
+function numbers(a,h,L){
   const A=S[a],H=S[h];
   const pts=x=>x[0]*2+x[2];
   const rows=[
@@ -337,12 +346,12 @@ function numbers(a,h,top){
     ["GA/G",A[4].toFixed(2),H[4].toFixed(2),A[4],H[4],false],
     ["PP%",A[5].toFixed(1)+"%",H[5].toFixed(1)+"%",A[5],H[5],true],
     ["PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true]];
-  return `<details class="nums"><summary>The Numbers <span class="hint">tap for team stats</span></summary>
+  return `<details class="nums"><summary>The Numbers <span class="hint">stats &amp; leaders</span></summary>
     <div class="ntable">
       <span class="nh">${logo(a)}</span><span class="nl">2025-26</span><span class="nh">${logo(h)}</span>
       ${rows.map(([l,av,hv,an,hn,up])=>{const aw=up?an>hn:an<hn, hw=up?hn>an:hn<an;
         return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`}).join("")}
-    </div></details>`;
+    </div>${leaders(L)}</details>`;
 }
 function renderQuick(){
   const g=days.tue, parts=(document.getElementById("daylabel").textContent||"").split(" · "), lbl=parts[0];
@@ -372,7 +381,7 @@ function renderGames(){renderQuick();document.querySelectorAll("[data-day]").for
     <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
     <div class="books" aria-label="Who each book has as the favorite">${books}</div>
     <div class="meta"><span>Projected goals: ${g.a} ${g.ag.toFixed(2)} – ${g.h} ${g.hg.toFixed(2)} · <b>Total ${(g.ag+g.hg).toFixed(2)}</b></span><span>${g.t}</span></div>
-    ${numbers(g.a,g.h)}
+    ${numbers(g.a,g.h,g.lead)}
   </article>`}).join("");});}
 /* ===== Record: every finished game. Add one object per game; everything below is computed from it.
    {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}

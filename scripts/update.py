@@ -161,6 +161,36 @@ def refresh_lines(data):
     return hit
 
 
+# ---------- team leaders (goals / assists / points) ----------
+def leader_season(day):
+    d = datetime.strptime(day, "%Y-%m-%d")
+    start = d.year if d.month >= 9 else d.year - 1
+    if d.month in (9, 10):          # October: last season's numbers, same rule as the model
+        start -= 1
+    return f"{start}{start + 1}", f"{start}-{str(start + 1)[2:]}"
+
+
+def add_leaders(data):
+    sid, lbl = leader_season(data["gameday"])
+    rows = get("https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=true&isGame=false&limit=-1"
+               f"&cayenneExp=seasonId={sid}%20and%20gameTypeId=2")["data"]
+    by_id = {r["playerId"]: r for r in rows}
+    teams = {t for g in data["games"] for t in (g["a"], g["h"])}
+    lead = {}
+    for t in teams:
+        ro = get(f"https://api-web.nhle.com/v1/roster/{t}/current")
+        ids = [p["id"] for k in ("forwards", "defensemen") for p in ro.get(k, [])]
+        pl = [by_id[i] for i in ids if i in by_id]
+        if not pl:
+            continue
+        name = lambda r: r["skaterFullName"].split(" ", 1)[-1]
+        top = lambda k: (lambda r: [name(r), r[k]])(max(pl, key=lambda r: (r[k], r["points"])))
+        lead[t] = {"g": top("goals"), "a": top("assists"), "p": top("points")}
+    for g in data["games"]:
+        g["lead"] = {"a": lead.get(g["a"]), "h": lead.get(g["h"]), "season": lbl}
+    return len(lead)
+
+
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else ("morning" if datetime.now(ET).hour < 12 else "evening")
     data = json.load(open(DATA))
@@ -182,6 +212,12 @@ def main():
             data["games"] = games
             data["label"] = label(gd, len(games), opening=(gd == "2026-09-29"))
             notes.append(f"loaded {len(games)} game(s) for {gd}")
+
+    if mode == "morning" or any("lead" not in g for g in data["games"]):
+        try:
+            notes.append(f"leaders for {add_leaders(data)} team(s)")
+        except Exception as e:
+            notes.append(f"leaders skipped: {e}")
 
     try:
         hit = refresh_lines(data)
