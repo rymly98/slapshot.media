@@ -144,6 +144,12 @@ html{scroll-behavior:smooth}
 .lh{text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px}
 .lgrid{display:grid;grid-template-columns:1fr auto 1fr;row-gap:8px;column-gap:12px;align-items:center}
 .lv{font-size:15px;color:#E6E7EA}.lv.r{text-align:right}.lv b{font-family:var(--num);font-size:19px;color:#fff}
+.datacard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:6px}
+.datacard .dh{font-family:var(--display);font-size:18px;text-transform:uppercase;letter-spacing:.04em}
+.dr{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:14px;color:var(--muted);align-items:baseline}
+.dr span:first-child{white-space:nowrap;min-width:92px;font-family:var(--num);font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#C9CBD0}
+.dr.on span{color:#fff}.dr.on span:first-child{color:#E0475B}
+.about-line{margin:4px 0 0;text-align:center;color:#E6E7EA;font-size:16px}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -283,12 +289,13 @@ td{white-space:nowrap}
       <div class="fxrow"><span class="fxn">3</span><div><b>Win %</b><p>Team's projected goals ÷ total goals in the game. Higher % is our pick.</p></div></div>
     </div>
 
-    <div class="head2"><h2>The data</h2></div>
-    <div class="steps">
-      <div class="step on"><span class="m">October</span><span>Last season's home/road stats (Jan 1 on).</span></div>
-      <div class="step"><span class="m">November</span><span>This season's overall stats.</span></div>
-      <div class="step"><span class="m">December on</span><span>This season's home/road stats.</span></div>
+    <div class="datacard">
+      <div class="dh">The data</div>
+      <div class="dr on"><span>October</span><span>Last season's home/road stats (Jan 1 on)</span></div>
+      <div class="dr"><span>November</span><span>This season's overall stats</span></div>
+      <div class="dr"><span>December on</span><span>This season's home/road stats</span></div>
     </div>
+    <p class="about-line">A site for hockey fans. We're just here to give you the info on tonight's games.</p>
 
     <div class="socials">
       <a href="https://www.instagram.com/slapshot.media/" target="_blank" rel="noopener">Instagram</a>
