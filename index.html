@@ -133,6 +133,8 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .qrec span{display:grid;gap:0}
 .qrec small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 .qrec b{font-family:var(--display);font-weight:400;font-size:26px;color:#fff;font-variant-numeric:tabular-nums}
+.gbg{margin-top:10px}
+#tue>.qc{margin-top:4px}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -233,13 +235,10 @@ td{white-space:nowrap}
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
-    <div class="head2"><h2>Todays Odds</h2><span class="muted" id="daylabel">Loading…</span></div>
-    <div class="seg" role="group" aria-label="View">
-      <button type="button" class="segb" id="v-quick" aria-pressed="true">Quick view</button>
-      <button type="button" class="segb" id="v-full" aria-pressed="false">Details</button>
-    </div>
+    <div class="head2" hidden><h2>Todays Odds</h2><span class="muted" id="daylabel">Loading…</span></div>
     <div class="qc" id="quick"></div>
-    <div class="list" data-day="tue" id="full" hidden></div>
+    <div class="head2 gbg"><h2>Game by game</h2><span class="muted" id="gbglabel">Picks, books &amp; numbers</span></div>
+    <div class="list" data-day="tue" id="full"></div>
   </section>
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
@@ -343,7 +342,8 @@ function numbers(a,h,top){
     </div></details>`;
 }
 function renderQuick(){
-  const g=days.tue, lbl=(document.getElementById("daylabel").textContent||"").split(" · ")[0];
+  const g=days.tue, parts=(document.getElementById("daylabel").textContent||"").split(" · "), lbl=parts[0];
+  document.getElementById("gbglabel").textContent=parts.slice(1).join(" · ")||"Picks, books & numbers";
   document.getElementById("quick").innerHTML=`<div class="qt">Todays Odds</div><div class="qd">${lbl}</div>`+
     g.map(x=>`<div class="qr"><span class="p ${x.ap>=x.hp?"hi":"lo"}">${x.ap.toFixed(1)}%</span><img src="tl/${x.a}.png" alt="${x.a}">
       <div class="qb" role="img" aria-label="${x.a} ${x.ap.toFixed(1)}% vs ${x.h} ${x.hp.toFixed(1)}%"><span style="width:${x.ap}%;background:${colors[x.a]}"></span><span style="width:${x.hp}%;background:${colors[x.h]}"></span></div>
@@ -354,11 +354,6 @@ function renderQuick(){
       return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})()+
     `<div class="qf">@SLAPSHOT.MEDIA</div>`;
 }
-function setView(v){const q=v==="quick";document.getElementById("quick").hidden=!q;document.getElementById("full").hidden=q;
-  document.getElementById("v-quick").setAttribute("aria-pressed",q);document.getElementById("v-full").setAttribute("aria-pressed",!q);
-  if(window.gtag)gtag("event","odds_view",{view:v});}
-document.getElementById("v-quick").addEventListener("click",()=>setView("quick"));
-document.getElementById("v-full").addEventListener("click",()=>setView("full"));
 function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
   const books=[["V","Vegas"],["E","Europe"],["B","Boston"]].map(([k,n])=>{const x=g.b&&g.b[k];
