@@ -256,7 +256,7 @@ td{white-space:nowrap}
   </section>
 
   <section id="games" role="tabpanel" aria-labelledby="tab-games" class="list" hidden>
-    <div class="head2 gbg" id="gbg"><h2>Game by Game</h2><span class="muted" id="gbglabel">Picks, books &amp; numbers</span></div>
+    <div class="head2 gbg" id="gbg"><h2>Game by Game</h2><span class="muted" id="gbglabel">Picks &amp; numbers</span></div>
     <div class="list" data-day="tue" id="full"></div>
   </section>
 
@@ -352,7 +352,7 @@ function numbers(a,h,L){
 }
 function renderQuick(){
   const g=days.tue, parts=(document.getElementById("daylabel").textContent||"").split(" · "), lbl=parts[0];
-  document.getElementById("gbglabel").textContent=parts.slice(1).join(" · ")||"Picks, books & numbers";
+  document.getElementById("gbglabel").textContent=parts.slice(1).join(" · ")||"Picks & numbers";
   document.getElementById("quick").innerHTML=`<div class="qt">Todays Odds</div><div class="qd">${lbl}</div>`+
     g.map(x=>`<div class="qr"><span class="p ${x.ap>=x.hp?"hi":"lo"}">${x.ap.toFixed(1)}%</span><img src="tl/${x.a}.png" alt="${x.a}">
       <div class="qb" role="img" aria-label="${x.a} ${x.ap.toFixed(1)}% vs ${x.h} ${x.hp.toFixed(1)}%"><span style="width:${x.ap}%;background:${colors[x.a]}"></span><span style="width:${x.hp}%;background:${colors[x.h]}"></span></div>
@@ -376,7 +376,6 @@ function renderGames(){renderQuick();document.querySelectorAll("[data-day]").for
       <div class="side r">${logo(g.h)}<span class="pct">${g.hp.toFixed(1)}%</span></div>
     </div>
     <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
-    <div class="books" aria-label="Who each book has as the favorite">${books}</div>
     <div class="meta"><span>Projected goals: ${g.a} ${g.ag.toFixed(2)} – ${g.h} ${g.hg.toFixed(2)} · <b>Total ${(g.ag+g.hg).toFixed(2)}</b></span><span>${g.t}</span></div>
     ${numbers(g.a,g.h,g.lead)}
   </article>`}).join("");});}
