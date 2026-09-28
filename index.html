@@ -129,6 +129,10 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .qr .qb{display:flex;height:16px;border-radius:2px;overflow:hidden}
 .qr .qb span{display:block;height:100%}
 .qc .qf{text-align:center;font-family:var(--display);font-size:16px;letter-spacing:.06em;color:var(--muted);margin-top:6px}
+.qrec{display:flex;justify-content:center;gap:26px;border-top:1px solid var(--line);padding-top:12px;margin-top:6px;text-align:center;color:var(--muted);font-size:14px}
+.qrec span{display:grid;gap:0}
+.qrec small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.qrec b{font-family:var(--display);font-weight:400;font-size:26px;color:#fff;font-variant-numeric:tabular-nums}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -344,6 +348,10 @@ function renderQuick(){
     g.map(x=>`<div class="qr"><span class="p ${x.ap>=x.hp?"hi":"lo"}">${x.ap.toFixed(1)}%</span><img src="tl/${x.a}.png" alt="${x.a}">
       <div class="qb" role="img" aria-label="${x.a} ${x.ap.toFixed(1)}% vs ${x.h} ${x.hp.toFixed(1)}%"><span style="width:${x.ap}%;background:${colors[x.a]}"></span><span style="width:${x.hp}%;background:${colors[x.h]}"></span></div>
       <img src="tl/${x.h}.png" alt="${x.h}"><span class="p r ${x.hp>=x.ap?"hi":"lo"}">${x.hp.toFixed(1)}%</span></div>`).join("")+
+    (()=>{const last=[...new Set(R.map(r=>r.d))].sort().pop();
+      if(!last)return `<div class="qrec"><span>Slapshot record starts after opening night</span></div>`;
+      const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
+      return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})()+
     `<div class="qf">@SLAPSHOT.MEDIA</div>`;
 }
 function setView(v){const q=v==="quick";document.getElementById("quick").hidden=!q;document.getElementById("full").hidden=q;
