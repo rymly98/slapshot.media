@@ -1,0 +1,292 @@
+{
+ "ANA": {
+  "name": "Lukas Dostal",
+  "id": 8480843,
+  "gp": 56,
+  "gaa": 3.1029,
+  "teams": [
+   "Anaheim Ducks"
+  ]
+ },
+ "BOS": {
+  "name": "Jeremy Swayman",
+  "id": 8480280,
+  "gp": 55,
+  "gaa": 2.7076,
+  "teams": [
+   "Boston Bruins"
+  ]
+ },
+ "BUF": {
+  "name": "Ukko-Pekka Luukkonen",
+  "id": 8480045,
+  "gp": 35,
+  "gaa": 2.5151,
+  "teams": [
+   "Buffalo Sabres"
+  ]
+ },
+ "CAR": {
+  "name": "Brandon Bussi",
+  "id": 8483548,
+  "gp": 39,
+  "gaa": 2.4652,
+  "teams": [
+   "Carolina Hurricanes"
+  ]
+ },
+ "CBJ": {
+  "name": "Jet Greaves",
+  "id": 8482982,
+  "gp": 55,
+  "gaa": 2.6007,
+  "teams": [
+   "Columbus Blue Jackets"
+  ]
+ },
+ "CGY": {
+  "name": "Dustin Wolf",
+  "id": 8481692,
+  "gp": 57,
+  "gaa": 3.0103,
+  "teams": [
+   "Calgary Flames"
+  ]
+ },
+ "CHI": {
+  "name": "Spencer Knight",
+  "id": 8481519,
+  "gp": 55,
+  "gaa": 2.824,
+  "teams": [
+   "Chicago Blackhawks"
+  ]
+ },
+ "COL": {
+  "name": "Mackenzie Blackwood",
+  "id": 8478406,
+  "gp": 39,
+  "gaa": 2.505,
+  "teams": [
+   "Colorado Avalanche"
+  ]
+ },
+ "DAL": {
+  "name": "Jake Oettinger",
+  "id": 8479979,
+  "gp": 54,
+  "gaa": 2.5922,
+  "teams": [
+   "Dallas Stars"
+  ]
+ },
+ "DET": {
+  "name": "John Gibson",
+  "id": 8476434,
+  "gp": 57,
+  "gaa": 2.7159,
+  "teams": [
+   "Detroit Red Wings"
+  ]
+ },
+ "EDM": {
+  "name": "Tristan Jarry",
+  "id": 8477465,
+  "gp": 33,
+  "gaa": 3.3547,
+  "teams": [
+   "Pittsburgh Penguins",
+   "Edmonton Oilers"
+  ]
+ },
+ "FLA": {
+  "name": "Jacob Markstrom",
+  "id": 8474593,
+  "gp": 44,
+  "gaa": 3.066,
+  "teams": [
+   "New Jersey Devils"
+  ]
+ },
+ "LAK": {
+  "name": "Darcy Kuemper",
+  "id": 8475311,
+  "gp": 50,
+  "gaa": 2.784,
+  "teams": [
+   "Los Angeles Kings"
+  ]
+ },
+ "MIN": {
+  "name": "Jesper Wallstedt",
+  "id": 8482661,
+  "gp": 35,
+  "gaa": 2.6144,
+  "teams": [
+   "Minnesota Wild"
+  ]
+ },
+ "MTL": {
+  "name": "Jakub Dobes",
+  "id": 8482487,
+  "gp": 43,
+  "gaa": 2.7796,
+  "teams": [
+   "Montr\u00e9al Canadiens"
+  ]
+ },
+ "NJD": {
+  "name": "Jake Allen",
+  "id": 8474596,
+  "gp": 37,
+  "gaa": 2.744,
+  "teams": [
+   "New Jersey Devils"
+  ]
+ },
+ "NSH": {
+  "name": "Juuse Saros",
+  "id": 8477424,
+  "gp": 59,
+  "gaa": 3.1638,
+  "teams": [
+   "Nashville Predators"
+  ]
+ },
+ "NYI": {
+  "name": "Ilya Sorokin",
+  "id": 8478009,
+  "gp": 55,
+  "gaa": 2.6781,
+  "teams": [
+   "New York Islanders"
+  ]
+ },
+ "NYR": {
+  "name": "Igor Shesterkin",
+  "id": 8478048,
+  "gp": 51,
+  "gaa": 2.4998,
+  "teams": [
+   "New York Rangers"
+  ]
+ },
+ "OTT": {
+  "name": "Linus Ullmark",
+  "id": 8476999,
+  "gp": 49,
+  "gaa": 2.7259,
+  "teams": [
+   "Ottawa Senators"
+  ]
+ },
+ "PHI": {
+  "name": "Dan Vladar",
+  "id": 8478435,
+  "gp": 52,
+  "gaa": 2.4239,
+  "teams": [
+   "Philadelphia Flyers"
+  ]
+ },
+ "PIT": {
+  "name": "Arturs Silovs",
+  "id": 8481668,
+  "gp": 39,
+  "gaa": 3.0714,
+  "teams": [
+   "Pittsburgh Penguins"
+  ]
+ },
+ "SEA": {
+  "name": "Joey Daccord",
+  "id": 8478916,
+  "gp": 47,
+  "gaa": 3.0298,
+  "teams": [
+   "Seattle Kraken"
+  ]
+ },
+ "SJS": {
+  "name": "Yaroslav Askarov",
+  "id": 8482137,
+  "gp": 47,
+  "gaa": 3.628,
+  "teams": [
+   "San Jose Sharks"
+  ]
+ },
+ "STL": {
+  "name": "Joel Hofer",
+  "id": 8480981,
+  "gp": 46,
+  "gaa": 2.6061,
+  "teams": [
+   "St. Louis Blues"
+  ]
+ },
+ "TBL": {
+  "name": "Andrei Vasilevskiy",
+  "id": 8476883,
+  "gp": 58,
+  "gaa": 2.3085,
+  "teams": [
+   "Tampa Bay Lightning"
+  ]
+ },
+ "TOR": {
+  "name": "Sergei Bobrovsky",
+  "id": 8475683,
+  "gp": 52,
+  "gaa": 3.0701,
+  "teams": [
+   "Florida Panthers"
+  ]
+ },
+ "UTA": {
+  "name": "Karel Vejmelka",
+  "id": 8478872,
+  "gp": 64,
+  "gaa": 2.7459,
+  "teams": [
+   "Utah Mammoth"
+  ]
+ },
+ "VAN": {
+  "name": "Kevin Lankinen",
+  "id": 8480947,
+  "gp": 47,
+  "gaa": 3.7032,
+  "teams": [
+   "Vancouver Canucks"
+  ]
+ },
+ "VGK": {
+  "name": "Carter Hart",
+  "id": 8479394,
+  "gp": 18,
+  "gaa": 2.7065,
+  "teams": [
+   "Vegas Golden Knights"
+  ]
+ },
+ "WPG": {
+  "name": "Stuart Skinner",
+  "id": 8479973,
+  "gp": 50,
+  "gaa": 2.9143,
+  "teams": [
+   "Edmonton Oilers",
+   "Pittsburgh Penguins"
+  ]
+ },
+ "WSH": {
+  "name": "Logan Thompson",
+  "id": 8480313,
+  "gp": 58,
+  "gaa": 2.4383,
+  "teams": [
+   "Washington Capitals"
+  ]
+ }
+}
