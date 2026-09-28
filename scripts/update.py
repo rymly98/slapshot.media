@@ -165,7 +165,7 @@ def refresh_lines(data):
 def leader_season(day):
     d = datetime.strptime(day, "%Y-%m-%d")
     start = d.year if d.month >= 9 else d.year - 1
-    if d.month in (9, 10):          # October: last season's numbers, same rule as the model
+    if d.month == 9 or (d.month == 10 and d.day <= 6):   # first week of the season: last season's leaders
         start -= 1
     return f"{start}{start + 1}", f"{start}-{str(start + 1)[2:]}"
 
