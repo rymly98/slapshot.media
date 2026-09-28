@@ -84,13 +84,13 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .recbox .rs .arr{font-size:16px;color:var(--muted);transition:transform .2s}
 .recbox[open] .rs .arr{transform:rotate(180deg)}
 .recbody{display:grid;gap:16px;padding:0 16px 16px}
-.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-@media (min-width:620px){.facts{grid-template-columns:repeat(4,1fr)}}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+
 .fact{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:2px}
-.fact small{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.fact b{font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:.02em}
-.fact:first-child{border-color:var(--maroon);background:var(--maroon-soft)}
-.fact:first-child b{color:#E0475B;font-size:30px}
+.fact small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.fact b{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.02em;white-space:nowrap}
+.fact.hl{border-color:var(--maroon);background:var(--maroon-soft)}
+.fact.hl b{color:#E0475B;font-size:30px}
 .fx{display:grid;gap:10px}
 .fxrow{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--maroon);border-radius:10px;padding:16px}
 .fxn{font-family:var(--display);font-size:40px;line-height:1;color:#E0475B}
@@ -113,6 +113,7 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .nums summary{cursor:pointer;list-style:none;font-family:var(--display);font-size:20px;text-transform:uppercase;letter-spacing:.03em;
   display:flex;justify-content:center;align-items:center;gap:8px;text-shadow:2px 2px 0 var(--maroon-deep)}
 .drop{display:grid;gap:12px;margin:12px 0}
+.nums summary .hint{font-family:var(--body);font-size:13px;text-transform:none;letter-spacing:0;color:var(--muted);text-shadow:none}
 .nums summary::-webkit-details-marker{display:none}
 .nums summary::after{content:"▾";font-size:16px;color:var(--muted);transition:transform .2s}
 .nums[open] summary::after{transform:rotate(180deg)}
@@ -201,6 +202,7 @@ td{white-space:nowrap}
   <div class="tabs" role="tablist" aria-label="Sections">
     <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>
     <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
+    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">Our Model</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
@@ -224,6 +226,43 @@ td{white-space:nowrap}
         <tbody id="log"></tbody>
       </table>
     </div>
+  </section>
+
+  <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
+    <div class="head2"><h2>The Slapshot.Media Model</h2></div>
+    <div class="facts">
+      <div class="fact"><small>Site updates</small><b>5am ET</b></div>
+      <div class="fact"><small>Posts go up</small><b>6am ET</b></div>
+      <div class="fact"><small>Stats from</small><b>NHL.com</b></div>
+    </div>
+
+    <div class="fx">
+      <div class="fxrow"><span class="fxn">1</span><div><b>Away goals</b><p>(Away team's <u>road</u> goals for per game + Home team's <u>home</u> goals against per game) ÷ 2</p></div></div>
+      <div class="fxrow"><span class="fxn">2</span><div><b>Home goals</b><p>(Home team's <u>home</u> goals for per game + Away team's <u>road</u> goals against per game) ÷ 2</p></div></div>
+      <div class="fxrow"><span class="fxn">3</span><div><b>Win %</b><p>Team's projected goals ÷ total goals in the game. Higher % is our pick.</p></div></div>
+    </div>
+
+    <div class="head2"><h2>See it work</h2><span class="muted">Opening night · Florida @ Carolina</span></div>
+    <div class="ex">
+      <div class="exrow"><span class="exl">Florida goals</span><span class="exm">(2.65 road GF + 3.10 CAR home GA) ÷ 2</span><span class="exv">2.875</span></div>
+      <div class="exrow"><span class="exl">Carolina goals</span><span class="exm">(4.29 home GF + 4.00 FLA road GA) ÷ 2</span><span class="exv">4.145</span></div>
+      <div class="exrow"><span class="exl">Total goals</span><span class="exm">2.875 + 4.145</span><span class="exv">7.02</span></div>
+      <div class="exrow win"><span class="exl">Carolina win %</span><span class="exm">4.145 ÷ 7.02</span><span class="exv">59.0%</span></div>
+      <p class="muted exnote">Florida 41.0%. Slapshot pick: Carolina.</p>
+    </div>
+
+    <div class="head2"><h2>The data</h2></div>
+    <div class="steps">
+      <div class="step on"><span class="m">October</span><span>Only a few games in, so this season's numbers don't mean much yet. We use last season's home/road numbers from January 1 on.</span></div>
+      <div class="step"><span class="m">November</span><span>Enough games to use this season, not enough to split home and road. We use overall goals for and against.</span></div>
+      <div class="step"><span class="m">December on</span><span>Enough home and road games to trust the splits. We use this season's home/road numbers the rest of the way.</span></div>
+    </div>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/slapshot.media/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@slapshot.media" target="_blank" rel="noopener">TikTok</a>
+    </div>
+    <p class="follow">Odds posted daily · <b>@SLAPSHOT.MEDIA</b></p>
   </section>
 </div>
 
@@ -254,7 +293,7 @@ function numbers(a,h,top){
     ["GA/G",A[4].toFixed(2),H[4].toFixed(2),A[4],H[4],false],
     ["PP%",A[5].toFixed(1)+"%",H[5].toFixed(1)+"%",A[5],H[5],true],
     ["PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true]];
-  return `<details class="nums"><summary>Odds &amp; numbers</summary>${top||""}
+  return `<details class="nums"><summary>The Numbers <span class="hint">tap for team stats</span></summary>
     <div class="ntable">
       <span class="nh">${logo(a)}</span><span class="nl">2025-26</span><span class="nh">${logo(h)}</span>
       ${rows.map(([l,av,hv,an,hn,up])=>{const aw=up?an>hn:an<hn, hw=up?hn>an:hn<an;
@@ -273,11 +312,10 @@ function renderGames(){document.querySelectorAll("[data-day]").forEach(el=>{el.i
       </div>
       <div class="side r">${logo(g.h)}<span class="pct">${g.hp.toFixed(1)}%</span></div>
     </div>
-    ${numbers(g.a,g.h,`<div class="drop">
     <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
     <div class="books" aria-label="Who each book has as the favorite">${books}</div>
     <div class="meta"><span>Projected goals: ${g.a} ${g.ag.toFixed(2)} – ${g.h} ${g.hg.toFixed(2)} · <b>Total ${(g.ag+g.hg).toFixed(2)}</b></span><span>${g.t}</span></div>
-    </div>`)}
+    ${numbers(g.a,g.h)}
   </article>`}).join("");});}
 /* ===== Record: every finished game. Add one object per game; everything below is computed from it.
    {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}
