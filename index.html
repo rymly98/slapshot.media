@@ -393,7 +393,7 @@ function renderQuick(){
       if(!last)return `<div class="qrec"><span>Slapshot record starts after opening night</span></div>`;
       const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
       return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})()+
-    `<button type="button" class="qjump" onclick="document.getElementById('tab-games').click();scrollTo(0,0)">Game by Game Details →</button><div class="qf">@SLAPSHOT.MEDIA</div>`;
+    `<div class="qf">@SLAPSHOT.MEDIA</div>`;
 }
 function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
