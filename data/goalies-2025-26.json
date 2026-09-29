@@ -2,6 +2,8 @@
  "ANA": {
   "name": "Lukas Dostal",
   "id": 8480843,
+  "career_gp": 177,
+  "career_gaa": 3.226205,
   "gp": 56,
   "gaa": 3.1029,
   "teams": [
@@ -11,6 +13,8 @@
  "BOS": {
   "name": "Jeremy Swayman",
   "id": 8480280,
+  "career_gp": 245,
+  "career_gaa": 2.607656,
   "gp": 55,
   "gaa": 2.7076,
   "teams": [
@@ -20,6 +24,8 @@
  "BUF": {
   "name": "Ukko-Pekka Luukkonen",
   "id": 8480045,
+  "career_gp": 190,
+  "career_gaa": 2.958426,
   "gp": 35,
   "gaa": 2.5151,
   "teams": [
@@ -29,6 +35,8 @@
  "CAR": {
   "name": "Brandon Bussi",
   "id": 8483548,
+  "career_gp": 39,
+  "career_gaa": 2.465248,
   "gp": 39,
   "gaa": 2.4652,
   "teams": [
@@ -38,6 +46,8 @@
  "CBJ": {
   "name": "Jet Greaves",
   "id": 8482982,
+  "career_gp": 76,
+  "career_gaa": 2.606951,
   "gp": 55,
   "gaa": 2.6007,
   "teams": [
@@ -47,6 +57,8 @@
  "CGY": {
   "name": "Dustin Wolf",
   "id": 8481692,
+  "career_gp": 128,
+  "career_gaa": 2.852082,
   "gp": 57,
   "gaa": 3.0103,
   "teams": [
@@ -56,6 +68,8 @@
  "CHI": {
   "name": "Spencer Knight",
   "id": 8481519,
+  "career_gp": 150,
+  "career_gaa": 2.828614,
   "gp": 55,
   "gaa": 2.824,
   "teams": [
@@ -65,6 +79,8 @@
  "COL": {
   "name": "Mackenzie Blackwood",
   "id": 8478406,
+  "career_gp": 291,
+  "career_gaa": 2.897514,
   "gp": 39,
   "gaa": 2.505,
   "teams": [
@@ -74,6 +90,8 @@
  "DAL": {
   "name": "Jake Oettinger",
   "id": 8479979,
+  "career_gp": 305,
+  "career_gaa": 2.536628,
   "gp": 54,
   "gaa": 2.5922,
   "teams": [
@@ -83,6 +101,8 @@
  "DET": {
   "name": "John Gibson",
   "id": 8476434,
+  "career_gp": 563,
+  "career_gaa": 2.871994,
   "gp": 57,
   "gaa": 2.7159,
   "teams": [
@@ -92,6 +112,8 @@
  "EDM": {
   "name": "Tristan Jarry",
   "id": 8477465,
+  "career_gp": 326,
+  "career_gaa": 2.803784,
   "gp": 33,
   "gaa": 3.3547,
   "teams": [
@@ -102,6 +124,8 @@
  "FLA": {
   "name": "Jacob Markstrom",
   "id": 8474593,
+  "career_gp": 578,
+  "career_gaa": 2.733044,
   "gp": 44,
   "gaa": 3.066,
   "teams": [
@@ -111,6 +135,8 @@
  "LAK": {
   "name": "Darcy Kuemper",
   "id": 8475311,
+  "career_gp": 489,
+  "career_gaa": 2.56513,
   "gp": 50,
   "gaa": 2.784,
   "teams": [
@@ -120,6 +146,8 @@
  "MIN": {
   "name": "Jesper Wallstedt",
   "id": 8482661,
+  "career_gp": 40,
+  "career_gaa": 2.720887,
   "gp": 35,
   "gaa": 2.6144,
   "teams": [
@@ -129,6 +157,8 @@
  "MTL": {
   "name": "Jakub Dobes",
   "id": 8482487,
+  "career_gp": 59,
+  "career_gaa": 2.770286,
   "gp": 43,
   "gaa": 2.7796,
   "teams": [
@@ -138,6 +168,8 @@
  "NJD": {
   "name": "Jake Allen",
   "id": 8474596,
+  "career_gp": 497,
+  "career_gaa": 2.754731,
   "gp": 37,
   "gaa": 2.744,
   "teams": [
@@ -147,6 +179,8 @@
  "NSH": {
   "name": "Juuse Saros",
   "id": 8477424,
+  "career_gp": 467,
+  "career_gaa": 2.74108,
   "gp": 59,
   "gaa": 3.1638,
   "teams": [
@@ -156,6 +190,8 @@
  "NYI": {
   "name": "Ilya Sorokin",
   "id": 8478009,
+  "career_gp": 308,
+  "career_gaa": 2.59591,
   "gp": 55,
   "gaa": 2.6781,
   "teams": [
@@ -165,6 +201,8 @@
  "NYR": {
   "name": "Igor Shesterkin",
   "id": 8478048,
+  "career_gp": 325,
+  "career_gaa": 2.519471,
   "gp": 51,
   "gaa": 2.4998,
   "teams": [
@@ -174,6 +212,8 @@
  "OTT": {
   "name": "Linus Ullmark",
   "id": 8476999,
+  "career_gp": 340,
+  "career_gaa": 2.56937,
   "gp": 49,
   "gaa": 2.7259,
   "teams": [
@@ -183,6 +223,8 @@
  "PHI": {
   "name": "Dan Vladar",
   "id": 8478435,
+  "career_gp": 157,
+  "career_gaa": 2.807917,
   "gp": 52,
   "gaa": 2.4239,
   "teams": [
@@ -192,6 +234,8 @@
  "PIT": {
   "name": "Arturs Silovs",
   "id": 8481668,
+  "career_gp": 58,
+  "career_gaa": 3.091468,
   "gp": 39,
   "gaa": 3.0714,
   "teams": [
@@ -201,6 +245,8 @@
  "SEA": {
   "name": "Joey Daccord",
   "id": 8478916,
+  "career_gp": 173,
+  "career_gaa": 2.833308,
   "gp": 47,
   "gaa": 3.0298,
   "teams": [
@@ -210,6 +256,8 @@
  "SJS": {
   "name": "Yaroslav Askarov",
   "id": 8482137,
+  "career_gp": 63,
+  "career_gaa": 3.475454,
   "gp": 47,
   "gaa": 3.628,
   "teams": [
@@ -219,6 +267,8 @@
  "STL": {
   "name": "Joel Hofer",
   "id": 8480981,
+  "career_gp": 115,
+  "career_gaa": 2.667096,
   "gp": 46,
   "gaa": 2.6061,
   "teams": [
@@ -228,6 +278,8 @@
  "TBL": {
   "name": "Andrei Vasilevskiy",
   "id": 8476883,
+  "career_gp": 598,
+  "career_gaa": 2.49898,
   "gp": 58,
   "gaa": 2.3085,
   "teams": [
@@ -237,6 +289,8 @@
  "TOR": {
   "name": "Sergei Bobrovsky",
   "id": 8475683,
+  "career_gp": 806,
+  "career_gaa": 2.60708,
   "gp": 52,
   "gaa": 3.0701,
   "teams": [
@@ -246,6 +300,8 @@
  "UTA": {
   "name": "Karel Vejmelka",
   "id": 8478872,
+  "career_gp": 262,
+  "career_gaa": 3.102199,
   "gp": 64,
   "gaa": 2.7459,
   "teams": [
@@ -255,6 +311,8 @@
  "VAN": {
   "name": "Kevin Lankinen",
   "id": 8480947,
+  "career_gp": 210,
+  "career_gaa": 3.095305,
   "gp": 47,
   "gaa": 3.7032,
   "teams": [
@@ -264,6 +322,8 @@
  "VGK": {
   "name": "Carter Hart",
   "id": 8479394,
+  "career_gp": 245,
+  "career_gaa": 2.92356,
   "gp": 18,
   "gaa": 2.7065,
   "teams": [
@@ -273,6 +333,8 @@
  "WPG": {
   "name": "Stuart Skinner",
   "id": 8479973,
+  "career_gp": 224,
+  "career_gaa": 2.77187,
   "gp": 50,
   "gaa": 2.9143,
   "teams": [
@@ -283,6 +345,8 @@
  "WSH": {
   "name": "Logan Thompson",
   "id": 8480313,
+  "career_gp": 204,
+  "career_gaa": 2.565734,
   "gp": 58,
   "gaa": 2.4383,
   "teams": [
