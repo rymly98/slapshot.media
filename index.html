@@ -181,6 +181,7 @@ html{scroll-behavior:smooth}
 .rd-t{font-family:var(--display);font-size:22px;text-transform:uppercase;letter-spacing:.03em}
 .rd-s{font-size:13px;color:var(--muted)}
 .rdrop .chartcard,.rdrop .tablewrap{border:0;border-top:1px solid var(--line);border-radius:0 0 10px 10px}
+.rec-top{border:1px solid var(--maroon);background:var(--maroon-soft);border-radius:10px;padding:12px;margin-top:0}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -290,7 +291,7 @@ td{white-space:nowrap}
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
     <div class="head2"><h2>Record</h2><span class="muted">Who picks better?</span></div>
-    <div class="recbox"><div class="recsum"><span class="rt">Slapshot</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span></span></div></div>
+    <div class="qrec rec-top" id="rectop"></div>
     <p class="recblurb">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>Europe</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right.</p>
 
     <div class="tonight">
@@ -393,8 +394,7 @@ function renderQuick(){
     (()=>{const last=[...new Set(R.map(r=>r.d))].sort().pop();
       if(!last)return `<div class="qrec"><span>Slapshot record starts after opening night</span></div>`;
       const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
-      return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})()+
-    `<div class="qf">@SLAPSHOT.MEDIA</div>`;
+      return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})();
 }
 function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
@@ -430,10 +430,12 @@ function renderTonight(){
       <div class="tn-pick me">${me?img(me):'<span class="pe">Toss-up</span>'}</div>${cell("V")}${cell("E")}${cell("B")}</div>`;
   }).join("");
 }
-function renderRecord(){renderTonight();
+function recStrip(){const last=[...new Set(R.map(r=>r.d))].sort().pop();
+  if(!last)return `<span>Slapshot record starts after opening night</span>`;
+  const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
+  return `<span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span>`;}
+function renderRecord(){document.getElementById("rectop").innerHTML=recStrip();renderTonight();
   const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
-  document.getElementById("ry").textContent=last?`${ty.w}–${ty.l}`:"—";
-  document.getElementById("rsea").textContent=`${ts.w}–${ts.l}`;
   document.getElementById("scoreboard").innerHTML=SRC.map(([k,n],i)=>{const t=tally(R,k);
     return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
   const dis=R.filter(r=>r.s&&["V","E","B"].every(k=>r[k]&&r[k]!==r.s)).length;
