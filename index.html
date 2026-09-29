@@ -169,6 +169,8 @@ html{scroll-behavior:smooth}
 .tn-pick .pe{font-family:var(--num);font-weight:700;font-size:12px;color:var(--muted);text-transform:uppercase}
 .tn-key{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:4px}
 .tn-key .dot{width:10px;height:10px;border-radius:3px;border:2px solid #E0475B;display:inline-block}
+.card .tag{font-size:12px;color:var(--muted);line-height:1.2;margin-bottom:4px;min-height:1.2em}
+.fine{text-align:center;font-size:12px;color:var(--muted);margin:6px 0 0}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -280,8 +282,8 @@ td{white-space:nowrap}
   </section>
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
-    <div class="head2"><h2>Record</h2><span class="muted">Every pick tracked vs our friends, win or lose</span></div>
-    <p class="recblurb">We track every Slapshot pick against our friends in <b>Vegas</b>, <b>Europe</b> and <b>Boston</b>. They run their own models, we run ours. Their pick is the team they have as the favorite. Results are added every morning.</p>
+    <div class="head2"><h2>Record</h2><span class="muted">Who picks better?</span></div>
+    <p class="recblurb">Every night we pick a winner for every game. So do our friends in <b>Vegas</b>, <b>Europe</b> and <b>Boston</b>. Next morning, we see who got it right.</p>
 
     <div class="tonight">
       <div class="tn-h"><span class="tn-t">Tonight's picks</span><span class="tn-s">Us vs our friends</span></div>
@@ -334,6 +336,7 @@ td{white-space:nowrap}
       </div>
       </div>
   </section>
+  <p class="fine">For entertainment only. Not affiliated with the NHL or any team.</p>
 </div>
 
 <script>
@@ -408,6 +411,7 @@ function renderGames(){renderQuick();document.querySelectorAll("[data-day]").for
    {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}
    s = Slapshot pick, V/E/B = each book's favorite (null = pick'em, no pick), w = winner, f = final score */
 const R=[];
+const TAG={s:"Just the math",V:"Likes the favorite",E:"Watches at 1am",B:"Has opinions"};
 const SRC=[["s","Slapshot","#e66767"],["V","Vegas","#3987e5"],["E","Europe","#199e70"],["B","Boston","#c98500"]];
 function tally(rows,k){let w=0,l=0;for(const r of rows){if(!r[k])continue;r[k]===r.w?w++:l++;}return{w,l,p:w+l?w/(w+l)*100:null};}
 function renderTonight(){
@@ -427,7 +431,7 @@ function renderRecord(){renderTonight();
   document.getElementById("ry").textContent=last?`${ty.w}–${ty.l}`:"—";
   document.getElementById("rsea").textContent=`${ts.w}–${ts.l}`;
   document.getElementById("scoreboard").innerHTML=SRC.map(([k,n],i)=>{const t=tally(R,k);
-    return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
+    return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="tag">${TAG[k]}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
   const dis=R.filter(r=>r.s&&["V","E","B"].every(k=>r[k]&&r[k]!==r.s)).length;
   document.getElementById("disagree").textContent=`Games where Slapshot went against all our friends: ${dis}`;
   const cell=(r,k)=>!r[k]?`<td class="muted">Pick'em</td>`:`<td class="${r[k]===r.w?"w":"l"}">${r[k]}</td>`;
