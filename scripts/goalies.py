@@ -14,7 +14,8 @@ for team,name in req["starters"].items():
     gp=sum(r.get("gamesPlayed",0) for r in rows)
     ga=sum(r.get("goalsAgainst",0) for r in rows)
     gaa=(sum(r.get("goalsAgainstAvg",0)*r.get("gamesPlayed",0) for r in rows)/gp) if gp else None
-    out[team]={"name":name,"id":pid,"gp":gp,"gaa":round(gaa,4) if gaa else None,
+    ct=land.get("careerTotals",{}).get("regularSeason",{})
+    out[team]={"name":name,"id":pid,"career_gp":ct.get("gamesPlayed"),"career_gaa":ct.get("goalsAgainstAvg"),"gp":gp,"gaa":round(gaa,4) if gaa else None,
                "teams":[r.get("teamName",{}).get("default") for r in rows]}
 json.dump(out,open("data/goalies-2025-26.json","w"),indent=1)
 print(json.dumps(out)[:3000])
