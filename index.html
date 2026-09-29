@@ -151,6 +151,24 @@ html{scroll-behavior:smooth}
 .dr span:first-child{white-space:nowrap;min-width:92px;font-family:var(--num);font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#C9CBD0}
 .dr.on span{color:#fff}.dr.on span:first-child{color:#E0475B}
 .about-line{margin:4px 0 0;text-align:center;color:#E6E7EA;font-size:16px}
+.tonight{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 10px;display:grid;gap:6px}
+.tn-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.tn-t{white-space:nowrap;font-family:var(--display);font-size:21px;text-transform:uppercase;letter-spacing:.03em}
+.tn-s{font-size:13px;color:var(--muted);white-space:nowrap}
+@media (max-width:400px){.tn-cols span{font-size:10px!important;letter-spacing:0!important}.tn-pick .pe{font-size:10px!important}.tn-s{font-size:12px}}
+.tn-row{display:grid;grid-template-columns:76px repeat(4,minmax(0,1fr));align-items:center;gap:5px}
+.tn-row>*{min-width:0}
+.tn-cols span{font-family:var(--num);font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center}
+.tn-cols span:nth-child(2){color:#E0475B}
+.tn-game{display:flex;align-items:center;gap:3px;font-family:var(--num);font-weight:700;font-size:12px;color:var(--muted)}
+.tn-game img{width:28px;height:28px;object-fit:contain}
+.tn-pick{display:flex;justify-content:center;align-items:center;height:46px;border-radius:8px;background:var(--panel-2);border:1px solid var(--line)}
+.tn-pick img{width:32px;height:32px;object-fit:contain}
+.tn-pick.me{background:var(--maroon-soft);border-color:var(--maroon)}
+.tn-pick.beef{border:2px solid #E0475B;box-shadow:0 0 0 2px rgba(224,71,91,.15)}
+.tn-pick .pe{font-family:var(--num);font-weight:700;font-size:12px;color:var(--muted);text-transform:uppercase}
+.tn-key{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;margin-top:4px}
+.tn-key .dot{width:10px;height:10px;border-radius:3px;border:2px solid #E0475B;display:inline-block}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -264,7 +282,13 @@ td{white-space:nowrap}
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
     <div class="head2"><h2>Record</h2><span class="muted">Every pick tracked vs our friends, win or lose</span></div>
     <p class="recblurb">We track every Slapshot pick against our friends in <b>Vegas</b>, <b>Europe</b> and <b>Boston</b>. They run their own models, we run ours. Their pick is the team they have as the favorite. Results are added every morning.</p>
-    <div class="recbox"><div class="recsum"><span class="rt">Slapshot</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span></span></div></div>
+
+    <div class="tonight">
+      <div class="tn-h"><span class="tn-t">Tonight's picks</span><span class="tn-s">Us vs our friends</span></div>
+      <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>Europe</span><span>Boston</span></div>
+      <div id="tonight"></div>
+      <div class="tn-key"><i class="dot"></i> a friend disagrees with us</div>
+    </div>    <div class="recbox"><div class="recsum"><span class="rt">Slapshot</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span></span></div></div>
     <div class="scoreboard" id="scoreboard"></div>
     <div class="chartcard">
       <div class="head2"><h2>Win % over the season</h2><span class="muted" id="chartnote">Slapshot vs our friends</span></div>
@@ -386,7 +410,19 @@ function renderGames(){renderQuick();document.querySelectorAll("[data-day]").for
 const R=[];
 const SRC=[["s","Slapshot","#e66767"],["V","Vegas","#3987e5"],["E","Europe","#199e70"],["B","Boston","#c98500"]];
 function tally(rows,k){let w=0,l=0;for(const r of rows){if(!r[k])continue;r[k]===r.w?w++:l++;}return{w,l,p:w+l?w/(w+l)*100:null};}
-function renderRecord(){
+function renderTonight(){
+  const el=document.getElementById("tonight"); if(!el)return;
+  const img=t=>`<img src="tl/${t}.png" alt="${t}">`;
+  el.innerHTML=days.tue.map(g=>{
+    const me=g.hp===g.ap?null:(g.hp>g.ap?g.h:g.a);
+    const cell=(k)=>{const x=g.b&&g.b[k]; if(!x)return `<div class="tn-pick"><span class="pe">—</span></div>`;
+      if(x[0]==="Pick'em")return `<div class="tn-pick"><span class="pe">Pick'em</span></div>`;
+      return `<div class="tn-pick${me&&x[0]!==me?" beef":""}">${img(x[0])}</div>`;};
+    return `<div class="tn-row"><div class="tn-game">${img(g.a)}@${img(g.h)}</div>
+      <div class="tn-pick me">${me?img(me):'<span class="pe">Toss-up</span>'}</div>${cell("V")}${cell("E")}${cell("B")}</div>`;
+  }).join("");
+}
+function renderRecord(){renderTonight();
   const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
   document.getElementById("ry").textContent=last?`${ty.w}–${ty.l}`:"—";
   document.getElementById("rsea").textContent=`${ts.w}–${ts.l}`;
