@@ -171,6 +171,15 @@ html{scroll-behavior:smooth}
 .tn-key .dot{width:10px;height:10px;border-radius:3px;border:2px solid #E0475B;display:inline-block}
 .card .tag{font-size:12px;color:var(--muted);line-height:1.2;margin-bottom:4px;min-height:1.2em}
 .fine{text-align:center;font-size:12px;color:var(--muted);margin:6px 0 0}
+.rdrop{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.rdrop>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;flex-wrap:wrap}
+.rdrop>summary::-webkit-details-marker{display:none}
+.rdrop>summary::after{content:"▾";color:var(--muted);font-size:16px;transition:transform .2s;margin-left:auto}
+.rdrop[open]>summary::after{transform:rotate(180deg)}
+.rdrop>summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.rd-t{font-family:var(--display);font-size:22px;text-transform:uppercase;letter-spacing:.03em}
+.rd-s{font-size:13px;color:var(--muted)}
+.rdrop .chartcard,.rdrop .tablewrap{border:0;border-top:1px solid var(--line);border-radius:0 0 10px 10px}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -289,18 +298,22 @@ td{white-space:nowrap}
       <div id="tonight"></div>
       <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
     </div>    <div class="scoreboard" id="scoreboard"></div>
-    <div class="chartcard">
-      <div class="head2"><h2>Win % over the season</h2><span class="muted" id="chartnote">Slapshot vs our friends</span></div>
-      <div class="legend" id="legend"></div>
-      <div class="chartwrap" id="chart"></div>
-    </div>
-    <div class="head2"><h2>Game log</h2><span class="muted" id="disagree">Games where Slapshot went against all our friends: 0</span></div>
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>Europe</th><th>Boston</th><th>Final</th></tr></thead>
-        <tbody id="log"></tbody>
-      </table>
-    </div>
+    <details class="rdrop" id="chartdrop">
+      <summary><span class="rd-t">Win % over the season</span><span class="rd-s" id="chartnote">Slapshot vs our friends</span></summary>
+      <div class="chartcard">
+        <div class="legend" id="legend"></div>
+        <div class="chartwrap" id="chart"></div>
+      </div>
+    </details>
+    <details class="rdrop">
+      <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Games where Slapshot went against all our friends: 0</span></summary>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>Europe</th><th>Boston</th><th>Final</th></tr></thead>
+          <tbody id="log"></tbody>
+        </table>
+      </div>
+    </details>
   </section>
 
   <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
@@ -465,6 +478,7 @@ fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   document.getElementById("daylabel").textContent=d.label||"";
   renderGames();renderRecord();
 }).catch(()=>{document.querySelector("[data-day]").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();});
+document.getElementById("chartdrop").addEventListener("toggle",e=>{if(e.target.open)drawChart();});
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
 const tabs=[...document.querySelectorAll(".tab")];
 tabs.forEach(t=>t.addEventListener("click",()=>{
