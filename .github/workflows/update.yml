@@ -41,17 +41,24 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then MODE="${{ inputs.mode }}";
           elif [ "${{ github.event_name }}" = "push" ]; then MODE=morning;
           else MODE=morning; fi
-          python scripts/update.py "$MODE" | tee result.txt
+          python scripts/update.py "$MODE" > result.txt 2>&1 || echo "FAILED: $(tail -1 result.txt)" >> result.txt; cat result.txt
 
       - name: Publish
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet data.json; then echo "Nothing changed."; exit 0; fi
+          python - <<'PY'
+          import json, datetime, zoneinfo, os
+          r = open("result.txt").read().strip() if os.path.exists("result.txt") else "FAILED: update script did not run"
+          now = datetime.datetime.now(zoneinfo.ZoneInfo("America/New_York"))
+          json.dump({"date": now.strftime("%Y-%m-%d"), "time": now.strftime("%H:%M ET"), "event": "${{ github.event_name }}", "result": r},
+                    open("data/last-run.json", "w"), indent=1)
+          PY
           git config user.name "Slapshot bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json
-          git commit -m "Site update: $(cat result.txt)"
+          git add data.json data/last-run.json
+          git commit -m "Site update: $(cat result.txt 2>/dev/null || echo FAILED)"
           git pull --rebase -q origin main
           git push
           test "$(git rev-parse HEAD)" = "$(git ls-remote origin refs/heads/main | cut -f1)"
@@ -60,6 +67,7 @@ jobs:
           echo "Uploaded to GitHub."
 
       - name: Flag failures
+        if: always()
         run: |
           cat result.txt
           if grep -q FAILED result.txt; then echo "::error::$(cat result.txt)"; exit 1; fi
