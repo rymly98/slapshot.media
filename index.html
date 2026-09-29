@@ -182,6 +182,27 @@ html{scroll-behavior:smooth}
 .rd-s{font-size:13px;color:var(--muted)}
 .rdrop .chartcard,.rdrop .tablewrap{border:0;border-top:1px solid var(--line);border-radius:0 0 10px 10px}
 .rec-top{border:1px solid var(--maroon);background:var(--maroon-soft);border-radius:10px;padding:12px;margin-top:0}
+.lastnight{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:6px}
+.ln-h{display:flex;justify-content:space-between;align-items:baseline}
+.ln-t{font-family:var(--display);font-size:22px;text-transform:uppercase;letter-spacing:.03em}
+.ln-s{font-size:13px;color:var(--muted)}
+.ln-row{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:10px;padding:6px 0;border-top:1px solid var(--line)}
+.ln-g{display:flex;align-items:center;gap:4px;font-family:var(--num);font-weight:700;color:var(--muted);font-size:13px}
+.ln-g img,.ln-p img{width:30px;height:30px;object-fit:contain}
+.ln-f{font-family:var(--num);font-weight:700;font-size:15px;color:#E6E7EA;text-align:right}
+.ln-p{display:flex;align-items:center;gap:6px;justify-content:flex-end}
+.ln-r{font-family:var(--display);font-size:18px;width:26px;text-align:center}
+.ln-r.w{color:#0ca30c}.ln-r.l{color:#E0475B}
+.ln-empty{color:var(--muted);font-size:14px;padding:4px 0}
+.race{display:grid;gap:10px;padding:14px 16px;border-top:1px solid var(--line)}
+.rc{display:grid;grid-template-columns:92px 1fr 96px;align-items:center;gap:10px}
+.rc-n{font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.03em}
+.rc-b{height:18px;background:var(--panel-2);border-radius:4px;overflow:hidden}
+.rc-b span{display:block;height:100%;border-radius:4px}
+.rc-v{font-family:var(--num);font-weight:700;font-size:16px;text-align:right;font-variant-numeric:tabular-nums}
+.rc-v small{color:var(--muted);font-weight:600;margin-left:4px}
+.rc.rc-me .rc-n{color:#E0475B}
+.rdrop .tonight{border:0;border-top:1px solid var(--line);border-radius:0 0 10px 10px}
 .recblurb{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .recblurb b{color:#fff}
 @media (min-width:620px){.qr{grid-template-columns:64px 44px 1fr 44px 64px;gap:12px}.qr img{width:44px;height:44px}.qr .p{font-size:24px}.qr .qb{height:22px}}
@@ -292,14 +313,28 @@ td{white-space:nowrap}
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
     <div class="head2"><h2>Record</h2><span class="muted">Who picks better?</span></div>
     <div class="qrec rec-top" id="rectop"></div>
-    <p class="recblurb">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>Europe</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right.</p>
 
-    <div class="tonight">
-      <div class="tn-h"><span class="tn-t">Tonight's picks</span><span class="tn-s">Us vs our friends</span></div>
-      <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>Europe</span><span>Boston</span></div>
-      <div id="tonight"></div>
-      <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
-    </div>    <div class="scoreboard" id="scoreboard"></div>
+    <div class="lastnight">
+      <div class="ln-h"><span class="ln-t">Last night</span><span class="ln-s" id="lndate"></span></div>
+      <div id="lastnight"></div>
+    </div>
+
+    <p class="recblurb">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>Europe</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right. Check the dropdowns below for the full race.</p>
+
+    <details class="rdrop">
+      <summary><span class="rd-t">The race</span><span class="rd-s">Slapshot vs our friends, win %</span></summary>
+      <div class="race" id="race"></div>
+    </details>
+
+    <details class="rdrop">
+      <summary><span class="rd-t">Tonight's picks</span><span class="rd-s">Us vs our friends</span></summary>
+      <div class="tonight">
+        <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>Europe</span><span>Boston</span></div>
+        <div id="tonight"></div>
+        <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
+      </div>
+    </details>
+
     <details class="rdrop" id="chartdrop">
       <summary><span class="rd-t">Win % over the season</span><span class="rd-s" id="chartnote">Slapshot vs our friends</span></summary>
       <div class="chartcard">
@@ -434,9 +469,24 @@ function recStrip(){const last=[...new Set(R.map(r=>r.d))].sort().pop();
   if(!last)return `<span>Slapshot record starts after opening night</span>`;
   const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
   return `<span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span>`;}
-function renderRecord(){document.getElementById("rectop").innerHTML=recStrip();renderTonight();
+function renderLastNight(){
+  const el=document.getElementById("lastnight"); if(!el)return;
+  const last=[...new Set(R.map(r=>r.d))].sort().pop();
+  if(!last){el.innerHTML='<div class="ln-empty">First results show up tomorrow morning.</div>';return;}
+  const d=new Date(last+"T12:00:00");document.getElementById("lndate").textContent=d.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+  const img=t=>`<img src="tl/${t}.png" alt="${t}">`;
+  el.innerHTML=R.filter(r=>r.d===last).map(r=>{const ok=r.s?(r.s===r.w):null;
+    return `<div class="ln-row"><div class="ln-g">${img(r.a)}@${img(r.h)}</div><div class="ln-f">${r.f}</div>
+      <div class="ln-p">${r.s?img(r.s):'<span class="muted">Tie</span>'}</div><div class="ln-r ${ok===null?"":ok?"w":"l"}">${ok===null?"–":ok?"✓":"✗"}</div></div>`}).join("");
+}
+function renderRace(){
+  const el=document.getElementById("race"); if(!el)return;
+  el.innerHTML=SRC.map(([k,n,c],i)=>{const t=tally(R,k),p=t.p;
+    return `<div class="rc${i?"":" rc-me"}"><span class="rc-n">${n}</span><div class="rc-b"><span style="width:${p==null?0:p}%;background:${c}"></span></div><span class="rc-v">${p==null?"—":p.toFixed(1)+"%"}<small>${t.w}–${t.l}</small></span></div>`}).join("");
+}
+function renderRecord(){renderLastNight();renderRace();document.getElementById("rectop").innerHTML=recStrip();renderTonight();
   const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
-  document.getElementById("scoreboard").innerHTML=SRC.map(([k,n],i)=>{const t=tally(R,k);
+  (document.getElementById("scoreboard")||{}).innerHTML=SRC.map(([k,n],i)=>{const t=tally(R,k);
     return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
   const dis=R.filter(r=>r.s&&["V","E","B"].every(k=>r[k]&&r[k]!==r.s)).length;
   document.getElementById("disagree").textContent=`Games where Slapshot went against all our friends: ${dis}`;
