@@ -260,9 +260,6 @@ td{white-space:nowrap}
 </head>
 <body>
 <div class="wrap">
-  <header class="brand">
-    <h1>Slapshot Media</h1>
-  </header>
 
   <div class="tabs" role="tablist" aria-label="Sections">
     <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>
@@ -289,7 +286,7 @@ td{white-space:nowrap}
       <div class="tn-h"><span class="tn-t">Tonight's picks</span><span class="tn-s">Us vs our friends</span></div>
       <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>Europe</span><span>Boston</span></div>
       <div id="tonight"></div>
-      <div class="tn-key"><i class="dot"></i> a friend disagrees with us</div>
+      <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
     </div>    <div class="recbox"><div class="recsum"><span class="rt">Slapshot</span><span class="rs"><span><small>Yesterday</small><span id="ry">—</span></span><span><small>Season</small><span id="rsea">0–0</span></span></span></div></div>
     <div class="scoreboard" id="scoreboard"></div>
     <div class="chartcard">
@@ -330,13 +327,12 @@ td{white-space:nowrap}
     </div>
     <p class="follow">Odds posted daily · <b>@SLAPSHOT.MEDIA</b></p>
     <div class="contact">
-      <span>Questions, ideas, comments?</span>
       <div class="cbtns">
       <a href="https://ig.me/m/slapshot.media" target="_blank" rel="noopener">DM us on Instagram</a>
       </div>
       </div>
   </section>
-  <p class="fine">For entertainment only. Not affiliated with the NHL or any team.</p>
+  <p class="fine">Not affiliated with the NHL.</p>
 </div>
 
 <script>
@@ -419,7 +415,7 @@ function renderTonight(){
   el.innerHTML=days.tue.map(g=>{
     const me=g.hp===g.ap?null:(g.hp>g.ap?g.h:g.a);
     const cell=(k)=>{const x=g.b&&g.b[k]; if(!x)return `<div class="tn-pick"><span class="pe">—</span></div>`;
-      if(x[0]==="Pick'em")return `<div class="tn-pick"><span class="pe">Pick'em</span></div>`;
+      if(x[0]==="Pick'em")return `<div class="tn-pick"><span class="pe">Tie</span></div>`;
       return `<div class="tn-pick${me&&x[0]!==me?" beef":""}">${img(x[0])}</div>`;};
     return `<div class="tn-row"><div class="tn-game">${img(g.a)}@${img(g.h)}</div>
       <div class="tn-pick me">${me?img(me):'<span class="pe">Toss-up</span>'}</div>${cell("V")}${cell("E")}${cell("B")}</div>`;
@@ -433,7 +429,7 @@ function renderRecord(){renderTonight();
     return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
   const dis=R.filter(r=>r.s&&["V","E","B"].every(k=>r[k]&&r[k]!==r.s)).length;
   document.getElementById("disagree").textContent=`Games where Slapshot went against all our friends: ${dis}`;
-  const cell=(r,k)=>!r[k]?`<td class="muted">Pick'em</td>`:`<td class="${r[k]===r.w?"w":"l"}">${r[k]}</td>`;
+  const cell=(r,k)=>!r[k]?`<td class="muted">Tie</td>`:`<td class="${r[k]===r.w?"w":"l"}">${r[k]}</td>`;
   document.getElementById("log").innerHTML=R.length?[...R].reverse().map(r=>`<tr><td>${r.d.slice(5).replace("-","/")}</td><td>${r.a} @ ${r.h}</td>${cell(r,"s")}${cell(r,"V")}${cell(r,"E")}${cell(r,"B")}<td>${r.f}</td></tr>`).join("")
     :`<tr class="empty"><td colspan="7">Season starts Tuesday. Results are logged the morning after each game.</td></tr>`;
   document.getElementById("legend").innerHTML=SRC.map(([k,n,c])=>`<span><i style="background:${c}"></i>${n}</span>`).join("");
