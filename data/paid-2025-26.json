@@ -1,0 +1,92 @@
+{
+ "Leo Carlsson": {
+  "playerId": 8484153,
+  "teamAbbrevs": null,
+  "gamesPlayed": 70,
+  "goals": 29,
+  "assists": 38,
+  "points": 67,
+  "plusMinus": 4
+ },
+ "Kirill Kaprizov": {
+  "playerId": 8478864,
+  "teamAbbrevs": null,
+  "gamesPlayed": 78,
+  "goals": 45,
+  "assists": 44,
+  "points": 89,
+  "plusMinus": 10
+ },
+ "Connor Bedard": {
+  "playerId": 8484144,
+  "teamAbbrevs": null,
+  "gamesPlayed": 69,
+  "goals": 30,
+  "assists": 45,
+  "points": 75,
+  "plusMinus": -18
+ },
+ "Leon Draisaitl": {
+  "playerId": 8477934,
+  "teamAbbrevs": null,
+  "gamesPlayed": 65,
+  "goals": 35,
+  "assists": 62,
+  "points": 97,
+  "plusMinus": 13
+ },
+ "Adam Fantilli": {
+  "playerId": 8484166,
+  "teamAbbrevs": null,
+  "gamesPlayed": 82,
+  "goals": 24,
+  "assists": 35,
+  "points": 59,
+  "plusMinus": -13
+ },
+ "Jack Eichel": {
+  "playerId": 8478403,
+  "teamAbbrevs": null,
+  "gamesPlayed": 74,
+  "goals": 27,
+  "assists": 63,
+  "points": 90,
+  "plusMinus": 23
+ },
+ "Cutter Gauthier": {
+  "playerId": 8483445,
+  "teamAbbrevs": null,
+  "gamesPlayed": 76,
+  "goals": 41,
+  "assists": 28,
+  "points": 69,
+  "plusMinus": -2
+ },
+ "Auston Matthews": {
+  "playerId": 8479318,
+  "teamAbbrevs": null,
+  "gamesPlayed": 60,
+  "goals": 27,
+  "assists": 26,
+  "points": 53,
+  "plusMinus": -4
+ },
+ "Nathan MacKinnon": {
+  "playerId": 8477492,
+  "teamAbbrevs": null,
+  "gamesPlayed": 80,
+  "goals": 53,
+  "assists": 74,
+  "points": 127,
+  "plusMinus": 57
+ },
+ "Connor McDavid": {
+  "playerId": 8478402,
+  "teamAbbrevs": null,
+  "gamesPlayed": 82,
+  "goals": 48,
+  "assists": 90,
+  "points": 138,
+  "plusMinus": 17
+ }
+}
