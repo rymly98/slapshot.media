@@ -1,0 +1,576 @@
+{
+ "stats": {
+  "WSH": {
+   "gamesPlayed": 82,
+   "wins": 43,
+   "losses": 30,
+   "otLosses": 9,
+   "points": 95,
+   "pointPct": 0.57926,
+   "goalsForPerGame": 3.18292,
+   "goalsAgainstPerGame": 2.90243,
+   "powerPlayPct": 0.178423,
+   "penaltyKillPct": 0.800797
+  },
+  "NJD": {
+   "gamesPlayed": 82,
+   "wins": 42,
+   "losses": 37,
+   "otLosses": 3,
+   "points": 87,
+   "pointPct": 0.53048,
+   "goalsForPerGame": 2.75609,
+   "goalsAgainstPerGame": 3.08536,
+   "powerPlayPct": 0.219512,
+   "penaltyKillPct": 0.79327
+  },
+  "VGK": {
+   "gamesPlayed": 82,
+   "wins": 39,
+   "losses": 26,
+   "otLosses": 17,
+   "points": 95,
+   "pointPct": 0.57926,
+   "goalsForPerGame": 3.21951,
+   "goalsAgainstPerGame": 2.95121,
+   "powerPlayPct": 0.245762,
+   "penaltyKillPct": 0.813726
+  },
+  "VAN": {
+   "gamesPlayed": 82,
+   "wins": 25,
+   "losses": 49,
+   "otLosses": 8,
+   "points": 58,
+   "pointPct": 0.35365,
+   "goalsForPerGame": 2.56097,
+   "goalsAgainstPerGame": 3.82926,
+   "powerPlayPct": 0.217948,
+   "penaltyKillPct": 0.714913
+  },
+  "ANA": {
+   "gamesPlayed": 82,
+   "wins": 43,
+   "losses": 33,
+   "otLosses": 6,
+   "points": 92,
+   "pointPct": 0.56097,
+   "goalsForPerGame": 3.2317,
+   "goalsAgainstPerGame": 3.51219,
+   "powerPlayPct": 0.185606,
+   "penaltyKillPct": 0.763566
+  },
+  "STL": {
+   "gamesPlayed": 82,
+   "wins": 37,
+   "losses": 33,
+   "otLosses": 12,
+   "points": 86,
+   "pointPct": 0.52439,
+   "goalsForPerGame": 2.80487,
+   "goalsAgainstPerGame": 3.09756,
+   "powerPlayPct": 0.175925,
+   "penaltyKillPct": 0.766817
+  },
+  "DAL": {
+   "gamesPlayed": 82,
+   "wins": 50,
+   "losses": 20,
+   "otLosses": 12,
+   "points": 112,
+   "pointPct": 0.68292,
+   "goalsForPerGame": 3.32926,
+   "goalsAgainstPerGame": 2.70731,
+   "powerPlayPct": 0.28629,
+   "penaltyKillPct": 0.803213
+  },
+  "DET": {
+   "gamesPlayed": 82,
+   "wins": 41,
+   "losses": 31,
+   "otLosses": 10,
+   "points": 92,
+   "pointPct": 0.56097,
+   "goalsForPerGame": 2.91463,
+   "goalsAgainstPerGame": 3.09756,
+   "powerPlayPct": 0.225806,
+   "penaltyKillPct": 0.771429
+  },
+  "OTT": {
+   "gamesPlayed": 82,
+   "wins": 44,
+   "losses": 27,
+   "otLosses": 11,
+   "points": 99,
+   "pointPct": 0.60365,
+   "goalsForPerGame": 3.35365,
+   "goalsAgainstPerGame": 2.9878,
+   "powerPlayPct": 0.239543,
+   "penaltyKillPct": 0.757447
+  },
+  "WPG": {
+   "gamesPlayed": 82,
+   "wins": 35,
+   "losses": 35,
+   "otLosses": 12,
+   "points": 82,
+   "pointPct": 0.5,
+   "goalsForPerGame": 2.79268,
+   "goalsAgainstPerGame": 3.12195,
+   "powerPlayPct": 0.185022,
+   "penaltyKillPct": 0.776316
+  },
+  "COL": {
+   "gamesPlayed": 82,
+   "wins": 55,
+   "losses": 16,
+   "otLosses": 11,
+   "points": 121,
+   "pointPct": 0.7378,
+   "goalsForPerGame": 3.63414,
+   "goalsAgainstPerGame": 2.40243,
+   "powerPlayPct": 0.171102,
+   "penaltyKillPct": 0.846154
+  },
+  "NSH": {
+   "gamesPlayed": 82,
+   "wins": 38,
+   "losses": 34,
+   "otLosses": 10,
+   "points": 86,
+   "pointPct": 0.52439,
+   "goalsForPerGame": 2.95121,
+   "goalsAgainstPerGame": 3.25609,
+   "powerPlayPct": 0.231092,
+   "penaltyKillPct": 0.817074
+  },
+  "BOS": {
+   "gamesPlayed": 82,
+   "wins": 45,
+   "losses": 27,
+   "otLosses": 10,
+   "points": 100,
+   "pointPct": 0.60975,
+   "goalsForPerGame": 3.26829,
+   "goalsAgainstPerGame": 3.01219,
+   "powerPlayPct": 0.234042,
+   "penaltyKillPct": 0.769785
+  },
+  "CBJ": {
+   "gamesPlayed": 82,
+   "wins": 40,
+   "losses": 30,
+   "otLosses": 12,
+   "points": 92,
+   "pointPct": 0.56097,
+   "goalsForPerGame": 3.0,
+   "goalsAgainstPerGame": 3.06097,
+   "powerPlayPct": 0.189054,
+   "penaltyKillPct": 0.760181
+  },
+  "CHI": {
+   "gamesPlayed": 82,
+   "wins": 29,
+   "losses": 39,
+   "otLosses": 14,
+   "points": 72,
+   "pointPct": 0.43902,
+   "goalsForPerGame": 2.56097,
+   "goalsAgainstPerGame": 3.29268,
+   "powerPlayPct": 0.169491,
+   "penaltyKillPct": 0.836135
+  },
+  "CGY": {
+   "gamesPlayed": 82,
+   "wins": 34,
+   "losses": 39,
+   "otLosses": 9,
+   "points": 77,
+   "pointPct": 0.46951,
+   "goalsForPerGame": 2.53658,
+   "goalsAgainstPerGame": 3.12195,
+   "powerPlayPct": 0.161572,
+   "penaltyKillPct": 0.804082
+  },
+  "TBL": {
+   "gamesPlayed": 82,
+   "wins": 50,
+   "losses": 26,
+   "otLosses": 6,
+   "points": 106,
+   "pointPct": 0.64634,
+   "goalsForPerGame": 3.4878,
+   "goalsAgainstPerGame": 2.79268,
+   "powerPlayPct": 0.207317,
+   "penaltyKillPct": 0.825582
+  },
+  "PIT": {
+   "gamesPlayed": 82,
+   "wins": 41,
+   "losses": 25,
+   "otLosses": 16,
+   "points": 98,
+   "pointPct": 0.59756,
+   "goalsForPerGame": 3.53658,
+   "goalsAgainstPerGame": 3.14634,
+   "powerPlayPct": 0.241379,
+   "penaltyKillPct": 0.814346
+  },
+  "SJS": {
+   "gamesPlayed": 82,
+   "wins": 39,
+   "losses": 35,
+   "otLosses": 8,
+   "points": 86,
+   "pointPct": 0.52439,
+   "goalsForPerGame": 3.03658,
+   "goalsAgainstPerGame": 3.53658,
+   "powerPlayPct": 0.211764,
+   "penaltyKillPct": 0.764228
+  },
+  "MTL": {
+   "gamesPlayed": 82,
+   "wins": 48,
+   "losses": 24,
+   "otLosses": 10,
+   "points": 106,
+   "pointPct": 0.64634,
+   "goalsForPerGame": 3.40243,
+   "goalsAgainstPerGame": 3.06097,
+   "powerPlayPct": 0.231404,
+   "penaltyKillPct": 0.782259
+  },
+  "NYR": {
+   "gamesPlayed": 82,
+   "wins": 34,
+   "losses": 39,
+   "otLosses": 9,
+   "points": 77,
+   "pointPct": 0.46951,
+   "goalsForPerGame": 2.86585,
+   "goalsAgainstPerGame": 3.03658,
+   "powerPlayPct": 0.246511,
+   "penaltyKillPct": 0.799197
+  },
+  "NYI": {
+   "gamesPlayed": 82,
+   "wins": 43,
+   "losses": 34,
+   "otLosses": 5,
+   "points": 91,
+   "pointPct": 0.55487,
+   "goalsForPerGame": 2.79268,
+   "goalsAgainstPerGame": 2.87804,
+   "powerPlayPct": 0.165289,
+   "penaltyKillPct": 0.808412
+  },
+  "LAK": {
+   "gamesPlayed": 82,
+   "wins": 35,
+   "losses": 27,
+   "otLosses": 20,
+   "points": 90,
+   "pointPct": 0.54878,
+   "goalsForPerGame": 2.68292,
+   "goalsAgainstPerGame": 2.90243,
+   "powerPlayPct": 0.169642,
+   "penaltyKillPct": 0.745834
+  },
+  "SEA": {
+   "gamesPlayed": 82,
+   "wins": 34,
+   "losses": 37,
+   "otLosses": 11,
+   "points": 79,
+   "pointPct": 0.4817,
+   "goalsForPerGame": 2.7317,
+   "goalsAgainstPerGame": 3.13414,
+   "powerPlayPct": 0.195454,
+   "penaltyKillPct": 0.722223
+  },
+  "UTA": {
+   "gamesPlayed": 82,
+   "wins": 43,
+   "losses": 33,
+   "otLosses": 6,
+   "points": 92,
+   "pointPct": 0.56097,
+   "goalsForPerGame": 3.26829,
+   "goalsAgainstPerGame": 2.92682,
+   "powerPlayPct": 0.2,
+   "penaltyKillPct": 0.781377
+  },
+  "MIN": {
+   "gamesPlayed": 82,
+   "wins": 46,
+   "losses": 24,
+   "otLosses": 12,
+   "points": 104,
+   "pointPct": 0.63414,
+   "goalsForPerGame": 3.26829,
+   "goalsAgainstPerGame": 2.86585,
+   "powerPlayPct": 0.251937,
+   "penaltyKillPct": 0.798123
+  },
+  "BUF": {
+   "gamesPlayed": 82,
+   "wins": 50,
+   "losses": 23,
+   "otLosses": 9,
+   "points": 109,
+   "pointPct": 0.66463,
+   "goalsForPerGame": 3.45121,
+   "goalsAgainstPerGame": 2.92682,
+   "powerPlayPct": 0.195121,
+   "penaltyKillPct": 0.818966
+  },
+  "CAR": {
+   "gamesPlayed": 82,
+   "wins": 53,
+   "losses": 22,
+   "otLosses": 7,
+   "points": 113,
+   "pointPct": 0.68902,
+   "goalsForPerGame": 3.54878,
+   "goalsAgainstPerGame": 2.87804,
+   "powerPlayPct": 0.248962,
+   "penaltyKillPct": 0.805195
+  },
+  "PHI": {
+   "gamesPlayed": 82,
+   "wins": 43,
+   "losses": 27,
+   "otLosses": 12,
+   "points": 98,
+   "pointPct": 0.59756,
+   "goalsForPerGame": 2.92682,
+   "goalsAgainstPerGame": 2.91463,
+   "powerPlayPct": 0.157446,
+   "penaltyKillPct": 0.775511
+  },
+  "EDM": {
+   "gamesPlayed": 82,
+   "wins": 41,
+   "losses": 30,
+   "otLosses": 11,
+   "points": 93,
+   "pointPct": 0.56707,
+   "goalsForPerGame": 3.43902,
+   "goalsAgainstPerGame": 3.2317,
+   "powerPlayPct": 0.306306,
+   "penaltyKillPct": 0.778281
+  },
+  "FLA": {
+   "gamesPlayed": 82,
+   "wins": 40,
+   "losses": 38,
+   "otLosses": 4,
+   "points": 84,
+   "pointPct": 0.51219,
+   "goalsForPerGame": 3.0,
+   "goalsAgainstPerGame": 3.34146,
+   "powerPlayPct": 0.195488,
+   "penaltyKillPct": 0.809524
+  },
+  "TOR": {
+   "gamesPlayed": 82,
+   "wins": 32,
+   "losses": 36,
+   "otLosses": 14,
+   "points": 78,
+   "pointPct": 0.4756,
+   "goalsForPerGame": 3.07317,
+   "goalsAgainstPerGame": 3.59756,
+   "powerPlayPct": 0.213197,
+   "penaltyKillPct": 0.812228
+  }
+ },
+ "top": {
+  "EDM": {
+   "name": "Connor McDavid",
+   "goals": 48
+  },
+  "VAN": {
+   "name": "Jake DeBrusk",
+   "goals": 23
+  },
+  "TBL": {
+   "name": "Nikita Kucherov",
+   "goals": 44
+  },
+  "NYR": {
+   "name": "Pavel Dorofeyev",
+   "goals": 37
+  },
+  "FLA": {
+   "name": "Sam Reinhart",
+   "goals": 29
+  },
+  "SJS": {
+   "name": "Macklin Celebrini",
+   "goals": 45
+  }
+ },
+ "sos": {
+  "ANA": {
+   "games": 84,
+   "sum": 46.5057,
+   "avg": 0.5536
+  },
+  "BOS": {
+   "games": 84,
+   "sum": 47.5545,
+   "avg": 0.5661
+  },
+  "BUF": {
+   "games": 84,
+   "sum": 47.335,
+   "avg": 0.5635
+  },
+  "CAR": {
+   "games": 84,
+   "sum": 47.0972,
+   "avg": 0.5607
+  },
+  "CBJ": {
+   "games": 84,
+   "sum": 47.6094,
+   "avg": 0.5668
+  },
+  "CGY": {
+   "games": 84,
+   "sum": 46.8716,
+   "avg": 0.558
+  },
+  "CHI": {
+   "games": 84,
+   "sum": 47.5118,
+   "avg": 0.5656
+  },
+  "COL": {
+   "games": 84,
+   "sum": 46.3167,
+   "avg": 0.5514
+  },
+  "DAL": {
+   "games": 84,
+   "sum": 46.5362,
+   "avg": 0.554
+  },
+  "DET": {
+   "games": 84,
+   "sum": 47.7496,
+   "avg": 0.5684
+  },
+  "EDM": {
+   "games": 84,
+   "sum": 46.4813,
+   "avg": 0.5533
+  },
+  "FLA": {
+   "games": 84,
+   "sum": 47.9447,
+   "avg": 0.5708
+  },
+  "LAK": {
+   "games": 84,
+   "sum": 46.5545,
+   "avg": 0.5542
+  },
+  "MIN": {
+   "games": 84,
+   "sum": 46.7313,
+   "avg": 0.5563
+  },
+  "MTL": {
+   "games": 84,
+   "sum": 47.4081,
+   "avg": 0.5644
+  },
+  "NJD": {
+   "games": 84,
+   "sum": 47.7313,
+   "avg": 0.5682
+  },
+  "NSH": {
+   "games": 84,
+   "sum": 47.1703,
+   "avg": 0.5616
+  },
+  "NYI": {
+   "games": 84,
+   "sum": 47.6338,
+   "avg": 0.5671
+  },
+  "NYR": {
+   "games": 84,
+   "sum": 47.9752,
+   "avg": 0.5711
+  },
+  "OTT": {
+   "games": 84,
+   "sum": 47.5789,
+   "avg": 0.5664
+  },
+  "PHI": {
+   "games": 84,
+   "sum": 47.463,
+   "avg": 0.565
+  },
+  "PIT": {
+   "games": 84,
+   "sum": 47.463,
+   "avg": 0.565
+  },
+  "SEA": {
+   "games": 84,
+   "sum": 46.8228,
+   "avg": 0.5574
+  },
+  "SJS": {
+   "games": 84,
+   "sum": 46.6521,
+   "avg": 0.5554
+  },
+  "STL": {
+   "games": 84,
+   "sum": 47.1703,
+   "avg": 0.5616
+  },
+  "TBL": {
+   "games": 84,
+   "sum": 47.4081,
+   "avg": 0.5644
+  },
+  "TOR": {
+   "games": 84,
+   "sum": 48.0911,
+   "avg": 0.5725
+  },
+  "UTA": {
+   "games": 84,
+   "sum": 47.024,
+   "avg": 0.5598
+  },
+  "VAN": {
+   "games": 84,
+   "sum": 47.335,
+   "avg": 0.5635
+  },
+  "VGK": {
+   "games": 84,
+   "sum": 46.4326,
+   "avg": 0.5528
+  },
+  "WPG": {
+   "games": 84,
+   "sum": 47.2679,
+   "avg": 0.5627
+  },
+  "WSH": {
+   "games": 84,
+   "sum": 47.5362,
+   "avg": 0.5659
+  }
+ }
+}
