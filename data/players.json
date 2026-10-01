@@ -1,646 +1,349 @@
 {
- "8478864": {
-  "name": "Kirill Kaprizov",
-  "birthDate": "1997-04-26",
-  "team": "MIN",
+ "8482720": {
+  "name": "Matthew Knies",
+  "birthDate": "2002-10-17",
+  "team": "CBJ",
   "position": "L",
   "career": {
-   "assists": 245,
-   "avgToi": "20:45",
-   "faceoffWinningPctg": 0.2325,
-   "gameWinningGoals": 34,
-   "gamesPlayed": 397,
-   "goals": 230,
-   "otGoals": 14,
-   "pim": 175,
-   "plusMinus": 81,
-   "points": 475,
-   "powerPlayGoals": 81,
-   "powerPlayPoints": 163,
-   "shootingPctg": 0.16449999999999998,
-   "shorthandedGoals": 0,
-   "shorthandedPoints": 0,
-   "shots": 1398
+   "assists": 93,
+   "avgToi": "16:56",
+   "faceoffWinningPctg": 0.125,
+   "gameWinningGoals": 11,
+   "gamesPlayed": 240,
+   "goals": 67,
+   "otGoals": 1,
+   "pim": 119,
+   "plusMinus": -13,
+   "points": 160,
+   "powerPlayGoals": 11,
+   "powerPlayPoints": 33,
+   "shootingPctg": 0.163,
+   "shorthandedGoals": 1,
+   "shorthandedPoints": 2,
+   "shots": 411
   },
   "seasons": [
    {
-    "assists": 24,
-    "avgToi": "18:18",
-    "faceoffWinningPctg": 0.125,
+    "assists": 1,
+    "avgToi": "13:07",
+    "faceoffWinningPctg": 0.0,
     "gameTypeId": 2,
-    "gameWinningGoals": 3,
-    "gamesPlayed": 55,
-    "goals": 27,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 3,
+    "goals": 0,
     "leagueAbbrev": "NHL",
-    "otGoals": 2,
-    "pim": 16,
-    "plusMinus": 10,
-    "points": 51,
-    "powerPlayGoals": 8,
-    "powerPlayPoints": 13,
-    "season": 20202021,
-    "sequence": 1,
-    "shootingPctg": 0.172,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 157,
-    "teamCommonName": {
-     "default": "Wild"
-    },
-    "teamName": {
-     "default": "Minnesota Wild",
-     "fr": "Wild du Minnesota"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Minnesota",
-     "fr": "du Minnesota"
-    }
-   },
-   {
-    "assists": 61,
-    "avgToi": "19:06",
-    "faceoffWinningPctg": 0.555556,
-    "gameTypeId": 2,
-    "gameWinningGoals": 5,
-    "gamesPlayed": 81,
-    "goals": 47,
-    "leagueAbbrev": "NHL",
-    "otGoals": 2,
-    "pim": 34,
-    "plusMinus": 27,
-    "points": 108,
-    "powerPlayGoals": 14,
-    "powerPlayPoints": 31,
-    "season": 20212022,
-    "sequence": 1,
-    "shootingPctg": 0.163,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 289,
-    "teamCommonName": {
-     "default": "Wild"
-    },
-    "teamName": {
-     "default": "Minnesota Wild",
-     "fr": "Wild du Minnesota"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Minnesota",
-     "fr": "du Minnesota"
-    }
-   },
-   {
-    "assists": 35,
-    "avgToi": "21:07",
-    "faceoffWinningPctg": 0.4,
-    "gameTypeId": 2,
-    "gameWinningGoals": 6,
-    "gamesPlayed": 67,
-    "goals": 40,
-    "leagueAbbrev": "NHL",
-    "otGoals": 2,
-    "pim": 45,
-    "plusMinus": 4,
-    "points": 75,
-    "powerPlayGoals": 17,
-    "powerPlayPoints": 32,
+    "otGoals": 0,
+    "pim": 2,
+    "plusMinus": 1,
+    "points": 1,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 0,
     "season": 20222023,
     "sequence": 1,
-    "shootingPctg": 0.153257,
+    "shootingPctg": 0.0,
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
-    "shots": 261,
+    "shots": 4,
     "teamCommonName": {
-     "default": "Wild"
+     "default": "Maple Leafs"
     },
     "teamName": {
-     "default": "Minnesota Wild",
-     "fr": "Wild du Minnesota"
+     "default": "Toronto Maple Leafs",
+     "fr": "Maple Leafs de Toronto"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Minnesota",
-     "fr": "du Minnesota"
+     "default": "Toronto",
+     "fr": "de Toronto"
     }
    },
    {
-    "assists": 50,
-    "avgToi": "21:35",
+    "assists": 20,
+    "avgToi": "13:41",
     "faceoffWinningPctg": 0.0,
     "gameTypeId": 2,
-    "gameWinningGoals": 8,
-    "gamesPlayed": 75,
-    "goals": 46,
+    "gameWinningGoals": 3,
+    "gamesPlayed": 80,
+    "goals": 15,
     "leagueAbbrev": "NHL",
-    "otGoals": 2,
-    "pim": 36,
-    "plusMinus": 11,
-    "points": 96,
-    "powerPlayGoals": 19,
-    "powerPlayPoints": 41,
+    "otGoals": 0,
+    "pim": 45,
+    "plusMinus": 9,
+    "points": 35,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 2,
     "season": 20232024,
     "sequence": 1,
-    "shootingPctg": 0.166065,
+    "shootingPctg": 0.130435,
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
-    "shots": 277,
+    "shots": 115,
     "teamCommonName": {
-     "default": "Wild"
+     "default": "Maple Leafs"
     },
     "teamName": {
-     "default": "Minnesota Wild",
-     "fr": "Wild du Minnesota"
+     "default": "Toronto Maple Leafs",
+     "fr": "Maple Leafs de Toronto"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Minnesota",
-     "fr": "du Minnesota"
+     "default": "Toronto",
+     "fr": "de Toronto"
     }
    },
    {
-    "assists": 31,
-    "avgToi": "22:28",
-    "faceoffWinningPctg": 0.0,
-    "gameTypeId": 2,
-    "gameWinningGoals": 5,
-    "gamesPlayed": 41,
-    "goals": 25,
-    "leagueAbbrev": "NHL",
-    "otGoals": 2,
-    "pim": 16,
-    "plusMinus": 19,
-    "points": 56,
-    "powerPlayGoals": 4,
-    "powerPlayPoints": 14,
-    "season": 20242025,
-    "sequence": 1,
-    "shootingPctg": 0.172414,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 145,
-    "teamCommonName": {
-     "default": "Wild"
-    },
-    "teamName": {
-     "default": "Minnesota Wild",
-     "fr": "Wild du Minnesota"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Minnesota",
-     "fr": "du Minnesota"
-    }
-   },
-   {
-    "assists": 44,
-    "avgToi": "22:09",
-    "faceoffWinningPctg": 0.0,
-    "gameTypeId": 2,
-    "gameWinningGoals": 7,
-    "gamesPlayed": 78,
-    "goals": 45,
-    "leagueAbbrev": "NHL",
-    "otGoals": 4,
-    "pim": 28,
-    "plusMinus": 10,
-    "points": 89,
-    "powerPlayGoals": 19,
-    "powerPlayPoints": 32,
-    "season": 20252026,
-    "sequence": 1,
-    "shootingPctg": 0.167286,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 269,
-    "teamCommonName": {
-     "default": "Wild"
-    },
-    "teamName": {
-     "default": "Minnesota Wild",
-     "fr": "Wild du Minnesota"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Minnesota",
-     "fr": "du Minnesota"
-    }
-   }
-  ]
- },
- "8478550": {
-  "name": "Artemi Panarin",
-  "birthDate": "1991-10-30",
-  "team": "LAK",
-  "position": "L",
-  "career": {
-   "assists": 624,
-   "avgToi": "19:47",
-   "faceoffWinningPctg": 0.22030000000000002,
-   "gameWinningGoals": 51,
-   "gamesPlayed": 830,
-   "goals": 330,
-   "otGoals": 10,
-   "pim": 242,
-   "plusMinus": 140,
-   "points": 954,
-   "powerPlayGoals": 79,
-   "powerPlayPoints": 288,
-   "shootingPctg": 0.1449,
-   "shorthandedGoals": 0,
-   "shorthandedPoints": 1,
-   "shots": 2277
-  },
-  "seasons": [
-   {
-    "assists": 47,
+    "assists": 29,
     "avgToi": "18:31",
     "faceoffWinningPctg": 0.0,
     "gameTypeId": 2,
-    "gameWinningGoals": 7,
-    "gamesPlayed": 80,
-    "goals": 30,
+    "gameWinningGoals": 6,
+    "gamesPlayed": 78,
+    "goals": 29,
     "leagueAbbrev": "NHL",
     "otGoals": 1,
-    "pim": 32,
-    "plusMinus": 8,
-    "points": 77,
-    "powerPlayGoals": 8,
-    "powerPlayPoints": 24,
-    "season": 20152016,
+    "pim": 43,
+    "plusMinus": 7,
+    "points": 58,
+    "powerPlayGoals": 5,
+    "powerPlayPoints": 15,
+    "season": 20242025,
     "sequence": 1,
-    "shootingPctg": 0.1604,
+    "shootingPctg": 0.190789,
     "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 187,
+    "shorthandedPoints": 1,
+    "shots": 152,
     "teamCommonName": {
-     "default": "Blackhawks"
+     "default": "Maple Leafs"
     },
     "teamName": {
-     "default": "Chicago Blackhawks",
-     "fr": "Blackhawks de Chicago"
+     "default": "Toronto Maple Leafs",
+     "fr": "Maple Leafs de Toronto"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Chicago",
-     "fr": "de Chicago"
+     "default": "Toronto",
+     "fr": "de Toronto"
     }
    },
    {
     "assists": 43,
-    "avgToi": "19:28",
-    "faceoffWinningPctg": 0.2,
+    "avgToi": "18:48",
+    "faceoffWinningPctg": 0.166667,
     "gameTypeId": 2,
-    "gameWinningGoals": 5,
-    "gamesPlayed": 82,
-    "goals": 31,
-    "leagueAbbrev": "NHL",
-    "otGoals": 1,
-    "pim": 21,
-    "plusMinus": 18,
-    "points": 74,
-    "powerPlayGoals": 9,
-    "powerPlayPoints": 17,
-    "season": 20162017,
-    "sequence": 1,
-    "shootingPctg": 0.1469,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 211,
-    "teamCommonName": {
-     "default": "Blackhawks"
-    },
-    "teamName": {
-     "default": "Chicago Blackhawks",
-     "fr": "Blackhawks de Chicago"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Chicago",
-     "fr": "de Chicago"
-    }
-   },
-   {
-    "assists": 55,
-    "avgToi": "20:08",
-    "faceoffWinningPctg": 0.0,
-    "gameTypeId": 2,
-    "gameWinningGoals": 5,
-    "gamesPlayed": 81,
-    "goals": 27,
-    "leagueAbbrev": "NHL",
-    "otGoals": 1,
-    "pim": 26,
-    "plusMinus": 23,
-    "points": 82,
-    "powerPlayGoals": 7,
-    "powerPlayPoints": 21,
-    "season": 20172018,
-    "sequence": 1,
-    "shootingPctg": 0.1184,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 228,
-    "teamCommonName": {
-     "default": "Blue Jackets"
-    },
-    "teamName": {
-     "default": "Columbus Blue Jackets",
-     "fr": "Blue Jackets de Columbus"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Columbus",
-     "fr": "de Columbus"
-    }
-   },
-   {
-    "assists": 59,
-    "avgToi": "19:51",
-    "faceoffWinningPctg": 0.25,
-    "gameTypeId": 2,
-    "gameWinningGoals": 8,
+    "gameWinningGoals": 2,
     "gamesPlayed": 79,
-    "goals": 28,
-    "leagueAbbrev": "NHL",
-    "otGoals": 4,
-    "pim": 23,
-    "plusMinus": 14,
-    "points": 87,
-    "powerPlayGoals": 6,
-    "powerPlayPoints": 18,
-    "season": 20182019,
-    "sequence": 1,
-    "shootingPctg": 0.1466,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 191,
-    "teamCommonName": {
-     "default": "Blue Jackets"
-    },
-    "teamName": {
-     "default": "Columbus Blue Jackets",
-     "fr": "Blue Jackets de Columbus"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Columbus",
-     "fr": "de Columbus"
-    }
-   },
-   {
-    "assists": 63,
-    "avgToi": "20:36",
-    "faceoffWinningPctg": 0.5,
-    "gameTypeId": 2,
-    "gameWinningGoals": 4,
-    "gamesPlayed": 69,
-    "goals": 32,
+    "goals": 23,
     "leagueAbbrev": "NHL",
     "otGoals": 0,
-    "pim": 20,
-    "plusMinus": 36,
-    "points": 95,
-    "powerPlayGoals": 7,
-    "powerPlayPoints": 24,
-    "season": 20192020,
+    "pim": 29,
+    "plusMinus": -30,
+    "points": 66,
+    "powerPlayGoals": 6,
+    "powerPlayPoints": 16,
+    "season": 20252026,
     "sequence": 1,
-    "shootingPctg": 0.153,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 209,
+    "shootingPctg": 0.164286,
+    "shorthandedGoals": 1,
+    "shorthandedPoints": 1,
+    "shots": 140,
     "teamCommonName": {
-     "default": "Rangers"
+     "default": "Maple Leafs"
     },
     "teamName": {
-     "default": "New York Rangers",
-     "fr": "Rangers de New York"
+     "default": "Toronto Maple Leafs",
+     "fr": "Maple Leafs de Toronto"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "New York",
-     "fr": "de New York"
+     "default": "Toronto",
+     "fr": "de Toronto"
     }
-   },
+   }
+  ]
+ },
+ "8480893": {
+  "name": "Kirill Marchenko",
+  "birthDate": "2000-07-21",
+  "team": "TOR",
+  "position": "R",
+  "career": {
+   "assists": 107,
+   "avgToi": "17:37",
+   "faceoffWinningPctg": 0.3611,
+   "gameWinningGoals": 11,
+   "gamesPlayed": 293,
+   "goals": 102,
+   "otGoals": 3,
+   "pim": 82,
+   "plusMinus": 9,
+   "points": 209,
+   "powerPlayGoals": 24,
+   "powerPlayPoints": 63,
+   "shootingPctg": 0.1354,
+   "shorthandedGoals": 1,
+   "shorthandedPoints": 1,
+   "shots": 753
+  },
+  "seasons": [
    {
-    "assists": 41,
-    "avgToi": "19:39",
-    "faceoffWinningPctg": 0.0,
+    "assists": 4,
+    "avgToi": "16:11",
+    "faceoffWinningPctg": 0.5625,
     "gameTypeId": 2,
     "gameWinningGoals": 1,
-    "gamesPlayed": 42,
-    "goals": 17,
-    "leagueAbbrev": "NHL",
-    "otGoals": 0,
-    "pim": 6,
-    "plusMinus": 14,
-    "points": 58,
-    "powerPlayGoals": 5,
-    "powerPlayPoints": 18,
-    "season": 20202021,
-    "sequence": 1,
-    "shootingPctg": 0.16,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 106,
-    "teamCommonName": {
-     "default": "Rangers"
-    },
-    "teamName": {
-     "default": "New York Rangers",
-     "fr": "Rangers de New York"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "New York",
-     "fr": "de New York"
-    }
-   },
-   {
-    "assists": 74,
-    "avgToi": "19:13",
-    "faceoffWinningPctg": 0.5,
-    "gameTypeId": 2,
-    "gameWinningGoals": 5,
-    "gamesPlayed": 75,
-    "goals": 22,
+    "gamesPlayed": 59,
+    "goals": 21,
     "leagueAbbrev": "NHL",
     "otGoals": 1,
-    "pim": 18,
-    "plusMinus": 21,
-    "points": 96,
-    "powerPlayGoals": 5,
-    "powerPlayPoints": 37,
-    "season": 20212022,
-    "sequence": 1,
-    "shootingPctg": 0.124,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 177,
-    "teamCommonName": {
-     "default": "Rangers"
-    },
-    "teamName": {
-     "default": "New York Rangers",
-     "fr": "Rangers de New York"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "New York",
-     "fr": "de New York"
-    }
-   },
-   {
-    "assists": 63,
-    "avgToi": "19:36",
-    "faceoffWinningPctg": 0.315789,
-    "gameTypeId": 2,
-    "gameWinningGoals": 4,
-    "gamesPlayed": 82,
-    "goals": 29,
-    "leagueAbbrev": "NHL",
-    "otGoals": 1,
-    "pim": 36,
-    "plusMinus": 4,
-    "points": 92,
-    "powerPlayGoals": 9,
-    "powerPlayPoints": 36,
+    "pim": 16,
+    "plusMinus": -23,
+    "points": 25,
+    "powerPlayGoals": 7,
+    "powerPlayPoints": 8,
     "season": 20222023,
     "sequence": 1,
-    "shootingPctg": 0.142157,
+    "shootingPctg": 0.160305,
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
-    "shots": 204,
+    "shots": 131,
     "teamCommonName": {
-     "default": "Rangers"
+     "default": "Blue Jackets"
     },
     "teamName": {
-     "default": "New York Rangers",
-     "fr": "Rangers de New York"
+     "default": "Columbus Blue Jackets",
+     "fr": "Blue Jackets de Columbus"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "New York",
-     "fr": "de New York"
+     "default": "Columbus",
+     "fr": "de Columbus"
     }
    },
    {
-    "assists": 71,
-    "avgToi": "20:07",
-    "faceoffWinningPctg": 0.1,
+    "assists": 19,
+    "avgToi": "16:25",
+    "faceoffWinningPctg": 0.329114,
     "gameTypeId": 2,
-    "gameWinningGoals": 5,
-    "gamesPlayed": 82,
-    "goals": 49,
-    "leagueAbbrev": "NHL",
-    "otGoals": 1,
-    "pim": 24,
-    "plusMinus": 18,
-    "points": 120,
-    "powerPlayGoals": 11,
-    "powerPlayPoints": 44,
-    "season": 20232024,
-    "sequence": 1,
-    "shootingPctg": 0.161716,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 1,
-    "shots": 303,
-    "teamCommonName": {
-     "default": "Rangers"
-    },
-    "teamName": {
-     "default": "New York Rangers",
-     "fr": "Rangers de New York"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "New York",
-     "fr": "de New York"
-    }
-   },
-   {
-    "assists": 52,
-    "avgToi": "19:41",
-    "faceoffWinningPctg": 0.0,
-    "gameTypeId": 2,
-    "gameWinningGoals": 3,
-    "gamesPlayed": 80,
-    "goals": 37,
-    "leagueAbbrev": "NHL",
-    "otGoals": 0,
-    "pim": 16,
-    "plusMinus": -9,
-    "points": 89,
-    "powerPlayGoals": 8,
-    "powerPlayPoints": 26,
-    "season": 20242025,
-    "sequence": 1,
-    "shootingPctg": 0.156118,
-    "shorthandedGoals": 0,
-    "shorthandedPoints": 0,
-    "shots": 237,
-    "teamCommonName": {
-     "default": "Rangers"
-    },
-    "teamName": {
-     "default": "New York Rangers",
-     "fr": "Rangers de New York"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "New York",
-     "fr": "de New York"
-    }
-   },
-   {
-    "assists": 38,
-    "avgToi": "20:55",
-    "faceoffWinningPctg": 1.0,
-    "gameTypeId": 2,
-    "gameWinningGoals": 3,
-    "gamesPlayed": 52,
-    "goals": 19,
+    "gameWinningGoals": 1,
+    "gamesPlayed": 78,
+    "goals": 23,
     "leagueAbbrev": "NHL",
     "otGoals": 0,
     "pim": 14,
-    "plusMinus": -16,
-    "points": 57,
-    "powerPlayGoals": 2,
-    "powerPlayPoints": 17,
-    "season": 20252026,
+    "plusMinus": -5,
+    "points": 42,
+    "powerPlayGoals": 9,
+    "powerPlayPoints": 13,
+    "season": 20232024,
     "sequence": 1,
-    "shootingPctg": 0.120253,
+    "shootingPctg": 0.119171,
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
-    "shots": 158,
+    "shots": 193,
     "teamCommonName": {
-     "default": "Rangers"
+     "default": "Blue Jackets"
     },
     "teamName": {
-     "default": "New York Rangers",
-     "fr": "Rangers de New York"
+     "default": "Columbus Blue Jackets",
+     "fr": "Blue Jackets de Columbus"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "New York",
-     "fr": "de New York"
+     "default": "Columbus",
+     "fr": "de Columbus"
     }
    },
    {
-    "assists": 18,
-    "avgToi": "20:42",
-    "faceoffWinningPctg": 0.0,
+    "assists": 43,
+    "avgToi": "18:35",
+    "faceoffWinningPctg": 0.317073,
     "gameTypeId": 2,
-    "gameWinningGoals": 1,
-    "gamesPlayed": 26,
-    "goals": 9,
+    "gameWinningGoals": 2,
+    "gamesPlayed": 79,
+    "goals": 31,
     "leagueAbbrev": "NHL",
-    "otGoals": 0,
-    "pim": 6,
-    "plusMinus": 9,
-    "points": 27,
+    "otGoals": 1,
+    "pim": 20,
+    "plusMinus": 29,
+    "points": 74,
     "powerPlayGoals": 2,
-    "powerPlayPoints": 6,
-    "season": 20252026,
-    "sequence": 2,
-    "shootingPctg": 0.136364,
+    "powerPlayPoints": 19,
+    "season": 20242025,
+    "sequence": 1,
+    "shootingPctg": 0.149758,
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
-    "shots": 66,
+    "shots": 207,
     "teamCommonName": {
-     "default": "Kings"
+     "default": "Blue Jackets"
     },
     "teamName": {
-     "default": "Los Angeles Kings",
-     "fr": "Kings de Los Angeles"
+     "default": "Columbus Blue Jackets",
+     "fr": "Blue Jackets de Columbus"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Los Angeles",
-     "fr": "de Los Angeles"
+     "default": "Columbus",
+     "fr": "de Columbus"
+    }
+   },
+   {
+    "assists": 40,
+    "avgToi": "18:57",
+    "faceoffWinningPctg": 0.5,
+    "gameTypeId": 2,
+    "gameWinningGoals": 7,
+    "gamesPlayed": 76,
+    "goals": 27,
+    "leagueAbbrev": "NHL",
+    "otGoals": 1,
+    "pim": 32,
+    "plusMinus": 7,
+    "points": 67,
+    "powerPlayGoals": 6,
+    "powerPlayPoints": 23,
+    "season": 20252026,
+    "sequence": 1,
+    "shootingPctg": 0.123853,
+    "shorthandedGoals": 1,
+    "shorthandedPoints": 1,
+    "shots": 218,
+    "teamCommonName": {
+     "default": "Blue Jackets"
+    },
+    "teamName": {
+     "default": "Columbus Blue Jackets",
+     "fr": "Blue Jackets de Columbus"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Columbus",
+     "fr": "de Columbus"
+    }
+   },
+   {
+    "assists": 1,
+    "avgToi": "20:08",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 2,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 1,
+    "goals": 0,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 0,
+    "plusMinus": 1,
+    "points": 1,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 0,
+    "season": 20262027,
+    "sequence": 1,
+    "shootingPctg": 0.0,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 4,
+    "teamCommonName": {
+     "default": "Maple Leafs"
+    },
+    "teamName": {
+     "default": "Toronto Maple Leafs",
+     "fr": "Maple Leafs de Toronto"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Toronto",
+     "fr": "de Toronto"
     }
    }
   ]
