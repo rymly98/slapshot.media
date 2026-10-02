@@ -1,0 +1,122 @@
+{
+ "top": {
+  "OTT": [
+   {
+    "name": "Tim St\u00fctzle",
+    "gp": 80,
+    "g": 34,
+    "a": 49,
+    "p": 83,
+    "pm": 7
+   },
+   {
+    "name": "Drake Batherson",
+    "gp": 79,
+    "g": 33,
+    "a": 38,
+    "p": 71,
+    "pm": -7
+   },
+   {
+    "name": "Dylan Cozens",
+    "gp": 82,
+    "g": 28,
+    "a": 31,
+    "p": 59,
+    "pm": -7
+   },
+   {
+    "name": "Jake Sanderson",
+    "gp": 67,
+    "g": 14,
+    "a": 40,
+    "p": 54,
+    "pm": 16
+   },
+   {
+    "name": "William Eklund",
+    "gp": 78,
+    "g": 15,
+    "a": 38,
+    "p": 53,
+    "pm": -31
+   }
+  ],
+  "TOR": [
+   {
+    "name": "William Nylander",
+    "gp": 65,
+    "g": 30,
+    "a": 49,
+    "p": 79,
+    "pm": -14
+   },
+   {
+    "name": "John Tavares",
+    "gp": 82,
+    "g": 31,
+    "a": 40,
+    "p": 71,
+    "pm": -28
+   },
+   {
+    "name": "Darren Raddysh",
+    "gp": 73,
+    "g": 22,
+    "a": 48,
+    "p": 70,
+    "pm": 21
+   },
+   {
+    "name": "Kirill Marchenko",
+    "gp": 76,
+    "g": 27,
+    "a": 40,
+    "p": 67,
+    "pm": 7
+   },
+   {
+    "name": "Auston Matthews",
+    "gp": 60,
+    "g": 27,
+    "a": 26,
+    "p": 53,
+    "pm": -4
+   }
+  ]
+ },
+ "h2h": [
+  {
+   "date": "2025-12-27",
+   "away": "OTT",
+   "as": 5,
+   "home": "TOR",
+   "hs": 7,
+   "last": "REG"
+  },
+  {
+   "date": "2026-02-28",
+   "away": "OTT",
+   "as": 5,
+   "home": "TOR",
+   "hs": 2,
+   "last": "REG"
+  },
+  {
+   "date": "2026-03-21",
+   "away": "TOR",
+   "as": 2,
+   "home": "OTT",
+   "hs": 5,
+   "last": "REG"
+  },
+  {
+   "date": "2026-04-15",
+   "away": "TOR",
+   "as": 1,
+   "home": "OTT",
+   "hs": 3,
+   "last": "REG"
+  }
+ ]
+}
