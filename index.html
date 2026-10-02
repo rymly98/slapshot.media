@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Slapshot Media: NHL odds from our own model, every game, tracked against our friends in Vegas, Europe and Boston all season.">
+<meta name="description" content="Slapshot Media: NHL odds from our own model, every game, tracked against our friends in Vegas, New York and Boston all season.">
 <meta property="og:title" content="Slapshot Media">
-<meta property="og:description" content="NHL odds from our own model, tracked vs our friends in Vegas, Europe and Boston all season.">
+<meta property="og:description" content="NHL odds from our own model, tracked vs our friends in Vegas, New York and Boston all season.">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8837WTYDLZ"></script>
 <script>
@@ -172,7 +172,7 @@ html{scroll-behavior:smooth}
 .card .tag{font-size:12px;color:var(--muted);line-height:1.2;margin-bottom:4px;min-height:1.2em}
 .socials{margin-top:18px}
 .fine{text-align:center;font-size:12px;color:var(--muted);margin:6px 0 0}
-.rdrop{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.rdrop{background:var(--panel);border:1px solid var(--line);border-radius:10px;min-width:0;max-width:100%;overflow:hidden}
 .rdrop>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;flex-wrap:wrap}
 .rdrop>summary::-webkit-details-marker{display:none}
 .rdrop>summary::after{content:"▾";color:var(--muted);font-size:16px;transition:transform .2s;margin-left:auto}
@@ -195,8 +195,8 @@ html{scroll-behavior:smooth}
 .ln-r.w{color:#0ca30c}.ln-r.l{color:#E0475B}
 .ln-empty{color:var(--muted);font-size:14px;padding:4px 0}
 .race{display:grid;gap:10px;padding:14px 16px;border-top:1px solid var(--line)}
-.rc{display:grid;grid-template-columns:92px 1fr 96px;align-items:center;gap:10px}
-.rc-n{font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.03em}
+.rc{display:grid;grid-template-columns:100px 1fr 96px;align-items:center;gap:10px}
+.rc-n{font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
 .rc-b{height:18px;background:var(--panel-2);border-radius:4px;overflow:hidden}
 .rc-b span{display:block;height:100%;border-radius:4px}
 .rc-v{font-family:var(--num);font-weight:700;font-size:16px;text-align:right;font-variant-numeric:tabular-nums}
@@ -319,7 +319,7 @@ td{white-space:nowrap}
       <div id="lastnight"></div>
     </div>
 
-    <p class="recblurb">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>Europe</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right. Check the dropdowns below for the full race.</p>
+    <p class="recblurb">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right. Check the dropdowns below for the full race.</p>
 
     <details class="rdrop">
       <summary><span class="rd-t">The race</span><span class="rd-s">Slapshot vs our friends, win %</span></summary>
@@ -329,7 +329,7 @@ td{white-space:nowrap}
     <details class="rdrop">
       <summary><span class="rd-t">Tonight's picks</span><span class="rd-s">Us vs our friends</span></summary>
       <div class="tonight">
-        <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>Europe</span><span>Boston</span></div>
+        <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>New York</span><span>Boston</span></div>
         <div id="tonight"></div>
         <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
       </div>
@@ -346,7 +346,7 @@ td{white-space:nowrap}
       <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Games where Slapshot went against all our friends: 0</span></summary>
       <div class="tablewrap">
         <table>
-          <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>Europe</th><th>Boston</th><th>Final</th></tr></thead>
+          <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>New York</th><th>Boston</th><th>Final</th></tr></thead>
           <tbody id="log"></tbody>
         </table>
       </div>
@@ -386,7 +386,7 @@ const colors={ANA:"#F47A38",DET:"#CE1126",WPG:"#041E42",FLA:"#0B2A5B",CAR:"#CE11
   PHI:"#F74902",PIT:"#FCB514",UTA:"#6CACE4",CBJ:"#002654",SEA:"#99D9D9",NJD:"#CE1126",NYI:"#00539B",DAL:"#006847",
   NSH:"#FFB81C",MIN:"#154734",STL:"#002F87",COL:"#6F263D",CGY:"#D2001C",LAK:"#A2AAAD",SJS:"#006D75"};
 /* Slapshot formula, October rule: last season's home/road splits from Jan 1 on.
-   b = each book's favorite ["TEAM","moneyline"] keyed V (Vegas), E (Europe), B (Boston); missing = line pending */
+   b = each book's favorite ["TEAM","moneyline"] keyed V (Vegas), E (New York), B (Boston); missing = line pending */
 let days={tue:[]};
 const logo=t=>`<img class="logo" src="tl/${t}.png" alt="${t}" width="104" height="104">`;
 /* 2025-26 regular season, NHL stats: W, L, OTL, GF/G, GA/G, PP%, PK% */
@@ -433,7 +433,7 @@ function renderQuick(){
 }
 function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
-  const books=[["V","Vegas"],["E","Europe"],["B","Boston"]].map(([k,n])=>{const x=g.b&&g.b[k];
+  const books=[["V","Vegas"],["E","New York"],["B","Boston"]].map(([k,n])=>{const x=g.b&&g.b[k];
     return `<div class="book"><span class="who">${n}</span>${x?`<span class="val">${x[0]}</span>`:`<span class="val pending">Pending</span>`}</div>`}).join("");
   return `<article class="game">
     <div class="matchup">
@@ -451,7 +451,7 @@ function renderGames(){renderQuick();document.querySelectorAll("[data-day]").for
    {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}
    s = Slapshot pick, V/E/B = each book's favorite (null = pick'em, no pick), w = winner, f = final score */
 const R=[];
-const SRC=[["s","Slapshot","#e66767"],["V","Vegas","#3987e5"],["E","Europe","#199e70"],["B","Boston","#c98500"]];
+const SRC=[["s","Slapshot","#e66767"],["V","Vegas","#3987e5"],["E","New York","#199e70"],["B","Boston","#c98500"]];
 function tally(rows,k){let w=0,l=0;for(const r of rows){if(!r[k])continue;r[k]===r.w?w++:l++;}return{w,l,p:w+l?w/(w+l)*100:null};}
 function renderTonight(){
   const el=document.getElementById("tonight"); if(!el)return;
