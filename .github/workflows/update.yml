@@ -3,6 +3,10 @@ name: Daily site update
 on:
   schedule:
     - cron: "53 8 * * *"    # 4:53am ET (EDT). In winter (EST) this runs at 3:53am.
+    # Backups: GitHub sometimes drops scheduled runs. Re-runs are safe (the script skips work already done).
+    - cron: "37 9 * * *"    # 5:37am ET (EDT)
+    - cron: "17 10 * * *"   # 6:17am ET (EDT)
+    - cron: "7 11 * * *"    # 7:07am ET (EDT)
   push:
     branches: [main]
     paths: ["data/run-now.txt"]   # edit this file to force a morning run
