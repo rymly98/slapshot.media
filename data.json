@@ -1,218 +1,56 @@
 {
- "gameday": "2026-10-08",
- "label": "Thu Oct 8 \u00b7 10 games \u00b7 times ET",
+ "gameday": "2026-10-09",
+ "label": "Fri Oct 9 \u00b7 4 games \u00b7 times ET",
  "games": [
   {
    "t": "7:00 PM",
-   "a": "UTA",
-   "h": "BOS",
-   "ag": 2.81,
-   "hg": 3.29,
-   "ap": 46.1,
-   "hp": 53.9,
+   "a": "SEA",
+   "h": "DET",
+   "ag": 2.83,
+   "hg": 3.2,
+   "ap": 46.9,
+   "hp": 53.1,
    "b": {
     "B": [
-     "UTA",
-     "-125"
+     "DET",
+     "-142"
     ],
     "E": [
-     "UTA",
-     "-125"
+     "DET",
+     "-140"
     ],
     "V": [
-     "UTA",
-     "-130"
-    ]
-   },
-   "lead": {
-    "a": {
-     "g": [
-      "Schmaltz",
-      5
-     ],
-     "a": [
-      "Keller",
-      6
-     ],
-     "p": [
-      "Keller",
-      7
-     ]
-    },
-    "h": {
-     "g": [
-      "Hagens",
-      2
-     ],
-     "a": [
-      "Kastelic",
-      2
-     ],
-     "p": [
-      "Kastelic",
-      3
-     ]
-    },
-    "season": "2026-27"
-   }
-  },
-  {
-   "t": "7:00 PM",
-   "a": "DAL",
-   "h": "BUF",
-   "ag": 3.05,
-   "hg": 3.22,
-   "ap": 48.6,
-   "hp": 51.4,
-   "b": {
-    "B": [
-     "DAL",
-     "-118"
-    ],
-    "E": [
-     "DAL",
-     "-113"
-    ],
-    "V": [
-     "DAL",
-     "-118"
-    ]
-   },
-   "lead": {
-    "a": {
-     "g": [
-      "Heiskanen",
-      2
-     ],
-     "a": [
-      "Hintz",
-      2
-     ],
-     "p": [
-      "Benn",
-      2
-     ]
-    },
-    "h": {
-     "g": [
-      "Thompson",
-      2
-     ],
-     "a": [
-      "Power",
-      4
-     ],
-     "p": [
-      "Power",
-      5
-     ]
-    },
-    "season": "2026-27"
-   }
-  },
-  {
-   "t": "7:00 PM",
-   "a": "NSH",
-   "h": "MTL",
-   "ag": 2.79,
-   "hg": 3.35,
-   "ap": 45.5,
-   "hp": 54.5,
-   "b": {
-    "B": [
-     "MTL",
-     "-180"
-    ],
-    "E": [
-     "MTL",
-     "-182"
-    ],
-    "V": [
-     "MTL",
-     "-180"
-    ]
-   },
-   "lead": {
-    "a": {
-     "g": [
-      "Stamkos",
-      3
-     ],
-     "a": [
-      "Forsberg",
-      3
-     ],
-     "p": [
-      "Stamkos",
-      4
-     ]
-    },
-    "h": {
-     "g": [
-      "Bolduc",
-      3
-     ],
-     "a": [
-      "Suzuki",
-      4
-     ],
-     "p": [
-      "Suzuki",
-      6
-     ]
-    },
-    "season": "2026-27"
-   }
-  },
-  {
-   "t": "7:00 PM",
-   "a": "PHI",
-   "h": "OTT",
-   "ag": 2.99,
-   "hg": 3.42,
-   "ap": 46.7,
-   "hp": 53.3,
-   "b": {
-    "B": [
-     "OTT",
-     "-148"
-    ],
-    "E": [
-     "OTT",
-     "-144"
-    ],
-    "V": [
-     "OTT",
+     "DET",
      "-145"
     ]
    },
    "lead": {
     "a": {
      "g": [
-      "Sanheim",
-      1
+      "Eberle",
+      2
      ],
      "a": [
-      "Couturier",
-      2
+      "McCann",
+      4
      ],
      "p": [
-      "Couturier",
-      2
+      "McCann",
+      5
      ]
     },
     "h": {
      "g": [
-      "St\u00fctzle",
-      3
+      "DeBrincat",
+      2
      ],
      "a": [
-      "St\u00fctzle",
+      "Raymond",
       3
      ],
      "p": [
-      "St\u00fctzle",
-      6
+      "DeBrincat",
+      4
      ]
     },
     "season": "2026-27"
@@ -220,52 +58,52 @@
   },
   {
    "t": "7:00 PM",
-   "a": "MIN",
-   "h": "TBL",
-   "ag": 3.27,
-   "hg": 3.54,
-   "ap": 48.0,
-   "hp": 52.0,
+   "a": "NYR",
+   "h": "WSH",
+   "ag": 2.91,
+   "hg": 3.7,
+   "ap": 44.0,
+   "hp": 56.0,
    "b": {
     "B": [
-     "TBL",
-     "-155"
+     "WSH",
+     "-142"
     ],
     "E": [
-     "TBL",
+     "WSH",
      "-146"
     ],
     "V": [
-     "TBL",
+     "WSH",
      "-145"
     ]
    },
    "lead": {
     "a": {
      "g": [
-      "Kaprizov",
+      "Lafreni\u00e8re",
       3
      ],
      "a": [
-      "Hughes",
-      3
+      "Fox",
+      5
      ],
      "p": [
-      "Hughes",
-      4
+      "Lafreni\u00e8re",
+      5
      ]
     },
     "h": {
      "g": [
-      "Kucherov",
-      1
+      "Tuch",
+      3
      ],
      "a": [
-      "Kucherov",
+      "Dubois",
       3
      ],
      "p": [
-      "Kucherov",
+      "Dubois",
       4
      ]
     },
@@ -274,106 +112,52 @@
   },
   {
    "t": "7:00 PM",
-   "a": "VAN",
-   "h": "CAR",
-   "ag": 2.76,
-   "hg": 4.43,
-   "ap": 38.4,
-   "hp": 61.6,
+   "a": "PIT",
+   "h": "CBJ",
+   "ag": 3.35,
+   "hg": 3.37,
+   "ap": 49.8,
+   "hp": 50.2,
    "b": {
     "B": [
-     "CAR",
-     "-325"
+     "CBJ",
+     "-122"
     ],
     "E": [
-     "CAR",
-     "-330"
+     "CBJ",
+     "-120"
     ],
     "V": [
-     "CAR",
-     "-325"
+     "CBJ",
+     "-120"
     ]
    },
    "lead": {
     "a": {
      "g": [
-      "Cotter",
-      4
+      "Novak",
+      3
      ],
      "a": [
-      "Hronek",
+      "Karlsson",
+      4
+     ],
+     "p": [
+      "Novak",
       5
-     ],
-     "p": [
-      "Cotter",
-      6
      ]
     },
     "h": {
      "g": [
-      "Aho",
-      4
-     ],
-     "a": [
-      "Aho",
-      3
-     ],
-     "p": [
-      "Aho",
-      7
-     ]
-    },
-    "season": "2026-27"
-   }
-  },
-  {
-   "t": "7:30 PM",
-   "a": "CHI",
-   "h": "NYI",
-   "ag": 2.72,
-   "hg": 3.07,
-   "ap": 47.0,
-   "hp": 53.0,
-   "b": {
-    "B": [
-     "NYI",
-     "-185"
-    ],
-    "E": [
-     "NYI",
-     "-172"
-    ],
-    "V": [
-     "NYI",
-     "-185"
-    ]
-   },
-   "lead": {
-    "a": {
-     "g": [
-      "Frondell",
-      1
-     ],
-     "a": [
-      "Frondell",
-      3
-     ],
-     "p": [
-      "Frondell",
-      4
-     ]
-    },
-    "h": {
-     "g": [
-      "Horvat",
+      "Knies",
       2
      ],
      "a": [
-      "Schenn",
+      "Coyle",
       3
      ],
      "p": [
-      "Schenn",
+      "Knies",
       4
      ]
     },
@@ -382,161 +166,53 @@
   },
   {
    "t": "8:00 PM",
-   "a": "SJS",
-   "h": "STL",
-   "ag": 2.76,
-   "hg": 3.48,
-   "ap": 44.3,
-   "hp": 55.7,
+   "a": "ANA",
+   "h": "WPG",
+   "ag": 3.04,
+   "hg": 3.15,
+   "ap": 49.1,
+   "hp": 50.9,
    "b": {
     "B": [
-     "STL",
-     "-142"
+     "WPG",
+     "-125"
     ],
     "E": [
-     "STL",
-     "-160"
+     "WPG",
+     "-118"
     ],
     "V": [
-     "STL",
-     "-150"
+     "WPG",
+     "-125"
     ]
    },
    "lead": {
     "a": {
      "g": [
-      "Chernyshov",
-      2
-     ],
-     "a": [
-      "Celebrini",
-      5
-     ],
-     "p": [
-      "Celebrini",
-      5
-     ]
-    },
-    "h": {
-     "g": [
-      "Dvorsky",
-      2
-     ],
-     "a": [
-      "McMichael",
-      2
-     ],
-     "p": [
-      "McMichael",
-      3
-     ]
-    },
-    "season": "2026-27"
-   }
-  },
-  {
-   "t": "9:00 PM",
-   "a": "COL",
-   "h": "CGY",
-   "ag": 3.14,
-   "hg": 2.39,
-   "ap": 56.8,
-   "hp": 43.2,
-   "b": {
-    "B": [
-     "COL",
-     "-238"
-    ],
-    "E": [
-     "COL",
-     "-235"
-    ],
-    "V": [
-     "COL",
-     "-235"
-    ]
-   },
-   "lead": {
-    "a": {
-     "g": [
-      "Lehkonen",
+      "Sennecke",
       3
      ],
      "a": [
-      "MacKinnon",
-      3
-     ],
-     "p": [
-      "MacKinnon",
-      5
-     ]
-    },
-    "h": {
-     "g": [
-      "Coronato",
-      1
-     ],
-     "a": [
-      "Farabee",
-      2
-     ],
-     "p": [
-      "Farabee",
-      2
-     ]
-    },
-    "season": "2026-27"
-   }
-  },
-  {
-   "t": "10:00 PM",
-   "a": "TOR",
-   "h": "VGK",
-   "ag": 2.73,
-   "hg": 3.76,
-   "ap": 42.1,
-   "hp": 57.9,
-   "b": {
-    "B": [
-     "VGK",
-     "-170"
-    ],
-    "E": [
-     "VGK",
-     "-162"
-    ],
-    "V": [
-     "VGK",
-     "-170"
-    ]
-   },
-   "lead": {
-    "a": {
-     "g": [
-      "Nylander",
-      3
-     ],
-     "a": [
-      "Nylander",
-      3
-     ],
-     "p": [
-      "Nylander",
+      "Carlsson",
       6
+     ],
+     "p": [
+      "Carlsson",
+      7
      ]
     },
     "h": {
      "g": [
-      "Olofsson",
-      4
+      "Connor",
+      5
      ],
      "a": [
-      "Eichel",
-      8
+      "Perfetti",
+      3
      ],
      "p": [
-      "Eichel",
-      10
+      "Connor",
+      7
      ]
     },
     "season": "2026-27"
@@ -1148,7 +824,117 @@
    "V": "EDM",
    "E": "EDM",
    "B": "EDM"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "UTA",
+   "h": "BOS",
+   "s": "BOS",
+   "w": "BOS",
+   "f": "UTA 1 - BOS 6",
+   "V": "UTA",
+   "E": "UTA",
+   "B": "UTA"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "DAL",
+   "h": "BUF",
+   "s": "BUF",
+   "w": "DAL",
+   "f": "DAL 4 - BUF 0",
+   "V": "DAL",
+   "E": "DAL",
+   "B": "DAL"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "NSH",
+   "h": "MTL",
+   "s": "MTL",
+   "w": "NSH",
+   "f": "NSH 5 - MTL 2",
+   "V": "MTL",
+   "E": "MTL",
+   "B": "MTL"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "PHI",
+   "h": "OTT",
+   "s": "OTT",
+   "w": "OTT",
+   "f": "PHI 1 - OTT 2",
+   "V": "OTT",
+   "E": "OTT",
+   "B": "OTT"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "MIN",
+   "h": "TBL",
+   "s": "TBL",
+   "w": "TBL",
+   "f": "MIN 2 - TBL 3",
+   "V": "TBL",
+   "E": "TBL",
+   "B": "TBL"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "VAN",
+   "h": "CAR",
+   "s": "CAR",
+   "w": "CAR",
+   "f": "VAN 2 - CAR 7",
+   "V": "CAR",
+   "E": "CAR",
+   "B": "CAR"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "CHI",
+   "h": "NYI",
+   "s": "NYI",
+   "w": "NYI",
+   "f": "CHI 1 - NYI 4",
+   "V": "NYI",
+   "E": "NYI",
+   "B": "NYI"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "SJS",
+   "h": "STL",
+   "s": "STL",
+   "w": "SJS",
+   "f": "SJS 3 - STL 2 OT",
+   "V": "STL",
+   "E": "STL",
+   "B": "STL"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "COL",
+   "h": "CGY",
+   "s": "COL",
+   "w": "COL",
+   "f": "COL 7 - CGY 3",
+   "V": "COL",
+   "E": "COL",
+   "B": "COL"
+  },
+  {
+   "d": "2026-10-08",
+   "a": "TOR",
+   "h": "VGK",
+   "s": "VGK",
+   "w": "VGK",
+   "f": "TOR 3 - VGK 4 SO",
+   "V": "VGK",
+   "E": "VGK",
+   "B": "VGK"
   }
  ],
- "updated": "2026-10-08 07:21 ET"
+ "updated": "2026-10-09 04:26 ET"
 }
