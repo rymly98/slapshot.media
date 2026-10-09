@@ -2,7 +2,7 @@
 import json, urllib.request
 get=lambda u: json.load(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"slapshot"}),timeout=30))
 req=json.load(open("data/stars-request.json"))
-rows=get("https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=true&isGame=false&limit=-1&cayenneExp=seasonId=20252026%20and%20gameTypeId=2")["data"]
+rows=get(f"https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=true&isGame=false&limit=-1&cayenneExp=seasonId={req.get("season","20252026")}%20and%20gameTypeId=2")["data"]
 by={r["playerId"]:r for r in rows}
 out=[]
 for t in req["teams"]:
