@@ -507,7 +507,7 @@ function drawChart(){
   if(lo<50&&hi>50)g+=`<line class="ref" x1="${m.l}" x2="${W-m.r}" y1="${y(50)}" y2="${y(50)}"/>`;
   if(!days.length){el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Win percentage chart, no games yet">${g}<text class="empty" x="${m.l+iw/2}" y="${m.t+ih/2}" text-anchor="middle">The race starts after opening night, Sep 29.</text></svg>`;return;}
   const step=Math.max(1,Math.ceil(days.length/6));
-  days.forEach((d,i)=>{if(i%step===0||i===days.length-1)g+=`<text class="axis" x="${x(i)}" y="${H-8}" text-anchor="middle">${d.slice(5).replace("-","/")}</text>`;});
+  days.forEach((d,i)=>{const L=days.length-1;if((i%step===0&&(i===L||L-i>=Math.max(2,Math.ceil(step*0.6))))||i===L)g+=`<text class="axis" x="${x(i)}" y="${H-8}" text-anchor="middle">${d.slice(5).replace("-","/")}</text>`;});
   // lines; Slapshot drawn last so it sits on top
   const order=[...series.slice(1),series[0]];
   let lines="",ends=[];
