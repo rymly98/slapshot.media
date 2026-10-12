@@ -1,110 +1,56 @@
 {
- "gameday": "2026-10-11",
- "label": "Sun Oct 11 \u00b7 3 games \u00b7 times ET",
+ "gameday": "2026-10-12",
+ "label": "Mon Oct 12 \u00b7 3 games \u00b7 times ET",
  "games": [
   {
-   "t": "5:00 PM",
-   "a": "SEA",
-   "h": "WSH",
-   "ag": 2.4,
-   "hg": 3.42,
-   "ap": 41.2,
-   "hp": 58.8,
+   "t": "1:00 PM",
+   "a": "FLA",
+   "h": "BUF",
+   "ag": 2.85,
+   "hg": 3.84,
+   "ap": 42.6,
+   "hp": 57.4,
    "b": {
     "B": [
-     "WSH",
-     "-218"
+     "FLA",
+     "-112"
     ],
     "E": [
-     "WSH",
-     "-210"
+     "Pick'em",
+     "-110"
     ],
     "V": [
-     "WSH",
-     "-210"
+     "Pick'em",
+     "-110"
     ]
    },
    "lead": {
     "a": {
      "g": [
-      "Gaudreau",
+      "Tkachuk",
       3
      ],
      "a": [
-      "McCann",
-      5
+      "Bennett",
+      3
      ],
      "p": [
-      "McCann",
-      6
+      "Tkachuk",
+      4
      ]
     },
     "h": {
      "g": [
-      "Tuch",
+      "Thompson",
       3
      ],
      "a": [
-      "Strome",
+      "Power",
       4
      ],
      "p": [
-      "Wilson",
+      "Thompson",
       5
-     ]
-    },
-    "season": "2026-27"
-   }
-  },
-  {
-   "t": "6:00 PM",
-   "a": "VAN",
-   "h": "NYR",
-   "ag": 2.65,
-   "hg": 3.81,
-   "ap": 41.0,
-   "hp": 59.0,
-   "b": {
-    "B": [
-     "NYR",
-     "-265"
-    ],
-    "E": [
-     "NYR",
-     "-260"
-    ],
-    "V": [
-     "NYR",
-     "-275"
-    ]
-   },
-   "lead": {
-    "a": {
-     "g": [
-      "Cotter",
-      4
-     ],
-     "a": [
-      "Pettersson",
-      6
-     ],
-     "p": [
-      "Pettersson",
-      8
-     ]
-    },
-    "h": {
-     "g": [
-      "Lafreni\u00e8re",
-      4
-     ],
-     "a": [
-      "Fox",
-      5
-     ],
-     "p": [
-      "Lafreni\u00e8re",
-      6
      ]
     },
     "season": "2026-27"
@@ -112,53 +58,107 @@
   },
   {
    "t": "7:00 PM",
-   "a": "CAR",
-   "h": "PHI",
-   "ag": 3.11,
-   "hg": 2.46,
-   "ap": 55.8,
-   "hp": 44.2,
+   "a": "OTT",
+   "h": "NJD",
+   "ag": 3.16,
+   "hg": 3.07,
+   "ap": 50.8,
+   "hp": 49.2,
    "b": {
     "B": [
-     "CAR",
-     "-180"
+     "NJD",
+     "-135"
     ],
     "E": [
-     "CAR",
-     "-178"
+     "NJD",
+     "-134"
     ],
     "V": [
-     "CAR",
-     "-185"
+     "NJD",
+     "-140"
     ]
    },
    "lead": {
     "a": {
      "g": [
-      "Aho",
-      5
+      "St\u00fctzle",
+      4
      ],
      "a": [
-      "Blake",
-      6
+      "St\u00fctzle",
+      4
      ],
      "p": [
-      "Aho",
-      9
+      "St\u00fctzle",
+      8
      ]
     },
     "h": {
      "g": [
-      "Michkov",
+      "Evangelista",
       2
      ],
      "a": [
-      "Konecny",
+      "Bratt",
       3
      ],
      "p": [
-      "Konecny",
-      3
+      "Bratt",
+      4
+     ]
+    },
+    "season": "2026-27"
+   }
+  },
+  {
+   "t": "8:00 PM",
+   "a": "VGK",
+   "h": "MIN",
+   "ag": 2.82,
+   "hg": 3.09,
+   "ap": 47.7,
+   "hp": 52.3,
+   "b": {
+    "B": [
+     "MIN",
+     "-118"
+    ],
+    "E": [
+     "MIN",
+     "-115"
+    ],
+    "V": [
+     "MIN",
+     "-115"
+    ]
+   },
+   "lead": {
+    "a": {
+     "g": [
+      "Olofsson",
+      4
+     ],
+     "a": [
+      "Eichel",
+      9
+     ],
+     "p": [
+      "Eichel",
+      12
+     ]
+    },
+    "h": {
+     "g": [
+      "Kaprizov",
+      6
+     ],
+     "a": [
+      "Hughes",
+      5
+     ],
+     "p": [
+      "Kaprizov",
+      8
      ]
     },
     "season": "2026-27"
@@ -1078,7 +1078,40 @@
    "V": "VGK",
    "E": "VGK",
    "B": "VGK"
+  },
+  {
+   "d": "2026-10-11",
+   "a": "SEA",
+   "h": "WSH",
+   "s": "WSH",
+   "w": "SEA",
+   "f": "SEA 5 - WSH 3",
+   "V": "WSH",
+   "E": "WSH",
+   "B": "WSH"
+  },
+  {
+   "d": "2026-10-11",
+   "a": "VAN",
+   "h": "NYR",
+   "s": "NYR",
+   "w": "NYR",
+   "f": "VAN 2 - NYR 6",
+   "V": "NYR",
+   "E": "NYR",
+   "B": "NYR"
+  },
+  {
+   "d": "2026-10-11",
+   "a": "CAR",
+   "h": "PHI",
+   "s": "CAR",
+   "w": "CAR",
+   "f": "CAR 4 - PHI 1",
+   "V": "CAR",
+   "E": "CAR",
+   "B": "CAR"
   }
  ],
- "updated": "2026-10-11 07:18 ET"
+ "updated": "2026-10-12 05:05 ET"
 }
