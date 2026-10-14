@@ -1,0 +1,3611 @@
+{
+ "asof": "2026-10-14T00:03:33.864827",
+ "games": 89,
+ "skipped": [],
+ "lines": [
+  {
+   "team": "EDM",
+   "ids": [
+    8477934,
+    8478402,
+    8481617
+   ],
+   "names": [
+    "L. Draisaitl",
+    "C. McDavid",
+    "V. Podkolzin"
+   ],
+   "toi": 26.7,
+   "gf": 4,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "COL",
+   "ids": [
+    8475768,
+    8482768,
+    8486171
+   ],
+   "names": [
+    "J. Schwartz",
+    "F. Svechkov",
+    "T. Hughes"
+   ],
+   "toi": 24.0,
+   "gf": 4,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "SEA",
+   "ids": [
+    8477919,
+    8482751,
+    8483570
+   ],
+   "names": [
+    "F. Gaudreau",
+    "R. Winterton",
+    "B. Meyers"
+   ],
+   "toi": 19.1,
+   "gf": 4,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "TBL",
+   "ids": [
+    8477404,
+    8478519,
+    8479542
+   ],
+   "names": [
+    "J. Guentzel",
+    "A. Cirelli",
+    "B. Hagel"
+   ],
+   "toi": 19.7,
+   "gf": 4,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8475786,
+    8478402,
+    8480029
+   ],
+   "names": [
+    "Z. Hyman",
+    "C. McDavid",
+    "A. Formenton"
+   ],
+   "toi": 11.7,
+   "gf": 3,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8478498,
+    8480012,
+    8483476
+   ],
+   "names": [
+    "J. DeBrusk",
+    "E. Pettersson",
+    "J. Lekkerim\u00e4ki"
+   ],
+   "toi": 44.6,
+   "gf": 4,
+   "ga": 2,
+   "gp": 4
+  },
+  {
+   "team": "WPG",
+   "ids": [
+    8476460,
+    8478398,
+    8482149
+   ],
+   "names": [
+    "M. Scheifele",
+    "K. Connor",
+    "C. Perfetti"
+   ],
+   "toi": 29.4,
+   "gf": 4,
+   "ga": 2,
+   "gp": 2
+  },
+  {
+   "team": "CAR",
+   "ids": [
+    8477478,
+    8478427,
+    8480830
+   ],
+   "names": [
+    "W. Carrier",
+    "S. Aho",
+    "A. Svechnikov"
+   ],
+   "toi": 30.1,
+   "gf": 3,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "BOS",
+   "ids": [
+    8482175,
+    8482177,
+    8483489
+   ],
+   "names": [
+    "J. Peterka",
+    "M. Khusnutdinov",
+    "F. Minten"
+   ],
+   "toi": 18.4,
+   "gf": 3,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "NYI",
+   "ids": [
+    8476292,
+    8476419,
+    8477407
+   ],
+   "names": [
+    "O. Palat",
+    "J. Pageau",
+    "A. Duclair"
+   ],
+   "toi": 6.8,
+   "gf": 3,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "VGK",
+   "ids": [
+    8475913,
+    8477964,
+    8478403
+   ],
+   "names": [
+    "M. Stone",
+    "I. Barbashev",
+    "J. Eichel"
+   ],
+   "toi": 45.9,
+   "gf": 2,
+   "ga": 0,
+   "gp": 4
+  },
+  {
+   "team": "CAR",
+   "ids": [
+    8475791,
+    8482702,
+    8482809
+   ],
+   "names": [
+    "T. Hall",
+    "L. Stankoven",
+    "J. Blake"
+   ],
+   "toi": 40.5,
+   "gf": 2,
+   "ga": 0,
+   "gp": 4
+  },
+  {
+   "team": "MIN",
+   "ids": [
+    8478493,
+    8478864,
+    8481557
+   ],
+   "names": [
+    "J. Eriksson Ek",
+    "K. Kaprizov",
+    "M. Boldy"
+   ],
+   "toi": 35.6,
+   "gf": 2,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "PIT",
+   "ids": [
+    8480980,
+    8481481,
+    8481582
+   ],
+   "names": [
+    "C. Dewar",
+    "B. Lizotte",
+    "N. Robertson"
+   ],
+   "toi": 21.9,
+   "gf": 2,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8479420,
+    8481522,
+    8482659
+   ],
+   "names": [
+    "T. Thompson",
+    "P. Krebs",
+    "J. Doan"
+   ],
+   "toi": 21.2,
+   "gf": 2,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8476880,
+    8477949,
+    8479400
+   ],
+   "names": [
+    "T. Wilson",
+    "A. Tuch",
+    "P. Dubois"
+   ],
+   "toi": 19.8,
+   "gf": 2,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BOS",
+   "ids": [
+    8477496,
+    8479999,
+    8485395
+   ],
+   "names": [
+    "E. Lindholm",
+    "C. Mittelstadt",
+    "J. Hagens"
+   ],
+   "toi": 19.3,
+   "gf": 2,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "COL",
+   "ids": [
+    8475172,
+    8477476,
+    8477492
+   ],
+   "names": [
+    "N. Kadri",
+    "A. Lehkonen",
+    "N. MacKinnon"
+   ],
+   "toi": 16.3,
+   "gf": 2,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "NYR",
+   "ids": [
+    8476468,
+    8481789,
+    8482109
+   ],
+   "names": [
+    "J. Miller",
+    "T. Kartye",
+    "A. Lafreni\u00e8re"
+   ],
+   "toi": 13.6,
+   "gf": 2,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "CGY",
+   "ids": [
+    8480028,
+    8482679,
+    8484234
+   ],
+   "names": [
+    "M. Frost",
+    "M. Coronato",
+    "A. Suniev"
+   ],
+   "toi": 10.8,
+   "gf": 2,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "UTA",
+   "ids": [
+    8475314,
+    8479977,
+    8480849
+   ],
+   "names": [
+    "A. Lee",
+    "K. Yamamoto",
+    "B. Hayton"
+   ],
+   "toi": 7.5,
+   "gf": 2,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "ANA",
+   "ids": [
+    8481538,
+    8482408,
+    8485512
+   ],
+   "names": [
+    "J. Caulfield",
+    "J. Malott",
+    "T. Washe"
+   ],
+   "toi": 22.6,
+   "gf": 2,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "STL",
+   "ids": [
+    8480023,
+    8482077,
+    8483516
+   ],
+   "names": [
+    "R. Thomas",
+    "D. Holloway",
+    "J. Snuggerud"
+   ],
+   "toi": 22.6,
+   "gf": 2,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "DET",
+   "ids": [
+    8479337,
+    8484471,
+    8484794
+   ],
+   "names": [
+    "A. DeBrincat",
+    "E. Finnie",
+    "M. Brandsegg-Nyg\u00e5rd"
+   ],
+   "toi": 22.4,
+   "gf": 2,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "SEA",
+   "ids": [
+    8477955,
+    8482665,
+    8482713
+   ],
+   "names": [
+    "J. McCann",
+    "M. Beniers",
+    "M. Samoskevich"
+   ],
+   "toi": 19.1,
+   "gf": 2,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "CAR",
+   "ids": [
+    8476873,
+    8480762,
+    8480829
+   ],
+   "names": [
+    "M. Jankowski",
+    "E. Robinson",
+    "J. Kotkaniemi"
+   ],
+   "toi": 18.4,
+   "gf": 2,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "SEA",
+   "ids": [
+    8481554,
+    8483524,
+    8484800
+   ],
+   "names": [
+    "K. Kakko",
+    "S. Wright",
+    "B. Catton"
+   ],
+   "toi": 17.4,
+   "gf": 2,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "PIT",
+   "ids": [
+    8471215,
+    8478438,
+    8482475
+   ],
+   "names": [
+    "E. Malkin",
+    "T. Novak",
+    "E. Chinakhov"
+   ],
+   "toi": 28.1,
+   "gf": 1,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "OTT",
+   "ids": [
+    8473512,
+    8478020,
+    8481596
+   ],
+   "names": [
+    "C. Giroux",
+    "M. Amadio",
+    "S. Pinto"
+   ],
+   "toi": 25.2,
+   "gf": 1,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "FLA",
+   "ids": [
+    8480185,
+    8482113,
+    8483771
+   ],
+   "names": [
+    "E. Luostarinen",
+    "A. Lundell",
+    "S. Vilmanis"
+   ],
+   "toi": 23.9,
+   "gf": 1,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "STL",
+   "ids": [
+    8481013,
+    8481580,
+    8482745
+   ],
+   "names": [
+    "J. Berggren",
+    "C. McMichael",
+    "M. McTavish"
+   ],
+   "toi": 23.4,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8478413,
+    8482062,
+    8483450
+   ],
+   "names": [
+    "J. Greenway",
+    "C. Smith",
+    "R. Greene"
+   ],
+   "toi": 21.2,
+   "gf": 1,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "TBL",
+   "ids": [
+    8476453,
+    8478010,
+    8482201
+   ],
+   "names": [
+    "N. Kucherov",
+    "B. Point",
+    "G. Goncalves"
+   ],
+   "toi": 20.6,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NJD",
+   "ids": [
+    8479996,
+    8480003,
+    8483695
+   ],
+   "names": [
+    "C. Glass",
+    "J. Boqvist",
+    "A. Lombardi"
+   ],
+   "toi": 19.0,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "ANA",
+   "ids": [
+    8482118,
+    8484153,
+    8484762
+   ],
+   "names": [
+    "S. Colangelo",
+    "L. Carlsson",
+    "B. Sennecke"
+   ],
+   "toi": 18.0,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "CBJ",
+   "ids": [
+    8477497,
+    8477501,
+    8481716
+   ],
+   "names": [
+    "S. Monahan",
+    "V. Nichushkin",
+    "D. Voronkov"
+   ],
+   "toi": 17.3,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "FLA",
+   "ids": [
+    8477409,
+    8477935,
+    8479314
+   ],
+   "names": [
+    "C. Verhaeghe",
+    "S. Bennett",
+    "M. Tkachuk"
+   ],
+   "toi": 17.2,
+   "gf": 1,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8476432,
+    8482088,
+    8484186
+   ],
+   "names": [
+    "B. Jenner",
+    "J. Sourdif",
+    "R. Leonard"
+   ],
+   "toi": 17.2,
+   "gf": 1,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "MTL",
+   "ids": [
+    8475184,
+    8476981,
+    8481618
+   ],
+   "names": [
+    "C. Kreider",
+    "J. Anderson",
+    "A. Newhook"
+   ],
+   "toi": 17.0,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BOS",
+   "ids": [
+    8479661,
+    8480355,
+    8483505
+   ],
+   "names": [
+    "T. Jeannot",
+    "M. Kastelic",
+    "M. Poitras"
+   ],
+   "toi": 16.8,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "DAL",
+   "ids": [
+    8478420,
+    8479351,
+    8482740
+   ],
+   "names": [
+    "M. Rantanen",
+    "S. Steel",
+    "W. Johnston"
+   ],
+   "toi": 16.8,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8471214,
+    8478440,
+    8478463
+   ],
+   "names": [
+    "A. Ovechkin",
+    "D. Strome",
+    "A. Beauvillier"
+   ],
+   "toi": 14.8,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NYR",
+   "ids": [
+    8476459,
+    8481604,
+    8484210
+   ],
+   "names": [
+    "M. Zibanejad",
+    "P. Dorofeyev",
+    "G. Perreault"
+   ],
+   "toi": 13.9,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "COL",
+   "ids": [
+    8475172,
+    8475754,
+    8476455
+   ],
+   "names": [
+    "N. Kadri",
+    "B. Nelson",
+    "G. Landeskog"
+   ],
+   "toi": 13.8,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BOS",
+   "ids": [
+    8477496,
+    8477956,
+    8482175
+   ],
+   "names": [
+    "E. Lindholm",
+    "D. Pastrnak",
+    "J. Peterka"
+   ],
+   "toi": 12.3,
+   "gf": 1,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "MIN",
+   "ids": [
+    8481553,
+    8483478,
+    8483525
+   ],
+   "names": [
+    "B. Brink",
+    "R. Lorenz",
+    "D. Yurov"
+   ],
+   "toi": 12.1,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8480802,
+    8483468,
+    8484797
+   ],
+   "names": [
+    "R. McLeod",
+    "J.Kulich",
+    "K. Helenius"
+   ],
+   "toi": 10.6,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "OTT",
+   "ids": [
+    8477998,
+    8480208,
+    8482116
+   ],
+   "names": [
+    "W. Foegele",
+    "D. Batherson",
+    "T. St\u00fctzle"
+   ],
+   "toi": 10.3,
+   "gf": 1,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "UTA",
+   "ids": [
+    8478474,
+    8480849,
+    8480855
+   ],
+   "names": [
+    "L. Crouse",
+    "B. Hayton",
+    "J. McBain"
+   ],
+   "toi": 9.4,
+   "gf": 1,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "TOR",
+   "ids": [
+    8476925,
+    8477426,
+    8486067
+   ],
+   "names": [
+    "C. Sissons",
+    "N. Paul",
+    "G. McKenna"
+   ],
+   "toi": 9.3,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "VGK",
+   "ids": [
+    8476881,
+    8478109,
+    8484803
+   ],
+   "names": [
+    "T. Hertl",
+    "V. Olofsson",
+    "T. Connelly"
+   ],
+   "toi": 8.6,
+   "gf": 1,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8478440,
+    8479385,
+    8484186
+   ],
+   "names": [
+    "D. Strome",
+    "J. Kyrou",
+    "R. Leonard"
+   ],
+   "toi": 7.3,
+   "gf": 1,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "MTL",
+   "ids": [
+    8476981,
+    8478133,
+    8482737
+   ],
+   "names": [
+    "J. Anderson",
+    "J. Evans",
+    "Z. Bolduc"
+   ],
+   "toi": 7.2,
+   "gf": 1,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "ANA",
+   "ids": [
+    8473986,
+    8478366,
+    8480068
+   ],
+   "names": [
+    "A. Killorn",
+    "F. Vatrano",
+    "R. Poehling"
+   ],
+   "toi": 6.5,
+   "gf": 1,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "MIN",
+   "ids": [
+    8476399,
+    8478493,
+    8481557
+   ],
+   "names": [
+    "B. Coleman",
+    "J. Eriksson Ek",
+    "M. Boldy"
+   ],
+   "toi": 6.1,
+   "gf": 1,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "NSH",
+   "ids": [
+    8477021,
+    8479525,
+    8486189
+   ],
+   "names": [
+    "A. Kerfoot",
+    "R. Colton",
+    "V. Pinchuk"
+   ],
+   "toi": 5.9,
+   "gf": 1,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8479365,
+    8483455,
+    8484509
+   ],
+   "names": [
+    "T. Frederic",
+    "I. Howard",
+    "J. Samanski"
+   ],
+   "toi": 5.7,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "PIT",
+   "ids": [
+    8475810,
+    8482758,
+    8485414
+   ],
+   "names": [
+    "B. Rust",
+    "V. Koivunen",
+    "B. Kindel"
+   ],
+   "toi": 5.4,
+   "gf": 1,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "MIN",
+   "ids": [
+    8475220,
+    8477451,
+    8481553
+   ],
+   "names": [
+    "M. Foligno",
+    "R. Hartman",
+    "B. Brink"
+   ],
+   "toi": 5.2,
+   "gf": 1,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "COL",
+   "ids": [
+    8477476,
+    8477492,
+    8480039
+   ],
+   "names": [
+    "A. Lehkonen",
+    "N. MacKinnon",
+    "M. Necas"
+   ],
+   "toi": 17.2,
+   "gf": 2,
+   "ga": 2,
+   "gp": 3
+  },
+  {
+   "team": "NYR",
+   "ids": [
+    8480009,
+    8482157,
+    8483690
+   ],
+   "names": [
+    "E. Tolvanen",
+    "W. Cuylle",
+    "N. Laba"
+   ],
+   "toi": 27.9,
+   "gf": 1,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "TOR",
+   "ids": [
+    8478458,
+    8479318,
+    8480893
+   ],
+   "names": [
+    "J. Roslovic",
+    "A. Matthews",
+    "K. Marchenko"
+   ],
+   "toi": 24.3,
+   "gf": 1,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "CAR",
+   "ids": [
+    8473533,
+    8476921,
+    8477940
+   ],
+   "names": [
+    "J. Staal",
+    "J. Martinook",
+    "N. Ehlers"
+   ],
+   "toi": 23.3,
+   "gf": 1,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8477479,
+    8484390,
+    8485391
+   ],
+   "names": [
+    "T. Bertuzzi",
+    "R. Kantserov",
+    "A. Frondell"
+   ],
+   "toi": 23.0,
+   "gf": 1,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8478472,
+    8480029,
+    8486161
+   ],
+   "names": [
+    "M. Joseph",
+    "A. Formenton",
+    "O. Michaels"
+   ],
+   "toi": 18.1,
+   "gf": 1,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "SJS",
+   "ids": [
+    8475726,
+    8484911,
+    8485402
+   ],
+   "names": [
+    "T. Toffoli",
+    "C. Graf",
+    "M. Misa"
+   ],
+   "toi": 17.5,
+   "gf": 1,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "CBJ",
+   "ids": [
+    8482660,
+    8482720,
+    8484166
+   ],
+   "names": [
+    "K. Johnson",
+    "M. Knies",
+    "A. Fantilli"
+   ],
+   "toi": 16.5,
+   "gf": 1,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "COL",
+   "ids": [
+    8475754,
+    8476455,
+    8480039
+   ],
+   "names": [
+    "B. Nelson",
+    "G. Landeskog",
+    "M. Necas"
+   ],
+   "toi": 15.3,
+   "gf": 1,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8477934,
+    8477953,
+    8481617
+   ],
+   "names": [
+    "L. Draisaitl",
+    "K. Kapanen",
+    "V. Podkolzin"
+   ],
+   "toi": 12.2,
+   "gf": 1,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8481024,
+    8482055,
+    8484136
+   ],
+   "names": [
+    "L. Karlsson",
+    "D. O'Connor",
+    "M. Sasson"
+   ],
+   "toi": 10.5,
+   "gf": 1,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "CAR",
+   "ids": [
+    8476873,
+    8476921,
+    8477940
+   ],
+   "names": [
+    "M. Jankowski",
+    "J. Martinook",
+    "N. Ehlers"
+   ],
+   "toi": 10.3,
+   "gf": 1,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "MTL",
+   "ids": [
+    8476479,
+    8480074,
+    8481523
+   ],
+   "names": [
+    "P. Danault",
+    "A. Texier",
+    "K. Dach"
+   ],
+   "toi": 9.4,
+   "gf": 1,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8471214,
+    8481656,
+    8484999
+   ],
+   "names": [
+    "A. Ovechkin",
+    "A. Protas",
+    "I. Protas"
+   ],
+   "toi": 8.8,
+   "gf": 1,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "VGK",
+   "ids": [
+    8475343,
+    8483553,
+    8483890
+   ],
+   "names": [
+    "N. Dowd",
+    "M. Gatcomb",
+    "B. Bowman"
+   ],
+   "toi": 29.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 4
+  },
+  {
+   "team": "NYR",
+   "ids": [
+    8476459,
+    8482109,
+    8484210
+   ],
+   "names": [
+    "M. Zibanejad",
+    "A. Lafreni\u00e8re",
+    "G. Perreault"
+   ],
+   "toi": 25.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8482097,
+    8483500,
+    8484145
+   ],
+   "names": [
+    "J. Quinn",
+    "N. Ostlund",
+    "Z. Benson"
+   ],
+   "toi": 24.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "TBL",
+   "ids": [
+    8476878,
+    8480995,
+    8481624
+   ],
+   "names": [
+    "Z. Girgensons",
+    "P. Holmberg",
+    "I. Mikheyev"
+   ],
+   "toi": 23.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "MTL",
+   "ids": [
+    8480018,
+    8481540,
+    8483515
+   ],
+   "names": [
+    "N. Suzuki",
+    "C. Caufield",
+    "J. Slafkovsk\u00fd"
+   ],
+   "toi": 23.6,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "BOS",
+   "ids": [
+    8477956,
+    8478401,
+    8479987
+   ],
+   "names": [
+    "D. Pastrnak",
+    "P. Zacha",
+    "M. Geekie"
+   ],
+   "toi": 22.9,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "SJS",
+   "ids": [
+    8477505,
+    8480748,
+    8486103
+   ],
+   "names": [
+    "A. Wennberg",
+    "K. Sherwood",
+    "I. Stenberg"
+   ],
+   "toi": 21.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NYI",
+   "ids": [
+    8475170,
+    8484221,
+    8485388
+   ],
+   "names": [
+    "B. Schenn",
+    "C. Ritchie",
+    "V. Eklund"
+   ],
+   "toi": 20.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "MTL",
+   "ids": [
+    8476479,
+    8480074,
+    8482737
+   ],
+   "names": [
+    "P. Danault",
+    "A. Texier",
+    "Z. Bolduc"
+   ],
+   "toi": 19.6,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "STL",
+   "ids": [
+    8477402,
+    8482089,
+    8484164
+   ],
+   "names": [
+    "P. Buchnevich",
+    "J. Neighbours",
+    "D. Dvorsky"
+   ],
+   "toi": 19.6,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NYI",
+   "ids": [
+    8475151,
+    8477500,
+    8482476
+   ],
+   "names": [
+    "K. Palmieri",
+    "B. Horvat",
+    "E. Heineman"
+   ],
+   "toi": 18.9,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NJD",
+   "ids": [
+    8478542,
+    8481721,
+    8482110
+   ],
+   "names": [
+    "E. Rodrigues",
+    "A. Gritsyuk",
+    "D. Mercer"
+   ],
+   "toi": 18.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "DAL",
+   "ids": [
+    8473994,
+    8478449,
+    8480027
+   ],
+   "names": [
+    "J. Benn",
+    "R. Hintz",
+    "J. Robertson"
+   ],
+   "toi": 17.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8481024,
+    8481032,
+    8482079
+   ],
+   "names": [
+    "L. Karlsson",
+    "P. Cotter",
+    "M. Rossi"
+   ],
+   "toi": 16.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "NJD",
+   "ids": [
+    8477511,
+    8479407,
+    8481559
+   ],
+   "names": [
+    "A. Mantha",
+    "J. Bratt",
+    "J. Hughes"
+   ],
+   "toi": 16.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NSH",
+   "ids": [
+    8474564,
+    8475158,
+    8476539
+   ],
+   "names": [
+    "S. Stamkos",
+    "R. O'Reilly",
+    "J. Marchessault"
+   ],
+   "toi": 13.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "CBJ",
+   "ids": [
+    8478046,
+    8478856,
+    8479066
+   ],
+   "names": [
+    "D. Heinen",
+    "C. Garland",
+    "R. Lomberg"
+   ],
+   "toi": 13.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8478444,
+    8482055,
+    8483499
+   ],
+   "names": [
+    "B. Boeser",
+    "D. O'Connor",
+    "L. Ohgren"
+   ],
+   "toi": 13.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "FLA",
+   "ids": [
+    8474189,
+    8477903,
+    8478147
+   ],
+   "names": [
+    "L. Eller",
+    "G. Hathaway",
+    "B. Imama"
+   ],
+   "toi": 12.9,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "PIT",
+   "ids": [
+    8482148,
+    8482758,
+    8485414
+   ],
+   "names": [
+    "H. Lapierre",
+    "V. Koivunen",
+    "B. Kindel"
+   ],
+   "toi": 12.6,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NYI",
+   "ids": [
+    8475231,
+    8476292,
+    8481711
+   ],
+   "names": [
+    "C. Cizikas",
+    "O. Palat",
+    "M. Maccelli"
+   ],
+   "toi": 12.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "ANA",
+   "ids": [
+    8473986,
+    8478421,
+    8480068
+   ],
+   "names": [
+    "A. Killorn",
+    "A. Greer",
+    "R. Poehling"
+   ],
+   "toi": 12.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NSH",
+   "ids": [
+    8476887,
+    8481535,
+    8484241
+   ],
+   "names": [
+    "F. Forsberg",
+    "N. Hoglander",
+    "M. Wood"
+   ],
+   "toi": 12.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BOS",
+   "ids": [
+    8478401,
+    8479987,
+    8479999
+   ],
+   "names": [
+    "P. Zacha",
+    "M. Geekie",
+    "C. Mittelstadt"
+   ],
+   "toi": 11.8,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "NYR",
+   "ids": [
+    8476468,
+    8477416,
+    8481604
+   ],
+   "names": [
+    "J. Miller",
+    "O. Bjorkstrand",
+    "P. Dorofeyev"
+   ],
+   "toi": 11.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "WPG",
+   "ids": [
+    8476392,
+    8480113,
+    8480289
+   ],
+   "names": [
+    "A. Lowry",
+    "A. Iafallo",
+    "M. Barron"
+   ],
+   "toi": 11.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "LAK",
+   "ids": [
+    8477960,
+    8478550,
+    8482124
+   ],
+   "names": [
+    "A. Kempe",
+    "A. Panarin",
+    "Q. Byfield"
+   ],
+   "toi": 11.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "DAL",
+   "ids": [
+    8476278,
+    8476889,
+    8480840
+   ],
+   "names": [
+    "C. Blackwell",
+    "R. Faksa",
+    "O. B\u00e4ck"
+   ],
+   "toi": 10.9,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "WPG",
+   "ids": [
+    8480014,
+    8480289,
+    8486025
+   ],
+   "names": [
+    "G. Vilardi",
+    "M. Barron",
+    "V. Bj\u00f6rck"
+   ],
+   "toi": 10.8,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BOS",
+   "ids": [
+    8476374,
+    8479661,
+    8480355
+   ],
+   "names": [
+    "S. Kuraly",
+    "T. Jeannot",
+    "M. Kastelic"
+   ],
+   "toi": 10.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8477450,
+    8477953,
+    8480842
+   ],
+   "names": [
+    "J. Dickinson",
+    "K. Kapanen",
+    "F. Hallander"
+   ],
+   "toi": 10.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8479420,
+    8480064,
+    8482097
+   ],
+   "names": [
+    "T. Thompson",
+    "J. Norris",
+    "J. Quinn"
+   ],
+   "toi": 10.6,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "MTL",
+   "ids": [
+    8475184,
+    8480018,
+    8481540
+   ],
+   "names": [
+    "C. Kreider",
+    "N. Suzuki",
+    "C. Caufield"
+   ],
+   "toi": 10.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "DAL",
+   "ids": [
+    8475794,
+    8484829,
+    8484938
+   ],
+   "names": [
+    "T. Seguin",
+    "J. Hryckowian",
+    "A. Hyry"
+   ],
+   "toi": 10.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "UTA",
+   "ids": [
+    8476389,
+    8482699,
+    8483431
+   ],
+   "names": [
+    "V. Trocheck",
+    "D. Guenther",
+    "L. Cooley"
+   ],
+   "toi": 10.3,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "LAK",
+   "ids": [
+    8475287,
+    8479675,
+    8482155
+   ],
+   "names": [
+    "E. Haula",
+    "T. Moore",
+    "A. Laferriere"
+   ],
+   "toi": 10.3,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "MTL",
+   "ids": [
+    8481618,
+    8483515,
+    8484984
+   ],
+   "names": [
+    "A. Newhook",
+    "J. Slafkovsk\u00fd",
+    "I. Demidov"
+   ],
+   "toi": 9.9,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "TOR",
+   "ids": [
+    8476925,
+    8477426,
+    8484158
+   ],
+   "names": [
+    "C. Sissons",
+    "N. Paul",
+    "E. Cowan"
+   ],
+   "toi": 9.8,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "ANA",
+   "ids": [
+    8475798,
+    8481754,
+    8483445
+   ],
+   "names": [
+    "M. Granlund",
+    "N. Nesterenko",
+    "C. Gauthier"
+   ],
+   "toi": 9.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BOS",
+   "ids": [
+    8482177,
+    8483489,
+    8485395
+   ],
+   "names": [
+    "M. Khusnutdinov",
+    "F. Minten",
+    "J. Hagens"
+   ],
+   "toi": 9.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8478413,
+    8482062,
+    8484197
+   ],
+   "names": [
+    "J. Greenway",
+    "C. Smith",
+    "O. Moore"
+   ],
+   "toi": 9.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "UTA",
+   "ids": [
+    8477951,
+    8478474,
+    8479343
+   ],
+   "names": [
+    "N. Schmaltz",
+    "L. Crouse",
+    "C. Keller"
+   ],
+   "toi": 9.3,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8474141,
+    8484197,
+    8484390
+   ],
+   "names": [
+    "P. Kane",
+    "O. Moore",
+    "R. Kantserov"
+   ],
+   "toi": 9.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "WPG",
+   "ids": [
+    8476392,
+    8480113,
+    8482765
+   ],
+   "names": [
+    "A. Lowry",
+    "A. Iafallo",
+    "I. Rosen"
+   ],
+   "toi": 9.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "UTA",
+   "ids": [
+    8478831,
+    8480855,
+    8484388
+   ],
+   "names": [
+    "K. Stenlund",
+    "J. McBain",
+    "D. But"
+   ],
+   "toi": 8.9,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8482659,
+    8483500,
+    8484145
+   ],
+   "names": [
+    "J. Doan",
+    "N. Ostlund",
+    "Z. Benson"
+   ],
+   "toi": 8.8,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "NYR",
+   "ids": [
+    8480813,
+    8481789,
+    8482460
+   ],
+   "names": [
+    "J. Veleno",
+    "T. Kartye",
+    "M. Rempe"
+   ],
+   "toi": 8.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8477989,
+    8480015,
+    8481533
+   ],
+   "names": [
+    "C. Dvorak",
+    "O. Tippett",
+    "T. Zegras"
+   ],
+   "toi": 8.6,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "FLA",
+   "ids": [
+    8474189,
+    8477933,
+    8480801
+   ],
+   "names": [
+    "L. Eller",
+    "S. Reinhart",
+    "B. Tkachuk"
+   ],
+   "toi": 8.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "CAR",
+   "ids": [
+    8478427,
+    8480762,
+    8480830
+   ],
+   "names": [
+    "S. Aho",
+    "E. Robinson",
+    "A. Svechnikov"
+   ],
+   "toi": 8.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 4
+  },
+  {
+   "team": "OTT",
+   "ids": [
+    8480188,
+    8481528,
+    8482092
+   ],
+   "names": [
+    "F. Zetterlund",
+    "D. Cozens",
+    "R. Greig"
+   ],
+   "toi": 8.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "SJS",
+   "ids": [
+    8476624,
+    8480848,
+    8482859
+   ],
+   "names": [
+    "B. Goodrow",
+    "T. Dellandrea",
+    "Z. Ostapchuk"
+   ],
+   "toi": 8.2,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "FLA",
+   "ids": [
+    8477493,
+    8477933,
+    8480801
+   ],
+   "names": [
+    "A. Barkov",
+    "S. Reinhart",
+    "B. Tkachuk"
+   ],
+   "toi": 8.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8475848,
+    8481032,
+    8483395
+   ],
+   "names": [
+    "B. Gallagher",
+    "P. Cotter",
+    "A. Bains"
+   ],
+   "toi": 8.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8479365,
+    8483455,
+    8486161
+   ],
+   "names": [
+    "T. Frederic",
+    "I. Howard",
+    "O. Michaels"
+   ],
+   "toi": 7.9,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "CAR",
+   "ids": [
+    8475235,
+    8480762,
+    8480829
+   ],
+   "names": [
+    "N. Deslauriers",
+    "E. Robinson",
+    "J. Kotkaniemi"
+   ],
+   "toi": 7.9,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "LAK",
+   "ids": [
+    8470621,
+    8481732,
+    8482726
+   ],
+   "names": [
+    "C. Perry",
+    "A. Lee",
+    "S. Helenius"
+   ],
+   "toi": 7.8,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8476461,
+    8480015,
+    8485406
+   ],
+   "names": [
+    "S. Couturier",
+    "O. Tippett",
+    "P. Martone"
+   ],
+   "toi": 7.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "OTT",
+   "ids": [
+    8477444,
+    8480208,
+    8482116
+   ],
+   "names": [
+    "A. Burakovsky",
+    "D. Batherson",
+    "T. St\u00fctzle"
+   ],
+   "toi": 7.6,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "LAK",
+   "ids": [
+    8476469,
+    8476872,
+    8483756
+   ],
+   "names": [
+    "J. Armia",
+    "S. Laughton",
+    "J. Wright"
+   ],
+   "toi": 7.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8479941,
+    8480802,
+    8481522
+   ],
+   "names": [
+    "J. Danforth",
+    "R. McLeod",
+    "P. Krebs"
+   ],
+   "toi": 7.2,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8479359,
+    8480064,
+    8482896
+   ],
+   "names": [
+    "B. Malenstyn",
+    "J. Norris",
+    "T. Kozak"
+   ],
+   "toi": 7.2,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8479420,
+    8481522,
+    8483468
+   ],
+   "names": [
+    "T. Thompson",
+    "P. Krebs",
+    "J.Kulich"
+   ],
+   "toi": 7.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "STL",
+   "ids": [
+    8477527,
+    8479346,
+    8480459
+   ],
+   "names": [
+    "R. Johnston",
+    "D. Dube",
+    "P. Suter"
+   ],
+   "toi": 7.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8477989,
+    8481533,
+    8482159
+   ],
+   "names": [
+    "C. Dvorak",
+    "T. Zegras",
+    "T. Foerster"
+   ],
+   "toi": 7.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "PIT",
+   "ids": [
+    8481725,
+    8482148,
+    8485414
+   ],
+   "names": [
+    "E. Soderblom",
+    "H. Lapierre",
+    "B. Kindel"
+   ],
+   "toi": 7.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8481024,
+    8483499,
+    8484136
+   ],
+   "names": [
+    "L. Karlsson",
+    "L. Ohgren",
+    "M. Sasson"
+   ],
+   "toi": 7.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "OTT",
+   "ids": [
+    8476393,
+    8481528,
+    8482092
+   ],
+   "names": [
+    "N. Cousins",
+    "D. Cozens",
+    "R. Greig"
+   ],
+   "toi": 7.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8476461,
+    8478439,
+    8485406
+   ],
+   "names": [
+    "S. Couturier",
+    "T. Konecny",
+    "P. Martone"
+   ],
+   "toi": 6.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8478569,
+    8479336,
+    8480220
+   ],
+   "names": [
+    "N. Acciari",
+    "C. Grundstrom",
+    "N. Cates"
+   ],
+   "toi": 6.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "CGY",
+   "ids": [
+    8483609,
+    8484154,
+    8484958
+   ],
+   "names": [
+    "A. Klapka",
+    "J. Castagna",
+    "M. Tsyplakov"
+   ],
+   "toi": 6.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "OTT",
+   "ids": [
+    8477444,
+    8481528,
+    8482092
+   ],
+   "names": [
+    "A. Burakovsky",
+    "D. Cozens",
+    "R. Greig"
+   ],
+   "toi": 6.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8476880,
+    8477949,
+    8478440
+   ],
+   "names": [
+    "T. Wilson",
+    "A. Tuch",
+    "D. Strome"
+   ],
+   "toi": 6.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "NSH",
+   "ids": [
+    8480835,
+    8481726,
+    8483513
+   ],
+   "names": [
+    "J. Drury",
+    "A. Edstrom",
+    "R. Schaefer"
+   ],
+   "toi": 6.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "UTA",
+   "ids": [
+    8478831,
+    8479619,
+    8484388
+   ],
+   "names": [
+    "K. Stenlund",
+    "M. Carcone",
+    "D. But"
+   ],
+   "toi": 6.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8478047,
+    8478569,
+    8480220
+   ],
+   "names": [
+    "M. Bunting",
+    "N. Acciari",
+    "N. Cates"
+   ],
+   "toi": 5.8,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8477450,
+    8477953,
+    8479365
+   ],
+   "names": [
+    "J. Dickinson",
+    "K. Kapanen",
+    "T. Frederic"
+   ],
+   "toi": 5.7,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8476432,
+    8478463,
+    8483573
+   ],
+   "names": [
+    "B. Jenner",
+    "A. Beauvillier",
+    "E. Frank"
+   ],
+   "toi": 5.6,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8478444,
+    8482055,
+    8484136
+   ],
+   "names": [
+    "B. Boeser",
+    "D. O'Connor",
+    "M. Sasson"
+   ],
+   "toi": 5.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8479368,
+    8483455,
+    8484509
+   ],
+   "names": [
+    "M. Jones",
+    "I. Howard",
+    "J. Samanski"
+   ],
+   "toi": 5.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "NSH",
+   "ids": [
+    8479525,
+    8480835,
+    8481726
+   ],
+   "names": [
+    "R. Colton",
+    "J. Drury",
+    "A. Edstrom"
+   ],
+   "toi": 5.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "SJS",
+   "ids": [
+    8476624,
+    8482859,
+    8484994
+   ],
+   "names": [
+    "B. Goodrow",
+    "Z. Ostapchuk",
+    "I. Chernyshov"
+   ],
+   "toi": 5.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "FLA",
+   "ids": [
+    8477903,
+    8478043,
+    8478147
+   ],
+   "names": [
+    "G. Hathaway",
+    "S. Lafferty",
+    "B. Imama"
+   ],
+   "toi": 5.5,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "COL",
+   "ids": [
+    8475172,
+    8477492,
+    8480039
+   ],
+   "names": [
+    "N. Kadri",
+    "N. MacKinnon",
+    "M. Necas"
+   ],
+   "toi": 5.4,
+   "gf": 0,
+   "ga": 0,
+   "gp": 3
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8474141,
+    8483493,
+    8484185
+   ],
+   "names": [
+    "P. Kane",
+    "F. Nazar",
+    "N. Lardis"
+   ],
+   "toi": 5.2,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8480220,
+    8484142,
+    8485406
+   ],
+   "names": [
+    "N. Cates",
+    "D. Barkey",
+    "P. Martone"
+   ],
+   "toi": 5.1,
+   "gf": 0,
+   "ga": 0,
+   "gp": 1
+  },
+  {
+   "team": "CBJ",
+   "ids": [
+    8482660,
+    8482705,
+    8484166
+   ],
+   "names": [
+    "K. Johnson",
+    "C. Sillinger",
+    "A. Fantilli"
+   ],
+   "toi": 5.0,
+   "gf": 0,
+   "ga": 0,
+   "gp": 2
+  },
+  {
+   "team": "VGK",
+   "ids": [
+    8476448,
+    8478483,
+    8479353
+   ],
+   "names": [
+    "W. Karlsson",
+    "M. Marner",
+    "B. Howden"
+   ],
+   "toi": 47.4,
+   "gf": 2,
+   "ga": 3,
+   "gp": 4
+  },
+  {
+   "team": "CBJ",
+   "ids": [
+    8475745,
+    8479671,
+    8482705
+   ],
+   "names": [
+    "C. Coyle",
+    "M. Olivier",
+    "C. Sillinger"
+   ],
+   "toi": 18.1,
+   "gf": 2,
+   "ga": 3,
+   "gp": 2
+  },
+  {
+   "team": "SEA",
+   "ids": [
+    8474586,
+    8476905,
+    8482259
+   ],
+   "names": [
+    "J. Eberle",
+    "C. Stephenson",
+    "B. McMann"
+   ],
+   "toi": 25.9,
+   "gf": 1,
+   "ga": 2,
+   "gp": 2
+  },
+  {
+   "team": "PIT",
+   "ids": [
+    8471675,
+    8475810,
+    8476483
+   ],
+   "names": [
+    "S. Crosby",
+    "B. Rust",
+    "R. Rakell"
+   ],
+   "toi": 25.3,
+   "gf": 1,
+   "ga": 2,
+   "gp": 3
+  },
+  {
+   "team": "VGK",
+   "ids": [
+    8476881,
+    8481534,
+    8484803
+   ],
+   "names": [
+    "T. Hertl",
+    "R. Lavoie",
+    "T. Connelly"
+   ],
+   "toi": 23.5,
+   "gf": 1,
+   "ga": 2,
+   "gp": 3
+  },
+  {
+   "team": "COL",
+   "ids": [
+    8478462,
+    8480448,
+    8482742
+   ],
+   "names": [
+    "N. Roy",
+    "P. Kelly",
+    "Z. L'Heureux"
+   ],
+   "toi": 21.4,
+   "gf": 1,
+   "ga": 2,
+   "gp": 3
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8477989,
+    8482159,
+    8484142
+   ],
+   "names": [
+    "C. Dvorak",
+    "T. Foerster",
+    "D. Barkey"
+   ],
+   "toi": 12.7,
+   "gf": 1,
+   "ga": 2,
+   "gp": 3
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8478444,
+    8482079,
+    8483499
+   ],
+   "names": [
+    "B. Boeser",
+    "M. Rossi",
+    "L. Ohgren"
+   ],
+   "toi": 11.1,
+   "gf": 1,
+   "ga": 2,
+   "gp": 4
+  },
+  {
+   "team": "CGY",
+   "ids": [
+    8483609,
+    8484154,
+    8484234
+   ],
+   "names": [
+    "A. Klapka",
+    "J. Castagna",
+    "A. Suniev"
+   ],
+   "toi": 6.5,
+   "gf": 1,
+   "ga": 2,
+   "gp": 1
+  },
+  {
+   "team": "CGY",
+   "ids": [
+    8474150,
+    8480797,
+    8481068
+   ],
+   "names": [
+    "M. Backlund",
+    "J. Farabee",
+    "Y. Sharangovich"
+   ],
+   "toi": 24.0,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "DET",
+   "ids": [
+    8477946,
+    8478042,
+    8482078
+   ],
+   "names": [
+    "D. Larkin",
+    "V. Arvidsson",
+    "L. Raymond"
+   ],
+   "toi": 23.1,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "DET",
+   "ids": [
+    8477429,
+    8478434,
+    8479992
+   ],
+   "names": [
+    "A. Copp",
+    "K. Kolesar",
+    "M. Rasmussen"
+   ],
+   "toi": 20.0,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "MIN",
+   "ids": [
+    8476399,
+    8477451,
+    8485702
+   ],
+   "names": [
+    "B. Coleman",
+    "R. Hartman",
+    "M. Shabanov"
+   ],
+   "toi": 19.1,
+   "gf": 0,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8478444,
+    8481032,
+    8482079
+   ],
+   "names": [
+    "B. Boeser",
+    "P. Cotter",
+    "M. Rossi"
+   ],
+   "toi": 18.9,
+   "gf": 0,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "NJD",
+   "ids": [
+    8478414,
+    8480002,
+    8482146
+   ],
+   "names": [
+    "T. Meier",
+    "N. Hischier",
+    "L. Evangelista"
+   ],
+   "toi": 17.6,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "NYR",
+   "ids": [
+    8477416,
+    8482877,
+    8484786
+   ],
+   "names": [
+    "O. Bjorkstrand",
+    "J. Chmelar",
+    "C. Beaudoin"
+   ],
+   "toi": 15.8,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "MIN",
+   "ids": [
+    8477446,
+    8478508,
+    8481477
+   ],
+   "names": [
+    "M. McCarron",
+    "Y. Trenin",
+    "N. Sturm"
+   ],
+   "toi": 12.6,
+   "gf": 0,
+   "ga": 1,
+   "gp": 3
+  },
+  {
+   "team": "FLA",
+   "ids": [
+    8477409,
+    8477933,
+    8478043
+   ],
+   "names": [
+    "C. Verhaeghe",
+    "S. Reinhart",
+    "S. Lafferty"
+   ],
+   "toi": 12.1,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "SJS",
+   "ids": [
+    8478975,
+    8484227,
+    8484801
+   ],
+   "names": [
+    "M. Marchment",
+    "W. Smith",
+    "M. Celebrini"
+   ],
+   "toi": 11.7,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "SJS",
+   "ids": [
+    8478975,
+    8484227,
+    8484994
+   ],
+   "names": [
+    "M. Marchment",
+    "W. Smith",
+    "I. Chernyshov"
+   ],
+   "toi": 11.4,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "NYR",
+   "ids": [
+    8476468,
+    8481604,
+    8481789
+   ],
+   "names": [
+    "J. Miller",
+    "P. Dorofeyev",
+    "T. Kartye"
+   ],
+   "toi": 11.2,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "EDM",
+   "ids": [
+    8478472,
+    8479368,
+    8482703
+   ],
+   "names": [
+    "M. Joseph",
+    "M. Jones",
+    "C. Dach"
+   ],
+   "toi": 10.2,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8476461,
+    8480015,
+    8484387
+   ],
+   "names": [
+    "S. Couturier",
+    "O. Tippett",
+    "M. Michkov"
+   ],
+   "toi": 10.1,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8475848,
+    8482691,
+    8484136
+   ],
+   "names": [
+    "B. Gallagher",
+    "A. R\u00e4ty",
+    "M. Sasson"
+   ],
+   "toi": 10.1,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "UTA",
+   "ids": [
+    8476389,
+    8477951,
+    8479343
+   ],
+   "names": [
+    "V. Trocheck",
+    "N. Schmaltz",
+    "C. Keller"
+   ],
+   "toi": 9.9,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "CGY",
+   "ids": [
+    8476458,
+    8481028,
+    8484180
+   ],
+   "names": [
+    "R. Strome",
+    "M. Pospisil",
+    "S. Honzek"
+   ],
+   "toi": 9.8,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "CGY",
+   "ids": [
+    8480028,
+    8482679,
+    8484860
+   ],
+   "names": [
+    "M. Frost",
+    "M. Coronato",
+    "M. Gridin"
+   ],
+   "toi": 9.8,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "TOR",
+   "ids": [
+    8477939,
+    8478458,
+    8479318
+   ],
+   "names": [
+    "W. Nylander",
+    "J. Roslovic",
+    "A. Matthews"
+   ],
+   "toi": 9.8,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8474141,
+    8483450,
+    8484185
+   ],
+   "names": [
+    "P. Kane",
+    "R. Greene",
+    "N. Lardis"
+   ],
+   "toi": 9.8,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "CGY",
+   "ids": [
+    8476458,
+    8481028,
+    8484860
+   ],
+   "names": [
+    "R. Strome",
+    "M. Pospisil",
+    "M. Gridin"
+   ],
+   "toi": 9.0,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8475253,
+    8478047,
+    8478569
+   ],
+   "names": [
+    "G. Wilson",
+    "M. Bunting",
+    "N. Acciari"
+   ],
+   "toi": 8.6,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "DET",
+   "ids": [
+    8480326,
+    8482802,
+    8484160
+   ],
+   "names": [
+    "S. Dries",
+    "C. Mazur",
+    "N. Danielson"
+   ],
+   "toi": 8.5,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "UTA",
+   "ids": [
+    8475314,
+    8482699,
+    8483431
+   ],
+   "names": [
+    "A. Lee",
+    "D. Guenther",
+    "L. Cooley"
+   ],
+   "toi": 8.4,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "WPG",
+   "ids": [
+    8480014,
+    8482765,
+    8486025
+   ],
+   "names": [
+    "G. Vilardi",
+    "I. Rosen",
+    "V. Bj\u00f6rck"
+   ],
+   "toi": 8.1,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8475848,
+    8483395,
+    8484136
+   ],
+   "names": [
+    "B. Gallagher",
+    "A. Bains",
+    "M. Sasson"
+   ],
+   "toi": 7.9,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8477987,
+    8483493,
+    8484185
+   ],
+   "names": [
+    "R. Donato",
+    "F. Nazar",
+    "N. Lardis"
+   ],
+   "toi": 7.3,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "ANA",
+   "ids": [
+    8483445,
+    8484153,
+    8484762
+   ],
+   "names": [
+    "C. Gauthier",
+    "L. Carlsson",
+    "B. Sennecke"
+   ],
+   "toi": 7.3,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8476882,
+    8476952,
+    8477987
+   ],
+   "names": [
+    "T. Teravainen",
+    "D. Toninato",
+    "R. Donato"
+   ],
+   "toi": 6.9,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "MIN",
+   "ids": [
+    8478864,
+    8483525,
+    8485702
+   ],
+   "names": [
+    "K. Kaprizov",
+    "D. Yurov",
+    "M. Shabanov"
+   ],
+   "toi": 6.4,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "BUF",
+   "ids": [
+    8475842,
+    8479359,
+    8482896
+   ],
+   "names": [
+    "S. Carrick",
+    "B. Malenstyn",
+    "T. Kozak"
+   ],
+   "toi": 6.3,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "STL",
+   "ids": [
+    8477527,
+    8480459,
+    8482784
+   ],
+   "names": [
+    "R. Johnston",
+    "P. Suter",
+    "Z. Dean"
+   ],
+   "toi": 6.3,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8476880,
+    8477949,
+    8482088
+   ],
+   "names": [
+    "T. Wilson",
+    "A. Tuch",
+    "J. Sourdif"
+   ],
+   "toi": 6.1,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8482055,
+    8482691,
+    8483395
+   ],
+   "names": [
+    "D. O'Connor",
+    "A. R\u00e4ty",
+    "A. Bains"
+   ],
+   "toi": 5.5,
+   "gf": 0,
+   "ga": 1,
+   "gp": 1
+  },
+  {
+   "team": "CHI",
+   "ids": [
+    8474141,
+    8483493,
+    8484197
+   ],
+   "names": [
+    "P. Kane",
+    "F. Nazar",
+    "O. Moore"
+   ],
+   "toi": 5.1,
+   "gf": 0,
+   "ga": 1,
+   "gp": 2
+  },
+  {
+   "team": "FLA",
+   "ids": [
+    8477935,
+    8479314,
+    8480801
+   ],
+   "names": [
+    "S. Bennett",
+    "M. Tkachuk",
+    "B. Tkachuk"
+   ],
+   "toi": 12.9,
+   "gf": 0,
+   "ga": 2,
+   "gp": 2
+  },
+  {
+   "team": "NYI",
+   "ids": [
+    8476419,
+    8477407,
+    8481601
+   ],
+   "names": [
+    "J. Pageau",
+    "A. Duclair",
+    "S. Holmstrom"
+   ],
+   "toi": 12.2,
+   "gf": 0,
+   "ga": 2,
+   "gp": 2
+  },
+  {
+   "team": "VAN",
+   "ids": [
+    8481024,
+    8482055,
+    8483499
+   ],
+   "names": [
+    "L. Karlsson",
+    "D. O'Connor",
+    "L. Ohgren"
+   ],
+   "toi": 10.1,
+   "gf": 0,
+   "ga": 2,
+   "gp": 2
+  },
+  {
+   "team": "TOR",
+   "ids": [
+    8475166,
+    8477939,
+    8486067
+   ],
+   "names": [
+    "J. Tavares",
+    "W. Nylander",
+    "G. McKenna"
+   ],
+   "toi": 8.7,
+   "gf": 0,
+   "ga": 2,
+   "gp": 2
+  },
+  {
+   "team": "PIT",
+   "ids": [
+    8471675,
+    8476483,
+    8482148
+   ],
+   "names": [
+    "S. Crosby",
+    "R. Rakell",
+    "H. Lapierre"
+   ],
+   "toi": 6.2,
+   "gf": 0,
+   "ga": 2,
+   "gp": 2
+  },
+  {
+   "team": "PHI",
+   "ids": [
+    8478047,
+    8481533,
+    8484387
+   ],
+   "names": [
+    "M. Bunting",
+    "T. Zegras",
+    "M. Michkov"
+   ],
+   "toi": 5.2,
+   "gf": 0,
+   "ga": 2,
+   "gp": 1
+  },
+  {
+   "team": "WSH",
+   "ids": [
+    8479385,
+    8481656,
+    8484999
+   ],
+   "names": [
+    "J. Kyrou",
+    "A. Protas",
+    "I. Protas"
+   ],
+   "toi": 15.4,
+   "gf": 0,
+   "ga": 3,
+   "gp": 3
+  },
+  {
+   "team": "WPG",
+   "ids": [
+    8476480,
+    8481043,
+    8483471
+   ],
+   "names": [
+    "V. Namestnikov",
+    "C. Koepke",
+    "B. Lambert"
+   ],
+   "toi": 11.7,
+   "gf": 0,
+   "ga": 3,
+   "gp": 2
+  }
+ ]
+}
