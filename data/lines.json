@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-14T00:03:33.864827",
+ "asof": "2026-10-14T00:08:25.141898",
  "games": 89,
  "skipped": [],
  "lines": [
@@ -18,7 +18,51 @@
    "toi": 26.7,
    "gf": 4,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020055,
+     "for": true,
+     "p": 2,
+     "t": "00:11",
+     "by": [
+      "E. Bouchard",
+      "L. Draisaitl"
+     ]
+    },
+    {
+     "g": 2026020055,
+     "for": true,
+     "p": 2,
+     "t": "14:12",
+     "by": [
+      "E. Bouchard",
+      "L. Draisaitl",
+      "C. McDavid"
+     ]
+    },
+    {
+     "g": 2026020055,
+     "for": true,
+     "p": 2,
+     "t": "16:49",
+     "by": [
+      "V. Podkolzin",
+      "L. Draisaitl"
+     ]
+    },
+    {
+     "g": 2026020072,
+     "for": true,
+     "p": 3,
+     "t": "03:13",
+     "by": [
+      "V. Podkolzin",
+      "C. McDavid",
+      "E. Bouchard"
+     ]
+    }
+   ]
   },
   {
    "team": "COL",
@@ -35,7 +79,53 @@
    "toi": 24.0,
    "gf": 4,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020054,
+     "for": true,
+     "p": 2,
+     "t": "02:51",
+     "by": [
+      "J. Schwartz",
+      "F. Svechkov",
+      "B. Burns"
+     ]
+    },
+    {
+     "g": 2026020054,
+     "for": true,
+     "p": 3,
+     "t": "12:35",
+     "by": [
+      "F. Svechkov",
+      "J. Schwartz",
+      "B. Kulak"
+     ]
+    },
+    {
+     "g": 2026020064,
+     "for": true,
+     "p": 3,
+     "t": "06:34",
+     "by": [
+      "J. Schwartz",
+      "T. Hughes",
+      "B. Kulak"
+     ]
+    },
+    {
+     "g": 2026020064,
+     "for": true,
+     "p": 3,
+     "t": "09:41",
+     "by": [
+      "J. Schwartz",
+      "F. Svechkov",
+      "B. Burns"
+     ]
+    }
+   ]
   },
   {
    "team": "SEA",
@@ -52,7 +142,53 @@
    "toi": 19.1,
    "gf": 4,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020066,
+     "for": true,
+     "p": 2,
+     "t": "04:39",
+     "by": [
+      "F. Gaudreau",
+      "R. Winterton",
+      "B. Meyers"
+     ]
+    },
+    {
+     "g": 2026020066,
+     "for": true,
+     "p": 2,
+     "t": "07:44",
+     "by": [
+      "F. Gaudreau",
+      "R. Winterton",
+      "B. Meyers"
+     ]
+    },
+    {
+     "g": 2026020084,
+     "for": true,
+     "p": 2,
+     "t": "13:24",
+     "by": [
+      "F. Gaudreau",
+      "R. Winterton",
+      "B. Meyers"
+     ]
+    },
+    {
+     "g": 2026020084,
+     "for": true,
+     "p": 3,
+     "t": "17:20",
+     "by": [
+      "R. Winterton",
+      "B. Meyers",
+      "F. Gaudreau"
+     ]
+    }
+   ]
   },
   {
    "team": "TBL",
@@ -69,7 +205,62 @@
    "toi": 19.7,
    "gf": 4,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020060,
+     "for": true,
+     "p": 1,
+     "t": "05:26",
+     "by": [
+      "A. Cirelli",
+      "E. Cernak",
+      "B. Hagel"
+     ]
+    },
+    {
+     "g": 2026020081,
+     "for": true,
+     "p": 1,
+     "t": "05:45",
+     "by": [
+      "J. Guentzel"
+     ]
+    },
+    {
+     "g": 2026020081,
+     "for": true,
+     "p": 1,
+     "t": "15:42",
+     "by": [
+      "B. Hagel",
+      "V. Hedman",
+      "M. Crozier"
+     ]
+    },
+    {
+     "g": 2026020081,
+     "for": false,
+     "p": 2,
+     "t": "11:41",
+     "by": [
+      "J. Pageau",
+      "M. Schaefer",
+      "T. DeAngelo"
+     ]
+    },
+    {
+     "g": 2026020081,
+     "for": true,
+     "p": 3,
+     "t": "18:16",
+     "by": [
+      "B. Hagel",
+      "M. Crozier",
+      "R. McDonagh"
+     ]
+    }
+   ]
   },
   {
    "team": "EDM",
@@ -86,7 +277,39 @@
    "toi": 11.7,
    "gf": 3,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020004,
+     "for": true,
+     "p": 1,
+     "t": "16:26",
+     "by": [
+      "E. Bouchard"
+     ]
+    },
+    {
+     "g": 2026020004,
+     "for": true,
+     "p": 2,
+     "t": "14:34",
+     "by": [
+      "E. Bouchard",
+      "C. McDavid",
+      "A. Formenton"
+     ]
+    },
+    {
+     "g": 2026020004,
+     "for": true,
+     "p": 3,
+     "t": "09:20",
+     "by": [
+      "E. Bouchard",
+      "C. McDavid"
+     ]
+    }
+   ]
   },
   {
    "team": "VAN",
@@ -103,7 +326,74 @@
    "toi": 44.6,
    "gf": 4,
    "ga": 2,
-   "gp": 4
+   "gp": 4,
+   "goals": [
+    {
+     "g": 2026020004,
+     "for": true,
+     "p": 3,
+     "t": "01:10",
+     "by": [
+      "J. Lekkerim\u00e4ki",
+      "J. DeBrusk",
+      "J. Oleksiak"
+     ]
+    },
+    {
+     "g": 2026020061,
+     "for": true,
+     "p": 2,
+     "t": "04:03",
+     "by": [
+      "J. DeBrusk",
+      "J. Lekkerim\u00e4ki",
+      "E. Pettersson"
+     ]
+    },
+    {
+     "g": 2026020061,
+     "for": true,
+     "p": 3,
+     "t": "13:04",
+     "by": [
+      "J. DeBrusk",
+      "E. Pettersson",
+      "Z. Buium"
+     ]
+    },
+    {
+     "g": 2026020085,
+     "for": false,
+     "p": 1,
+     "t": "00:27",
+     "by": [
+      "T. Kartye",
+      "J. Miller",
+      "A. Lafreni\u00e8re"
+     ]
+    },
+    {
+     "g": 2026020085,
+     "for": true,
+     "p": 1,
+     "t": "17:04",
+     "by": [
+      "J. DeBrusk",
+      "J. Lekkerim\u00e4ki"
+     ]
+    },
+    {
+     "g": 2026020085,
+     "for": false,
+     "p": 3,
+     "t": "05:57",
+     "by": [
+      "G. Perreault",
+      "A. Fox",
+      "M. Zibanejad"
+     ]
+    }
+   ]
   },
   {
    "team": "WPG",
@@ -120,7 +410,73 @@
    "toi": 29.4,
    "gf": 4,
    "ga": 2,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020054,
+     "for": true,
+     "p": 2,
+     "t": "04:01",
+     "by": [
+      "K. Connor",
+      "N. Pionk",
+      "D. Samberg"
+     ]
+    },
+    {
+     "g": 2026020054,
+     "for": true,
+     "p": 2,
+     "t": "18:16",
+     "by": [
+      "C. Perfetti",
+      "D. Samberg",
+      "M. Scheifele"
+     ]
+    },
+    {
+     "g": 2026020054,
+     "for": false,
+     "p": 3,
+     "t": "12:35",
+     "by": [
+      "F. Svechkov",
+      "J. Schwartz",
+      "B. Kulak"
+     ]
+    },
+    {
+     "g": 2026020054,
+     "for": true,
+     "p": 3,
+     "t": "19:00",
+     "by": [
+      "K. Connor",
+      "M. Scheifele"
+     ]
+    },
+    {
+     "g": 2026020069,
+     "for": false,
+     "p": 3,
+     "t": "04:25",
+     "by": [
+      "S. Colangelo",
+      "B. Sennecke"
+     ]
+    },
+    {
+     "g": 2026020069,
+     "for": true,
+     "p": 3,
+     "t": "10:36",
+     "by": [
+      "K. Connor",
+      "M. Scheifele",
+      "D. DeMelo"
+     ]
+    }
+   ]
   },
   {
    "team": "CAR",
@@ -137,7 +493,51 @@
    "toi": 30.1,
    "gf": 3,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020061,
+     "for": true,
+     "p": 1,
+     "t": "01:18",
+     "by": [
+      "K. Miller",
+      "W. Carrier",
+      "S. Walker"
+     ]
+    },
+    {
+     "g": 2026020078,
+     "for": false,
+     "p": 2,
+     "t": "04:40",
+     "by": [
+      "R. Kantserov"
+     ]
+    },
+    {
+     "g": 2026020086,
+     "for": true,
+     "p": 2,
+     "t": "13:45",
+     "by": [
+      "S. Gostisbehere",
+      "S. Aho",
+      "W. Carrier"
+     ]
+    },
+    {
+     "g": 2026020086,
+     "for": true,
+     "p": 2,
+     "t": "16:54",
+     "by": [
+      "S. Aho",
+      "W. Carrier",
+      "A. Svechnikov"
+     ]
+    }
+   ]
   },
   {
    "team": "BOS",
@@ -154,7 +554,53 @@
    "toi": 18.4,
    "gf": 3,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020056,
+     "for": false,
+     "p": 3,
+     "t": "09:48",
+     "by": [
+      "J. McBain",
+      "D. Simashev",
+      "B. Hayton"
+     ]
+    },
+    {
+     "g": 2026020070,
+     "for": true,
+     "p": 2,
+     "t": "17:12",
+     "by": [
+      "M. Lohrei",
+      "J. Peterka",
+      "F. Minten"
+     ]
+    },
+    {
+     "g": 2026020070,
+     "for": true,
+     "p": 3,
+     "t": "01:55",
+     "by": [
+      "M. Khusnutdinov",
+      "F. Minten",
+      "W. Borgen"
+     ]
+    },
+    {
+     "g": 2026020070,
+     "for": true,
+     "p": 3,
+     "t": "15:59",
+     "by": [
+      "F. Minten",
+      "J. Peterka",
+      "H. Lindholm"
+     ]
+    }
+   ]
   },
   {
    "team": "NYI",
@@ -171,7 +617,52 @@
    "toi": 6.8,
    "gf": 3,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020062,
+     "for": true,
+     "p": 2,
+     "t": "09:38",
+     "by": [
+      "A. Duclair",
+      "L. Stanley",
+      "J. Pageau"
+     ]
+    },
+    {
+     "g": 2026020081,
+     "for": true,
+     "p": 2,
+     "t": "06:27",
+     "by": [
+      "T. DeAngelo",
+      "O. Palat"
+     ]
+    },
+    {
+     "g": 2026020081,
+     "for": true,
+     "p": 2,
+     "t": "11:41",
+     "by": [
+      "J. Pageau",
+      "M. Schaefer",
+      "T. DeAngelo"
+     ]
+    },
+    {
+     "g": 2026020081,
+     "for": false,
+     "p": 3,
+     "t": "18:16",
+     "by": [
+      "B. Hagel",
+      "M. Crozier",
+      "R. McDonagh"
+     ]
+    }
+   ]
   },
   {
    "team": "VGK",
@@ -188,7 +679,31 @@
    "toi": 45.9,
    "gf": 2,
    "ga": 0,
-   "gp": 4
+   "gp": 4,
+   "goals": [
+    {
+     "g": 2026020005,
+     "for": true,
+     "p": 2,
+     "t": "15:12",
+     "by": [
+      "J. Eichel",
+      "I. Barbashev",
+      "B. McNabb"
+     ]
+    },
+    {
+     "g": 2026020065,
+     "for": true,
+     "p": 1,
+     "t": "17:36",
+     "by": [
+      "M. Stone",
+      "J. Eichel",
+      "I. Barbashev"
+     ]
+    }
+   ]
   },
   {
    "team": "CAR",
@@ -205,7 +720,31 @@
    "toi": 40.5,
    "gf": 2,
    "ga": 0,
-   "gp": 4
+   "gp": 4,
+   "goals": [
+    {
+     "g": 2026020061,
+     "for": true,
+     "p": 3,
+     "t": "11:36",
+     "by": [
+      "L. Stankoven",
+      "T. Hall",
+      "S. Walker"
+     ]
+    },
+    {
+     "g": 2026020078,
+     "for": true,
+     "p": 2,
+     "t": "06:05",
+     "by": [
+      "T. Hall",
+      "J. Blake",
+      "M. Reilly"
+     ]
+    }
+   ]
   },
   {
    "team": "MIN",
@@ -222,7 +761,31 @@
    "toi": 35.6,
    "gf": 2,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020073,
+     "for": true,
+     "p": 2,
+     "t": "05:00",
+     "by": [
+      "K. Kaprizov",
+      "M. Boldy",
+      "J. Eriksson Ek"
+     ]
+    },
+    {
+     "g": 2026020089,
+     "for": true,
+     "p": 1,
+     "t": "11:50",
+     "by": [
+      "M. Boldy",
+      "O. Maatta",
+      "Q. Hughes"
+     ]
+    }
+   ]
   },
   {
    "team": "PIT",
@@ -239,7 +802,30 @@
    "toi": 21.9,
    "gf": 2,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020053,
+     "for": true,
+     "p": 2,
+     "t": "18:01",
+     "by": [
+      "N. Robertson",
+      "K. Korczak",
+      "B. Lizotte"
+     ]
+    },
+    {
+     "g": 2026020077,
+     "for": true,
+     "p": 3,
+     "t": "01:57",
+     "by": [
+      "C. Dewar",
+      "B. Lizotte"
+     ]
+    }
+   ]
   },
   {
    "team": "BUF",
@@ -256,7 +842,30 @@
    "toi": 21.2,
    "gf": 2,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020087,
+     "for": true,
+     "p": 1,
+     "t": "05:58",
+     "by": [
+      "J. Doan",
+      "P. Krebs"
+     ]
+    },
+    {
+     "g": 2026020087,
+     "for": true,
+     "p": 3,
+     "t": "13:20",
+     "by": [
+      "T. Thompson",
+      "O. Power",
+      "P. Krebs"
+     ]
+    }
+   ]
   },
   {
    "team": "WSH",
@@ -273,7 +882,29 @@
    "toi": 19.8,
    "gf": 2,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020053,
+     "for": true,
+     "p": 2,
+     "t": "04:42",
+     "by": [
+      "P. Dubois",
+      "T. Wilson"
+     ]
+    },
+    {
+     "g": 2026020053,
+     "for": true,
+     "p": 2,
+     "t": "13:14",
+     "by": [
+      "A. Tuch",
+      "T. Wilson"
+     ]
+    }
+   ]
   },
   {
    "team": "BOS",
@@ -290,7 +921,31 @@
    "toi": 19.3,
    "gf": 2,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020056,
+     "for": true,
+     "p": 1,
+     "t": "10:06",
+     "by": [
+      "C. Mittelstadt",
+      "J. Hagens",
+      "E. Lindholm"
+     ]
+    },
+    {
+     "g": 2026020070,
+     "for": true,
+     "p": 3,
+     "t": "09:21",
+     "by": [
+      "C. Mittelstadt",
+      "E. Lindholm",
+      "J. Hagens"
+     ]
+    }
+   ]
   },
   {
    "team": "COL",
@@ -307,7 +962,31 @@
    "toi": 16.3,
    "gf": 2,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020064,
+     "for": true,
+     "p": 2,
+     "t": "09:16",
+     "by": [
+      "C. Makar",
+      "N. MacKinnon",
+      "B. Kulak"
+     ]
+    },
+    {
+     "g": 2026020064,
+     "for": true,
+     "p": 3,
+     "t": "05:35",
+     "by": [
+      "C. Makar",
+      "N. MacKinnon",
+      "N. Kadri"
+     ]
+    }
+   ]
   },
   {
    "team": "NYR",
@@ -324,7 +1003,31 @@
    "toi": 13.6,
    "gf": 2,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020085,
+     "for": true,
+     "p": 1,
+     "t": "00:27",
+     "by": [
+      "T. Kartye",
+      "J. Miller",
+      "A. Lafreni\u00e8re"
+     ]
+    },
+    {
+     "g": 2026020085,
+     "for": true,
+     "p": 2,
+     "t": "18:25",
+     "by": [
+      "T. Kartye",
+      "J. Miller",
+      "V. Gavrikov"
+     ]
+    }
+   ]
   },
   {
    "team": "CGY",
@@ -341,7 +1044,30 @@
    "toi": 10.8,
    "gf": 2,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020082,
+     "for": true,
+     "p": 1,
+     "t": "15:03",
+     "by": [
+      "M. Frost",
+      "M. Coronato",
+      "S. Nemec"
+     ]
+    },
+    {
+     "g": 2026020082,
+     "for": true,
+     "p": 2,
+     "t": "17:54",
+     "by": [
+      "A. Suniev",
+      "M. Coronato"
+     ]
+    }
+   ]
   },
   {
    "team": "UTA",
@@ -358,7 +1084,31 @@
    "toi": 7.5,
    "gf": 2,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020074,
+     "for": true,
+     "p": 1,
+     "t": "10:12",
+     "by": [
+      "K. Yamamoto",
+      "B. Hayton",
+      "M. Sergachev"
+     ]
+    },
+    {
+     "g": 2026020074,
+     "for": true,
+     "p": 2,
+     "t": "17:24",
+     "by": [
+      "A. Lee",
+      "J. Marino",
+      "K. Yamamoto"
+     ]
+    }
+   ]
   },
   {
    "team": "ANA",
@@ -375,7 +1125,42 @@
    "toi": 22.6,
    "gf": 2,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020055,
+     "for": false,
+     "p": 2,
+     "t": "14:12",
+     "by": [
+      "E. Bouchard",
+      "L. Draisaitl",
+      "C. McDavid"
+     ]
+    },
+    {
+     "g": 2026020069,
+     "for": true,
+     "p": 1,
+     "t": "14:41",
+     "by": [
+      "J. Caulfield",
+      "J. Malott",
+      "T. Washe"
+     ]
+    },
+    {
+     "g": 2026020069,
+     "for": true,
+     "p": 2,
+     "t": "05:20",
+     "by": [
+      "T. Washe",
+      "J. Malott",
+      "J. Caulfield"
+     ]
+    }
+   ]
   },
   {
    "team": "STL",
@@ -392,7 +1177,42 @@
    "toi": 22.6,
    "gf": 2,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020079,
+     "for": false,
+     "p": 1,
+     "t": "16:10",
+     "by": [
+      "V. Nichushkin",
+      "S. Monahan",
+      "E. Gudbranson"
+     ]
+    },
+    {
+     "g": 2026020079,
+     "for": true,
+     "p": 2,
+     "t": "09:02",
+     "by": [
+      "J. Snuggerud",
+      "P. Broberg",
+      "D. Holloway"
+     ]
+    },
+    {
+     "g": 2026020079,
+     "for": true,
+     "p": 2,
+     "t": "12:32",
+     "by": [
+      "J. Snuggerud",
+      "R. Thomas",
+      "D. Holloway"
+     ]
+    }
+   ]
   },
   {
    "team": "DET",
@@ -409,7 +1229,39 @@
    "toi": 22.4,
    "gf": 2,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020066,
+     "for": true,
+     "p": 2,
+     "t": "04:00",
+     "by": [
+      "W. Wallinder",
+      "A. DeBrincat",
+      "M. Brandsegg-Nyg\u00e5rd"
+     ]
+    },
+    {
+     "g": 2026020066,
+     "for": false,
+     "p": 2,
+     "t": "06:59",
+     "by": [
+      "M. Samoskevich",
+      "J. McCann"
+     ]
+    },
+    {
+     "g": 2026020066,
+     "for": true,
+     "p": 3,
+     "t": "15:27",
+     "by": [
+      "M. Brandsegg-Nyg\u00e5rd"
+     ]
+    }
+   ]
   },
   {
    "team": "SEA",
@@ -426,7 +1278,41 @@
    "toi": 19.1,
    "gf": 2,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020066,
+     "for": false,
+     "p": 2,
+     "t": "04:00",
+     "by": [
+      "W. Wallinder",
+      "A. DeBrincat",
+      "M. Brandsegg-Nyg\u00e5rd"
+     ]
+    },
+    {
+     "g": 2026020066,
+     "for": true,
+     "p": 2,
+     "t": "06:59",
+     "by": [
+      "M. Samoskevich",
+      "J. McCann"
+     ]
+    },
+    {
+     "g": 2026020084,
+     "for": true,
+     "p": 3,
+     "t": "14:33",
+     "by": [
+      "J. McCann",
+      "B. Montour",
+      "R. Evans"
+     ]
+    }
+   ]
   },
   {
    "team": "CAR",
@@ -443,7 +1329,41 @@
    "toi": 18.4,
    "gf": 2,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020061,
+     "for": true,
+     "p": 2,
+     "t": "03:20",
+     "by": [
+      "M. Jankowski",
+      "J. Kotkaniemi"
+     ]
+    },
+    {
+     "g": 2026020078,
+     "for": true,
+     "p": 1,
+     "t": "19:03",
+     "by": [
+      "M. Jankowski",
+      "J. Kotkaniemi",
+      "E. Robinson"
+     ]
+    },
+    {
+     "g": 2026020078,
+     "for": false,
+     "p": 3,
+     "t": "14:14",
+     "by": [
+      "O. Moore",
+      "W. Kaiser",
+      "R. Donato"
+     ]
+    }
+   ]
   },
   {
    "team": "SEA",
@@ -460,7 +1380,42 @@
    "toi": 17.4,
    "gf": 2,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020066,
+     "for": true,
+     "p": 1,
+     "t": "14:52",
+     "by": [
+      "B. Catton",
+      "K. Kakko",
+      "J. Mahura"
+     ]
+    },
+    {
+     "g": 2026020084,
+     "for": true,
+     "p": 1,
+     "t": "06:06",
+     "by": [
+      "K. Kakko",
+      "V. Dunn",
+      "A. Larsson"
+     ]
+    },
+    {
+     "g": 2026020084,
+     "for": false,
+     "p": 1,
+     "t": "11:41",
+     "by": [
+      "J. Kyrou",
+      "C. Hutson",
+      "R. Leonard"
+     ]
+    }
+   ]
   },
   {
    "team": "PIT",
@@ -477,7 +1432,18 @@
    "toi": 28.1,
    "gf": 1,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020053,
+     "for": true,
+     "p": 2,
+     "t": "14:05",
+     "by": [
+      "T. Novak"
+     ]
+    }
+   ]
   },
   {
    "team": "OTT",
@@ -494,7 +1460,20 @@
    "toi": 25.2,
    "gf": 1,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020088,
+     "for": true,
+     "p": 2,
+     "t": "00:09",
+     "by": [
+      "S. Pinto",
+      "M. Amadio",
+      "C. Giroux"
+     ]
+    }
+   ]
   },
   {
    "team": "FLA",
@@ -511,7 +1490,20 @@
    "toi": 23.9,
    "gf": 1,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020087,
+     "for": true,
+     "p": 1,
+     "t": "11:00",
+     "by": [
+      "A. Lundell",
+      "A. Ekblad",
+      "S. Vilmanis"
+     ]
+    }
+   ]
   },
   {
    "team": "STL",
@@ -528,7 +1520,20 @@
    "toi": 23.4,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020063,
+     "for": true,
+     "p": 1,
+     "t": "03:52",
+     "by": [
+      "C. McMichael",
+      "M. McTavish",
+      "J. Berggren"
+     ]
+    }
+   ]
   },
   {
    "team": "CHI",
@@ -545,7 +1550,20 @@
    "toi": 21.2,
    "gf": 1,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020005,
+     "for": true,
+     "p": 2,
+     "t": "12:23",
+     "by": [
+      "J. Greenway",
+      "R. Greene",
+      "W. Kaiser"
+     ]
+    }
+   ]
   },
   {
    "team": "TBL",
@@ -562,7 +1580,20 @@
    "toi": 20.6,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020060,
+     "for": true,
+     "p": 1,
+     "t": "06:02",
+     "by": [
+      "J. Carlson",
+      "N. Kucherov",
+      "B. Point"
+     ]
+    }
+   ]
   },
   {
    "team": "NJD",
@@ -579,7 +1610,19 @@
    "toi": 19.0,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020071,
+     "for": true,
+     "p": 1,
+     "t": "16:24",
+     "by": [
+      "J. Boqvist",
+      "A. Lombardi"
+     ]
+    }
+   ]
   },
   {
    "team": "ANA",
@@ -596,7 +1639,19 @@
    "toi": 18.0,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020069,
+     "for": true,
+     "p": 3,
+     "t": "04:25",
+     "by": [
+      "S. Colangelo",
+      "B. Sennecke"
+     ]
+    }
+   ]
   },
   {
    "team": "CBJ",
@@ -613,7 +1668,20 @@
    "toi": 17.3,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020079,
+     "for": true,
+     "p": 1,
+     "t": "16:10",
+     "by": [
+      "V. Nichushkin",
+      "S. Monahan",
+      "E. Gudbranson"
+     ]
+    }
+   ]
   },
   {
    "team": "FLA",
@@ -630,7 +1698,18 @@
    "toi": 17.2,
    "gf": 1,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020073,
+     "for": true,
+     "p": 2,
+     "t": "02:18",
+     "by": [
+      "M. Tkachuk"
+     ]
+    }
+   ]
   },
   {
    "team": "WSH",
@@ -647,7 +1726,18 @@
    "toi": 17.2,
    "gf": 1,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020067,
+     "for": true,
+     "p": 2,
+     "t": "17:38",
+     "by": [
+      "B. Jenner"
+     ]
+    }
+   ]
   },
   {
    "team": "MTL",
@@ -664,7 +1754,19 @@
    "toi": 17.0,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020058,
+     "for": true,
+     "p": 2,
+     "t": "08:50",
+     "by": [
+      "A. Newhook",
+      "J. Anderson"
+     ]
+    }
+   ]
   },
   {
    "team": "BOS",
@@ -681,7 +1783,20 @@
    "toi": 16.8,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020056,
+     "for": true,
+     "p": 1,
+     "t": "15:51",
+     "by": [
+      "M. Lohrei",
+      "M. Poitras",
+      "M. Kastelic"
+     ]
+    }
+   ]
   },
   {
    "team": "DAL",
@@ -698,7 +1813,20 @@
    "toi": 16.8,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020057,
+     "for": true,
+     "p": 2,
+     "t": "13:57",
+     "by": [
+      "M. Rantanen",
+      "N. Lundkvist",
+      "W. Johnston"
+     ]
+    }
+   ]
   },
   {
    "team": "WSH",
@@ -715,7 +1843,19 @@
    "toi": 14.8,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020053,
+     "for": true,
+     "p": 1,
+     "t": "00:23",
+     "by": [
+      "A. Beauvillier",
+      "D. Strome"
+     ]
+    }
+   ]
   },
   {
    "team": "NYR",
@@ -732,7 +1872,20 @@
    "toi": 13.9,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020085,
+     "for": true,
+     "p": 3,
+     "t": "05:57",
+     "by": [
+      "G. Perreault",
+      "A. Fox",
+      "M. Zibanejad"
+     ]
+    }
+   ]
   },
   {
    "team": "COL",
@@ -749,7 +1902,18 @@
    "toi": 13.8,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020080,
+     "for": true,
+     "p": 2,
+     "t": "12:25",
+     "by": [
+      "B. Nelson"
+     ]
+    }
+   ]
   },
   {
    "team": "BOS",
@@ -766,7 +1930,20 @@
    "toi": 12.3,
    "gf": 1,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020003,
+     "for": true,
+     "p": 3,
+     "t": "17:06",
+     "by": [
+      "J. Peterka",
+      "E. Lindholm",
+      "H. Lindholm"
+     ]
+    }
+   ]
   },
   {
    "team": "MIN",
@@ -783,7 +1960,20 @@
    "toi": 12.1,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020089,
+     "for": true,
+     "p": 1,
+     "t": "16:57",
+     "by": [
+      "D. Yurov",
+      "B. Brink",
+      "R. Lorenz"
+     ]
+    }
+   ]
   },
   {
    "team": "BUF",
@@ -800,7 +1990,20 @@
    "toi": 10.6,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020087,
+     "for": true,
+     "p": 2,
+     "t": "11:25",
+     "by": [
+      "R. McLeod",
+      "O. Zellweger",
+      "O. Power"
+     ]
+    }
+   ]
   },
   {
    "team": "OTT",
@@ -817,7 +2020,20 @@
    "toi": 10.3,
    "gf": 1,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020088,
+     "for": true,
+     "p": 3,
+     "t": "11:10",
+     "by": [
+      "T. St\u00fctzle",
+      "T. Chabot",
+      "J. Spence"
+     ]
+    }
+   ]
   },
   {
    "team": "UTA",
@@ -834,7 +2050,20 @@
    "toi": 9.4,
    "gf": 1,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020056,
+     "for": true,
+     "p": 3,
+     "t": "09:48",
+     "by": [
+      "J. McBain",
+      "D. Simashev",
+      "B. Hayton"
+     ]
+    }
+   ]
   },
   {
    "team": "TOR",
@@ -851,7 +2080,20 @@
    "toi": 9.3,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020065,
+     "for": true,
+     "p": 1,
+     "t": "08:37",
+     "by": [
+      "N. Paul",
+      "D. Raddysh",
+      "G. McKenna"
+     ]
+    }
+   ]
   },
   {
    "team": "VGK",
@@ -868,7 +2110,20 @@
    "toi": 8.6,
    "gf": 1,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020005,
+     "for": true,
+     "p": 1,
+     "t": "15:22",
+     "by": [
+      "T. Connelly",
+      "B. McNabb",
+      "S. Theodore"
+     ]
+    }
+   ]
   },
   {
    "team": "WSH",
@@ -885,7 +2140,20 @@
    "toi": 7.3,
    "gf": 1,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020084,
+     "for": true,
+     "p": 1,
+     "t": "11:41",
+     "by": [
+      "J. Kyrou",
+      "C. Hutson",
+      "R. Leonard"
+     ]
+    }
+   ]
   },
   {
    "team": "MTL",
@@ -902,7 +2170,20 @@
    "toi": 7.2,
    "gf": 1,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020002,
+     "for": true,
+     "p": 2,
+     "t": "04:52",
+     "by": [
+      "Z. Bolduc",
+      "M. Matheson",
+      "J. Anderson"
+     ]
+    }
+   ]
   },
   {
    "team": "ANA",
@@ -919,7 +2200,20 @@
    "toi": 6.5,
    "gf": 1,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020082,
+     "for": true,
+     "p": 1,
+     "t": "19:15",
+     "by": [
+      "F. Vatrano",
+      "R. Poehling",
+      "N. Warren"
+     ]
+    }
+   ]
   },
   {
    "team": "MIN",
@@ -936,7 +2230,20 @@
    "toi": 6.1,
    "gf": 1,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020073,
+     "for": true,
+     "p": 1,
+     "t": "00:53",
+     "by": [
+      "M. Boldy",
+      "J. Spurgeon",
+      "K. Kaprizov"
+     ]
+    }
+   ]
   },
   {
    "team": "NSH",
@@ -953,7 +2260,20 @@
    "toi": 5.9,
    "gf": 1,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020076,
+     "for": true,
+     "p": 1,
+     "t": "08:50",
+     "by": [
+      "R. Colton",
+      "V. Pinchuk",
+      "A. Kerfoot"
+     ]
+    }
+   ]
   },
   {
    "team": "EDM",
@@ -970,7 +2290,20 @@
    "toi": 5.7,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020072,
+     "for": true,
+     "p": 1,
+     "t": "12:37",
+     "by": [
+      "M. Ekholm",
+      "I. Howard",
+      "J. Samanski"
+     ]
+    }
+   ]
   },
   {
    "team": "PIT",
@@ -987,7 +2320,20 @@
    "toi": 5.4,
    "gf": 1,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020053,
+     "for": true,
+     "p": 1,
+     "t": "01:19",
+     "by": [
+      "B. Rust",
+      "B. Kindel",
+      "S. Girard"
+     ]
+    }
+   ]
   },
   {
    "team": "MIN",
@@ -1004,7 +2350,20 @@
    "toi": 5.2,
    "gf": 1,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020060,
+     "for": true,
+     "p": 2,
+     "t": "02:32",
+     "by": [
+      "Q. Hughes",
+      "B. Brink",
+      "J. Spurgeon"
+     ]
+    }
+   ]
   },
   {
    "team": "COL",
@@ -1021,7 +2380,53 @@
    "toi": 17.2,
    "gf": 2,
    "ga": 2,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020054,
+     "for": false,
+     "p": 2,
+     "t": "04:01",
+     "by": [
+      "K. Connor",
+      "N. Pionk",
+      "D. Samberg"
+     ]
+    },
+    {
+     "g": 2026020080,
+     "for": true,
+     "p": 1,
+     "t": "10:46",
+     "by": [
+      "N. MacKinnon",
+      "B. Kulak",
+      "D. Toews"
+     ]
+    },
+    {
+     "g": 2026020080,
+     "for": true,
+     "p": 1,
+     "t": "15:14",
+     "by": [
+      "N. MacKinnon",
+      "C. Makar",
+      "M. Necas"
+     ]
+    },
+    {
+     "g": 2026020080,
+     "for": false,
+     "p": 2,
+     "t": "16:47",
+     "by": [
+      "W. Nylander",
+      "A. Matthews",
+      "N. Paul"
+     ]
+    }
+   ]
   },
   {
    "team": "NYR",
@@ -1038,7 +2443,29 @@
    "toi": 27.9,
    "gf": 1,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020003,
+     "for": false,
+     "p": 3,
+     "t": "16:14",
+     "by": [
+      "F. Minten",
+      "M. Lohrei"
+     ]
+    },
+    {
+     "g": 2026020085,
+     "for": true,
+     "p": 2,
+     "t": "02:09",
+     "by": [
+      "W. Cuylle",
+      "N. Laba"
+     ]
+    }
+   ]
   },
   {
    "team": "TOR",
@@ -1055,7 +2482,31 @@
    "toi": 24.3,
    "gf": 1,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020065,
+     "for": true,
+     "p": 1,
+     "t": "00:34",
+     "by": [
+      "J. Roslovic",
+      "A. Matthews",
+      "K. Marchenko"
+     ]
+    },
+    {
+     "g": 2026020080,
+     "for": false,
+     "p": 1,
+     "t": "10:46",
+     "by": [
+      "N. MacKinnon",
+      "B. Kulak",
+      "D. Toews"
+     ]
+    }
+   ]
   },
   {
    "team": "CAR",
@@ -1072,7 +2523,31 @@
    "toi": 23.3,
    "gf": 1,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020061,
+     "for": false,
+     "p": 2,
+     "t": "04:03",
+     "by": [
+      "J. DeBrusk",
+      "J. Lekkerim\u00e4ki",
+      "E. Pettersson"
+     ]
+    },
+    {
+     "g": 2026020078,
+     "for": true,
+     "p": 3,
+     "t": "05:00",
+     "by": [
+      "J. Martinook",
+      "N. Ehlers",
+      "M. Reilly"
+     ]
+    }
+   ]
   },
   {
    "team": "CHI",
@@ -1089,7 +2564,29 @@
    "toi": 23.0,
    "gf": 1,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020078,
+     "for": false,
+     "p": 1,
+     "t": "19:03",
+     "by": [
+      "M. Jankowski",
+      "J. Kotkaniemi",
+      "E. Robinson"
+     ]
+    },
+    {
+     "g": 2026020078,
+     "for": true,
+     "p": 2,
+     "t": "04:40",
+     "by": [
+      "R. Kantserov"
+     ]
+    }
+   ]
   },
   {
    "team": "EDM",
@@ -1106,7 +2603,30 @@
    "toi": 18.1,
    "gf": 1,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020072,
+     "for": true,
+     "p": 3,
+     "t": "05:40",
+     "by": [
+      "A. Formenton",
+      "M. Joseph",
+      "C. Murphy"
+     ]
+    },
+    {
+     "g": 2026020072,
+     "for": false,
+     "p": 3,
+     "t": "11:19",
+     "by": [
+      "M. Celebrini",
+      "M. Misa"
+     ]
+    }
+   ]
   },
   {
    "team": "SJS",
@@ -1123,7 +2643,31 @@
    "toi": 17.5,
    "gf": 1,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020063,
+     "for": true,
+     "p": 3,
+     "t": "06:05",
+     "by": [
+      "C. Graf",
+      "S. Dickinson",
+      "T. Toffoli"
+     ]
+    },
+    {
+     "g": 2026020072,
+     "for": false,
+     "p": 1,
+     "t": "12:37",
+     "by": [
+      "M. Ekholm",
+      "I. Howard",
+      "J. Samanski"
+     ]
+    }
+   ]
   },
   {
    "team": "CBJ",
@@ -1140,7 +2684,31 @@
    "toi": 16.5,
    "gf": 1,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020079,
+     "for": true,
+     "p": 1,
+     "t": "19:48",
+     "by": [
+      "K. Johnson",
+      "A. Fantilli",
+      "Z. Werenski"
+     ]
+    },
+    {
+     "g": 2026020079,
+     "for": false,
+     "p": 2,
+     "t": "12:32",
+     "by": [
+      "J. Snuggerud",
+      "R. Thomas",
+      "D. Holloway"
+     ]
+    }
+   ]
   },
   {
    "team": "COL",
@@ -1157,7 +2725,30 @@
    "toi": 15.3,
    "gf": 1,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020064,
+     "for": true,
+     "p": 1,
+     "t": "15:54",
+     "by": [
+      "D. Toews",
+      "C. Makar",
+      "B. Nelson"
+     ]
+    },
+    {
+     "g": 2026020064,
+     "for": false,
+     "p": 3,
+     "t": "07:17",
+     "by": [
+      "M. Backlund",
+      "R. Strome"
+     ]
+    }
+   ]
   },
   {
    "team": "EDM",
@@ -1174,7 +2765,31 @@
    "toi": 12.2,
    "gf": 1,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020004,
+     "for": false,
+     "p": 3,
+     "t": "01:10",
+     "by": [
+      "J. Lekkerim\u00e4ki",
+      "J. DeBrusk",
+      "J. Oleksiak"
+     ]
+    },
+    {
+     "g": 2026020004,
+     "for": true,
+     "p": 3,
+     "t": "08:56",
+     "by": [
+      "V. Podkolzin",
+      "E. Bouchard",
+      "R. Shea"
+     ]
+    }
+   ]
   },
   {
    "team": "VAN",
@@ -1191,7 +2806,30 @@
    "toi": 10.5,
    "gf": 1,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020004,
+     "for": true,
+     "p": 3,
+     "t": "02:55",
+     "by": [
+      "M. Sasson",
+      "D. O'Connor",
+      "L. Karlsson"
+     ]
+    },
+    {
+     "g": 2026020004,
+     "for": false,
+     "p": 3,
+     "t": "09:20",
+     "by": [
+      "E. Bouchard",
+      "C. McDavid"
+     ]
+    }
+   ]
   },
   {
    "team": "CAR",
@@ -1208,7 +2846,31 @@
    "toi": 10.3,
    "gf": 1,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020086,
+     "for": false,
+     "p": 2,
+     "t": "15:26",
+     "by": [
+      "C. Dvorak",
+      "N. Seeler",
+      "D. Barkey"
+     ]
+    },
+    {
+     "g": 2026020086,
+     "for": true,
+     "p": 3,
+     "t": "15:09",
+     "by": [
+      "M. Jankowski",
+      "J. Martinook",
+      "J. Chatfield"
+     ]
+    }
+   ]
   },
   {
    "team": "MTL",
@@ -1225,7 +2887,29 @@
    "toi": 9.4,
    "gf": 1,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020002,
+     "for": true,
+     "p": 3,
+     "t": "13:12",
+     "by": [
+      "A. Carrier"
+     ]
+    },
+    {
+     "g": 2026020002,
+     "for": false,
+     "p": 3,
+     "t": "15:46",
+     "by": [
+      "W. Nylander",
+      "E. Cowan",
+      "J. Tavares"
+     ]
+    }
+   ]
   },
   {
    "team": "WSH",
@@ -1242,7 +2926,31 @@
    "toi": 8.8,
    "gf": 1,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020084,
+     "for": true,
+     "p": 1,
+     "t": "16:47",
+     "by": [
+      "A. Ovechkin",
+      "I. Protas",
+      "A. Protas"
+     ]
+    },
+    {
+     "g": 2026020084,
+     "for": false,
+     "p": 1,
+     "t": "19:49",
+     "by": [
+      "J. Eberle",
+      "C. Stephenson",
+      "B. McMann"
+     ]
+    }
+   ]
   },
   {
    "team": "VGK",
@@ -1259,7 +2967,8 @@
    "toi": 29.5,
    "gf": 0,
    "ga": 0,
-   "gp": 4
+   "gp": 4,
+   "goals": []
   },
   {
    "team": "NYR",
@@ -1276,7 +2985,8 @@
    "toi": 25.0,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "BUF",
@@ -1293,7 +3003,8 @@
    "toi": 24.0,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "TBL",
@@ -1310,7 +3021,8 @@
    "toi": 23.7,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "MTL",
@@ -1327,7 +3039,8 @@
    "toi": 23.6,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "BOS",
@@ -1344,7 +3057,8 @@
    "toi": 22.9,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "SJS",
@@ -1361,7 +3075,8 @@
    "toi": 21.1,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "NYI",
@@ -1378,7 +3093,8 @@
    "toi": 20.5,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "MTL",
@@ -1395,7 +3111,8 @@
    "toi": 19.6,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "STL",
@@ -1412,7 +3129,8 @@
    "toi": 19.6,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "NYI",
@@ -1429,7 +3147,8 @@
    "toi": 18.9,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "NJD",
@@ -1446,7 +3165,8 @@
    "toi": 18.1,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "DAL",
@@ -1463,7 +3183,8 @@
    "toi": 17.4,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "VAN",
@@ -1480,7 +3201,8 @@
    "toi": 16.4,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "NJD",
@@ -1497,7 +3219,8 @@
    "toi": 16.0,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "NSH",
@@ -1514,7 +3237,8 @@
    "toi": 13.5,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "CBJ",
@@ -1531,7 +3255,8 @@
    "toi": 13.1,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "VAN",
@@ -1548,7 +3273,8 @@
    "toi": 13.0,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "FLA",
@@ -1565,7 +3291,8 @@
    "toi": 12.9,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "PIT",
@@ -1582,7 +3309,8 @@
    "toi": 12.6,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "NYI",
@@ -1599,7 +3327,8 @@
    "toi": 12.5,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "ANA",
@@ -1616,7 +3345,8 @@
    "toi": 12.4,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "NSH",
@@ -1633,7 +3363,8 @@
    "toi": 12.1,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "BOS",
@@ -1650,7 +3381,8 @@
    "toi": 11.8,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "NYR",
@@ -1667,7 +3399,8 @@
    "toi": 11.4,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "WPG",
@@ -1684,7 +3417,8 @@
    "toi": 11.1,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "LAK",
@@ -1701,7 +3435,8 @@
    "toi": 11.1,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "DAL",
@@ -1718,7 +3453,8 @@
    "toi": 10.9,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "WPG",
@@ -1735,7 +3471,8 @@
    "toi": 10.8,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "BOS",
@@ -1752,7 +3489,8 @@
    "toi": 10.7,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "EDM",
@@ -1769,7 +3507,8 @@
    "toi": 10.7,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "BUF",
@@ -1786,7 +3525,8 @@
    "toi": 10.6,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "MTL",
@@ -1803,7 +3543,8 @@
    "toi": 10.5,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "DAL",
@@ -1820,7 +3561,8 @@
    "toi": 10.4,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "UTA",
@@ -1837,7 +3579,8 @@
    "toi": 10.3,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "LAK",
@@ -1854,7 +3597,8 @@
    "toi": 10.3,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "MTL",
@@ -1871,7 +3615,8 @@
    "toi": 9.9,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "TOR",
@@ -1888,7 +3633,8 @@
    "toi": 9.8,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "ANA",
@@ -1905,7 +3651,8 @@
    "toi": 9.7,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "BOS",
@@ -1922,7 +3669,8 @@
    "toi": 9.5,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "CHI",
@@ -1939,7 +3687,8 @@
    "toi": 9.4,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "UTA",
@@ -1956,7 +3705,8 @@
    "toi": 9.3,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "CHI",
@@ -1973,7 +3723,8 @@
    "toi": 9.1,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "WPG",
@@ -1990,7 +3741,8 @@
    "toi": 9.1,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "UTA",
@@ -2007,7 +3759,8 @@
    "toi": 8.9,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "BUF",
@@ -2024,7 +3777,8 @@
    "toi": 8.8,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "NYR",
@@ -2041,7 +3795,8 @@
    "toi": 8.7,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "PHI",
@@ -2058,7 +3813,8 @@
    "toi": 8.6,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "FLA",
@@ -2075,7 +3831,8 @@
    "toi": 8.5,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "CAR",
@@ -2092,7 +3849,8 @@
    "toi": 8.4,
    "gf": 0,
    "ga": 0,
-   "gp": 4
+   "gp": 4,
+   "goals": []
   },
   {
    "team": "OTT",
@@ -2109,7 +3867,8 @@
    "toi": 8.4,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "SJS",
@@ -2126,7 +3885,8 @@
    "toi": 8.2,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "FLA",
@@ -2143,7 +3903,8 @@
    "toi": 8.0,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "VAN",
@@ -2160,7 +3921,8 @@
    "toi": 8.0,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "EDM",
@@ -2177,7 +3939,8 @@
    "toi": 7.9,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "CAR",
@@ -2194,7 +3957,8 @@
    "toi": 7.9,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "LAK",
@@ -2211,7 +3975,8 @@
    "toi": 7.8,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "PHI",
@@ -2228,7 +3993,8 @@
    "toi": 7.7,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "OTT",
@@ -2245,7 +4011,8 @@
    "toi": 7.6,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "LAK",
@@ -2262,7 +4029,8 @@
    "toi": 7.5,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "BUF",
@@ -2279,7 +4047,8 @@
    "toi": 7.2,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "BUF",
@@ -2296,7 +4065,8 @@
    "toi": 7.2,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "BUF",
@@ -2313,7 +4083,8 @@
    "toi": 7.1,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "STL",
@@ -2330,7 +4101,8 @@
    "toi": 7.1,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "PHI",
@@ -2347,7 +4119,8 @@
    "toi": 7.1,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "PIT",
@@ -2364,7 +4137,8 @@
    "toi": 7.1,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "VAN",
@@ -2381,7 +4155,8 @@
    "toi": 7.0,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "OTT",
@@ -2398,7 +4173,8 @@
    "toi": 7.0,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "PHI",
@@ -2415,7 +4191,8 @@
    "toi": 6.7,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "PHI",
@@ -2432,7 +4209,8 @@
    "toi": 6.7,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "CGY",
@@ -2449,7 +4227,8 @@
    "toi": 6.5,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "OTT",
@@ -2466,7 +4245,8 @@
    "toi": 6.5,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "WSH",
@@ -2483,7 +4263,8 @@
    "toi": 6.4,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "NSH",
@@ -2500,7 +4281,8 @@
    "toi": 6.1,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "UTA",
@@ -2517,7 +4299,8 @@
    "toi": 6.0,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "PHI",
@@ -2534,7 +4317,8 @@
    "toi": 5.8,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "EDM",
@@ -2551,7 +4335,8 @@
    "toi": 5.7,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "WSH",
@@ -2568,7 +4353,8 @@
    "toi": 5.6,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "VAN",
@@ -2585,7 +4371,8 @@
    "toi": 5.5,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "EDM",
@@ -2602,7 +4389,8 @@
    "toi": 5.5,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "NSH",
@@ -2619,7 +4407,8 @@
    "toi": 5.5,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "SJS",
@@ -2636,7 +4425,8 @@
    "toi": 5.5,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "FLA",
@@ -2653,7 +4443,8 @@
    "toi": 5.5,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "COL",
@@ -2670,7 +4461,8 @@
    "toi": 5.4,
    "gf": 0,
    "ga": 0,
-   "gp": 3
+   "gp": 3,
+   "goals": []
   },
   {
    "team": "CHI",
@@ -2687,7 +4479,8 @@
    "toi": 5.2,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "PHI",
@@ -2704,7 +4497,8 @@
    "toi": 5.1,
    "gf": 0,
    "ga": 0,
-   "gp": 1
+   "gp": 1,
+   "goals": []
   },
   {
    "team": "CBJ",
@@ -2721,7 +4515,8 @@
    "toi": 5.0,
    "gf": 0,
    "ga": 0,
-   "gp": 2
+   "gp": 2,
+   "goals": []
   },
   {
    "team": "VGK",
@@ -2738,7 +4533,63 @@
    "toi": 47.4,
    "gf": 2,
    "ga": 3,
-   "gp": 4
+   "gp": 4,
+   "goals": [
+    {
+     "g": 2026020065,
+     "for": false,
+     "p": 1,
+     "t": "00:34",
+     "by": [
+      "J. Roslovic",
+      "A. Matthews",
+      "K. Marchenko"
+     ]
+    },
+    {
+     "g": 2026020065,
+     "for": false,
+     "p": 1,
+     "t": "03:20",
+     "by": [
+      "E. Cowan",
+      "C. Tanev"
+     ]
+    },
+    {
+     "g": 2026020065,
+     "for": true,
+     "p": 2,
+     "t": "01:12",
+     "by": [
+      "B. Howden",
+      "M. Marner",
+      "W. Karlsson"
+     ]
+    },
+    {
+     "g": 2026020089,
+     "for": false,
+     "p": 1,
+     "t": "11:50",
+     "by": [
+      "M. Boldy",
+      "O. Maatta",
+      "Q. Hughes"
+     ]
+    },
+    {
+     "g": 2026020089,
+     "for": true,
+     "p": 3,
+     "t": "09:25",
+     "by": [
+      "W. Karlsson",
+      "B. Howden",
+      "M. Marner"
+     ]
+    }
+   ]
   },
   {
    "team": "CBJ",
@@ -2755,7 +4606,62 @@
    "toi": 18.1,
    "gf": 2,
    "ga": 3,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020068,
+     "for": true,
+     "p": 1,
+     "t": "10:52",
+     "by": [
+      "D. Severson",
+      "Z. Werenski",
+      "C. Sillinger"
+     ]
+    },
+    {
+     "g": 2026020068,
+     "for": true,
+     "p": 2,
+     "t": "11:40",
+     "by": [
+      "M. Olivier",
+      "D. Severson",
+      "C. Sillinger"
+     ]
+    },
+    {
+     "g": 2026020068,
+     "for": false,
+     "p": 2,
+     "t": "14:30",
+     "by": [
+      "B. Rust",
+      "S. Girard"
+     ]
+    },
+    {
+     "g": 2026020068,
+     "for": false,
+     "p": 3,
+     "t": "03:19",
+     "by": [
+      "E. Malkin",
+      "E. Karlsson"
+     ]
+    },
+    {
+     "g": 2026020079,
+     "for": false,
+     "p": 2,
+     "t": "09:02",
+     "by": [
+      "J. Snuggerud",
+      "P. Broberg",
+      "D. Holloway"
+     ]
+    }
+   ]
   },
   {
    "team": "SEA",
@@ -2772,7 +4678,40 @@
    "toi": 25.9,
    "gf": 1,
    "ga": 2,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020084,
+     "for": false,
+     "p": 1,
+     "t": "16:47",
+     "by": [
+      "A. Ovechkin",
+      "I. Protas",
+      "A. Protas"
+     ]
+    },
+    {
+     "g": 2026020084,
+     "for": true,
+     "p": 1,
+     "t": "19:49",
+     "by": [
+      "J. Eberle",
+      "C. Stephenson",
+      "B. McMann"
+     ]
+    },
+    {
+     "g": 2026020084,
+     "for": false,
+     "p": 3,
+     "t": "00:46",
+     "by": [
+      "B. Jenner"
+     ]
+    }
+   ]
   },
   {
    "team": "PIT",
@@ -2789,7 +4728,40 @@
    "toi": 25.3,
    "gf": 1,
    "ga": 2,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020053,
+     "for": false,
+     "p": 2,
+     "t": "13:14",
+     "by": [
+      "A. Tuch",
+      "T. Wilson"
+     ]
+    },
+    {
+     "g": 2026020068,
+     "for": false,
+     "p": 1,
+     "t": "10:52",
+     "by": [
+      "D. Severson",
+      "Z. Werenski",
+      "C. Sillinger"
+     ]
+    },
+    {
+     "g": 2026020068,
+     "for": true,
+     "p": 2,
+     "t": "14:30",
+     "by": [
+      "B. Rust",
+      "S. Girard"
+     ]
+    }
+   ]
   },
   {
    "team": "VGK",
@@ -2806,7 +4778,42 @@
    "toi": 23.5,
    "gf": 1,
    "ga": 2,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020065,
+     "for": false,
+     "p": 1,
+     "t": "08:37",
+     "by": [
+      "N. Paul",
+      "D. Raddysh",
+      "G. McKenna"
+     ]
+    },
+    {
+     "g": 2026020089,
+     "for": false,
+     "p": 1,
+     "t": "16:57",
+     "by": [
+      "D. Yurov",
+      "B. Brink",
+      "R. Lorenz"
+     ]
+    },
+    {
+     "g": 2026020089,
+     "for": true,
+     "p": 2,
+     "t": "02:37",
+     "by": [
+      "R. Andersson",
+      "T. Hertl",
+      "R. Lavoie"
+     ]
+    }
+   ]
   },
   {
    "team": "COL",
@@ -2823,7 +4830,41 @@
    "toi": 21.4,
    "gf": 1,
    "ga": 2,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020064,
+     "for": false,
+     "p": 1,
+     "t": "17:30",
+     "by": [
+      "A. Klapka",
+      "J. Castagna"
+     ]
+    },
+    {
+     "g": 2026020064,
+     "for": true,
+     "p": 2,
+     "t": "06:45",
+     "by": [
+      "D. Toews",
+      "N. Juulsen",
+      "P. Kelly"
+     ]
+    },
+    {
+     "g": 2026020080,
+     "for": false,
+     "p": 1,
+     "t": "03:03",
+     "by": [
+      "N. Blankenburg",
+      "W. Nylander",
+      "N. Paul"
+     ]
+    }
+   ]
   },
   {
    "team": "PHI",
@@ -2840,7 +4881,42 @@
    "toi": 12.7,
    "gf": 1,
    "ga": 2,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020070,
+     "for": false,
+     "p": 3,
+     "t": "09:21",
+     "by": [
+      "C. Mittelstadt",
+      "E. Lindholm",
+      "J. Hagens"
+     ]
+    },
+    {
+     "g": 2026020086,
+     "for": true,
+     "p": 2,
+     "t": "15:26",
+     "by": [
+      "C. Dvorak",
+      "N. Seeler",
+      "D. Barkey"
+     ]
+    },
+    {
+     "g": 2026020086,
+     "for": false,
+     "p": 3,
+     "t": "15:09",
+     "by": [
+      "M. Jankowski",
+      "J. Martinook",
+      "J. Chatfield"
+     ]
+    }
+   ]
   },
   {
    "team": "VAN",
@@ -2857,7 +4933,40 @@
    "toi": 11.1,
    "gf": 1,
    "ga": 2,
-   "gp": 4
+   "gp": 4,
+   "goals": [
+    {
+     "g": 2026020004,
+     "for": false,
+     "p": 1,
+     "t": "16:26",
+     "by": [
+      "E. Bouchard"
+     ]
+    },
+    {
+     "g": 2026020004,
+     "for": true,
+     "p": 2,
+     "t": "02:07",
+     "by": [
+      "M. Rossi",
+      "L. Ohgren",
+      "F. Hronek"
+     ]
+    },
+    {
+     "g": 2026020004,
+     "for": false,
+     "p": 3,
+     "t": "08:56",
+     "by": [
+      "V. Podkolzin",
+      "E. Bouchard",
+      "R. Shea"
+     ]
+    }
+   ]
   },
   {
    "team": "CGY",
@@ -2874,7 +4983,41 @@
    "toi": 6.5,
    "gf": 1,
    "ga": 2,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020064,
+     "for": true,
+     "p": 1,
+     "t": "17:30",
+     "by": [
+      "A. Klapka",
+      "J. Castagna"
+     ]
+    },
+    {
+     "g": 2026020064,
+     "for": false,
+     "p": 2,
+     "t": "06:45",
+     "by": [
+      "D. Toews",
+      "N. Juulsen",
+      "P. Kelly"
+     ]
+    },
+    {
+     "g": 2026020064,
+     "for": false,
+     "p": 3,
+     "t": "06:34",
+     "by": [
+      "J. Schwartz",
+      "T. Hughes",
+      "B. Kulak"
+     ]
+    }
+   ]
   },
   {
    "team": "CGY",
@@ -2891,7 +5034,20 @@
    "toi": 24.0,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020064,
+     "for": false,
+     "p": 3,
+     "t": "05:35",
+     "by": [
+      "C. Makar",
+      "N. MacKinnon",
+      "N. Kadri"
+     ]
+    }
+   ]
   },
   {
    "team": "DET",
@@ -2908,7 +5064,20 @@
    "toi": 23.1,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020066,
+     "for": false,
+     "p": 2,
+     "t": "07:44",
+     "by": [
+      "F. Gaudreau",
+      "R. Winterton",
+      "B. Meyers"
+     ]
+    }
+   ]
   },
   {
    "team": "DET",
@@ -2925,7 +5094,20 @@
    "toi": 20.0,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020066,
+     "for": false,
+     "p": 2,
+     "t": "04:39",
+     "by": [
+      "F. Gaudreau",
+      "R. Winterton",
+      "B. Meyers"
+     ]
+    }
+   ]
   },
   {
    "team": "MIN",
@@ -2942,7 +5124,20 @@
    "toi": 19.1,
    "gf": 0,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020089,
+     "for": false,
+     "p": 3,
+     "t": "09:25",
+     "by": [
+      "W. Karlsson",
+      "B. Howden",
+      "M. Marner"
+     ]
+    }
+   ]
   },
   {
    "team": "VAN",
@@ -2959,7 +5154,20 @@
    "toi": 18.9,
    "gf": 0,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020061,
+     "for": false,
+     "p": 1,
+     "t": "01:18",
+     "by": [
+      "K. Miller",
+      "W. Carrier",
+      "S. Walker"
+     ]
+    }
+   ]
   },
   {
    "team": "NJD",
@@ -2976,7 +5184,20 @@
    "toi": 17.6,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020088,
+     "for": false,
+     "p": 2,
+     "t": "00:09",
+     "by": [
+      "S. Pinto",
+      "M. Amadio",
+      "C. Giroux"
+     ]
+    }
+   ]
   },
   {
    "team": "NYR",
@@ -2993,7 +5214,18 @@
    "toi": 15.8,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020067,
+     "for": false,
+     "p": 2,
+     "t": "17:38",
+     "by": [
+      "B. Jenner"
+     ]
+    }
+   ]
   },
   {
    "team": "MIN",
@@ -3010,7 +5242,20 @@
    "toi": 12.6,
    "gf": 0,
    "ga": 1,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020060,
+     "for": false,
+     "p": 1,
+     "t": "06:02",
+     "by": [
+      "J. Carlson",
+      "N. Kucherov",
+      "B. Point"
+     ]
+    }
+   ]
   },
   {
    "team": "FLA",
@@ -3027,7 +5272,20 @@
    "toi": 12.1,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020087,
+     "for": false,
+     "p": 2,
+     "t": "11:25",
+     "by": [
+      "R. McLeod",
+      "O. Zellweger",
+      "O. Power"
+     ]
+    }
+   ]
   },
   {
    "team": "SJS",
@@ -3044,7 +5302,20 @@
    "toi": 11.7,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020072,
+     "for": false,
+     "p": 3,
+     "t": "05:40",
+     "by": [
+      "A. Formenton",
+      "M. Joseph",
+      "C. Murphy"
+     ]
+    }
+   ]
   },
   {
    "team": "SJS",
@@ -3061,7 +5332,20 @@
    "toi": 11.4,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020063,
+     "for": false,
+     "p": 1,
+     "t": "03:52",
+     "by": [
+      "C. McMichael",
+      "M. McTavish",
+      "J. Berggren"
+     ]
+    }
+   ]
   },
   {
    "team": "NYR",
@@ -3078,7 +5362,20 @@
    "toi": 11.2,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020067,
+     "for": false,
+     "p": 2,
+     "t": "06:08",
+     "by": [
+      "T. Liljegren",
+      "D. Strome",
+      "R. Leonard"
+     ]
+    }
+   ]
   },
   {
    "team": "EDM",
@@ -3095,7 +5392,20 @@
    "toi": 10.2,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020004,
+     "for": false,
+     "p": 2,
+     "t": "02:07",
+     "by": [
+      "M. Rossi",
+      "L. Ohgren",
+      "F. Hronek"
+     ]
+    }
+   ]
   },
   {
    "team": "PHI",
@@ -3112,7 +5422,19 @@
    "toi": 10.1,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020070,
+     "for": false,
+     "p": 1,
+     "t": "12:21",
+     "by": [
+      "P. Zacha",
+      "D. Pastrnak"
+     ]
+    }
+   ]
   },
   {
    "team": "VAN",
@@ -3129,7 +5451,20 @@
    "toi": 10.1,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020085,
+     "for": false,
+     "p": 2,
+     "t": "18:25",
+     "by": [
+      "T. Kartye",
+      "J. Miller",
+      "V. Gavrikov"
+     ]
+    }
+   ]
   },
   {
    "team": "UTA",
@@ -3146,7 +5481,20 @@
    "toi": 9.9,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020056,
+     "for": false,
+     "p": 1,
+     "t": "10:06",
+     "by": [
+      "C. Mittelstadt",
+      "J. Hagens",
+      "E. Lindholm"
+     ]
+    }
+   ]
   },
   {
    "team": "CGY",
@@ -3163,7 +5511,19 @@
    "toi": 9.8,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020064,
+     "for": false,
+     "p": 2,
+     "t": "11:39",
+     "by": [
+      "N. MacKinnon",
+      "Z. L'Heureux"
+     ]
+    }
+   ]
   },
   {
    "team": "CGY",
@@ -3180,7 +5540,20 @@
    "toi": 9.8,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020064,
+     "for": false,
+     "p": 1,
+     "t": "15:54",
+     "by": [
+      "D. Toews",
+      "C. Makar",
+      "B. Nelson"
+     ]
+    }
+   ]
   },
   {
    "team": "TOR",
@@ -3197,7 +5570,18 @@
    "toi": 9.8,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020080,
+     "for": false,
+     "p": 2,
+     "t": "12:25",
+     "by": [
+      "B. Nelson"
+     ]
+    }
+   ]
   },
   {
    "team": "CHI",
@@ -3214,7 +5598,20 @@
    "toi": 9.8,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020078,
+     "for": false,
+     "p": 2,
+     "t": "06:05",
+     "by": [
+      "T. Hall",
+      "J. Blake",
+      "M. Reilly"
+     ]
+    }
+   ]
   },
   {
    "team": "CGY",
@@ -3231,7 +5628,20 @@
    "toi": 9.0,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020082,
+     "for": false,
+     "p": 3,
+     "t": "17:03",
+     "by": [
+      "N. Nesterenko",
+      "A. Killorn",
+      "M. Granlund"
+     ]
+    }
+   ]
   },
   {
    "team": "PHI",
@@ -3248,7 +5658,20 @@
    "toi": 8.6,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020070,
+     "for": false,
+     "p": 3,
+     "t": "15:59",
+     "by": [
+      "F. Minten",
+      "J. Peterka",
+      "H. Lindholm"
+     ]
+    }
+   ]
   },
   {
    "team": "DET",
@@ -3265,7 +5688,20 @@
    "toi": 8.5,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020066,
+     "for": false,
+     "p": 1,
+     "t": "14:52",
+     "by": [
+      "B. Catton",
+      "K. Kakko",
+      "J. Mahura"
+     ]
+    }
+   ]
   },
   {
    "team": "UTA",
@@ -3282,7 +5718,20 @@
    "toi": 8.4,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020056,
+     "for": false,
+     "p": 1,
+     "t": "15:51",
+     "by": [
+      "M. Lohrei",
+      "M. Poitras",
+      "M. Kastelic"
+     ]
+    }
+   ]
   },
   {
    "team": "WPG",
@@ -3299,7 +5748,20 @@
    "toi": 8.1,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020054,
+     "for": false,
+     "p": 2,
+     "t": "02:51",
+     "by": [
+      "J. Schwartz",
+      "F. Svechkov",
+      "B. Burns"
+     ]
+    }
+   ]
   },
   {
    "team": "VAN",
@@ -3316,7 +5778,19 @@
    "toi": 7.9,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020071,
+     "for": false,
+     "p": 1,
+     "t": "16:24",
+     "by": [
+      "J. Boqvist",
+      "A. Lombardi"
+     ]
+    }
+   ]
   },
   {
    "team": "CHI",
@@ -3333,7 +5807,20 @@
    "toi": 7.3,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020005,
+     "for": false,
+     "p": 1,
+     "t": "15:22",
+     "by": [
+      "T. Connelly",
+      "B. McNabb",
+      "S. Theodore"
+     ]
+    }
+   ]
   },
   {
    "team": "ANA",
@@ -3350,7 +5837,19 @@
    "toi": 7.3,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020055,
+     "for": false,
+     "p": 2,
+     "t": "16:49",
+     "by": [
+      "V. Podkolzin",
+      "L. Draisaitl"
+     ]
+    }
+   ]
   },
   {
    "team": "CHI",
@@ -3367,7 +5866,20 @@
    "toi": 6.9,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020078,
+     "for": false,
+     "p": 3,
+     "t": "05:00",
+     "by": [
+      "J. Martinook",
+      "N. Ehlers",
+      "M. Reilly"
+     ]
+    }
+   ]
   },
   {
    "team": "MIN",
@@ -3384,7 +5896,20 @@
    "toi": 6.4,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020060,
+     "for": false,
+     "p": 1,
+     "t": "05:26",
+     "by": [
+      "A. Cirelli",
+      "E. Cernak",
+      "B. Hagel"
+     ]
+    }
+   ]
   },
   {
    "team": "BUF",
@@ -3401,7 +5926,20 @@
    "toi": 6.3,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020074,
+     "for": false,
+     "p": 2,
+     "t": "17:24",
+     "by": [
+      "A. Lee",
+      "J. Marino",
+      "K. Yamamoto"
+     ]
+    }
+   ]
   },
   {
    "team": "STL",
@@ -3418,7 +5956,20 @@
    "toi": 6.3,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020079,
+     "for": false,
+     "p": 1,
+     "t": "19:48",
+     "by": [
+      "K. Johnson",
+      "A. Fantilli",
+      "Z. Werenski"
+     ]
+    }
+   ]
   },
   {
    "team": "WSH",
@@ -3435,7 +5986,20 @@
    "toi": 6.1,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020084,
+     "for": false,
+     "p": 2,
+     "t": "13:24",
+     "by": [
+      "F. Gaudreau",
+      "R. Winterton",
+      "B. Meyers"
+     ]
+    }
+   ]
   },
   {
    "team": "VAN",
@@ -3452,7 +6016,19 @@
    "toi": 5.5,
    "gf": 0,
    "ga": 1,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020061,
+     "for": false,
+     "p": 2,
+     "t": "03:20",
+     "by": [
+      "M. Jankowski",
+      "J. Kotkaniemi"
+     ]
+    }
+   ]
   },
   {
    "team": "CHI",
@@ -3469,7 +6045,20 @@
    "toi": 5.1,
    "gf": 0,
    "ga": 1,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020062,
+     "for": false,
+     "p": 2,
+     "t": "06:44",
+     "by": [
+      "E. Heineman",
+      "M. Maccelli",
+      "A. Pelech"
+     ]
+    }
+   ]
   },
   {
    "team": "FLA",
@@ -3486,7 +6075,30 @@
    "toi": 12.9,
    "gf": 0,
    "ga": 2,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020087,
+     "for": false,
+     "p": 1,
+     "t": "05:58",
+     "by": [
+      "J. Doan",
+      "P. Krebs"
+     ]
+    },
+    {
+     "g": 2026020087,
+     "for": false,
+     "p": 3,
+     "t": "13:20",
+     "by": [
+      "T. Thompson",
+      "O. Power",
+      "P. Krebs"
+     ]
+    }
+   ]
   },
   {
    "team": "NYI",
@@ -3503,7 +6115,29 @@
    "toi": 12.2,
    "gf": 0,
    "ga": 2,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020081,
+     "for": false,
+     "p": 1,
+     "t": "05:45",
+     "by": [
+      "J. Guentzel"
+     ]
+    },
+    {
+     "g": 2026020081,
+     "for": false,
+     "p": 1,
+     "t": "15:42",
+     "by": [
+      "B. Hagel",
+      "V. Hedman",
+      "M. Crozier"
+     ]
+    }
+   ]
   },
   {
    "team": "VAN",
@@ -3520,7 +6154,30 @@
    "toi": 10.1,
    "gf": 0,
    "ga": 2,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020085,
+     "for": false,
+     "p": 2,
+     "t": "02:09",
+     "by": [
+      "W. Cuylle",
+      "N. Laba"
+     ]
+    },
+    {
+     "g": 2026020085,
+     "for": false,
+     "p": 3,
+     "t": "15:22",
+     "by": [
+      "W. Cuylle",
+      "E. Tolvanen",
+      "B. Schneider"
+     ]
+    }
+   ]
   },
   {
    "team": "TOR",
@@ -3537,7 +6194,29 @@
    "toi": 8.7,
    "gf": 0,
    "ga": 2,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020002,
+     "for": false,
+     "p": 2,
+     "t": "04:52",
+     "by": [
+      "Z. Bolduc",
+      "M. Matheson",
+      "J. Anderson"
+     ]
+    },
+    {
+     "g": 2026020002,
+     "for": false,
+     "p": 3,
+     "t": "13:12",
+     "by": [
+      "A. Carrier"
+     ]
+    }
+   ]
   },
   {
    "team": "PIT",
@@ -3554,7 +6233,29 @@
    "toi": 6.2,
    "gf": 0,
    "ga": 2,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020053,
+     "for": false,
+     "p": 1,
+     "t": "00:23",
+     "by": [
+      "A. Beauvillier",
+      "D. Strome"
+     ]
+    },
+    {
+     "g": 2026020053,
+     "for": false,
+     "p": 1,
+     "t": "11:51",
+     "by": [
+      "T. Wilson",
+      "P. Dubois"
+     ]
+    }
+   ]
   },
   {
    "team": "PHI",
@@ -3571,7 +6272,30 @@
    "toi": 5.2,
    "gf": 0,
    "ga": 2,
-   "gp": 1
+   "gp": 1,
+   "goals": [
+    {
+     "g": 2026020086,
+     "for": false,
+     "p": 2,
+     "t": "10:16",
+     "by": [
+      "A. Svechnikov",
+      "S. Walker"
+     ]
+    },
+    {
+     "g": 2026020086,
+     "for": false,
+     "p": 2,
+     "t": "13:45",
+     "by": [
+      "S. Gostisbehere",
+      "S. Aho",
+      "W. Carrier"
+     ]
+    }
+   ]
   },
   {
    "team": "WSH",
@@ -3588,7 +6312,40 @@
    "toi": 15.4,
    "gf": 0,
    "ga": 3,
-   "gp": 3
+   "gp": 3,
+   "goals": [
+    {
+     "g": 2026020053,
+     "for": false,
+     "p": 1,
+     "t": "01:19",
+     "by": [
+      "B. Rust",
+      "B. Kindel",
+      "S. Girard"
+     ]
+    },
+    {
+     "g": 2026020053,
+     "for": false,
+     "p": 2,
+     "t": "14:05",
+     "by": [
+      "T. Novak"
+     ]
+    },
+    {
+     "g": 2026020053,
+     "for": false,
+     "p": 2,
+     "t": "18:01",
+     "by": [
+      "N. Robertson",
+      "K. Korczak",
+      "B. Lizotte"
+     ]
+    }
+   ]
   },
   {
    "team": "WPG",
@@ -3605,7 +6362,42 @@
    "toi": 11.7,
    "gf": 0,
    "ga": 3,
-   "gp": 2
+   "gp": 2,
+   "goals": [
+    {
+     "g": 2026020069,
+     "for": false,
+     "p": 1,
+     "t": "14:41",
+     "by": [
+      "J. Caulfield",
+      "J. Malott",
+      "T. Washe"
+     ]
+    },
+    {
+     "g": 2026020069,
+     "for": false,
+     "p": 2,
+     "t": "05:20",
+     "by": [
+      "T. Washe",
+      "J. Malott",
+      "J. Caulfield"
+     ]
+    },
+    {
+     "g": 2026020069,
+     "for": false,
+     "p": 3,
+     "t": "14:06",
+     "by": [
+      "M. Granlund",
+      "N. Warren",
+      "J. LaCombe"
+     ]
+    }
+   ]
   }
  ]
 }
