@@ -14,7 +14,7 @@ while d<=end:
     d+=datetime.timedelta(days=1)
 sec=lambda p,mmss:(p-1)*1200+int(mmss.split(":")[0])*60+int(mmss.split(":")[1])
 TOI=collections.Counter(); GF=collections.Counter(); GA=collections.Counter(); GP=collections.defaultdict(set)
-NAME={}; TEAMOF={}; skipped=[]
+NAME={}; TEAMOF={}; skipped=[]; GOALS=collections.defaultdict(list)
 for gid in games:
     try:
         box=get(f"https://api-web.nhle.com/v1/gamecenter/{gid}/boxscore")
@@ -48,8 +48,10 @@ for gid in games:
         t=sec(pl["periodDescriptor"]["number"],pl["timeInPeriod"]); st=state(max(0,t-1))
         tid=pl["details"]["eventOwnerTeamId"]; scorer=box["awayTeam"]["abbrev"] if box["awayTeam"]["id"]==tid else box["homeTeam"]["abbrev"]
         for ab,v in st.items():
-            if len(v["F"])==3: (GF if ab==scorer else GA)[(ab,v["F"])]+=1
-lines=[{"team":k[0],"ids":list(k[1]),"names":[NAME[i] for i in k[1]],"toi":round(v/60,1),"gf":GF[k],"ga":GA[k],"gp":len(GP[k])} for k,v in TOI.items() if v>=300]
+            if len(v["F"])==3:
+                (GF if ab==scorer else GA)[(ab,v["F"])]+=1
+                dd=pl["details"]; GOALS[(ab,v["F"])].append({"g":gid,"for":ab==scorer,"p":pl["periodDescriptor"]["number"],"t":pl["timeInPeriod"],"by":[NAME.get(dd.get(k)) for k in ("scoringPlayerId","assist1PlayerId","assist2PlayerId") if dd.get(k)]})
+lines=[{"team":k[0],"ids":list(k[1]),"names":[NAME[i] for i in k[1]],"toi":round(v/60,1),"gf":GF[k],"ga":GA[k],"gp":len(GP[k]),"goals":GOALS[k]} for k,v in TOI.items() if v>=300]
 lines.sort(key=lambda x:(-(x["gf"]-x["ga"]),-x["gf"],-x["toi"]))
 json.dump({"asof":datetime.datetime.utcnow().isoformat(),"games":len(games),"skipped":skipped,"lines":lines},open("data/lines.json","w"),indent=1)
 print(len(games),len(lines),skipped[:3])
