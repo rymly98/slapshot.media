@@ -389,8 +389,9 @@ const colors={ANA:"#F47A38",DET:"#CE1126",WPG:"#041E42",FLA:"#0B2A5B",CAR:"#CE11
    b = each book's favorite ["TEAM","moneyline"] keyed V (Vegas), E (New York), B (Boston); missing = line pending */
 let days={tue:[]};
 const logo=t=>`<img class="logo" src="tl/${t}.png" alt="${t}" width="104" height="104">`;
-/* 2025-26 regular season, NHL stats: W, L, OTL, GF/G, GA/G, PP%, PK% */
-const S={WSH:[43,30,9,3.18,2.90,17.8,80.1],NJD:[42,37,3,2.76,3.09,22.0,79.3],VGK:[39,26,17,3.22,2.95,24.6,81.4],VAN:[25,49,8,2.56,3.83,21.8,71.5],
+/* Fallback: 2025-26 regular season, NHL stats: W, L, OTL, GF/G, GA/G, PP%, PK%. The morning update replaces this with this season's numbers (data.json S). */
+let SSEASON="2025-26";
+let S={WSH:[43,30,9,3.18,2.90,17.8,80.1],NJD:[42,37,3,2.76,3.09,22.0,79.3],VGK:[39,26,17,3.22,2.95,24.6,81.4],VAN:[25,49,8,2.56,3.83,21.8,71.5],
  ANA:[43,33,6,3.23,3.51,18.6,76.4],STL:[37,33,12,2.80,3.10,17.6,76.7],DAL:[50,20,12,3.33,2.71,28.6,80.3],DET:[41,31,10,2.91,3.10,22.6,77.1],
  OTT:[44,27,11,3.35,2.99,24.0,75.7],WPG:[35,35,12,2.79,3.12,18.5,77.6],COL:[55,16,11,3.63,2.40,17.1,84.6],NSH:[38,34,10,2.95,3.26,23.1,81.7],
  BOS:[45,27,10,3.27,3.01,23.4,77.0],CBJ:[40,30,12,3.00,3.06,18.9,76.0],CHI:[29,39,14,2.56,3.29,16.9,83.6],CGY:[34,39,9,2.54,3.12,16.2,80.4],
@@ -414,7 +415,7 @@ function numbers(a,h,L){
     ["PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true]];
   return `<details class="nums"><summary>The Numbers <span class="hint">team stats</span></summary>
     <div class="ntable">
-      <span class="nh">${logo(a)}</span><span class="nl">2025-26</span><span class="nh">${logo(h)}</span>
+      <span class="nh">${logo(a)}</span><span class="nl">${SSEASON}</span><span class="nh">${logo(h)}</span>
       ${rows.map(([l,av,hv,an,hn,up])=>{const aw=up?an>hn:an<hn, hw=up?hn>an:hn<an;
         return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`}).join("")}
     </div></details>${leaders(L)}`;
@@ -531,6 +532,7 @@ function drawChart(){
 }
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
+  if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
   document.getElementById("daylabel").textContent=d.label||"";
   renderGames();renderRecord();
 }).catch(()=>{document.querySelector("[data-day]").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();});
