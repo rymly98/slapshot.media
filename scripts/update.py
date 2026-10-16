@@ -191,6 +191,24 @@ def add_leaders(data):
     return len(lead)
 
 
+def add_team_stats(data):
+    """This season's team stats for The Numbers dropdown: W, L, OTL, GF/G, GA/G, PP%, PK%."""
+    sid, lbl = leader_season(data["gameday"])
+    tri = {t["id"]: t["triCode"] for t in get("https://api.nhle.com/stats/rest/en/team")["data"]}
+    rows = get("https://api.nhle.com/stats/rest/en/team/summary?isAggregate=false&isGame=false&limit=-1"
+               f"&cayenneExp=seasonId={sid}%20and%20gameTypeId=2")["data"]
+    S = {}
+    for r in rows:
+        ab = tri.get(r["teamId"])
+        if not ab:
+            continue
+        S[ab] = [r["wins"], r["losses"], r["otLosses"], round(r["goalsForPerGame"], 2), round(r["goalsAgainstPerGame"], 2),
+                 round((r["powerPlayPct"] or 0) * 100, 1), round((r["penaltyKillPct"] or 0) * 100, 1)]
+    if len(S) >= 32:
+        data["S"], data["Sseason"] = S, lbl
+    return len(S)
+
+
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else ("morning" if datetime.now(ET).hour < 12 else "evening")
     data = json.load(open(DATA))
@@ -218,6 +236,10 @@ def main():
             notes.append(f"leaders for {add_leaders(data)} team(s)")
         except Exception as e:
             notes.append(f"leaders skipped: {e}")
+        try:
+            notes.append(f"team stats for {add_team_stats(data)} team(s)")
+        except Exception as e:
+            notes.append(f"team stats skipped: {e}")
 
     try:
         hit = refresh_lines(data)
