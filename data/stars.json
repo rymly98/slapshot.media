@@ -192,6 +192,18 @@
   "ppp": 1
  },
  {
+  "team": "BOS",
+  "id": 8477956,
+  "name": "David Pastrnak",
+  "pos": "R",
+  "gp": 8,
+  "g": 3,
+  "a": 7,
+  "p": 10,
+  "pm": 1,
+  "ppp": 5
+ },
+ {
   "team": "EDM",
   "id": 8481617,
   "name": "Vasily Podkolzin",
@@ -405,18 +417,6 @@
   "a": 5,
   "p": 8,
   "pm": 4,
-  "ppp": 3
- },
- {
-  "team": "BOS",
-  "id": 8477956,
-  "name": "David Pastrnak",
-  "pos": "R",
-  "gp": 7,
-  "g": 2,
-  "a": 6,
-  "p": 8,
-  "pm": 1,
   "ppp": 3
  },
  {
