@@ -260,7 +260,7 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .bksvg .bk-ft{fill:#fff;font-family:var(--display);font-size:12px;text-anchor:middle}
 .bksvg .bk-ft2{fill:#FFB81C;font-family:var(--display);font-size:10px;letter-spacing:.1em;text-anchor:middle}
 #playoffs.poin .pob{animation:poin .5s ease-out .1s both}
-.pob{margin-top:12px}
+.pob{margin-top:0}.poseg{margin-top:12px}.pstd{margin-top:10px}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -447,10 +447,6 @@ td{white-space:nowrap}
 
   <section id="po" role="tabpanel" aria-labelledby="tab-po" class="list" hidden>
     <div class="head2"><h2>Playoffs</h2><span class="muted" id="poasof">NHL.com</span></div>
-    <div class="seg" role="group" aria-label="Conference standings">
-      <button class="segb" type="button" data-pc="E" aria-pressed="true">East</button>
-      <button class="segb" type="button" data-pc="W" aria-pressed="false">West</button>
-    </div>
     <div id="playoffs"></div>
   </section>
 
@@ -781,13 +777,14 @@ function renderPlayoffs(){
   const head=t=>`<div class="prh"><span></span><span></span><span>${t}</span><span>GP</span><span>PTS</span></div>`;
   let tbl=divs.map(d=>head(DIVN[d])+by[d].slice(0,3).map((r,i)=>row(r,d+(i+1),"in")).join("")).join("");
   tbl+=head("Wild Card")+rest.map((r,i)=>(i===2?'<div class="pcut">Playoff line</div>':"")+row(r,i<2?"WC"+(i+1):(cut-r[7]>0?"−"+(cut-r[7]):"Tied"),i<2?"in":"out")).join("");
-  el.innerHTML=`<div class="stb pstd">${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · − = points back of the last spot · tiebreakers from NHL.com</div></div>
-    <div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">League-wide bracket</div>${bracketSvg()}
-    <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>`;
+  const seg=`<div class="seg poseg" role="group" aria-label="Conference standings">${["E","W"].map(c=>`<button class="segb" type="button" data-pc="${c}" aria-pressed="${PC===c}">${c==="E"?"East":"West"}</button>`).join("")}</div>`;
+  el.innerHTML=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">League-wide bracket</div>${bracketSvg()}
+    <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>${seg}<div class="stb pstd">${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · − = points back of the last spot · tiebreakers from NHL.com</div></div>
+`;
+  el.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;renderPlayoffs();}));
   el.classList.remove("poin");void el.offsetWidth;el.classList.add("poin");
 }
-document.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;
-  document.querySelectorAll("[data-pc]").forEach(x=>x.setAttribute("aria-pressed",x===b));renderPlayoffs();}));
+
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
   if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
