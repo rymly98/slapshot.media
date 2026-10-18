@@ -215,6 +215,7 @@ html{scroll-behavior:smooth}
 .nums summary::after{content:"▾";font-size:16px;color:var(--muted);transition:transform .2s}
 .nums[open] summary::after{transform:rotate(180deg)}
 .nums summary:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:4px}
+.qnums{border-top:1px solid var(--line);padding-top:10px;margin-top:10px}.qlead{max-width:420px;margin:10px auto 4px;padding-top:8px;border-top:1px dashed var(--line)}.lseason{text-align:center;font-size:12px;color:var(--muted);margin-top:6px;text-transform:uppercase;letter-spacing:.06em}
 .ntable{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;row-gap:6px;column-gap:18px;max-width:420px;margin:12px auto 4px}
 .ntable .nh{justify-self:center}.ntable .nh .logo{width:48px;height:48px}
 .nl{font-family:var(--display);font-size:17px;text-transform:uppercase;color:var(--muted);text-align:center;letter-spacing:.03em}
@@ -399,26 +400,23 @@ let S={WSH:[43,30,9,3.18,2.90,17.8,80.1],NJD:[42,37,3,2.76,3.09,22.0,79.3],VGK:[
  NYR:[34,39,9,2.87,3.04,24.7,79.9],NYI:[43,34,5,2.79,2.88,16.5,80.8],LAK:[35,27,20,2.68,2.90,17.0,74.6],SEA:[34,37,11,2.73,3.13,19.5,72.2],
  UTA:[43,33,6,3.27,2.93,20.0,78.1],MIN:[46,24,12,3.27,2.87,25.2,79.8],BUF:[50,23,9,3.45,2.93,19.5,81.9],CAR:[53,22,7,3.55,2.88,24.9,80.5],
  PHI:[43,27,12,2.93,2.91,15.7,77.6],EDM:[41,30,11,3.44,3.23,30.6,77.8],FLA:[40,38,4,3.00,3.34,19.5,81.0],TOR:[32,36,14,3.07,3.60,21.3,81.2]};
-function leaders(L){
-  if(!L||!L.a||!L.h)return "";
-  const row=(k,n)=>`<span class="lv">${L.a[k][0]} <b>${L.a[k][1]}</b></span><span class="nl">${n}</span><span class="lv r">${L.h[k][0]} <b>${L.h[k][1]}</b></span>`;
-  return `<details class="nums lead"><summary>Team Leaders <span class="hint">${L.season} top players</span></summary><div class="leaders"><div class="lgrid">${row("g","Goals")}${row("a","Assists")}${row("p","Points")}</div></div></details>`;
-}
 function numbers(a,h,L){
   const A=S[a],H=S[h];
   const pts=x=>x[0]*2+x[2];
-  const rows=[
-    ["Record",`${A[0]}-${A[1]}-${A[2]}`,`${H[0]}-${H[1]}-${H[2]}`,pts(A),pts(H),true],
-    ["GF/G",A[3].toFixed(2),H[3].toFixed(2),A[3],H[3],true],
-    ["GA/G",A[4].toFixed(2),H[4].toFixed(2),A[4],H[4],false],
-    ["PP%",A[5].toFixed(1)+"%",H[5].toFixed(1)+"%",A[5],H[5],true],
-    ["PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true]];
-  return `<details class="nums"><summary>The Numbers <span class="hint">team stats</span></summary>
-    <div class="ntable">
+  const cell=(l,av,hv,an,hn,up)=>{const aw=up?an>hn:an<hn, hw=up?hn>an:hn<an;
+    return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`;};
+  const lr=(k,n)=>(L&&L.a&&L.h&&L.a[k]&&L.h[k])?`<span class="lv">${L.a[k][0]} <b>${L.a[k][1]}</b></span><span class="nl">${n}</span><span class="lv r">${L.h[k][0]} <b>${L.h[k][1]}</b></span>`:"";
+  const quick=`<div class="qnums"><div class="ntable">
       <span class="nh">${logo(a)}</span><span class="nl">${SSEASON}</span><span class="nh">${logo(h)}</span>
-      ${rows.map(([l,av,hv,an,hn,up])=>{const aw=up?an>hn:an<hn, hw=up?hn>an:hn<an;
-        return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`}).join("")}
-    </div></details>${leaders(L)}`;
+      ${cell("Record",`${A[0]}-${A[1]}-${A[2]}`,`${H[0]}-${H[1]}-${H[2]}`,pts(A),pts(H),true)}
+      ${cell("GF/G",A[3].toFixed(2),H[3].toFixed(2),A[3],H[3],true)}
+      ${cell("GA/G",A[4].toFixed(2),H[4].toFixed(2),A[4],H[4],false)}
+    </div>${lr("g","Top goals")?`<div class="lgrid qlead">${lr("g","Top goals")}</div>`:""}</div>`;
+  const more=`<details class="nums"><summary>More numbers <span class="hint">PP, PK &amp; leaders</span></summary>
+    <div class="ntable">${cell("PP%",A[5].toFixed(1)+"%",H[5].toFixed(1)+"%",A[5],H[5],true)}${cell("PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true)}</div>
+    ${L&&L.a&&L.h?`<div class="leaders"><div class="lgrid">${lr("a","Assists")}${lr("p","Points")}</div><div class="lseason">${L.season} leaders</div></div>`:""}
+  </details>`;
+  return quick+more;
 }
 function renderQuick(){
   const g=days.tue, parts=(document.getElementById("daylabel").textContent||"").split(" · "), lbl=parts[0];
