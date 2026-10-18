@@ -251,8 +251,8 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .bksvg .bk-h{fill:#FFB81C;font-family:var(--display);font-size:15px;letter-spacing:.1em;text-anchor:middle}
 .bksvg .bk-b{fill:rgba(0,0,0,.35);stroke:rgba(255,255,255,.18);stroke-width:1}
 .bksvg .bk-sep{stroke:rgba(255,255,255,.1);stroke-width:1}
-.bksvg .bk-s{fill:#fff;font-family:var(--display);font-size:11px}
-.bksvg .bk-p{fill:#9a9ca3;font-family:var(--num);font-size:10px;font-weight:600;text-anchor:end}
+.bksvg .bk-s{fill:#FFB81C;font-family:var(--display);font-size:9.5px}
+.bksvg .bk-p{fill:#fff;font-family:var(--display);font-size:11px;letter-spacing:.04em;text-anchor:end}
 .bksvg .bk-c{fill:none;stroke:rgba(255,255,255,.28);stroke-width:1.3}
 .bksvg .bk-e{fill:rgba(0,0,0,.2);stroke:rgba(255,255,255,.22);stroke-width:1;stroke-dasharray:3 3}
 .bksvg .bk-q{fill:#8d8f96;font-family:var(--display);font-size:10px;text-anchor:middle}
@@ -757,7 +757,7 @@ function bracketSvg(){
     g+=`<text x="${x1+bw/2}" y="20" class="bk-h">${conf==="E"?"EAST":"WEST"}</text>`;
     ms.forEach(([h,hs,l,ls],i)=>{const y=top+slot*i+(slot-bh)/2;cy.push(y+bh/2);g+=box(x1,y,bw,bh,"bk-b");
       [[h,hs],[l,ls]].forEach(([r,sd],j)=>{const ry=y+j*23;if(j)g+=`<line x1="${x1+4}" x2="${x1+bw-4}" y1="${y+23}" y2="${y+23}" class="bk-sep"/>`;
-        g+=`<image href="tl/${r[0]}.png" x="${x1+4}" y="${ry+3}" width="17" height="17"/><text x="${x1+25}" y="${ry+15.5}" class="bk-s">${sd}</text><text x="${x1+bw-5}" y="${ry+15.5}" class="bk-p">${r[7]}</text>`;});});
+        g+=`<image href="tl/${r[0]}.png" x="${x1+4}" y="${ry+3}" width="17" height="17"/><text x="${x1+24}" y="${ry+15.5}" class="bk-s">${sd}</text><text x="${x1+bw-5}" y="${ry+15.5}" class="bk-p">${r[0]}</text>`;});});
     const r2=[(cy[0]+cy[1])/2,(cy[2]+cy[3])/2],cf=(r2[0]+r2[1])/2,edge=(x,inward)=>inward;
     const conn=(ya,yb,ym,xa,xb)=>{const xm=(xa+xb)/2;return `<path d="M${xa},${ya}H${xm}V${yb}M${xa},${yb}H${xm}M${xm},${ym}H${xb}" class="bk-c"/>`;};
     const r2in=left?xr2:xr2+r2w,r2out=left?xr2+r2w:xr2,cfin=left?xcf:xcf+r2w,cfout=left?xcf+r2w:xcf;
@@ -778,7 +778,7 @@ function renderPlayoffs(){
   let tbl=divs.map(d=>head(DIVN[d])+by[d].slice(0,3).map((r,i)=>row(r,d+(i+1),"in")).join("")).join("");
   tbl+=head("Wild Card")+rest.map((r,i)=>(i===2?'<div class="pcut">Playoff line</div>':"")+row(r,i<2?"WC"+(i+1):(cut-r[7]>0?"−"+(cut-r[7]):"Tied"),i<2?"in":"out")).join("");
   const seg=`<div class="seg poseg" role="group" aria-label="Conference standings">${["E","W"].map(c=>`<button class="segb" type="button" data-pc="${c}" aria-pressed="${PC===c}">${c==="E"?"East":"West"}</button>`).join("")}</div>`;
-  el.innerHTML=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">League-wide bracket</div>${bracketSvg()}
+  el.innerHTML=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">League-wide bracket · seed &amp; team</div>${bracketSvg()}
     <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>${seg}<div class="stb pstd">${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · − = points back of the last spot · tiebreakers from NHL.com</div></div>
 `;
   el.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;renderPlayoffs();}));
