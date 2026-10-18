@@ -205,6 +205,30 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .shareb svg{width:16px;height:16px}
 .shareb:hover{background:var(--maroon)}.shareb:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .shareb.wide{display:flex;margin:12px auto 2px}
+.pob{padding:16px 12px 14px}
+.pot{font-family:var(--display);font-size:clamp(28px,8vw,40px);line-height:1;text-align:center;text-transform:uppercase;text-shadow:3px 3px 0 var(--maroon-deep)}
+.pot.sm{font-size:24px;margin-bottom:6px}
+.pos{text-align:center;font-family:var(--display);font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#FFB81C;margin:6px 0 10px}
+.bh-d{font-family:var(--display);font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:6px 0 6px 2px}
+.bh-g{display:grid;grid-template-columns:minmax(0,1fr) 16px 62px;grid-template-rows:auto auto;column-gap:0;row-gap:10px;align-items:stretch}
+.bs{grid-column:1;background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:10px;padding:2px 8px}
+.bs .pt+.pt{border-top:1px solid var(--line)}
+.bc{grid-column:2;grid-row:1/3;margin:24% 0;border:2px solid rgba(255,255,255,.25);border-left:0;border-radius:0 8px 8px 0}
+.br2{grid-column:3;grid-row:1/3;align-self:center;margin-left:4px;text-align:center;font-family:var(--display);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  border:1.5px dashed rgba(255,255,255,.25);border-radius:8px;padding:12px 2px}
+.bcf{margin:12px auto 4px;width:max-content;font-family:var(--display);font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--maroon);border-radius:999px;padding:4px 14px}
+.pt,.prw{display:grid;grid-template-columns:34px 28px minmax(0,1fr) auto;align-items:center;gap:8px;padding:7px 0}
+.pt img,.prw img{width:28px;height:28px;object-fit:contain}
+.ps{font-family:var(--display);font-size:13px;color:#FFB81C;letter-spacing:.04em}
+.pn{font-family:var(--display);font-size:18px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pp{font-family:var(--display);font-size:20px;text-align:right}
+.pstd{margin-top:12px;padding:16px 12px 12px}
+.prw{grid-template-columns:34px 28px minmax(0,1fr) 34px 38px;border-top:1px solid var(--line)}
+.prw .pg{font-family:var(--num);font-size:14px;color:var(--muted);text-align:right}
+.prw.out{opacity:.7}.prw.out .ps{color:var(--muted)}
+.prh{display:grid;grid-template-columns:34px 28px minmax(0,1fr) 34px 38px;gap:8px;margin-top:12px;padding-bottom:4px;font-family:var(--display);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right}
+.prh span:nth-child(3){text-align:left;color:#fff;font-size:16px}
+.pcut{border-top:2px dashed #E0475B;margin:2px 0;font-family:var(--display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#E0475B;text-align:right;padding-top:2px}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -368,6 +392,7 @@ td{white-space:nowrap}
     <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
     <button class="tab" role="tab" id="tab-race" aria-controls="race" aria-selected="false" type="button">The Race</button>
     <button class="tab" role="tab" id="tab-stand" aria-controls="stand" aria-selected="false" type="button">Standings</button>
+    <button class="tab" role="tab" id="tab-po" aria-controls="po" aria-selected="false" type="button">Playoffs</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
@@ -386,6 +411,15 @@ td{white-space:nowrap}
         <option value="L">Whole NHL</option>
       </select></label>
     <div id="standings"></div>
+  </section>
+
+  <section id="po" role="tabpanel" aria-labelledby="tab-po" class="list" hidden>
+    <div class="head2"><h2>Playoffs</h2><span class="muted" id="poasof">NHL.com</span></div>
+    <div class="seg" role="group" aria-label="Conference">
+      <button class="segb" type="button" data-pc="E" aria-pressed="true">East</button>
+      <button class="segb" type="button" data-pc="W" aria-pressed="false">West</button>
+    </div>
+    <div id="playoffs"></div>
   </section>
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
@@ -675,13 +709,45 @@ function renderStandings(anim){
 }
 document.getElementById("racepick").addEventListener("change",e=>{SV=e.target.value;RSEL=null;renderStandings(true);});
 document.getElementById("tab-stand").addEventListener("click",()=>renderStandings(true));
+let PC="E";
+function poSeed(conf){
+  const ord=t=>ST.t.findIndex(r=>r[0]===t),rows=ST.t.filter(r=>r[1]===conf),divs=conf==="E"?["A","M"]:["C","P"];
+  const by={};divs.forEach(d=>by[d]=rows.filter(r=>r[2]===d).sort((a,b)=>((a[8]||99)-(b[8]||99))||ord(a[0])-ord(b[0])));
+  const top=new Set(divs.flatMap(d=>by[d].slice(0,3).map(r=>r[0])));
+  const rest=rows.filter(r=>!top.has(r[0])).sort((a,b)=>((a[9]||99)-(b[9]||99))||((a[10]||99)-(b[10]||99))||ord(a[0])-ord(b[0]));
+  const w1=by[divs[0]][0],w2=by[divs[1]][0],cs=r=>r[10]||ord(r[0])+1,firstBetter=cs(w1)<=cs(w2);
+  const opp={};opp[divs[0]]=firstBetter?rest[1]:rest[0];opp[divs[1]]=firstBetter?rest[0]:rest[1];
+  return {divs,by,rest,opp};
+}
+function poTeam(r,seed){return `<div class="pt"><span class="ps">${seed}</span><img src="tl/${r[0]}.png" alt="${r[0]}"><span class="pn">${NICKN[r[0]]}</span><span class="pp">${r[7]}</span></div>`;}
+function renderPlayoffs(){
+  const el=document.getElementById("playoffs");if(!el)return;
+  if(!ST){el.innerHTML='<p class="muted">Loads with the morning update.</p>';return;}
+  const {divs,by,rest,opp}=poSeed(PC),wcs=r=>rest[0]&&r[0]===rest[0][0]?"WC1":"WC2";
+  const half=d=>{const t=by[d],o=opp[d];
+    return `<div class="bh"><div class="bh-d">${DIVN[d]}</div><div class="bh-g">
+      <div class="bs">${poTeam(t[0],d+"1")}${o?poTeam(o,wcs(o)):""}</div>
+      <div class="bs">${poTeam(t[1],d+"2")}${poTeam(t[2],d+"3")}</div>
+      <div class="bc"></div><div class="br2">Round 2</div></div></div>`;};
+  const bracket=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">${PC==="E"?"Eastern":"Western"} Conference · round 1</div>
+    ${half(divs[0])}<div class="bcf">${PC==="E"?"East":"West"} Final</div>${half(divs[1])}</div>`;
+  const cut=rest[1]?rest[1][7]:0;
+  const row=(r,seed,cls)=>`<div class="prw ${cls||""}"><span class="ps">${seed}</span><img src="tl/${r[0]}.png" alt="${r[0]}"><span class="pn">${NICKN[r[0]]}</span><span class="pg">${r[3]}</span><span class="pp">${r[7]}</span></div>`;
+  const head=t=>`<div class="prh"><span></span><span></span><span>${t}</span><span>GP</span><span>PTS</span></div>`;
+  let tbl=divs.map(d=>head(DIVN[d])+by[d].slice(0,3).map((r,i)=>row(r,d+(i+1),"in")).join("")).join("");
+  tbl+=head("Wild Card")+rest.map((r,i)=>row(r,i<2?"WC"+(i+1):(cut-r[7]>0?"−"+(cut-r[7]):"–"),i<2?"in":"out")+(i===1?'<div class="pcut">Playoff line</div>':"")).join("");
+  el.innerHTML=bracket+`<div class="stb pstd"><div class="pot sm">Wild card standings</div>${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · seeding and tiebreakers from NHL.com · − = points back of the last spot</div></div>`;
+}
+document.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;
+  document.querySelectorAll("[data-pc]").forEach(x=>x.setAttribute("aria-pressed",x===b));renderPlayoffs();}));
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
   if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
   document.getElementById("daylabel").textContent=d.label||"";
   if(d.RG&&d.RG.g)RG=d.RG;if(d.ST&&d.ST.t&&d.ST.t.length>=32){ST=d.ST;const dt=new Date(ST.asof+"T12:00:00");
     document.getElementById("stasof").textContent="Through "+new Date(RG&&RG.thru?RG.thru+"T12:00:00":dt).toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
-  renderGames();renderRecord();renderStandings();
+  renderGames();renderRecord();renderStandings();renderPlayoffs();
+  if(ST){const pa=document.getElementById("poasof");if(pa)pa.textContent=document.getElementById("stasof").textContent;}
 }).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();renderStandings();});
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
 const tabs=[...document.querySelectorAll(".tab")];
