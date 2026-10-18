@@ -185,16 +185,19 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 @keyframes rfade{to{opacity:1}}
 @media (prefers-reduced-motion:reduce){#standings,#standings *{animation:none!important;transition:none!important}}
 .stn{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
-.rboard{display:grid;gap:10px}
-.rfr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.rfr .rb b{font-size:28px}.rfr .rb-n{font-size:13px}.rfr .rb{padding:10px 4px 8px}
-.rb.hero{padding:16px 8px 14px}.rb.hero b{font-size:64px}.rb.hero .rb-n{color:#fff;font-size:20px}.rb.hero small{font-size:14px}
-.rb{position:relative;display:flex;flex-direction:column;align-items:center;padding:14px 8px 12px;border-radius:14px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--c)}
-.rb.me{background:radial-gradient(300px 140px at 50% 0%,#3d1a21 0%,rgba(0,0,0,0) 80%),var(--panel);box-shadow:0 0 0 2px var(--maroon)}
-.rb-rk{position:absolute;top:8px;left:10px;font-family:var(--display);font-size:14px;color:var(--muted)}
-.rb-n{font-family:var(--display);font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.rb b{font-family:var(--display);font-weight:400;font-size:40px;line-height:1.05;color:#fff}
-.rb small{font-family:var(--num);font-size:13px;color:var(--muted)}
+.recblurb.top{margin:0 0 4px}
+.rboard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 8px;min-width:0}
+.rst,.rst-h{display:grid;grid-template-columns:16px minmax(0,1fr) 54px 64px 34px;align-items:center;gap:5px}
+.rst-h{font-family:var(--display);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:6px 6px 2px;text-align:right}
+.rst{padding:10px 6px;border-top:1px solid var(--line);text-align:right}
+.rst .rk{font-family:var(--display);font-size:16px;color:var(--muted);text-align:left}
+.rst .nm{display:flex;align-items:center;gap:7px;text-align:left;font-family:var(--display);font-size:18px;text-transform:uppercase;white-space:nowrap;overflow:hidden}
+.rst .nm i{width:6px;height:22px;border-radius:3px;display:block}
+.rst .wl{font-family:var(--num);font-size:14px;color:var(--muted)}
+.rst .pc{font-family:var(--display);font-size:20px}
+.rst .bk{font-family:var(--num);font-size:14px;color:var(--muted)}
+.rst.me{background:linear-gradient(90deg,rgba(224,71,91,.22),rgba(224,71,91,.05));border-radius:10px;border-top-color:transparent;box-shadow:inset 0 0 0 1.5px var(--maroon)}
+.rst.me .rk,.rst.me .bk,.rst.me .wl{color:#fff}
 .chartcard.big{padding:16px 10px 8px;margin-top:12px}
 .ch-t{font-family:var(--display);font-size:20px;text-transform:uppercase;text-align:center;margin-bottom:6px;text-shadow:2px 2px 0 var(--maroon-deep)}
 .shareb{display:inline-flex;align-items:center;gap:6px;font:inherit;font-family:var(--display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;
@@ -407,12 +410,12 @@ td{white-space:nowrap}
 
   <section id="race" role="tabpanel" aria-labelledby="tab-race" class="list" hidden>
     <div class="head2"><h2>The Race</h2><button type="button" class="shareb" data-share="race" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+    <p class="recblurb top">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right.</p>
     <div class="rboard" id="rboard"></div>
     <div class="chartcard big">
       <div class="ch-t">Win % over the season</div>
       <div class="chartwrap" id="chart"></div>
     </div>
-    <p class="recblurb">Every morning we ask our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b> who they like, and make our picks too. Next morning, we see who got it right.</p>
     <details class="rdrop">
       <summary><span class="rd-t">Tonight's picks</span><span class="rd-s">Us vs our friends</span></summary>
       <div class="tonight">
@@ -556,12 +559,10 @@ function renderLastNight(){
 }
 function renderRace(){
   const el=document.getElementById("rboard"); if(!el)return;
-  const rows=SRC.map(([k,n,c])=>({k,n,c,t:tally(R,k)})),me=rows[0];
-  const all=[...rows].sort((a,b)=>(b.t.p??-1)-(a.t.p??-1)),rank=all.indexOf(me)+1,best=all[0];
-  const gap=me.t.p!=null&&best!==me?(best.t.p-me.t.p).toFixed(1):null;
-  const note=me.t.p==null?"":best===me?"Leading our friends":`${gap} back of ${best.n}`;
-  el.innerHTML=`<div class="rb me hero" style="--c:${me.c}"><span class="rb-n">Slapshot</span><b>${me.t.p==null?"—":me.t.p.toFixed(1)+"%"}</b><small>${me.t.w}–${me.t.l}${note?" · "+note:""}</small></div>`+
-    `<div class="rfr">`+rows.slice(1).map(r=>`<div class="rb" style="--c:${r.c}"><span class="rb-n">${r.n}</span><b>${r.t.p==null?"—":r.t.p.toFixed(1)+"%"}</b><small>${r.t.w}–${r.t.l}</small></div>`).join("")+`</div>`;
+  const rows=SRC.map(([k,n,c])=>({k,n,c,t:tally(R,k)})).sort((a,b)=>(b.t.p??-1)-(a.t.p??-1)),top=rows[0].t.p;
+  el.innerHTML=`<div class="rst-h"><span></span><span></span><span>W–L</span><span>Win %</span><span>Back</span></div>`+rows.map((r,i)=>{
+    const back=r.t.p==null||i===0?"—":(top-r.t.p).toFixed(1);
+    return `<div class="rst${r.k==="s"?" me":""}"><span class="rk">${i+1}</span><span class="nm"><i style="background:${r.c}"></i>${r.n}</span><span class="wl">${r.t.w}–${r.t.l}</span><span class="pc">${r.t.p==null?"—":r.t.p.toFixed(1)+"%"}</span><span class="bk">${back}</span></div>`}).join("");
 }
 function renderRecord(){renderLastNight();renderRace();document.getElementById("rectop").innerHTML=recStrip();renderTonight();
   const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
@@ -751,13 +752,16 @@ const POSTERS={
       const tot=w1.reduce((a,b)=>a+b,0)+20*(ps.length-1);let cx=SW/2-tot/2;ps.forEach((p,i)=>{pill(x,p.textContent.toUpperCase(),cx+w1[i]/2,y+50,i?"#ff6b7d":"#FFB81C");cx+=w1[i]+20;});}
     drawSvg(x,el.querySelector("svg"),40,y+100,1000,SHH-170-(y+100));shFoot(x);return c;},
   race(){const [c,x]=shCanvas();const y=shHead(x,"WHO PICKS BETTER?","THE RACE","SLAPSHOT VS OUR FRIENDS · WIN %");
-    const rows=SRC.map(([k,n,col])=>({k,n,col,t:tally(R,k)}));
-    rows.forEach((r,i)=>{const w=232,gx=40+i*(w+16),gy=y+30;x.save();x.fillStyle=r.k==="s"?"rgba(224,71,91,.18)":"rgba(0,0,0,.3)";x.beginPath();x.roundRect(gx,gy,w,170,18);x.fill();
-      x.fillStyle=r.col;x.fillRect(gx+18,gy,w-36,6);if(r.k==="s"){x.lineWidth=4;x.strokeStyle="#E0475B";x.beginPath();x.roundRect(gx,gy,w,170,18);x.stroke();}x.restore();
-      T(x,r.n.toUpperCase(),gx+w/2,gy+46,{f:BC,w:700,size:26,ls:3,c:"#c9cad0"});T(x,r.t.p==null?"—":r.t.p.toFixed(1)+"%",gx+w/2,gy+116,{size:60});
-      T(x,`${r.t.w}–${r.t.l}`,gx+w/2,gy+152,{f:BC,w:700,size:24,c:"#9a9ca3"});});
+    const rows=SRC.map(([k,n,col])=>({k,n,col,t:tally(R,k)})).sort((a,b)=>(b.t.p??-1)-(a.t.p??-1)),top=rows[0].t.p;
+    [["",150],["W–L",640],["WIN %",820],["BACK",975]].forEach(([h,hx])=>T(x,h,hx,y+40,{f:BC,w:700,size:22,ls:4,c:"#9a9ca3",align:hx===150?"left":"right"}));
+    rows.forEach((r,i)=>{const ry=y+56+i*62;x.save();if(r.k==="s"){x.fillStyle="rgba(224,71,91,.2)";x.strokeStyle="#E0475B";x.lineWidth=3;x.beginPath();x.roundRect(60,ry,960,56,12);x.fill();x.stroke();}
+      else{x.fillStyle="rgba(0,0,0,.22)";x.beginPath();x.roundRect(60,ry,960,56,12);x.fill();}x.fillStyle=r.col;x.fillRect(130,ry+12,8,32);x.restore();
+      T(x,String(i+1),95,ry+40,{size:30,c:"#9a9ca3"});T(x,r.n.toUpperCase(),155,ry+41,{size:34,align:"left"});
+      T(x,`${r.t.w}–${r.t.l}`,640,ry+39,{f:BC,w:700,size:30,c:"#c9cad0",align:"right"});T(x,r.t.p==null?"—":r.t.p.toFixed(1)+"%",820,ry+41,{size:36,align:"right"});
+      T(x,i===0||r.t.p==null?"—":(top-r.t.p).toFixed(1),975,ry+39,{f:BC,w:700,size:30,c:"#c9cad0",align:"right"});});
+    const y2=y+56+4*62+10;
     const tmp=document.createElement("div");tmp.className="chartwrap";tmp.style.cssText="position:absolute;left:-9999px;top:0;width:620px";document.body.appendChild(tmp);
-    drawChart(tmp);const sv=tmp.querySelector("svg");if(sv)drawSvg(x,sv,30,y+240,1020,SHH-180-(y+240));tmp.remove();shFoot(x);return c;},
+    drawChart(tmp);const sv=tmp.querySelector("svg");if(sv)drawSvg(x,sv,30,y2+10,1020,SHH-180-(y2+10));tmp.remove();shFoot(x);return c;},
   record(){const [c,x]=shCanvas(),last=[...new Set(R.map(r=>r.d))].sort().pop();if(!last)return null;
     const rows=R.filter(r=>r.d===last),t=tally(rows,"s");
     const y=shHead(x,new Date(last+"T12:00:00").toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric"}).toUpperCase(),`LAST NIGHT ${t.w}–${t.l}`,"SLAPSHOT.MEDIA PICKS")+30;
