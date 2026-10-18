@@ -136,6 +136,22 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .qrec span{display:grid;gap:0}
 .qrec small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 .qrec b{font-family:var(--display);font-weight:400;font-size:26px;color:#fff;font-variant-numeric:tabular-nums}
+.gxwrap{gap:4px;padding-top:14px}
+.gxtip{text-align:center;font-family:var(--display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.gx{border-bottom:1px solid var(--line)}.gx:last-child{border-bottom:0}
+.gx>summary{list-style:none;cursor:pointer;padding:10px 4px 6px;border-radius:10px;-webkit-tap-highlight-color:transparent}
+.gx>summary::-webkit-details-marker{display:none}
+.gx>summary:hover{background:rgba(255,255,255,.03)}
+.gx>summary:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.gxt{display:flex;justify-content:center;align-items:center;gap:6px;font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:.04em}
+.gxt::after{content:"▾";font-size:13px;transition:transform .2s}
+.gx[open] .gxt::after{transform:rotate(180deg)}
+.gx[open]>summary{background:rgba(255,255,255,.04)}
+.gxb{display:grid;gap:10px;padding:10px 4px 16px}
+.gxp{text-align:center;font-size:13px;color:var(--muted)}.gxp b{color:#fff}
+.gxh{text-align:center;font-family:var(--display);font-size:19px;text-transform:uppercase;letter-spacing:.03em;border-top:1px solid var(--line);padding-top:10px}
+.gxh span{font-family:var(--body);font-size:12px;text-transform:none;letter-spacing:0;color:var(--muted);margin-left:6px}
+.gxb .ntable,.gxb .leaders{margin:0 auto}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -432,22 +448,28 @@ function renderQuick(){
       const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
       return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})();
 }
-function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=days[el.dataset.day].map(g=>{
+function gxBody(g){
+  const A=S[g.a],H=S[g.h],pts=x=>x[0]*2+x[2];
+  const rows=[["Record",`${A[0]}-${A[1]}-${A[2]}`,`${H[0]}-${H[1]}-${H[2]}`,pts(A),pts(H),true],
+    ["GF/G",A[3].toFixed(2),H[3].toFixed(2),A[3],H[3],true],["GA/G",A[4].toFixed(2),H[4].toFixed(2),A[4],H[4],false],
+    ["PP%",A[5].toFixed(1)+"%",H[5].toFixed(1)+"%",A[5],H[5],true],["PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true]];
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
-  const books=[["V","Vegas"],["E","New York"],["B","Boston"]].map(([k,n])=>{const x=g.b&&g.b[k];
-    return `<div class="book"><span class="who">${n}</span>${x?`<span class="val">${x[0]}</span>`:`<span class="val pending">Pending</span>`}</div>`}).join("");
-  return `<article class="game">
-    <div class="matchup">
-      <div class="side"><span class="pct">${g.ap.toFixed(1)}%</span>${logo(g.a)}</div>
-      <div class="bar" role="img" aria-label="${g.a} ${g.ap.toFixed(1)}% vs ${g.h} ${g.hp.toFixed(1)}%">
-        <span style="width:${g.ap.toFixed(1)}%;background:${colors[g.a]}"></span><span style="width:${g.hp.toFixed(1)}%;background:${colors[g.h]}"></span>
-      </div>
-      <div class="side r">${logo(g.h)}<span class="pct">${g.hp.toFixed(1)}%</span></div>
-    </div>
+  const L=g.lead, lr=(k,n)=>`<span class="lv">${L.a[k][0]} <b>${L.a[k][1]}</b></span><span class="nl">${n}</span><span class="lv r">${L.h[k][0]} <b>${L.h[k][1]}</b></span>`;
+  return `<div class="gxb">
     <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
-    <div class="meta"><span>Projected goals: ${g.a} ${g.ag.toFixed(2)} – ${g.h} ${g.hg.toFixed(2)} · <b>Total ${(g.ag+g.hg).toFixed(2)}</b></span><span>${g.t}</span></div>
-    ${numbers(g.a,g.h,g.lead)}
-  </article>`}).join("");});}
+    <div class="gxp">Projected goals: ${g.a} ${g.ag.toFixed(2)} – ${g.h} ${g.hg.toFixed(2)} · <b>Total ${(g.ag+g.hg).toFixed(2)}</b></div>
+    <div class="gxh">The Numbers <span>${SSEASON}</span></div>
+    <div class="ntable"><span class="nh">${logo(g.a)}</span><span class="nl"></span><span class="nh">${logo(g.h)}</span>
+      ${rows.map(([l,av,hv,an,hn,up])=>{const aw=up?an>hn:an<hn,hw=up?hn>an:hn<an;
+        return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`}).join("")}</div>
+    ${L&&L.a&&L.h?`<div class="gxh">Team Leaders <span>${L.season}</span></div><div class="leaders"><div class="lgrid">${lr("g","Goals")}${lr("a","Assists")}${lr("p","Points")}</div></div>`:""}
+  </div>`;
+}
+function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=`<div class="qc gxwrap"><div class="gxtip">Tap a game for the details</div>`+days[el.dataset.day].map(g=>`<details class="gx"><summary>
+    <div class="qr"><span class="p ${g.ap>=g.hp?"hi":"lo"}">${g.ap.toFixed(1)}%</span><img src="tl/${g.a}.png" alt="${g.a}">
+      <div class="qb" role="img" aria-label="${g.a} ${g.ap.toFixed(1)}% vs ${g.h} ${g.hp.toFixed(1)}%"><span style="width:${g.ap}%;background:${colors[g.a]}"></span><span style="width:${g.hp}%;background:${colors[g.h]}"></span></div>
+      <img src="tl/${g.h}.png" alt="${g.h}"><span class="p r ${g.hp>=g.ap?"hi":"lo"}">${g.hp.toFixed(1)}%</span></div>
+    <div class="gxt">${g.t}</div></summary>${gxBody(g)}</details>`).join("")+`</div>`;});}
 /* ===== Record: every finished game. Add one object per game; everything below is computed from it.
    {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}
    s = Slapshot pick, V/E/B = each book's favorite (null = pick'em, no pick), w = winner, f = final score */
