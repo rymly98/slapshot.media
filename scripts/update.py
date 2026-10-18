@@ -219,6 +219,28 @@ def add_standings(data):
     return len(t)
 
 
+def add_race(data):
+    """Points race: every final regular-season game as [date, away, home, away pts, home pts]. Fetches only new days."""
+    rg = data.get("RG") or {"thru": "2026-09-28", "g": []}
+    d = datetime.strptime(rg["thru"], "%Y-%m-%d").date() + timedelta(days=1)
+    end = datetime.now(ET).date() - timedelta(days=1)
+    while d <= end:
+        day, new = d.isoformat(), []
+        games = [g for g in get(f"https://api-web.nhle.com/v1/score/{day}").get("games", []) if g.get("gameType") == 2]
+        if any(g.get("gameState") not in ("OFF", "FINAL") for g in games):
+            break
+        for g in games:
+            a, h = g["awayTeam"], g["homeTeam"]
+            ot = (g.get("gameOutcome") or {}).get("lastPeriodType") in ("OT", "SO")
+            aw = a["score"] > h["score"]
+            new.append([day, a["abbrev"], h["abbrev"], 2 if aw else (1 if ot else 0), 0 if aw and not ot else (1 if aw else 2)])
+        rg["g"] += new
+        rg["thru"] = day
+        d += timedelta(days=1)
+    data["RG"] = rg
+    return rg["thru"], len(rg["g"])
+
+
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else ("morning" if datetime.now(ET).hour < 12 else "evening")
     data = json.load(open(DATA))
@@ -255,6 +277,10 @@ def main():
             notes.append(f"standings for {add_standings(data)} team(s)")
         except Exception as e:
             notes.append(f"standings skipped: {e}")
+        try:
+            notes.append("race thru %s (%d games)" % add_race(data))
+        except Exception as e:
+            notes.append(f"race skipped: {e}")
 
     try:
         hit = refresh_lines(data)

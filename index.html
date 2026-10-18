@@ -155,19 +155,25 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .stb{border:1px solid var(--line);border-radius:14px;padding:16px 12px 12px;background:radial-gradient(600px 260px at 50% 0%,#3d1a21 0%,rgba(0,0,0,0) 75%),#101114}
 .stb+.stb{margin-top:12px}
 .stt{font-family:var(--display);font-size:24px;text-transform:uppercase;text-align:center;text-shadow:2px 2px 0 var(--maroon-deep);margin-bottom:10px}
-.str{display:grid;grid-template-columns:22px 30px 1fr 64px;align-items:center;gap:8px;padding:3px 0}
-.str .rk{font-family:var(--num);font-size:13px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
-.str img{width:30px;height:30px;object-fit:contain;display:block}
-.str .bw{position:relative;height:22px}
-.str .bf{height:100%;border-radius:3px;min-width:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;box-sizing:border-box;
-  font-family:var(--display);font-size:17px;color:#fff;text-shadow:1px 1px 0 rgba(0,0,0,.6)}
-.str .bf.lt{color:#111;text-shadow:none}
-.str .bf.out{justify-content:flex-start}
-.str .pn{position:absolute;top:0;bottom:0;display:flex;align-items:center;font-family:var(--display);font-size:17px;padding-left:6px}
-.str .rec{font-family:var(--num);font-size:13px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
-.str.cut{border-bottom:1px dashed rgba(255,255,255,.25);padding-bottom:6px;margin-bottom:3px}
+.rsvg{width:100%;height:auto;display:block}
+.rsvg .rg{stroke:rgba(255,255,255,.07);stroke-width:1}
+.rsvg .ry,.rsvg .rx{fill:#8d8f96;font-size:10px;font-family:var(--num)}.rsvg .ry{text-anchor:end}
+.rsvg .rl{fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.rsvg .rl.dim{stroke:rgba(255,255,255,.16);stroke-width:1.3}
+.rstory{text-align:center;font-family:var(--display);font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:#FFB81C;margin:6px 0 10px}
+.rlist{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px}
+.rc{display:flex!important;align-items:center;gap:5px;text-align:left;font:inherit;color:#fff;width:100%;min-width:0;
+  background:rgba(255,255,255,.03);border:1px solid transparent;border-radius:8px;padding:6px 6px;cursor:pointer}
+.rc .rk{flex:0 0 14px;font-family:var(--num);font-size:12px;color:var(--muted);text-align:right}
+.rc img{flex:0 0 26px;width:26px!important;height:26px!important;object-fit:contain}
+.rc .rtx{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.15}
+.rc .rn{font-size:12px;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rc .rrec{font-family:var(--num);font-size:11px;color:var(--muted);white-space:nowrap}
+.rc .rp{font-family:var(--display);font-size:20px}
+.rc.on{border-color:#fff;background:rgba(255,255,255,.08)}
+.rc:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media (min-width:620px){.rlist{grid-template-columns:1fr 1fr 1fr 1fr}}
 .stn{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
-@media (min-width:620px){.str{grid-template-columns:26px 36px 1fr 80px;gap:12px}.str img{width:36px;height:36px}.str .bw{height:26px}.str .rec{font-size:14px}}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -572,25 +578,50 @@ function drawChart(){
     tip.hidden=false;const tx=x(i)*r.width/W;tip.style.left=Math.min(r.width-170,Math.max(0,tx+12))+"px";tip.style.top="8px";};
   hit.addEventListener("pointermove",move);hit.addEventListener("pointerleave",()=>{tip.hidden=true;xh.setAttribute("visibility","hidden");});
 }
-let ST=null,SV="L";
+let ST=null,RG=null,SV="L",RSEL=null;
 const DIVN={A:"Atlantic",M:"Metropolitan",C:"Central",P:"Pacific"},CONFN={E:"Eastern",W:"Western"};
-function stBox(title,rows,cut){
-  const max=Math.max(...rows.map(r=>r[7]),1);
-  const lum=c=>{const v=[1,3,5].map(i=>parseInt(c.slice(i,i+2),16));return .299*v[0]+.587*v[1]+.114*v[2];};
-  return `<div class="stb"><div class="stt">${title}</div>`+rows.map((r,i)=>{
-    const [t,,,gp,w,l,o,pts]=r, pct=pts/max*100, c=colors[t]||"#888", lt=lum(c)>170, inside=pct>=14;
-    return `<div class="str${cut&&i===cut-1&&rows.length>cut?" cut":""}"><span class="rk">${i+1}</span><img src="tl/${t}.png" alt="${t}">
-      <div class="bw"><div class="bf${lt?" lt":""}" style="width:${pct}%;background:${c}">${inside?pts:""}</div>${inside?"":`<span class="pn" style="left:${pct}%">${pts}</span>`}</div>
-      <span class="rec">${w}-${l}-${o}<br><small>${gp} GP</small></span></div>`}).join("")+`</div>`;
+const LC={BOS:"#FFB81C",BUF:"#ADAFAA",DET:"#CE1126",FLA:"#B9975B",MTL:"#6A5BD6",OTT:"#FF6B6B",TBL:"#2B8CE0",TOR:"#FFFFFF",
+CAR:"#E8344A",CBJ:"#A4A9AD",NJD:"#00A04A",NYI:"#6CB4F0",NYR:"#2F5FD0",PHI:"#F74902",PIT:"#FCB514",WSH:"#FFFFFF",
+CHI:"#FF671B",COL:"#3A80C0",DAL:"#8F8F8C",MIN:"#2FA36B",NSH:"#FFB81C",STL:"#2F5FD0",UTA:"#FFFFFF",WPG:"#AC162C",
+ANA:"#F47A38",CGY:"#FAAF19",EDM:"#3A5FB8",LAK:"#FFFFFF",SJS:"#00A3AD",SEA:"#E9072B",VAN:"#00A04A",VGK:"#B4975A"};
+const NICKN={ANA:"Ducks",BOS:"Bruins",BUF:"Sabres",CGY:"Flames",CAR:"Hurricanes",CHI:"Blackhawks",COL:"Avalanche",CBJ:"Blue Jackets",DAL:"Stars",DET:"Red Wings",EDM:"Oilers",FLA:"Panthers",LAK:"Kings",MIN:"Wild",MTL:"Canadiens",NSH:"Predators",NJD:"Devils",NYI:"Islanders",NYR:"Rangers",OTT:"Senators",PHI:"Flyers",PIT:"Penguins",SJS:"Sharks",SEA:"Kraken",STL:"Blues",TBL:"Lightning",TOR:"Maple Leafs",UTA:"Mammoth",VAN:"Canucks",VGK:"Golden Knights",WSH:"Capitals",WPG:"Jets"};
+function raceCum(){
+  const days=[];let d=new Date("2026-09-29T12:00:00"),e=new Date(RG.thru+"T12:00:00");
+  while(d<=e){days.push(d.toISOString().slice(0,10));d.setDate(d.getDate()+1);}
+  const by={};RG.g.forEach(g=>(by[g[0]]=by[g[0]]||[]).push(g));
+  const run={},cum={};ST.t.forEach(r=>{run[r[0]]=0;cum[r[0]]=[];});
+  days.forEach(day=>{(by[day]||[]).forEach(g=>{if(g[1] in run)run[g[1]]+=g[3];if(g[2] in run)run[g[2]]+=g[4];});
+    for(const t in run)cum[t].push(run[t]);});
+  return {days,cum};
+}
+function raceBox(title,rows,cut,RC){
+  const teams=rows.map(r=>r[0]),n=RC.days.length,fin=t=>RC.cum[t][n-1];
+  const hl=new Set(teams.slice(0,3));if(RSEL&&teams.includes(RSEL))hl.add(RSEL);
+  const W=360,H=210,L=24,R=40,T=10,B=20,mx=Math.max(4,...teams.map(fin)),top=Math.ceil(mx/2)*2,st=top<=12?2:top<=24?4:top<=60?10:20;
+  const X=i=>L+(n<2?0:i*(W-L-R)/(n-1)),Y=v=>T+(H-T-B)*(1-v/top);
+  let g="";for(let v=0;v<=top;v+=st)g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" class="rg"/><text x="${L-6}" y="${Y(v)+3.5}" class="ry">${v}</text>`;
+  const md=s=>new Date(s+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"});
+  g+=`<text x="${L}" y="${H-5}" class="rx">${md(RC.days[0])}</text><text x="${W-R}" y="${H-5}" class="rx" text-anchor="end">${md(RC.days[n-1])}</text>`;
+  const path=t=>{const c=RC.cum[t];let p=`M${X(0)},${Y(c[0])}`;for(let i=1;i<n;i++){if(c[i]!==c[i-1]){const xm=X(i-.5);p+=`H${xm-3}C${xm},${Y(c[i-1])} ${xm},${Y(c[i])} ${xm+3},${Y(c[i])}`;}}return p+`H${X(n-1)}`;};
+  const dim=teams.filter(t=>!hl.has(t)),bright=teams.filter(t=>hl.has(t)).reverse();
+  g+=dim.map(t=>`<path d="${path(t)}" class="rl dim"/>`).join("")+bright.map(t=>`<path d="${path(t)}" class="rl" style="stroke:${LC[t]}${t===RSEL?";stroke-width:3.6":""}"/>`).join("");
+  let ys=[...hl].map(t=>({t,y:Y(fin(t))})).sort((a,b)=>a.y-b.y);for(let i=1;i<ys.length;i++)ys[i].y=Math.max(ys[i].y,ys[i-1].y+19);
+  const over=ys.length?ys[ys.length-1].y-(H-B):0;if(over>0)ys.forEach(o=>o.y-=over);
+  g+=ys.map(o=>`<circle cx="${W-R+20}" cy="${o.y}" r="10" fill="#111" stroke="${LC[o.t]}" stroke-width="1.6"/><image href="tl/${o.t}.png" x="${W-R+12}" y="${o.y-8}" width="16" height="16"/>`).join("");
+  const p=teams.map(fin),tie=p.filter(x=>x===p[0]).length;
+  const story=tie===1?`${NICKN[teams[0]]} lead by ${p[0]-p[1]}`:tie===2?`${NICKN[teams[0]]} &amp; ${NICKN[teams[1]]} tied on top`:`${tie}-way tie at the top`;
+  const list=rows.map((r,i)=>`<button type="button" class="rc${r[0]===RSEL?" on":""}" data-rt="${r[0]}"><span class="rk">${i+1}</span><img src="tl/${r[0]}.png" alt="${r[0]}"><span class="rtx"><span class="rn">${NICKN[r[0]]}</span><span class="rrec">${r[4]}-${r[5]}-${r[6]}</span></span><span class="rp">${r[7]}</span></button>`).join("");
+  return `<div class="stb"><div class="stt">${title}</div><svg viewBox="0 0 ${W} ${H}" class="rsvg" role="img" aria-label="${title} points race">${g}</svg><div class="rstory">${story}</div><div class="rlist">${list}</div></div>`;
 }
 function renderStandings(){
   const el=document.getElementById("standings");if(!el)return;
-  if(!ST){el.innerHTML='<p class="muted">Standings load with the morning update.</p>';return;}
-  const T=ST.t;let h="";
-  if(SV==="L")h=stBox("NHL",T,16);
-  else if(SV==="C")h=["E","W"].map(c=>stBox(CONFN[c]+" Conference",T.filter(r=>r[1]===c),8)).join("");
-  else h=["A","M","C","P"].map(d=>stBox(DIVN[d],T.filter(r=>r[2]===d),3)).join("");
-  el.innerHTML=h+`<div class="stn">Bar = points · W-L-OTL · ${SV==="L"?"dashed line = top 16":SV==="C"?"dashed line = top 8":"dashed line = top 3"}</div>`;
+  if(!ST||!RG){el.innerHTML='<p class="muted">Standings load with the morning update.</p>';return;}
+  const RC=raceCum(),T=ST.t;let h="";
+  if(SV==="L")h=raceBox("NHL",T,16,RC);
+  else if(SV==="C")h=["E","W"].map(c=>raceBox(CONFN[c]+" Conference",T.filter(r=>r[1]===c),8,RC)).join("");
+  else h=["A","M","C","P"].map(d=>raceBox(DIVN[d],T.filter(r=>r[2]===d),3,RC)).join("");
+  el.innerHTML=h+`<div class="stn">Points over the season · top 3 lit up · tap a team to light up its line</div>`;
+  el.querySelectorAll("[data-rt]").forEach(b=>b.addEventListener("click",()=>{RSEL=RSEL===b.dataset.rt?null:b.dataset.rt;renderStandings();}));
 }
 document.querySelectorAll("[data-sv]").forEach(b=>b.addEventListener("click",()=>{SV=b.dataset.sv;
   document.querySelectorAll("[data-sv]").forEach(x=>x.setAttribute("aria-pressed",x===b));renderStandings();}));
@@ -598,7 +629,7 @@ fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
   if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
   document.getElementById("daylabel").textContent=d.label||"";
-  if(d.ST&&d.ST.t&&d.ST.t.length>=32){ST=d.ST;const dt=new Date(ST.asof+"T12:00:00");
+  if(d.RG&&d.RG.g)RG=d.RG;if(d.ST&&d.ST.t&&d.ST.t.length>=32){ST=d.ST;const dt=new Date(ST.asof+"T12:00:00");
     document.getElementById("stasof").textContent="Updated "+dt.toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
   renderGames();renderRecord();renderStandings();
 }).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();renderStandings();});
