@@ -431,8 +431,9 @@ function numbers(a,h,L){
         return `<span class="nv${aw?" best":""}">${av}</span><span class="nl">${l}</span><span class="nv${hw?" best":""}">${hv}</span>`}).join("")}
     </div></details>${leaders(L)}`;
 }
-function barCols(a,h){const rgb=c=>[1,3,5].map(i=>parseInt(c.slice(i,i+2),16)),A=rgb(colors[a]),H=rgb(colors[h]);
-  const red=c=>c[0]>150&&c[1]<80&&c[2]<80;return [red(A)&&red(H)?"#FFFFFF":colors[a],colors[h]];}
+const CLASH={red:"CAR CGY CHI DET EDM MTL NJD OTT PHI WSH",gold:"BOS NSH PIT",blue:"BUF CBJ FLA NYI NYR STL TBL VAN WPG",green:"DAL MIN"};
+function barCols(a,h){const grp=t=>Object.keys(CLASH).find(k=>CLASH[k].split(" ").includes(t));
+  const ga=grp(a);return [ga&&ga===grp(h)?"#FFFFFF":colors[a],colors[h]];}
 function renderQuick(){
   const g=days.tue, parts=(document.getElementById("daylabel").textContent||"").split(" · "), lbl=parts[0];
   document.getElementById("quick").innerHTML=`<div class="qt">Todays Odds</div><div class="qd">${lbl}</div>`+
