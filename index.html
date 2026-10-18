@@ -195,6 +195,11 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .chartcard.big{padding:16px 10px 8px;margin-top:12px}
 .ch-t{font-family:var(--display);font-size:20px;text-transform:uppercase;text-align:center;margin-bottom:6px;text-shadow:2px 2px 0 var(--maroon-deep)}
 @media (min-width:620px){.rboard{grid-template-columns:repeat(4,1fr)}}
+.shareb{display:inline-flex;align-items:center;gap:6px;font:inherit;font-family:var(--display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;
+  color:#fff;background:rgba(0,0,0,.25);border:1.5px solid var(--maroon);border-radius:999px;padding:6px 14px 6px 11px;cursor:pointer}
+.shareb svg{width:16px;height:16px}
+.shareb:hover{background:var(--maroon)}.shareb:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.shareb.wide{display:flex;margin:12px auto 2px}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -379,7 +384,7 @@ td{white-space:nowrap}
   </section>
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
-    <div class="head2"><h2>Record</h2><span class="muted">Who picks better?</span></div>
+    <div class="head2"><h2>Record</h2><button type="button" class="shareb" data-share="record" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
     <div class="qrec rec-top" id="rectop"></div>
 
     <div class="lastnight">
@@ -399,7 +404,7 @@ td{white-space:nowrap}
   </section>
 
   <section id="race" role="tabpanel" aria-labelledby="tab-race" class="list" hidden>
-    <div class="head2"><h2>The Race</h2><span class="muted">Slapshot vs our friends</span></div>
+    <div class="head2"><h2>The Race</h2><button type="button" class="shareb" data-share="race" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
     <div class="rboard" id="rboard"></div>
     <div class="chartcard big">
       <div class="ch-t">Win % over the season</div>
@@ -495,7 +500,7 @@ function renderQuick(){
     (()=>{const last=[...new Set(R.map(r=>r.d))].sort().pop();
       if(!last)return `<div class="qrec"><span>Slapshot record starts after opening night</span></div>`;
       const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
-      return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})();
+      return `<div class="qrec"><span><small>Last night</small><b>${y.w}–${y.l}</b></span><span><small>Season</small><b>${s.w}–${s.l}</b></span><span><small>Win %</small><b>${s.p==null?"—":s.p.toFixed(1)+"%"}</b></span></div>`})()+`<button type="button" class="shareb wide" data-share="odds" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button>`;
 }
 function gxBody(g){
   const A=S[g.a],H=S[g.h],pts=x=>x[0]*2+x[2];
@@ -563,8 +568,8 @@ function renderRecord(){renderLastNight();renderRace();document.getElementById("
     :`<tr class="empty"><td colspan="7">Season starts Tuesday. Results are logged the morning after each game.</td></tr>`;
   drawChart();
 }
-function drawChart(){
-  const el=document.getElementById("chart"),W=Math.max(300,Math.round(el.clientWidth||760)),H0=W<520?330:400,m={l:40,r:78,t:12,b:28};
+function drawChart(target){
+  const el=target||document.getElementById("chart"),W=Math.max(300,Math.round(el.clientWidth||760)),H0=W<520?330:400,m={l:40,r:78,t:12,b:28};
   const days=[...new Set(R.map(r=>r.d))].sort();
   const gap=(W-m.l-m.r)/Math.max(1,days.length-1),tilt=gap<42;if(tilt)m.b=50;const H=H0+(tilt?22:0);
   const series=SRC.map(([k,n,c])=>({k,n,c,pts:days.map(d=>{const t=tally(R.filter(r=>r.d<=d),k);return t.p;})}));
@@ -650,7 +655,7 @@ function raceChart(key,RC){
   return `<div class="stb race"><div class="rtitle">${title}</div><div class="rsub">Points through ${new Date(RG.thru+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric"})}</div>
     <div class="rpills"><span class="rpill y">${top1}</span><span class="rpill r">${bot}</span></div>
     <svg viewBox="0 0 ${W} ${H}" class="rsvg" role="img" aria-label="${title} points race">${g}</svg>
-    <div class="stn">2 points for a win · 1 for an OT/SO loss · tap a team to spotlight it</div></div>`;
+    <div class="stn">2 points for a win · 1 for an OT/SO loss · tap a team to spotlight it</div><button type="button" class="shareb wide" data-share="standings" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>`;
 }
 function renderStandings(anim){
   const el=document.getElementById("standings");if(!el)return;
@@ -678,6 +683,97 @@ tabs.forEach(t=>t.addEventListener("click",()=>{
   if(t.id==="tab-race")drawChart();
   if(window.gtag)gtag("event","tab_view",{tab:t.textContent.trim()});
 }));
+/* ===== Share: one tap turns a section into a 1080x1350 post image ===== */
+const LOGO={};
+function preloadLogos(){Object.keys(colors).forEach(t=>{if(!LOGO[t]){const i=new Image();i.src=`tl/${t}.png`;LOGO[t]=i;}});}
+const SW=1080,SHH=1350,AN='"Anton","Bebas Neue",Impact,sans-serif',BC='"Barlow Condensed","Arial Narrow",Arial,sans-serif';
+function shCanvas(){const c=document.createElement("canvas");c.width=SW;c.height=SHH;const x=c.getContext("2d");
+  let g=x.createLinearGradient(0,0,0,SHH);g.addColorStop(0,"#3d1a21");g.addColorStop(.55,"#2a1218");g.addColorStop(1,"#1c0d11");x.fillStyle=g;x.fillRect(0,0,SW,SHH);
+  g=x.createRadialGradient(SW/2,0,0,SW/2,0,800);g.addColorStop(0,"rgba(90,31,42,1)");g.addColorStop(1,"rgba(90,31,42,0)");x.fillStyle=g;x.fillRect(0,0,SW,SHH);return [c,x];}
+function T(x,s,px,py,o={}){x.save();x.font=`${o.w||400} ${o.size||40}px ${o.f||AN}`;x.textAlign=o.align||"center";x.textBaseline=o.base||"alphabetic";
+  if(o.ls&&"letterSpacing" in x)x.letterSpacing=o.ls+"px";
+  if(o.shadow){x.fillStyle="#5E121B";x.fillText(s,px+o.shadow,py+o.shadow);}x.fillStyle=o.c||"#fff";x.fillText(s,px,py);x.restore();}
+function shHead(x,kick,title,sub){T(x,kick,SW/2,78,{f:BC,w:700,size:30,ls:6,c:"#E0475B"});
+  let size=150;x.font=`400 ${size}px ${AN}`;while(x.measureText(title).width>980&&size>60){size-=6;x.font=`400 ${size}px ${AN}`;}
+  T(x,title,SW/2,90+size*.95,{size,shadow:7});if(sub)T(x,sub,SW/2,130+size*.95,{f:BC,w:700,size:34,ls:2});return 130+size*.95;}
+function shFoot(x){T(x,"@SLAPSHOT.MEDIA",SW/2,SHH-40,{size:44});T(x,"ODDS DAILY AT SLAPSHOT.MEDIA",SW/2,SHH-96,{f:BC,w:700,size:24,ls:5,c:"#9a9ca3"});}
+function pill(x,s,cx,cy,col){x.save();x.font=`400 28px ${AN}`;if("letterSpacing" in x)x.letterSpacing="2px";const w=x.measureText(s).width+48;
+  x.lineWidth=4;x.strokeStyle=col;x.beginPath();x.roundRect(cx-w/2,cy-26,w,52,26);x.stroke();x.restore();T(x,s,cx,cy+11,{size:28,c:col,ls:2});return w;}
+function logoAt(x,t,cx,cy,s){const i=LOGO[t];if(i&&i.complete&&i.naturalWidth)x.drawImage(i,cx-s/2,cy-s/2,s,s);}
+/* draw an on-page SVG chart onto the canvas, fitted into a box */
+function drawSvg(x,svg,bx,by,bw,bh){
+  const vb=svg.viewBox.baseVal,sc=Math.min(bw/vb.width,bh/vb.height),ox=bx+(bw-vb.width*sc)/2,oy=by+(bh-vb.height*sc)/2;
+  x.save();x.translate(ox,oy);x.scale(sc,sc);
+  const alpha=el=>{let a=1;for(let n=el;n&&n!==svg;n=n.parentNode)a*=parseFloat(getComputedStyle(n).opacity||1);return a;};
+  svg.querySelectorAll("line,path,circle,text,image").forEach(el=>{
+    if(el.closest("defs"))return;const cs=getComputedStyle(el);if(cs.visibility==="hidden"||cs.display==="none")return;
+    const a=alpha(el);if(a<.02)return;x.save();x.globalAlpha=a;
+    const tr=el.getAttribute("transform");if(tr){const m=tr.match(/rotate\(([-\d.]+)\s+([-\d.]+)\s+([-\d.]+)\)/);if(m){x.translate(+m[2],+m[3]);x.rotate(m[1]*Math.PI/180);x.translate(-m[2],-m[3]);}}
+    const stroke=cs.stroke&&cs.stroke!=="none"?cs.stroke:null,sw=parseFloat(cs.strokeWidth)||1;
+    let fill=cs.fill&&cs.fill!=="none"?cs.fill:null;
+    if(fill&&fill.startsWith("url")){const gr=x.createLinearGradient(0,0,0,vb.height);gr.addColorStop(0,"rgba(255,184,28,.22)");gr.addColorStop(1,"rgba(255,184,28,0)");fill=gr;}
+    if(cs.filter&&cs.filter!=="none"&&stroke){x.shadowColor=stroke;x.shadowBlur=6*sc;}
+    x.lineWidth=sw;x.lineCap=cs.strokeLinecap||"butt";x.lineJoin=cs.strokeLinejoin||"miter";
+    const da=cs.strokeDasharray;if(da&&da!=="none"&&el.tagName!=="path")x.setLineDash(da.split(/[ ,]+/).map(parseFloat));
+    const tag=el.tagName.toLowerCase();
+    if(tag==="line"){x.beginPath();x.moveTo(+el.getAttribute("x1"),+el.getAttribute("y1"));x.lineTo(+el.getAttribute("x2"),+el.getAttribute("y2"));if(stroke){x.strokeStyle=stroke;x.stroke();}}
+    else if(tag==="path"){const p=new Path2D(el.getAttribute("d"));if(fill){x.fillStyle=fill;x.fill(p);}if(stroke){x.strokeStyle=stroke;x.stroke(p);}}
+    else if(tag==="circle"){x.beginPath();x.arc(+el.getAttribute("cx"),+el.getAttribute("cy"),+el.getAttribute("r"),0,7);if(fill){x.fillStyle=fill;x.fill();}if(stroke){x.strokeStyle=stroke;x.stroke();}}
+    else if(tag==="text"){x.shadowBlur=0;x.font=`${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;const an=el.getAttribute("text-anchor")||cs.textAnchor;
+      x.textAlign=an==="middle"?"center":an==="end"?"right":"left";x.fillStyle=fill||"#fff";x.fillText(el.textContent,+el.getAttribute("x"),+el.getAttribute("y"));}
+    else if(tag==="image"){const t=(el.getAttribute("href")||"").match(/tl\/(\w+)\.png/);if(t){const i=LOGO[t[1]];if(i&&i.naturalWidth)x.drawImage(i,+el.getAttribute("x"),+el.getAttribute("y"),+el.getAttribute("width"),+el.getAttribute("height"));}}
+    x.restore();});
+  x.restore();}
+function shDate(){return new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"}).toUpperCase();}
+const POSTERS={
+  odds(){const [c,x]=shCanvas(),g=days.tue||[];const lbl=(document.getElementById("daylabel").textContent||"").split(" · ")[0].toUpperCase();
+    let y=shHead(x,"SLAPSHOT.MEDIA MODEL","TODAY'S ODDS",lbl)+40;
+    const room=1060-y,rh=Math.min(230,room/Math.max(1,g.length));y+=(room-rh*g.length)/2;
+    g.forEach(m=>{const cy=y+rh/2-10,ls=Math.min(116,rh*.62),bc=barCols(m.a,m.h),fs=Math.min(52,24+rh*.2);
+      T(x,m.ap.toFixed(1)+"%",105,cy+fs*.35,{f:BC,w:700,size:fs,c:m.ap>=m.hp?"#fff":"#C9CBD0"});logoAt(x,m.a,285,cy,ls);
+      const bx=360,bw=360,bh=Math.max(24,ls*.4);x.fillStyle=bc[0];x.fillRect(bx,cy-bh/2,bw*m.ap/100,bh);x.fillStyle=bc[1];x.fillRect(bx+bw*m.ap/100,cy-bh/2,bw*m.hp/100,bh);
+      logoAt(x,m.h,795,cy,ls);T(x,m.hp.toFixed(1)+"%",975,cy+fs*.35,{f:BC,w:700,size:fs,c:m.hp>=m.ap?"#fff":"#C9CBD0"});
+      if(m.t&&rh>=90)T(x,m.t,540,cy+bh/2+(rh>150?48:34),{f:BC,w:600,size:rh>150?32:24,c:"#9a9ca3",ls:2});y+=rh;});
+    const last=[...new Set(R.map(r=>r.d))].sort().pop();
+    if(last){const yy=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
+      [["LAST NIGHT",`${yy.w}–${yy.l}`],["SEASON",`${s.w}–${s.l}`],["WIN %",s.p==null?"—":s.p.toFixed(1)+"%"]].forEach(([k,v],i)=>{const cx=SW/2+(i-1)*300;
+        T(x,k,cx,1140,{f:BC,w:700,size:24,ls:4,c:"#9a9ca3"});T(x,v,cx,1200,{size:56});});}
+    shFoot(x);return c;},
+  standings(){const [c,x]=shCanvas(),el=document.querySelector("#standings .race");if(!el)return null;
+    const y=shHead(x,"POINTS RACE · NHL.COM",el.querySelector(".rtitle").textContent.toUpperCase(),el.querySelector(".rsub").textContent.toUpperCase());
+    const ps=[...el.querySelectorAll(".rpill")];if(ps.length){const w1=ps.map(p=>{x.save();x.font=`400 28px ${AN}`;if("letterSpacing" in x)x.letterSpacing="2px";const w=x.measureText(p.textContent.toUpperCase()).width+48;x.restore();return w;});
+      const tot=w1.reduce((a,b)=>a+b,0)+20*(ps.length-1);let cx=SW/2-tot/2;ps.forEach((p,i)=>{pill(x,p.textContent.toUpperCase(),cx+w1[i]/2,y+50,i?"#ff6b7d":"#FFB81C");cx+=w1[i]+20;});}
+    drawSvg(x,el.querySelector("svg"),40,y+100,1000,SHH-170-(y+100));shFoot(x);return c;},
+  race(){const [c,x]=shCanvas();const y=shHead(x,"WHO PICKS BETTER?","THE RACE","SLAPSHOT VS OUR FRIENDS · WIN %");
+    const rows=SRC.map(([k,n,col])=>({k,n,col,t:tally(R,k)})).sort((a,b)=>(b.t.p??-1)-(a.t.p??-1));
+    rows.forEach((r,i)=>{const w=232,gx=40+i*(w+16),gy=y+30;x.save();x.fillStyle=r.k==="s"?"rgba(224,71,91,.18)":"rgba(0,0,0,.3)";x.beginPath();x.roundRect(gx,gy,w,170,18);x.fill();
+      x.fillStyle=r.col;x.fillRect(gx+18,gy,w-36,6);if(r.k==="s"){x.lineWidth=4;x.strokeStyle="#E0475B";x.beginPath();x.roundRect(gx,gy,w,170,18);x.stroke();}x.restore();
+      T(x,r.n.toUpperCase(),gx+w/2,gy+46,{f:BC,w:700,size:26,ls:3,c:"#c9cad0"});T(x,r.t.p==null?"—":r.t.p.toFixed(1)+"%",gx+w/2,gy+116,{size:60});
+      T(x,`${r.t.w}–${r.t.l}`,gx+w/2,gy+152,{f:BC,w:700,size:24,c:"#9a9ca3"});});
+    const tmp=document.createElement("div");tmp.className="chartwrap";tmp.style.cssText="position:absolute;left:-9999px;top:0;width:620px";document.body.appendChild(tmp);
+    drawChart(tmp);const sv=tmp.querySelector("svg");if(sv)drawSvg(x,sv,30,y+240,1020,SHH-180-(y+240));tmp.remove();shFoot(x);return c;},
+  record(){const [c,x]=shCanvas(),last=[...new Set(R.map(r=>r.d))].sort().pop();if(!last)return null;
+    const rows=R.filter(r=>r.d===last),t=tally(rows,"s");
+    const y=shHead(x,new Date(last+"T12:00:00").toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric"}).toUpperCase(),`LAST NIGHT ${t.w}–${t.l}`,"SLAPSHOT.MEDIA PICKS")+30;
+    const rh=Math.min(84,(SHH-190-y)/Math.max(1,rows.length)),ls=Math.min(60,rh*.72);
+    rows.forEach((r,i)=>{const cy=y+rh*i+rh/2;if(i%2===0){x.fillStyle="rgba(0,0,0,.22)";x.fillRect(60,cy-rh/2,960,rh);}
+      logoAt(x,r.a,120,cy,ls);T(x,"@",175,cy+10,{f:BC,w:700,size:26,c:"#9a9ca3"});logoAt(x,r.h,230,cy,ls);
+      T(x,r.f,600,cy+13,{f:BC,w:700,size:Math.min(40,rh*.5),});if(r.s)logoAt(x,r.s,880,cy,ls);
+      const ok=r.s?r.s===r.w:null;T(x,ok===null?"–":ok?"✓":"✗",965,cy+14,{f:BC,w:700,size:44,c:ok===null?"#9a9ca3":ok?"#3DDC84":"#E0475B"});});
+    shFoot(x);return c;}
+};
+function shareSection(kind,btn){
+  try{const c=POSTERS[kind]();if(!c)return;const name=`slapshot-${kind}-${new Date().toISOString().slice(0,10)}.png`;
+    const bin=atob(c.toDataURL("image/png").split(",")[1]),arr=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)arr[i]=bin.charCodeAt(i);
+    const file=new File([arr],name,{type:"image/png"});
+    if(window.gtag)gtag("event","share_image",{section:kind});
+    if(navigator.canShare&&navigator.canShare({files:[file]})){navigator.share({files:[file],title:"Slapshot Media"}).catch(()=>{});return;}
+    const a=document.createElement("a");a.href=URL.createObjectURL(file);a.download=name;document.body.appendChild(a);a.click();a.remove();
+    if(btn){const o=btn.textContent;btn.textContent="Saved ✓";setTimeout(()=>btn.textContent=o,1800);}
+  }catch(e){console.log("share failed",e);}
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-share]");if(b){e.preventDefault();e.stopPropagation();shareSection(b.dataset.share,b);}});
+preloadLogos();
 </script>
 </body>
 </html>
