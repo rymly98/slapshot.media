@@ -247,6 +247,20 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .prh{display:grid;grid-template-columns:40px 28px minmax(0,1fr) 34px 38px;gap:8px;margin-top:12px;padding-bottom:4px;font-family:var(--display);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right}
 .prh span:nth-child(3){text-align:left;color:#fff;font-size:16px}
 .pcut{border-top:2px solid #E0475B;margin:2px 0;font-family:var(--display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#E0475B;text-align:right;padding-top:2px}
+.bksvg{width:100%;height:auto;display:block;margin-top:6px}
+.bksvg .bk-h{fill:#FFB81C;font-family:var(--display);font-size:15px;letter-spacing:.1em;text-anchor:middle}
+.bksvg .bk-b{fill:rgba(0,0,0,.35);stroke:rgba(255,255,255,.18);stroke-width:1}
+.bksvg .bk-sep{stroke:rgba(255,255,255,.1);stroke-width:1}
+.bksvg .bk-s{fill:#fff;font-family:var(--display);font-size:11px}
+.bksvg .bk-p{fill:#9a9ca3;font-family:var(--num);font-size:10px;font-weight:600;text-anchor:end}
+.bksvg .bk-c{fill:none;stroke:rgba(255,255,255,.28);stroke-width:1.3}
+.bksvg .bk-e{fill:rgba(0,0,0,.2);stroke:rgba(255,255,255,.22);stroke-width:1;stroke-dasharray:3 3}
+.bksvg .bk-q{fill:#8d8f96;font-family:var(--display);font-size:10px;text-anchor:middle}
+.bksvg .bk-f{fill:#8E1F2C;stroke:#E0475B;stroke-width:1.5}
+.bksvg .bk-ft{fill:#fff;font-family:var(--display);font-size:12px;text-anchor:middle}
+.bksvg .bk-ft2{fill:#FFB81C;font-family:var(--display);font-size:10px;letter-spacing:.1em;text-anchor:middle}
+#playoffs.poin .pob{animation:poin .5s ease-out .1s both}
+.pob{margin-top:12px}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -433,7 +447,7 @@ td{white-space:nowrap}
 
   <section id="po" role="tabpanel" aria-labelledby="tab-po" class="list" hidden>
     <div class="head2"><h2>Playoffs</h2><span class="muted" id="poasof">NHL.com</span></div>
-    <div class="seg" role="group" aria-label="Conference">
+    <div class="seg" role="group" aria-label="Conference standings">
       <button class="segb" type="button" data-pc="E" aria-pressed="true">East</button>
       <button class="segb" type="button" data-pc="W" aria-pressed="false">West</button>
     </div>
@@ -737,50 +751,42 @@ function poSeed(conf){
   const opp={};opp[divs[0]]=firstBetter?rest[1]:rest[0];opp[divs[1]]=firstBetter?rest[0]:rest[1];
   return {divs,by,rest,opp};
 }
-let SPL=null,POALL=false;
-fetch("data/splits.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{SPL=j;renderPlayoffs();}).catch(()=>{});
-function poRates(t){const oct=new Date().getMonth()===9;
-  if(oct&&SPL&&SPL[t]&&SPL[t].last){const x=SPL[t].last;return {hgf:x.hgf/x.hgp,hga:x.hga/x.hgp,rgf:x.rgf/x.rgp,rga:x.rga/x.rgp};}
-  const v=S[t];return v?{hgf:v[3],hga:v[4],rgf:v[3],rga:v[4]}:null;}
-function poGame(h,a){const H=poRates(h),A=poRates(a);if(!H||!A)return null;
-  const ag=(A.rgf+H.hga)/2,hg=(H.hgf+A.rga)/2;return {p:hg/(ag+hg),hg,ag};}
-function poSeries(hi,lo){const home=poGame(hi,lo),road=poGame(lo,hi);if(!home||!road)return null;
-  const ph=home.p,pr=1-road.p,pat=[ph,ph,pr,pr,ph,pr,ph];
-  const f=(g,w,l)=>w===4?1:l===4?0:pat[g]*f(g+1,w+1,l)+(1-pat[g])*f(g+1,w,l+1);
-  return {s:f(0,0,0),ph,pr};}
-function poCard(hiR,hiS,loR,loS){
-  const hi=hiR[0],lo=loR[0],sr=poSeries(hi,lo),bc=barCols(lo,hi);
-  const fav=sr?(sr.s>=.5?hi:lo):null,fp=sr?Math.max(sr.s,1-sr.s)*100:null,coin=sr&&Math.abs(sr.s-.5)<.01;
-  const side=(r,sd,c)=>`<div class="sc-t"><span class="sc-seed">${sd}</span><img src="tl/${r[0]}.png" alt="${r[0]}"><span class="sc-n">${NICKN[r[0]]}</span><span class="sc-p">${r[7]} pts</span></div>`;
-  return `<details class="sc" style="--ca:${colors[hi]};--cb:${colors[lo]}"><summary>
-    <div class="sc-row">${side(hiR,hiS)}<span class="sc-vs">VS</span>${side(loR,loS)}</div>
-    ${sr?`<div class="sc-bar"><span style="width:${(sr.s*100).toFixed(1)}%;background:${colors[hi]}"></span><span style="width:${(100-sr.s*100).toFixed(1)}%;background:${bc[0]==="#FFFFFF"?"#FFFFFF":colors[lo]}"></span></div>
-    <div class="sc-pick">${coin?`Slapshot: <b>Toss-up</b> · ${NICKN[fav]} ${fp.toFixed(1)}%`:`Slapshot: <b>${NICKN[fav]} ${fp.toFixed(0)}%</b> to win the series`} <i>▾</i></div>`:""}</summary>
-    ${sr?`<div class="sc-more"><div><span>Games at ${NICKN[hi]}</span><b>${NICKN[hi]} ${(sr.ph*100).toFixed(1)}%</b></div><div><span>Games at ${NICKN[lo]}</span><b>${NICKN[hi]} ${(sr.pr*100).toFixed(1)}%</b></div>
-      <p>${NICKN[hi]} get home ice: games 1, 2, 5 and 7. Same Slapshot formula as our daily picks.</p></div>`:""}</details>`;
+function bracketSvg(){
+  const W=420,H=430,bw=78,bh=46,top=44,slot=(H-top-6)/4,r2w=30,r2h=26;
+  const box=(x,y,w,h,cls)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="7" class="${cls}"/>`;
+  let g="";
+  const side=(conf,left)=>{const {divs,by,rest,opp}=poSeed(conf),wcs=r=>rest[0]&&r[0]===rest[0][0]?"WC1":"WC2";
+    const ms=divs.flatMap(d=>[[by[d][0],d+"1",opp[d],wcs(opp[d])],[by[d][1],d+"2",by[d][2],d+"3"]]);
+    const x1=left?4:W-4-bw,xr2=left?92:W-92-r2w,xcf=left?132:W-132-r2w,inner=left?x1+bw:x1,cy=[];
+    g+=`<text x="${x1+bw/2}" y="20" class="bk-h">${conf==="E"?"EAST":"WEST"}</text>`;
+    ms.forEach(([h,hs,l,ls],i)=>{const y=top+slot*i+(slot-bh)/2;cy.push(y+bh/2);g+=box(x1,y,bw,bh,"bk-b");
+      [[h,hs],[l,ls]].forEach(([r,sd],j)=>{const ry=y+j*23;if(j)g+=`<line x1="${x1+4}" x2="${x1+bw-4}" y1="${y+23}" y2="${y+23}" class="bk-sep"/>`;
+        g+=`<image href="tl/${r[0]}.png" x="${x1+4}" y="${ry+3}" width="17" height="17"/><text x="${x1+25}" y="${ry+15.5}" class="bk-s">${sd}</text><text x="${x1+bw-5}" y="${ry+15.5}" class="bk-p">${r[7]}</text>`;});});
+    const r2=[(cy[0]+cy[1])/2,(cy[2]+cy[3])/2],cf=(r2[0]+r2[1])/2,edge=(x,inward)=>inward;
+    const conn=(ya,yb,ym,xa,xb)=>{const xm=(xa+xb)/2;return `<path d="M${xa},${ya}H${xm}V${yb}M${xa},${yb}H${xm}M${xm},${ym}H${xb}" class="bk-c"/>`;};
+    const r2in=left?xr2:xr2+r2w,r2out=left?xr2+r2w:xr2,cfin=left?xcf:xcf+r2w,cfout=left?xcf+r2w:xcf;
+    g+=conn(cy[0],cy[1],r2[0],inner,r2in)+conn(cy[2],cy[3],r2[1],inner,r2in)+conn(r2[0],r2[1],cf,r2out,cfin);
+    r2.forEach(y=>{g+=box(xr2,y-r2h/2,r2w,r2h,"bk-e")+`<text x="${xr2+r2w/2}" y="${y+4}" class="bk-q">R2</text>`;});
+    g+=box(xcf,cf-r2h/2,r2w,r2h,"bk-e")+`<text x="${xcf+r2w/2}" y="${cf+4}" class="bk-q">CF</text>`;
+    g+=`<path d="M${cfout},${cf}H${left?W/2-38:W/2+38}" class="bk-c"/>`;return cf;};
+  const cf=side("W",true);side("E",false);
+  g+=box(W/2-38,cf-34,76,68,"bk-f")+`<text x="${W/2}" y="${cf-6}" class="bk-ft">STANLEY</text><text x="${W/2}" y="${cf+8}" class="bk-ft">CUP</text><text x="${W/2}" y="${cf+22}" class="bk-ft2">FINAL</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" class="bksvg" role="img" aria-label="NHL playoff bracket if the playoffs started today">${g}</svg>`;
 }
 function renderPlayoffs(){
   const el=document.getElementById("playoffs");if(!el)return;
   if(!ST){el.innerHTML='<p class="muted">Loads with the morning update.</p>';return;}
-  const {divs,by,rest,opp}=poSeed(PC),wcs=r=>rest[0]&&r[0]===rest[0][0]?"WC1":"WC2";
-  const half=d=>{const t=by[d],o=opp[d];return `<div class="bh-d">${DIVN[d]} side</div>${o?poCard(t[0],d+"1",o,wcs(o)):""}${poCard(t[1],d+"2",t[2],d+"3")}`;};
-  const conf=PC==="E"?"East":"West";
-  const bracket=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">${conf} · Round 1 · tap a series</div>${half(divs[0])}${half(divs[1])}
-    <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>`;
-  const cut=rest[1]?rest[1][7]:0;
+  const {divs,by,rest}=poSeed(PC),cut=rest[1]?rest[1][7]:0;
   const row=(r,seed,cls)=>`<div class="prw ${cls||""}"><span class="ps">${seed}</span><img src="tl/${r[0]}.png" alt="${r[0]}"><span class="pn">${NICKN[r[0]]}</span><span class="pg">${r[3]}</span><span class="pp">${r[7]}</span></div>`;
   const head=t=>`<div class="prh"><span></span><span></span><span>${t}</span><span>GP</span><span>PTS</span></div>`;
   let tbl=divs.map(d=>head(DIVN[d])+by[d].slice(0,3).map((r,i)=>row(r,d+(i+1),"in")).join("")).join("");
-  const out=rest.slice(2),bub=out.filter(r=>cut-r[7]<=3),far=out.filter(r=>cut-r[7]>3);
-  const back=r=>cut-r[7]>0?"−"+(cut-r[7]):"Tied";
-  tbl+=head("Wild Card")+rest.slice(0,2).map((r,i)=>row(r,"WC"+(i+1),"in")).join("")+'<div class="pcut">Playoff line</div>'+
-    (bub.length?`<div class="pbub">On the bubble</div>`+bub.map(r=>row(r,back(r),"out")).join(""):"")+
-    (far.length?(POALL?far.map(r=>row(r,back(r),"out far")).join(""):"")+`<button type="button" class="pall" id="pall">${POALL?"Show less":`Show all (${far.length} more)`}</button>`:"");
-  el.innerHTML=bracket+`<div class="stb pstd"><div class="pot sm">Playoff standings</div>${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · seeding and tiebreakers from NHL.com</div></div>`;
-  const pa=document.getElementById("pall");if(pa)pa.addEventListener("click",()=>{POALL=!POALL;renderPlayoffs();});
+  tbl+=head("Wild Card")+rest.map((r,i)=>(i===2?'<div class="pcut">Playoff line</div>':"")+row(r,i<2?"WC"+(i+1):(cut-r[7]>0?"−"+(cut-r[7]):"Tied"),i<2?"in":"out")).join("");
+  el.innerHTML=`<div class="stb pstd">${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · − = points back of the last spot · tiebreakers from NHL.com</div></div>
+    <div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">League-wide bracket</div>${bracketSvg()}
+    <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>`;
   el.classList.remove("poin");void el.offsetWidth;el.classList.add("poin");
 }
-document.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;POALL=false;
+document.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;
   document.querySelectorAll("[data-pc]").forEach(x=>x.setAttribute("aria-pressed",x===b));renderPlayoffs();}));
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
@@ -820,7 +826,7 @@ function drawSvg(x,svg,bx,by,bw,bh){
   const vb=svg.viewBox.baseVal,sc=Math.min(bw/vb.width,bh/vb.height),ox=bx+(bw-vb.width*sc)/2,oy=by+(bh-vb.height*sc)/2;
   x.save();x.translate(ox,oy);x.scale(sc,sc);
   const alpha=el=>{let a=1;for(let n=el;n&&n!==svg;n=n.parentNode)a*=parseFloat(getComputedStyle(n).opacity||1);return a;};
-  svg.querySelectorAll("line,path,circle,text,image").forEach(el=>{
+  svg.querySelectorAll("rect,line,path,circle,text,image").forEach(el=>{
     if(el.closest("defs"))return;const cs=getComputedStyle(el);if(cs.visibility==="hidden"||cs.display==="none")return;
     const a=alpha(el);if(a<.02)return;x.save();x.globalAlpha=a;
     const tr=el.getAttribute("transform");if(tr){const m=tr.match(/rotate\(([-\d.]+)\s+([-\d.]+)\s+([-\d.]+)\)/);if(m){x.translate(+m[2],+m[3]);x.rotate(m[1]*Math.PI/180);x.translate(-m[2],-m[3]);}}
@@ -833,6 +839,7 @@ function drawSvg(x,svg,bx,by,bw,bh){
     const tag=el.tagName.toLowerCase();
     if(tag==="line"){x.beginPath();x.moveTo(+el.getAttribute("x1"),+el.getAttribute("y1"));x.lineTo(+el.getAttribute("x2"),+el.getAttribute("y2"));if(stroke){x.strokeStyle=stroke;x.stroke();}}
     else if(tag==="path"){const p=new Path2D(el.getAttribute("d"));if(fill){x.fillStyle=fill;x.fill(p);}if(stroke){x.strokeStyle=stroke;x.stroke(p);}}
+    else if(tag==="rect"){x.beginPath();x.roundRect(+el.getAttribute("x"),+el.getAttribute("y"),+el.getAttribute("width"),+el.getAttribute("height"),+(el.getAttribute("rx")||0));if(fill){x.fillStyle=fill;x.fill();}if(stroke){x.strokeStyle=stroke;x.stroke();}}
     else if(tag==="circle"){x.beginPath();x.arc(+el.getAttribute("cx"),+el.getAttribute("cy"),+el.getAttribute("r"),0,7);if(fill){x.fillStyle=fill;x.fill();}if(stroke){x.strokeStyle=stroke;x.stroke();}}
     else if(tag==="text"){x.shadowBlur=0;x.font=`${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;const an=el.getAttribute("text-anchor")||cs.textAnchor;
       x.textAlign=an==="middle"?"center":an==="end"?"right":"left";x.fillStyle=fill||"#fff";x.fillText(el.textContent,+el.getAttribute("x"),+el.getAttribute("y"));}
@@ -870,20 +877,8 @@ const POSTERS={
     const y2=y+56+4*62+10;
     const tmp=document.createElement("div");tmp.className="chartwrap";tmp.style.cssText="position:absolute;left:-9999px;top:0;width:620px";document.body.appendChild(tmp);
     drawChart(tmp);const sv=tmp.querySelector("svg");if(sv)drawSvg(x,sv,30,y2+10,1020,SHH-180-(y2+10));tmp.remove();shFoot(x);return c;},
-  playoffs(){const [c,x]=shCanvas();if(!ST)return null;const {divs,by,rest,opp}=poSeed(PC),wcs=r=>rest[0]&&r[0]===rest[0][0]?"WC1":"WC2";
-    const y=shHead(x,"IF THE PLAYOFFS STARTED TODAY",(PC==="E"?"EAST":"WEST")+" ROUND 1","SLAPSHOT SERIES ODDS");
-    const ser=divs.flatMap(d=>[[by[d][0],d+"1",opp[d],wcs(opp[d])],[by[d][1],d+"2",by[d][2],d+"3"]]);
-    const rh=(SHH-170-(y+30))/4;
-    ser.forEach(([h,hs,l,ls],i)=>{const top=y+30+i*rh,cy=top+rh*.38,sr=poSeries(h[0],l[0]);
-      x.save();x.fillStyle="rgba(0,0,0,.28)";x.beginPath();x.roundRect(50,top+6,980,rh-14,22);x.fill();x.restore();
-      [[h,hs,1],[l,ls,-1]].forEach(([r,sd,dir])=>{const lx=dir>0?130:950,tx=dir>0?200:880,al=dir>0?"left":"right";logoAt(x,r[0],lx,cy,96);
-        x.save();x.font=`400 22px ${AN}`;const w=x.measureText(sd).width+24;x.fillStyle="#FFB81C";x.beginPath();x.roundRect(dir>0?tx:tx-w,cy-66,w,30,15);x.fill();x.restore();
-        T(x,sd,dir>0?tx+12:tx-12,cy-43,{size:22,c:"#111",align:al});
-        T(x,NICKN[r[0]].toUpperCase(),tx,cy+12,{size:40,align:al});T(x,r[7]+" PTS",tx,cy+46,{f:BC,w:700,size:24,c:"#9a9ca3",ls:2,align:al});});
-      T(x,"VS",540,cy+14,{size:40,c:"#E0475B"});
-      if(sr){const bx=130,bw=820,by2=top+rh*.72;x.fillStyle=colors[h[0]];x.fillRect(bx,by2,bw*sr.s,14);x.fillStyle=barCols(l[0],h[0])[0]==="#FFFFFF"?"#FFFFFF":colors[l[0]];x.fillRect(bx+bw*sr.s,by2,bw*(1-sr.s),14);
-        const fav=sr.s>=.5?h[0]:l[0],fp=Math.max(sr.s,1-sr.s)*100;T(x,Math.abs(sr.s-.5)<.01?`SLAPSHOT: TOSS-UP · ${NICKN[fav].toUpperCase()} ${fp.toFixed(1)}%`:`SLAPSHOT: ${NICKN[fav].toUpperCase()} ${fp.toFixed(0)}% TO WIN THE SERIES`,540,by2+46,{f:BC,w:700,size:26,ls:2});}});
-    shFoot(x);return c;},
+  playoffs(){const [c,x]=shCanvas();if(!ST)return null;const y=shHead(x,"IF THE PLAYOFFS STARTED TODAY","NHL BRACKET","THROUGH "+(RG?new Date(RG.thru+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric"}).toUpperCase():""));
+    const sv=document.querySelector("#playoffs .bksvg");if(sv)drawSvg(x,sv,20,y+30,1040,SHH-170-(y+30));shFoot(x);return c;},
   record(){const [c,x]=shCanvas(),last=[...new Set(R.map(r=>r.d))].sort().pop();if(!last)return null;
     const rows=R.filter(r=>r.d===last),t=tally(rows,"s");
     const y=shHead(x,new Date(last+"T12:00:00").toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric"}).toUpperCase(),`LAST NIGHT ${t.w}–${t.l}`,"SLAPSHOT.MEDIA PICKS")+30;
