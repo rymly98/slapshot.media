@@ -1,0 +1,37 @@
+{
+ "checks": [
+  [
+   "Nov model (season overall) 2026-10-18",
+   "OK",
+   [
+    "CBJ@MIN 44.1-55.9",
+    "CAR@CGY 66.9-33.1"
+   ]
+  ],
+  [
+   "Dec model (home/road) 2026-10-18",
+   "OK",
+   [
+    "CBJ@MIN 36.4-63.6",
+    "CAR@CGY 70.1-29.9"
+   ]
+  ],
+  [
+   "Future day standings fallback",
+   "OK",
+   2
+  ],
+  [
+   "Full morning update (scratch copy)",
+   "OK",
+   {
+    "gameday": "2026-10-18",
+    "games": 2,
+    "race_thru": "2026-10-17",
+    "standings_teams": 32
+   }
+  ]
+ ],
+ "ok": true,
+ "ran": "2026-10-18 17:52 ET"
+}
