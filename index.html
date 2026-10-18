@@ -313,7 +313,6 @@ td{white-space:nowrap}
     <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>
     <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">Our Model</button>
     <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
-    <button class="tab wide" role="tab" id="tab-games" aria-controls="games" aria-selected="false" type="button">Game by Game Details</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
@@ -321,10 +320,6 @@ td{white-space:nowrap}
     <div class="qc" id="quick"></div>
   </section>
 
-  <section id="games" role="tabpanel" aria-labelledby="tab-games" class="list" hidden>
-    <div class="head2 gbg" id="gbg"><h2>Game by Game</h2><span class="muted" id="gbglabel">Picks &amp; numbers</span></div>
-    <div class="list" data-day="tue" id="full"></div>
-  </section>
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
     <div class="head2"><h2>Record</h2><span class="muted">Who picks better?</span></div>
@@ -438,7 +433,6 @@ function numbers(a,h,L){
 }
 function renderQuick(){
   const g=days.tue, parts=(document.getElementById("daylabel").textContent||"").split(" · "), lbl=parts[0];
-  document.getElementById("gbglabel").textContent=parts.slice(1).join(" · ")||"Picks & numbers";
   document.getElementById("quick").innerHTML=`<div class="qt">Todays Odds</div><div class="qd">${lbl}</div>`+
     `<div class="gxtip">Tap a game for the details</div>`+g.map(x=>`<details class="gx"><summary><div class="qr"><span class="p ${x.ap>=x.hp?"hi":"lo"}">${x.ap.toFixed(1)}%</span><img src="tl/${x.a}.png" alt="${x.a}">
       <div class="qb" role="img" aria-label="${x.a} ${x.ap.toFixed(1)}% vs ${x.h} ${x.hp.toFixed(1)}%"><span style="width:${x.ap}%;background:${colors[x.a]}"></span><span style="width:${x.hp}%;background:${colors[x.h]}"></span></div>
@@ -465,11 +459,7 @@ function gxBody(g){
     ${L&&L.a&&L.h?`<div class="gxh">Team Leaders <span>${L.season}</span></div><div class="leaders"><div class="lgrid">${lr("g","Goals")}${lr("a","Assists")}${lr("p","Points")}</div></div>`:""}
   </div>`;
 }
-function renderGames(){renderQuick();document.querySelectorAll("[data-day]").forEach(el=>{el.innerHTML=`<div class="qc gxwrap"><div class="gxtip">Tap a game for the details</div>`+days[el.dataset.day].map(g=>`<details class="gx"><summary>
-    <div class="qr"><span class="p ${g.ap>=g.hp?"hi":"lo"}">${g.ap.toFixed(1)}%</span><img src="tl/${g.a}.png" alt="${g.a}">
-      <div class="qb" role="img" aria-label="${g.a} ${g.ap.toFixed(1)}% vs ${g.h} ${g.hp.toFixed(1)}%"><span style="width:${g.ap}%;background:${colors[g.a]}"></span><span style="width:${g.hp}%;background:${colors[g.h]}"></span></div>
-      <img src="tl/${g.h}.png" alt="${g.h}"><span class="p r ${g.hp>=g.ap?"hi":"lo"}">${g.hp.toFixed(1)}%</span></div>
-    <div class="gxt">${g.t}</div></summary>${gxBody(g)}</details>`).join("")+`</div>`;});}
+function renderGames(){renderQuick();}
 /* ===== Record: every finished game. Add one object per game; everything below is computed from it.
    {d:"2026-09-29", a:"FLA", h:"CAR", s:"CAR", V:"CAR", E:"CAR", B:"CAR", w:"CAR", f:"FLA 2 - CAR 3"}
    s = Slapshot pick, V/E/B = each book's favorite (null = pick'em, no pick), w = winner, f = final score */
@@ -557,7 +547,7 @@ fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
   document.getElementById("daylabel").textContent=d.label||"";
   renderGames();renderRecord();
-}).catch(()=>{document.querySelector("[data-day]").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();});
+}).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();});
 document.getElementById("chartdrop").addEventListener("toggle",e=>{if(e.target.open)drawChart();});
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
 const tabs=[...document.querySelectorAll(".tab")];
