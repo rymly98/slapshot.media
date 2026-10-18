@@ -152,6 +152,22 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .gxh{text-align:center;font-family:var(--display);font-size:19px;text-transform:uppercase;letter-spacing:.03em;border-top:1px solid var(--line);padding-top:10px}
 .gxh span{font-family:var(--body);font-size:12px;text-transform:none;letter-spacing:0;color:var(--muted);margin-left:6px}
 .gxb .ntable,.gxb .leaders{margin:0 auto}
+.stb{border:1px solid var(--line);border-radius:14px;padding:16px 12px 12px;background:radial-gradient(600px 260px at 50% 0%,#3d1a21 0%,rgba(0,0,0,0) 75%),#101114}
+.stb+.stb{margin-top:12px}
+.stt{font-family:var(--display);font-size:24px;text-transform:uppercase;text-align:center;text-shadow:2px 2px 0 var(--maroon-deep);margin-bottom:10px}
+.str{display:grid;grid-template-columns:22px 30px 1fr 64px;align-items:center;gap:8px;padding:3px 0}
+.str .rk{font-family:var(--num);font-size:13px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.str img{width:30px;height:30px;object-fit:contain;display:block}
+.str .bw{position:relative;height:22px}
+.str .bf{height:100%;border-radius:3px;min-width:4px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;box-sizing:border-box;
+  font-family:var(--display);font-size:17px;color:#fff;text-shadow:1px 1px 0 rgba(0,0,0,.6)}
+.str .bf.lt{color:#111;text-shadow:none}
+.str .bf.out{justify-content:flex-start}
+.str .pn{position:absolute;top:0;bottom:0;display:flex;align-items:center;font-family:var(--display);font-size:17px;padding-left:6px}
+.str .rec{font-family:var(--num);font-size:13px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.str.cut{border-bottom:1px dashed rgba(255,255,255,.25);padding-bottom:6px;margin-bottom:3px}
+.stn{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
+@media (min-width:620px){.str{grid-template-columns:26px 36px 1fr 80px;gap:12px}.str img{width:36px;height:36px}.str .bw{height:26px}.str .rec{font-size:14px}}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -313,6 +329,7 @@ td{white-space:nowrap}
     <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>
     <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">Our Model</button>
     <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
+    <button class="tab" role="tab" id="tab-stand" aria-controls="stand" aria-selected="false" type="button">Standings</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
@@ -320,6 +337,16 @@ td{white-space:nowrap}
     <div class="qc" id="quick"></div>
   </section>
 
+
+  <section id="stand" role="tabpanel" aria-labelledby="tab-stand" class="list" hidden>
+    <div class="head2"><h2>Standings</h2><span class="muted" id="stasof">Points · NHL.com</span></div>
+    <div class="seg" role="group" aria-label="Standings view">
+      <button class="segb" type="button" data-sv="L" aria-pressed="true">League</button>
+      <button class="segb" type="button" data-sv="C" aria-pressed="false">Conference</button>
+      <button class="segb" type="button" data-sv="D" aria-pressed="false">Division</button>
+    </div>
+    <div id="standings"></div>
+  </section>
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
     <div class="head2"><h2>Record</h2><span class="muted">Who picks better?</span></div>
@@ -545,12 +572,36 @@ function drawChart(){
     tip.hidden=false;const tx=x(i)*r.width/W;tip.style.left=Math.min(r.width-170,Math.max(0,tx+12))+"px";tip.style.top="8px";};
   hit.addEventListener("pointermove",move);hit.addEventListener("pointerleave",()=>{tip.hidden=true;xh.setAttribute("visibility","hidden");});
 }
+let ST=null,SV="L";
+const DIVN={A:"Atlantic",M:"Metropolitan",C:"Central",P:"Pacific"},CONFN={E:"Eastern",W:"Western"};
+function stBox(title,rows,cut){
+  const max=Math.max(...rows.map(r=>r[7]),1);
+  const lum=c=>{const v=[1,3,5].map(i=>parseInt(c.slice(i,i+2),16));return .299*v[0]+.587*v[1]+.114*v[2];};
+  return `<div class="stb"><div class="stt">${title}</div>`+rows.map((r,i)=>{
+    const [t,,,gp,w,l,o,pts]=r, pct=pts/max*100, c=colors[t]||"#888", lt=lum(c)>170, inside=pct>=14;
+    return `<div class="str${cut&&i===cut-1&&rows.length>cut?" cut":""}"><span class="rk">${i+1}</span><img src="tl/${t}.png" alt="${t}">
+      <div class="bw"><div class="bf${lt?" lt":""}" style="width:${pct}%;background:${c}">${inside?pts:""}</div>${inside?"":`<span class="pn" style="left:${pct}%">${pts}</span>`}</div>
+      <span class="rec">${w}-${l}-${o}<br><small>${gp} GP</small></span></div>`}).join("")+`</div>`;
+}
+function renderStandings(){
+  const el=document.getElementById("standings");if(!el)return;
+  if(!ST){el.innerHTML='<p class="muted">Standings load with the morning update.</p>';return;}
+  const T=ST.t;let h="";
+  if(SV==="L")h=stBox("NHL",T,16);
+  else if(SV==="C")h=["E","W"].map(c=>stBox(CONFN[c]+" Conference",T.filter(r=>r[1]===c),8)).join("");
+  else h=["A","M","C","P"].map(d=>stBox(DIVN[d],T.filter(r=>r[2]===d),3)).join("");
+  el.innerHTML=h+`<div class="stn">Bar = points · W-L-OTL · ${SV==="L"?"dashed line = top 16":SV==="C"?"dashed line = top 8":"dashed line = top 3"}</div>`;
+}
+document.querySelectorAll("[data-sv]").forEach(b=>b.addEventListener("click",()=>{SV=b.dataset.sv;
+  document.querySelectorAll("[data-sv]").forEach(x=>x.setAttribute("aria-pressed",x===b));renderStandings();}));
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
   if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
   document.getElementById("daylabel").textContent=d.label||"";
-  renderGames();renderRecord();
-}).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();});
+  if(d.ST&&d.ST.t&&d.ST.t.length>=32){ST=d.ST;const dt=new Date(ST.asof+"T12:00:00");
+    document.getElementById("stasof").textContent="Through "+dt.toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
+  renderGames();renderRecord();renderStandings();
+}).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();renderStandings();});
 document.getElementById("chartdrop").addEventListener("toggle",e=>{if(e.target.open)drawChart();});
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
 const tabs=[...document.querySelectorAll(".tab")];

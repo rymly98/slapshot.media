@@ -209,6 +209,16 @@ def add_team_stats(data):
     return len(S)
 
 
+def add_standings(data):
+    """Standings tab: every team's conference, division, GP, W, L, OTL, points, in NHL.com order."""
+    rows = get("https://api-web.nhle.com/v1/standings/now")["standings"]
+    t = [[r["teamAbbrev"]["default"], r["conferenceAbbrev"], r["divisionAbbrev"], r["gamesPlayed"],
+          r["wins"], r["losses"], r["otLosses"], r["points"]] for r in rows]
+    if len(t) >= 32:
+        data["ST"] = {"asof": rows[0].get("date") or datetime.now(ET).date().isoformat(), "t": t}
+    return len(t)
+
+
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else ("morning" if datetime.now(ET).hour < 12 else "evening")
     data = json.load(open(DATA))
@@ -240,6 +250,11 @@ def main():
             notes.append(f"team stats for {add_team_stats(data)} team(s)")
         except Exception as e:
             notes.append(f"team stats skipped: {e}")
+    if mode == "morning" or "ST" not in data:
+        try:
+            notes.append(f"standings for {add_standings(data)} team(s)")
+        except Exception as e:
+            notes.append(f"standings skipped: {e}")
 
     try:
         hit = refresh_lines(data)
