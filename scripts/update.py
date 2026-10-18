@@ -213,7 +213,9 @@ def add_standings(data):
     """Standings tab: every team's conference, division, GP, W, L, OTL, points, in NHL.com order."""
     rows = get("https://api-web.nhle.com/v1/standings/now")["standings"]
     t = [[r["teamAbbrev"]["default"], r["conferenceAbbrev"], r["divisionAbbrev"], r["gamesPlayed"],
-          r["wins"], r["losses"], r["otLosses"], r["points"]] for r in rows]
+          r["wins"], r["losses"], r["otLosses"], r["points"],
+          r.get("divisionSequence"), r.get("wildcardSequence"), r.get("conferenceSequence"),
+          r.get("regulationWins"), round(r.get("pointPctg") or 0, 3)] for r in rows]
     if len(t) >= 32:
         data["ST"] = {"asof": rows[0].get("date") or datetime.now(ET).date().isoformat(), "t": t}
     return len(t)
