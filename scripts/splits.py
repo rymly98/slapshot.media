@@ -7,7 +7,10 @@ def split(t,season,lo,hi):
     for g in get(f"https://api-web.nhle.com/v1/club-schedule-season/{t}/{season}")["games"]:
         if g.get("gameType")!=2 or g.get("gameState") not in ("OFF","FINAL") or not (lo<=g["gameDate"]<=hi): continue
         home=g["homeTeam"]["abbrev"]==t; me=g["homeTeam"] if home else g["awayTeam"]; op=g["awayTeam"] if home else g["homeTeam"]
-        k="h" if home else "r"; S[k+"gp"]+=1; S[k+"gf"]+=me["score"]; S[k+"ga"]+=op["score"]
+        so=(g.get("gameOutcome") or {}).get("lastPeriodType")=="SO"
+        mf,of=me["score"],op["score"]
+        if so: mf,of=(mf-1,of) if mf>of else (mf,of-1)   # shootout winner gets +1 in the score; not a real goal
+        k="h" if home else "r"; S[k+"gp"]+=1; S[k+"gf"]+=mf; S[k+"ga"]+=of
     return S
 out={t:{"last":split(t,"20252026","2026-01-01","2026-06-30"),"now":split(t,"20262027","2026-09-01","2026-10-17")} for t in teams}
 json.dump(out,open("data/splits.json","w"),indent=1); print(len(out))
