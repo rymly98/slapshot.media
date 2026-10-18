@@ -1,0 +1,294 @@
+{
+ "VGK": [
+  {
+   "id": 8478403,
+   "name": "Jack Eichel",
+   "gp": 10,
+   "g": 5,
+   "a": 13,
+   "p": 18,
+   "last": {
+    "gp": 74,
+    "g": 27,
+    "a": 63,
+    "p": 90
+   }
+  },
+  {
+   "id": 8475913,
+   "name": "Mark Stone",
+   "gp": 10,
+   "g": 7,
+   "a": 7,
+   "p": 14,
+   "last": {
+    "gp": 60,
+    "g": 28,
+    "a": 45,
+    "p": 73
+   }
+  },
+  {
+   "id": 8478483,
+   "name": "Mitch Marner",
+   "gp": 10,
+   "g": 2,
+   "a": 9,
+   "p": 11,
+   "last": {
+    "gp": 81,
+    "g": 24,
+    "a": 56,
+    "p": 80
+   }
+  }
+ ],
+ "CAR": [
+  {
+   "id": 8478427,
+   "name": "Sebastian Aho",
+   "gp": 9,
+   "g": 6,
+   "a": 7,
+   "p": 13,
+   "last": {
+    "gp": 79,
+    "g": 27,
+    "a": 53,
+    "p": 80
+   }
+  },
+  {
+   "id": 8480830,
+   "name": "Andrei Svechnikov",
+   "gp": 9,
+   "g": 6,
+   "a": 5,
+   "p": 11,
+   "last": {
+    "gp": 79,
+    "g": 31,
+    "a": 39,
+    "p": 70
+   }
+  },
+  {
+   "id": 8482809,
+   "name": "Jackson Blake",
+   "gp": 9,
+   "g": 1,
+   "a": 7,
+   "p": 8,
+   "last": {
+    "gp": 81,
+    "g": 22,
+    "a": 31,
+    "p": 53
+   }
+  }
+ ],
+ "BOS": [
+  {
+   "id": 8477956,
+   "name": "David Pastrnak",
+   "gp": 9,
+   "g": 4,
+   "a": 8,
+   "p": 12,
+   "last": {
+    "gp": 77,
+    "g": 29,
+    "a": 71,
+    "p": 100
+   }
+  },
+  {
+   "id": 8483489,
+   "name": "Fraser Minten",
+   "gp": 9,
+   "g": 4,
+   "a": 4,
+   "p": 8,
+   "last": {
+    "gp": 82,
+    "g": 17,
+    "a": 18,
+    "p": 35
+   }
+  },
+  {
+   "id": 8479987,
+   "name": "Morgan Geekie",
+   "gp": 9,
+   "g": 1,
+   "a": 7,
+   "p": 8,
+   "last": {
+    "gp": 81,
+    "g": 39,
+    "a": 29,
+    "p": 68
+   }
+  }
+ ],
+ "EDM": [
+  {
+   "id": 8478402,
+   "name": "Connor McDavid",
+   "gp": 8,
+   "g": 6,
+   "a": 17,
+   "p": 23,
+   "last": {
+    "gp": 82,
+    "g": 48,
+    "a": 90,
+    "p": 138
+   }
+  },
+  {
+   "id": 8480803,
+   "name": "Evan Bouchard",
+   "gp": 8,
+   "g": 6,
+   "a": 10,
+   "p": 16,
+   "last": {
+    "gp": 82,
+    "g": 21,
+    "a": 74,
+    "p": 95
+   }
+  },
+  {
+   "id": 8477934,
+   "name": "Leon Draisaitl",
+   "gp": 8,
+   "g": 6,
+   "a": 8,
+   "p": 14,
+   "last": {
+    "gp": 65,
+    "g": 35,
+    "a": 62,
+    "p": 97
+   }
+  }
+ ],
+ "NYR": [
+  {
+   "id": 8482109,
+   "name": "Alexis Lafreni\u00e8re",
+   "gp": 10,
+   "g": 7,
+   "a": 4,
+   "p": 11,
+   "last": {
+    "gp": 82,
+    "g": 24,
+    "a": 33,
+    "p": 57
+   }
+  },
+  {
+   "id": 8479323,
+   "name": "Adam Fox",
+   "gp": 10,
+   "g": 0,
+   "a": 9,
+   "p": 9,
+   "last": {
+    "gp": 55,
+    "g": 9,
+    "a": 44,
+    "p": 53
+   }
+  },
+  {
+   "id": 8476459,
+   "name": "Mika Zibanejad",
+   "gp": 10,
+   "g": 2,
+   "a": 6,
+   "p": 8,
+   "last": {
+    "gp": 81,
+    "g": 34,
+    "a": 44,
+    "p": 78
+   }
+  }
+ ],
+ "_league": [
+  {
+   "name": "Connor McDavid",
+   "team": null,
+   "gp": 8,
+   "g": 6,
+   "p": 23
+  },
+  {
+   "name": "Jack Eichel",
+   "team": null,
+   "gp": 10,
+   "g": 5,
+   "p": 18
+  },
+  {
+   "name": "Evan Bouchard",
+   "team": null,
+   "gp": 8,
+   "g": 6,
+   "p": 16
+  },
+  {
+   "name": "Nathan MacKinnon",
+   "team": null,
+   "gp": 8,
+   "g": 6,
+   "p": 16
+  },
+  {
+   "name": "Kirill Kaprizov",
+   "team": null,
+   "gp": 8,
+   "g": 9,
+   "p": 14
+  },
+  {
+   "name": "Mark Stone",
+   "team": null,
+   "gp": 10,
+   "g": 7,
+   "p": 14
+  },
+  {
+   "name": "Leon Draisaitl",
+   "team": null,
+   "gp": 8,
+   "g": 6,
+   "p": 14
+  },
+  {
+   "name": "Matthew Tkachuk",
+   "team": null,
+   "gp": 9,
+   "g": 3,
+   "p": 14
+  },
+  {
+   "name": "Auston Matthews",
+   "team": null,
+   "gp": 9,
+   "g": 6,
+   "p": 13
+  },
+  {
+   "name": "Sebastian Aho",
+   "team": null,
+   "gp": 9,
+   "g": 6,
+   "p": 13
+  }
+ ]
+}
