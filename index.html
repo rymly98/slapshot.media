@@ -440,9 +440,9 @@ function renderQuick(){
   const g=days.tue, parts=(document.getElementById("daylabel").textContent||"").split(" · "), lbl=parts[0];
   document.getElementById("gbglabel").textContent=parts.slice(1).join(" · ")||"Picks & numbers";
   document.getElementById("quick").innerHTML=`<div class="qt">Todays Odds</div><div class="qd">${lbl}</div>`+
-    g.map(x=>`<div class="qr"><span class="p ${x.ap>=x.hp?"hi":"lo"}">${x.ap.toFixed(1)}%</span><img src="tl/${x.a}.png" alt="${x.a}">
+    `<div class="gxtip">Tap a game for the details</div>`+g.map(x=>`<details class="gx"><summary><div class="qr"><span class="p ${x.ap>=x.hp?"hi":"lo"}">${x.ap.toFixed(1)}%</span><img src="tl/${x.a}.png" alt="${x.a}">
       <div class="qb" role="img" aria-label="${x.a} ${x.ap.toFixed(1)}% vs ${x.h} ${x.hp.toFixed(1)}%"><span style="width:${x.ap}%;background:${colors[x.a]}"></span><span style="width:${x.hp}%;background:${colors[x.h]}"></span></div>
-      <img src="tl/${x.h}.png" alt="${x.h}"><span class="p r ${x.hp>=x.ap?"hi":"lo"}">${x.hp.toFixed(1)}%</span></div>`).join("")+
+      <img src="tl/${x.h}.png" alt="${x.h}"><span class="p r ${x.hp>=x.ap?"hi":"lo"}">${x.hp.toFixed(1)}%</span></div><div class="gxt">${x.t}</div></summary>${gxBody(x)}</details>`).join("")+
     (()=>{const last=[...new Set(R.map(r=>r.d))].sort().pop();
       if(!last)return `<div class="qrec"><span>Slapshot record starts after opening night</span></div>`;
       const y=tally(R.filter(r=>r.d===last),"s"),s=tally(R,"s");
