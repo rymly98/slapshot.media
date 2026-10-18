@@ -599,7 +599,7 @@ fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
   document.getElementById("daylabel").textContent=d.label||"";
   if(d.ST&&d.ST.t&&d.ST.t.length>=32){ST=d.ST;const dt=new Date(ST.asof+"T12:00:00");
-    document.getElementById("stasof").textContent="Through "+dt.toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
+    document.getElementById("stasof").textContent="Updated "+dt.toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
   renderGames();renderRecord();renderStandings();
 }).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();renderStandings();});
 document.getElementById("chartdrop").addEventListener("toggle",e=>{if(e.target.open)drawChart();});
