@@ -185,7 +185,10 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 @keyframes rfade{to{opacity:1}}
 @media (prefers-reduced-motion:reduce){#standings,#standings *{animation:none!important;transition:none!important}}
 .stn{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
-.rboard{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rboard{display:grid;gap:10px}
+.rfr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rfr .rb b{font-size:28px}.rfr .rb-n{font-size:13px}.rfr .rb{padding:10px 4px 8px}
+.rb.hero{padding:16px 8px 14px}.rb.hero b{font-size:64px}.rb.hero .rb-n{color:#fff;font-size:20px}.rb.hero small{font-size:14px}
 .rb{position:relative;display:flex;flex-direction:column;align-items:center;padding:14px 8px 12px;border-radius:14px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--c)}
 .rb.me{background:radial-gradient(300px 140px at 50% 0%,#3d1a21 0%,rgba(0,0,0,0) 80%),var(--panel);box-shadow:0 0 0 2px var(--maroon)}
 .rb-rk{position:absolute;top:8px;left:10px;font-family:var(--display);font-size:14px;color:var(--muted)}
@@ -194,7 +197,6 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .rb small{font-family:var(--num);font-size:13px;color:var(--muted)}
 .chartcard.big{padding:16px 10px 8px;margin-top:12px}
 .ch-t{font-family:var(--display);font-size:20px;text-transform:uppercase;text-align:center;margin-bottom:6px;text-shadow:2px 2px 0 var(--maroon-deep)}
-@media (min-width:620px){.rboard{grid-template-columns:repeat(4,1fr)}}
 .shareb{display:inline-flex;align-items:center;gap:6px;font:inherit;font-family:var(--display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;
   color:#fff;background:rgba(0,0,0,.25);border:1.5px solid var(--maroon);border-radius:999px;padding:6px 14px 6px 11px;cursor:pointer}
 .shareb svg{width:16px;height:16px}
@@ -554,8 +556,12 @@ function renderLastNight(){
 }
 function renderRace(){
   const el=document.getElementById("rboard"); if(!el)return;
-  const rows=SRC.map(([k,n,c])=>({k,n,c,t:tally(R,k)})).sort((a,b)=>(b.t.p??-1)-(a.t.p??-1));
-  el.innerHTML=rows.map((r,i)=>`<div class="rb${r.k==="s"?" me":""}" style="--c:${r.c}"><span class="rb-rk">${i+1}</span><span class="rb-n">${r.n}</span><b>${r.t.p==null?"—":r.t.p.toFixed(1)+"%"}</b><small>${r.t.w}–${r.t.l}</small></div>`).join("");
+  const rows=SRC.map(([k,n,c])=>({k,n,c,t:tally(R,k)})),me=rows[0];
+  const all=[...rows].sort((a,b)=>(b.t.p??-1)-(a.t.p??-1)),rank=all.indexOf(me)+1,best=all[0];
+  const gap=me.t.p!=null&&best!==me?(best.t.p-me.t.p).toFixed(1):null;
+  const note=me.t.p==null?"":best===me?"Leading our friends":`${gap} back of ${best.n}`;
+  el.innerHTML=`<div class="rb me hero" style="--c:${me.c}"><span class="rb-n">Slapshot</span><b>${me.t.p==null?"—":me.t.p.toFixed(1)+"%"}</b><small>${me.t.w}–${me.t.l}${note?" · "+note:""}</small></div>`+
+    `<div class="rfr">`+rows.slice(1).map(r=>`<div class="rb" style="--c:${r.c}"><span class="rb-n">${r.n}</span><b>${r.t.p==null?"—":r.t.p.toFixed(1)+"%"}</b><small>${r.t.w}–${r.t.l}</small></div>`).join("")+`</div>`;
 }
 function renderRecord(){renderLastNight();renderRace();document.getElementById("rectop").innerHTML=recStrip();renderTonight();
   const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
@@ -745,7 +751,7 @@ const POSTERS={
       const tot=w1.reduce((a,b)=>a+b,0)+20*(ps.length-1);let cx=SW/2-tot/2;ps.forEach((p,i)=>{pill(x,p.textContent.toUpperCase(),cx+w1[i]/2,y+50,i?"#ff6b7d":"#FFB81C");cx+=w1[i]+20;});}
     drawSvg(x,el.querySelector("svg"),40,y+100,1000,SHH-170-(y+100));shFoot(x);return c;},
   race(){const [c,x]=shCanvas();const y=shHead(x,"WHO PICKS BETTER?","THE RACE","SLAPSHOT VS OUR FRIENDS · WIN %");
-    const rows=SRC.map(([k,n,col])=>({k,n,col,t:tally(R,k)})).sort((a,b)=>(b.t.p??-1)-(a.t.p??-1));
+    const rows=SRC.map(([k,n,col])=>({k,n,col,t:tally(R,k)}));
     rows.forEach((r,i)=>{const w=232,gx=40+i*(w+16),gy=y+30;x.save();x.fillStyle=r.k==="s"?"rgba(224,71,91,.18)":"rgba(0,0,0,.3)";x.beginPath();x.roundRect(gx,gy,w,170,18);x.fill();
       x.fillStyle=r.col;x.fillRect(gx+18,gy,w-36,6);if(r.k==="s"){x.lineWidth=4;x.strokeStyle="#E0475B";x.beginPath();x.roundRect(gx,gy,w,170,18);x.stroke();}x.restore();
       T(x,r.n.toUpperCase(),gx+w/2,gy+46,{f:BC,w:700,size:26,ls:3,c:"#c9cad0"});T(x,r.t.p==null?"—":r.t.p.toFixed(1)+"%",gx+w/2,gy+116,{size:60});
