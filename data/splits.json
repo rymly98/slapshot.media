@@ -2,10 +2,10 @@
  "ANA": {
   "last": {
    "hgp": 21,
-   "hgf": 72,
+   "hgf": 70,
    "hga": 75,
    "rgp": 21,
-   "rgf": 64,
+   "rgf": 62,
    "rga": 72
   },
   "now": {
@@ -23,8 +23,8 @@
    "hgf": 77,
    "hga": 38,
    "rgp": 21,
-   "rgf": 65,
-   "rga": 78
+   "rgf": 63,
+   "rga": 76
   },
   "now": {
    "hgp": 4,
@@ -38,8 +38,8 @@
  "BUF": {
   "last": {
    "hgp": 22,
-   "hgf": 83,
-   "hga": 68,
+   "hgf": 81,
+   "hga": 67,
    "rgp": 21,
    "rgf": 81,
    "rga": 52
@@ -50,17 +50,17 @@
    "hga": 16,
    "rgp": 4,
    "rgf": 14,
-   "rga": 18
+   "rga": 17
   }
  },
  "CAR": {
   "last": {
    "hgp": 21,
-   "hgf": 91,
-   "hga": 66,
+   "hgf": 90,
+   "hga": 65,
    "rgp": 22,
    "rgf": 75,
-   "rga": 59
+   "rga": 58
   },
   "now": {
    "hgp": 4,
@@ -75,14 +75,14 @@
   "last": {
    "hgp": 23,
    "hgf": 82,
-   "hga": 65,
+   "hga": 64,
    "rgp": 20,
-   "rgf": 53,
+   "rgf": 50,
    "rga": 57
   },
   "now": {
    "hgp": 5,
-   "hgf": 14,
+   "hgf": 13,
    "hga": 16,
    "rgp": 1,
    "rgf": 3,
@@ -92,11 +92,11 @@
  "CGY": {
   "last": {
    "hgp": 22,
-   "hgf": 60,
+   "hgf": 58,
    "hga": 65,
    "rgp": 20,
    "rgf": 44,
-   "rga": 77
+   "rga": 76
   },
   "now": {
    "hgp": 3,
@@ -111,10 +111,10 @@
   "last": {
    "hgp": 22,
    "hgf": 57,
-   "hga": 81,
+   "hga": 80,
    "rgp": 21,
-   "rgf": 48,
-   "rga": 67
+   "rgf": 46,
+   "rga": 66
   },
   "now": {
    "hgp": 5,
@@ -128,16 +128,16 @@
  "COL": {
   "last": {
    "hgp": 22,
-   "hgf": 71,
-   "hga": 70,
+   "hgf": 70,
+   "hga": 68,
    "rgp": 21,
-   "rgf": 72,
+   "rgf": 70,
    "rga": 45
   },
   "now": {
    "hgp": 5,
    "hgf": 24,
-   "hga": 16,
+   "hga": 15,
    "rgp": 3,
    "rgf": 12,
    "rga": 8
@@ -147,9 +147,9 @@
   "last": {
    "hgp": 21,
    "hgf": 72,
-   "hga": 59,
+   "hga": 58,
    "rgp": 21,
-   "rgf": 67,
+   "rgf": 64,
    "rga": 58
   },
   "now": {
@@ -157,33 +157,33 @@
    "hgf": 7,
    "hga": 7,
    "rgp": 5,
-   "rgf": 13,
-   "rga": 6
+   "rgf": 12,
+   "rga": 5
   }
  },
  "DET": {
   "last": {
    "hgp": 19,
    "hgf": 57,
-   "hga": 64,
+   "hga": 62,
    "rgp": 22,
    "rgf": 57,
    "rga": 64
   },
   "now": {
    "hgp": 7,
-   "hgf": 20,
+   "hgf": 19,
    "hga": 23,
    "rgp": 1,
    "rgf": 0,
-   "rga": 1
+   "rga": 0
   }
  },
  "EDM": {
   "last": {
    "hgp": 24,
    "hgf": 77,
-   "hga": 78,
+   "hga": 76,
    "rgp": 17,
    "rgf": 68,
    "rga": 53
@@ -200,11 +200,11 @@
  "FLA": {
   "last": {
    "hgp": 17,
-   "hgf": 55,
+   "hgf": 53,
    "hga": 47,
    "rgp": 26,
-   "rgf": 70,
-   "rga": 105
+   "rgf": 69,
+   "rga": 104
   },
   "now": {
    "hgp": 3,
@@ -218,11 +218,11 @@
  "LAK": {
   "last": {
    "hgp": 24,
-   "hgf": 70,
-   "hga": 85,
+   "hgf": 68,
+   "hga": 82,
    "rgp": 20,
-   "rgf": 56,
-   "rga": 60
+   "rgf": 54,
+   "rga": 59
   },
   "now": {
    "hgp": 3,
@@ -236,11 +236,11 @@
  "MIN": {
   "last": {
    "hgp": 19,
-   "hgf": 59,
-   "hga": 53,
+   "hgf": 58,
+   "hga": 52,
    "rgp": 22,
    "rgf": 84,
-   "rga": 79
+   "rga": 77
   },
   "now": {
    "hgp": 3,
@@ -254,15 +254,15 @@
  "MTL": {
   "last": {
    "hgp": 21,
-   "hgf": 74,
+   "hgf": 73,
    "hga": 57,
    "rgp": 22,
-   "rgf": 79,
-   "rga": 68
+   "rgf": 78,
+   "rga": 67
   },
   "now": {
    "hgp": 5,
-   "hgf": 15,
+   "hgf": 13,
    "hga": 17,
    "rgp": 3,
    "rgf": 12,
@@ -272,8 +272,8 @@
  "NJD": {
   "last": {
    "hgp": 22,
-   "hgf": 68,
-   "hga": 69,
+   "hgf": 67,
+   "hga": 68,
    "rgp": 20,
    "rgf": 53,
    "rga": 65
@@ -290,19 +290,19 @@
  "NSH": {
   "last": {
    "hgp": 20,
-   "hgf": 66,
+   "hgf": 65,
    "hga": 64,
    "rgp": 23,
-   "rgf": 68,
-   "rga": 76
+   "rgf": 66,
+   "rga": 74
   },
   "now": {
    "hgp": 5,
    "hgf": 12,
-   "hga": 14,
+   "hga": 13,
    "rgp": 3,
    "rgf": 11,
-   "rga": 10
+   "rga": 9
   }
  },
  "NYI": {
@@ -312,7 +312,7 @@
    "hga": 65,
    "rgp": 22,
    "rgf": 59,
-   "rga": 66
+   "rga": 65
   },
   "now": {
    "hgp": 4,
@@ -320,14 +320,14 @@
    "hga": 8,
    "rgp": 4,
    "rgf": 8,
-   "rga": 10
+   "rga": 9
   }
  },
  "NYR": {
   "last": {
    "hgp": 23,
-   "hgf": 71,
-   "hga": 67,
+   "hgf": 70,
+   "hga": 66,
    "rgp": 17,
    "rgf": 58,
    "rga": 67
@@ -345,14 +345,14 @@
   "last": {
    "hgp": 23,
    "hgf": 85,
-   "hga": 57,
+   "hga": 56,
    "rgp": 21,
    "rgf": 68,
    "rga": 65
   },
   "now": {
    "hgp": 4,
-   "hgf": 9,
+   "hgf": 7,
    "hga": 11,
    "rgp": 5,
    "rgf": 15,
@@ -362,16 +362,16 @@
  "PHI": {
   "last": {
    "hgp": 21,
-   "hgf": 49,
-   "hga": 60,
+   "hgf": 48,
+   "hga": 59,
    "rgp": 22,
-   "rgf": 82,
+   "rgf": 78,
    "rga": 69
   },
   "now": {
    "hgp": 5,
    "hgf": 8,
-   "hga": 18,
+   "hga": 17,
    "rgp": 5,
    "rgf": 6,
    "rga": 16
@@ -380,36 +380,36 @@
  "PIT": {
   "last": {
    "hgp": 22,
-   "hgf": 84,
-   "hga": 73,
+   "hgf": 83,
+   "hga": 70,
    "rgp": 22,
-   "rgf": 87,
-   "rga": 72
+   "rgf": 86,
+   "rga": 70
   },
   "now": {
    "hgp": 3,
-   "hgf": 10,
+   "hgf": 9,
    "hga": 9,
    "rgp": 6,
    "rgf": 19,
-   "rga": 24
+   "rga": 23
   }
  },
  "SEA": {
   "last": {
    "hgp": 22,
-   "hgf": 75,
+   "hgf": 74,
    "hga": 72,
    "rgp": 23,
-   "rgf": 56,
-   "rga": 80
+   "rgf": 55,
+   "rga": 78
   },
   "now": {
    "hgp": 2,
    "hgf": 8,
    "hga": 7,
    "rgp": 7,
-   "rgf": 27,
+   "rgf": 26,
    "rga": 24
   }
  },
@@ -417,7 +417,7 @@
   "last": {
    "hgp": 20,
    "hgf": 61,
-   "hga": 74,
+   "hga": 73,
    "rgp": 22,
    "rgf": 66,
    "rga": 79
@@ -427,18 +427,18 @@
    "hgf": 13,
    "hga": 16,
    "rgp": 4,
-   "rgf": 9,
-   "rga": 13
+   "rgf": 8,
+   "rga": 12
   }
  },
  "STL": {
   "last": {
    "hgp": 19,
-   "hgf": 65,
-   "hga": 49,
+   "hgf": 64,
+   "hga": 48,
    "rgp": 22,
    "rgf": 65,
-   "rga": 66
+   "rga": 65
   },
   "now": {
    "hgp": 2,
@@ -452,11 +452,11 @@
  "TBL": {
   "last": {
    "hgp": 21,
-   "hgf": 76,
+   "hgf": 75,
    "hga": 57,
    "rgp": 22,
-   "rgf": 84,
-   "rga": 70
+   "rgf": 82,
+   "rga": 69
   },
   "now": {
    "hgp": 5,
@@ -471,10 +471,10 @@
   "last": {
    "hgp": 18,
    "hgf": 54,
-   "hga": 74,
+   "hga": 73,
    "rgp": 25,
-   "rgf": 71,
-   "rga": 96
+   "rgf": 70,
+   "rga": 94
   },
   "now": {
    "hgp": 6,
@@ -482,7 +482,7 @@
    "hga": 20,
    "rgp": 3,
    "rgf": 13,
-   "rga": 12
+   "rga": 11
   }
  },
  "UTA": {
@@ -506,10 +506,10 @@
  "VAN": {
   "last": {
    "hgp": 24,
-   "hgf": 57,
-   "hga": 93,
+   "hgf": 56,
+   "hga": 91,
    "rgp": 19,
-   "rgf": 47,
+   "rgf": 46,
    "rga": 87
   },
   "now": {
@@ -525,14 +525,14 @@
   "last": {
    "hgp": 21,
    "hgf": 79,
-   "hga": 58,
+   "hga": 56,
    "rgp": 23,
    "rgf": 67,
-   "rga": 73
+   "rga": 72
   },
   "now": {
    "hgp": 6,
-   "hgf": 26,
+   "hgf": 25,
    "hga": 14,
    "rgp": 4,
    "rgf": 16,
@@ -543,10 +543,10 @@
   "last": {
    "hgp": 23,
    "hgf": 66,
-   "hga": 74,
+   "hga": 72,
    "rgp": 21,
-   "rgf": 57,
-   "rga": 70
+   "rgf": 56,
+   "rga": 69
   },
   "now": {
    "hgp": 5,
@@ -561,9 +561,9 @@
   "last": {
    "hgp": 20,
    "hgf": 69,
-   "hga": 50,
+   "hga": 48,
    "rgp": 22,
-   "rgf": 64,
+   "rgf": 62,
    "rga": 80
   },
   "now": {
