@@ -185,6 +185,16 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 @keyframes rfade{to{opacity:1}}
 @media (prefers-reduced-motion:reduce){#standings,#standings *{animation:none!important;transition:none!important}}
 .stn{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
+.rboard{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rb{position:relative;display:flex;flex-direction:column;align-items:center;padding:14px 8px 12px;border-radius:14px;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--c)}
+.rb.me{background:radial-gradient(300px 140px at 50% 0%,#3d1a21 0%,rgba(0,0,0,0) 80%),var(--panel);box-shadow:0 0 0 2px var(--maroon)}
+.rb-rk{position:absolute;top:8px;left:10px;font-family:var(--display);font-size:14px;color:var(--muted)}
+.rb-n{font-family:var(--display);font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.rb b{font-family:var(--display);font-weight:400;font-size:40px;line-height:1.05;color:#fff}
+.rb small{font-family:var(--num);font-size:13px;color:var(--muted)}
+.chartcard.big{padding:16px 10px 8px;margin-top:12px}
+.ch-t{font-family:var(--display);font-size:20px;text-transform:uppercase;text-align:center;margin-bottom:6px;text-shadow:2px 2px 0 var(--maroon-deep)}
+@media (min-width:620px){.rboard{grid-template-columns:repeat(4,1fr)}}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -346,6 +356,7 @@ td{white-space:nowrap}
     <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>
     <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">Our Model</button>
     <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
+    <button class="tab" role="tab" id="tab-race" aria-controls="race" aria-selected="false" type="button">The Race</button>
     <button class="tab" role="tab" id="tab-stand" aria-controls="stand" aria-selected="false" type="button">Standings</button>
   </div>
 
@@ -376,36 +387,31 @@ td{white-space:nowrap}
       <div id="lastnight"></div>
     </div>
 
-    <p class="recblurb">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right. Check the dropdowns below for the full race.</p>
-
     <details class="rdrop">
-      <summary><span class="rd-t">The race</span><span class="rd-s">Slapshot vs our friends, win %</span></summary>
-      <div class="race" id="race"></div>
+      <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Every pick, every game</span></summary>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>New York</th><th>Boston</th><th>Final</th></tr></thead>
+          <tbody id="log"></tbody>
+        </table>
+      </div>
     </details>
+  </section>
 
+  <section id="race" role="tabpanel" aria-labelledby="tab-race" class="list" hidden>
+    <div class="head2"><h2>The Race</h2><span class="muted">Slapshot vs our friends</span></div>
+    <div class="rboard" id="rboard"></div>
+    <div class="chartcard big">
+      <div class="ch-t">Win % over the season</div>
+      <div class="chartwrap" id="chart"></div>
+    </div>
+    <p class="recblurb">Every morning we ask our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b> who they like, and make our picks too. Next morning, we see who got it right.</p>
     <details class="rdrop">
       <summary><span class="rd-t">Tonight's picks</span><span class="rd-s">Us vs our friends</span></summary>
       <div class="tonight">
         <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>New York</span><span>Boston</span></div>
         <div id="tonight"></div>
         <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
-      </div>
-    </details>
-
-    <details class="rdrop" id="chartdrop">
-      <summary><span class="rd-t">Win % over the season</span><span class="rd-s" id="chartnote">Slapshot vs our friends</span></summary>
-      <div class="chartcard">
-        <div class="legend" id="legend"></div>
-        <div class="chartwrap" id="chart"></div>
-      </div>
-    </details>
-    <details class="rdrop">
-      <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Games where Slapshot went against all our friends: 0</span></summary>
-      <div class="tablewrap">
-        <table>
-          <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>New York</th><th>Boston</th><th>Final</th></tr></thead>
-          <tbody id="log"></tbody>
-        </table>
       </div>
     </details>
   </section>
@@ -542,24 +548,23 @@ function renderLastNight(){
       <div class="ln-p">${r.s?img(r.s):'<span class="muted">Tie</span>'}</div><div class="ln-r ${ok===null?"":ok?"w":"l"}">${ok===null?"–":ok?"✓":"✗"}</div></div>`}).join("");
 }
 function renderRace(){
-  const el=document.getElementById("race"); if(!el)return;
-  el.innerHTML=SRC.map(([k,n,c],i)=>{const t=tally(R,k),p=t.p;
-    return `<div class="rc${i?"":" rc-me"}"><span class="rc-n">${n}</span><div class="rc-b"><span style="width:${p==null?0:p}%;background:${c}"></span></div><span class="rc-v">${p==null?"—":p.toFixed(1)+"%"}<small>${t.w}–${t.l}</small></span></div>`}).join("");
+  const el=document.getElementById("rboard"); if(!el)return;
+  const rows=SRC.map(([k,n,c])=>({k,n,c,t:tally(R,k)})).sort((a,b)=>(b.t.p??-1)-(a.t.p??-1));
+  el.innerHTML=rows.map((r,i)=>`<div class="rb${r.k==="s"?" me":""}" style="--c:${r.c}"><span class="rb-rk">${i+1}</span><span class="rb-n">${r.n}</span><b>${r.t.p==null?"—":r.t.p.toFixed(1)+"%"}</b><small>${r.t.w}–${r.t.l}</small></div>`).join("");
 }
 function renderRecord(){renderLastNight();renderRace();document.getElementById("rectop").innerHTML=recStrip();renderTonight();
   const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
   (document.getElementById("scoreboard")||{}).innerHTML=SRC.map(([k,n],i)=>{const t=tally(R,k);
     return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
   const dis=R.filter(r=>r.s&&["V","E","B"].every(k=>r[k]&&r[k]!==r.s)).length;
-  document.getElementById("disagree").textContent=`Games where Slapshot went against all our friends: ${dis}`;
+  document.getElementById("disagree").textContent=`Every pick, every game · ${dis} where we went against all our friends`;
   const cell=(r,k)=>!r[k]?`<td class="muted">Tie</td>`:`<td class="${r[k]===r.w?"w":"l"}">${r[k]}</td>`;
   document.getElementById("log").innerHTML=R.length?[...R].reverse().map(r=>`<tr><td>${r.d.slice(5).replace("-","/")}</td><td>${r.a} @ ${r.h}</td>${cell(r,"s")}${cell(r,"V")}${cell(r,"E")}${cell(r,"B")}<td>${r.f}</td></tr>`).join("")
     :`<tr class="empty"><td colspan="7">Season starts Tuesday. Results are logged the morning after each game.</td></tr>`;
-  document.getElementById("legend").innerHTML=SRC.map(([k,n,c])=>`<span><i style="background:${c}"></i>${n}</span>`).join("");
   drawChart();
 }
 function drawChart(){
-  const el=document.getElementById("chart"),W=Math.max(300,Math.round(el.clientWidth||760)),H0=W<520?240:300,m={l:40,r:92,t:12,b:28};
+  const el=document.getElementById("chart"),W=Math.max(300,Math.round(el.clientWidth||760)),H0=W<520?330:400,m={l:40,r:78,t:12,b:28};
   const days=[...new Set(R.map(r=>r.d))].sort();
   const gap=(W-m.l-m.r)/Math.max(1,days.length-1),tilt=gap<42;if(tilt)m.b=50;const H=H0+(tilt?22:0);
   const series=SRC.map(([k,n,c])=>({k,n,c,pts:days.map(d=>{const t=tally(R.filter(r=>r.d<=d),k);return t.p;})}));
@@ -577,12 +582,12 @@ function drawChart(){
   const order=[...series.slice(1),series[0]];
   let lines="",ends=[];
   for(const s of order){const path=s.pts.map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);if(!path.length)continue;
-    lines+=`<path d="M${path.map(p=>p.join(",")).join("L")}" fill="none" stroke="${s.c}" stroke-width="${s.k==="s"?3:2}" stroke-linejoin="round" stroke-linecap="round"/>`;
+    lines+=`<path d="M${path.map(p=>p.join(",")).join("L")}" fill="none" stroke="${s.c}" stroke-width="${s.k==="s"?3.4:2.4}" stroke-linejoin="round" stroke-linecap="round" filter="url(#cglow)"/>`;
     const last=path[path.length-1];lines+=`<circle cx="${last[0]}" cy="${last[1]}" r="4.5" fill="${s.c}" stroke="#1C1D20" stroke-width="2"/>`;
-    ends.push({y:last[1],x:last[0],t:`${s.n} ${s.pts[s.pts.length-1].toFixed(0)}%`,c:s.c});}
+    ends.push({y:last[1],x:last[0],t:s.n,c:s.c});}
   ends.sort((a,b)=>a.y-b.y);for(let i=1;i<ends.length;i++)if(ends[i].y-ends[i-1].y<14)ends[i].y=ends[i-1].y+14;
-  const labels=ends.map(e=>`<text x="${e.x+10}" y="${e.y+4}" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="13" fill="#E6EDF3">${e.t}</text>`).join("");
-  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Season win percentage for Slapshot and each book by date">${g}${lines}${labels}<line id="xh" y1="${m.t}" y2="${m.t+ih}" stroke="#8C9AA8" stroke-width="1" visibility="hidden"/><rect x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent" id="hit"/></svg><div class="tip" id="tip" hidden></div>`;
+  const labels=ends.map(e=>`<text x="${e.x+10}" y="${e.y+4}" font-family="Barlow Condensed,Arial Narrow,sans-serif" font-weight="600" font-size="15" fill="${e.c}">${e.t}</text>`).join("");
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Season win percentage for Slapshot and each book by date"><defs><filter id="cglow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>${g}${lines}${labels}<line id="xh" y1="${m.t}" y2="${m.t+ih}" stroke="#8C9AA8" stroke-width="1" visibility="hidden"/><rect x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent" id="hit"/></svg><div class="tip" id="tip" hidden></div>`;
   const svg=el.querySelector("svg"),hit=el.querySelector("#hit"),xh=el.querySelector("#xh"),tip=el.querySelector("#tip");
   const move=ev=>{const r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)*W/r.width;
     let i=days.length<2?0:Math.round((px-m.l)/iw*(days.length-1));i=Math.max(0,Math.min(days.length-1,i));
@@ -666,12 +671,11 @@ fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
     document.getElementById("stasof").textContent="Through "+new Date(RG&&RG.thru?RG.thru+"T12:00:00":dt).toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
   renderGames();renderRecord();renderStandings();
 }).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();renderStandings();});
-document.getElementById("chartdrop").addEventListener("toggle",e=>{if(e.target.open)drawChart();});
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
 const tabs=[...document.querySelectorAll(".tab")];
 tabs.forEach(t=>t.addEventListener("click",()=>{
   tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});
-  if(t.id==="tab-record")drawChart();
+  if(t.id==="tab-race")drawChart();
   if(window.gtag)gtag("event","tab_view",{tab:t.textContent.trim()});
 }));
 </script>
