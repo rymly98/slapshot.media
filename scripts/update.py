@@ -50,17 +50,19 @@ def label(day, n, opening=False):
 
 
 # ---------- model (only used after the saved October picks run out) ----------
-def model_games(day):
+def model_games(day, split=None):
     """Formula from the playbook. November: overall GF/GP, GA/GP. December on: home/road splits."""
     sched = [g for g in get(f"https://api-web.nhle.com/v1/score/{day}").get("games", [])
              if g.get("gameType", 2) == 2]
     if not sched:
         return []
     st = {}
-    for t in get(f"https://api-web.nhle.com/v1/standings/{day}")["standings"]:
+    sday = min(day, datetime.now(ET).date().isoformat())  # never ask for standings from the future
+    for t in get(f"https://api-web.nhle.com/v1/standings/{sday}")["standings"]:
         a = t["teamAbbrev"]["default"] if isinstance(t["teamAbbrev"], dict) else t["teamAbbrev"]
         st[a] = t
-    split = datetime.strptime(day, "%Y-%m-%d").month not in (11,)
+    if split is None:
+        split = datetime.strptime(day, "%Y-%m-%d").month not in (11,)
     out = []
     for g in sched:
         a, h = g["awayTeam"]["abbrev"], g["homeTeam"]["abbrev"]
