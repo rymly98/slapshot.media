@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-15T08:18:39.425632",
+ "asof": "2026-10-19T10:53:27.629718",
  "games": [
   {
    "d": "2026-09-29",
@@ -963,328 +963,1021 @@
    "hs": 2,
    "state": "OFF",
    "last": "SO"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "BUF",
+   "as": 5,
+   "h": "TOR",
+   "hs": 4,
+   "state": "OFF",
+   "last": "OT"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "NYI",
+   "as": 1,
+   "h": "OTT",
+   "hs": 2,
+   "state": "OFF",
+   "last": "SO"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "SEA",
+   "as": 3,
+   "h": "TBL",
+   "hs": 4,
+   "state": "OFF",
+   "last": "OT"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "VAN",
+   "as": 2,
+   "h": "FLA",
+   "hs": 3,
+   "state": "OFF",
+   "last": "OT"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "NYR",
+   "as": 1,
+   "h": "NJD",
+   "hs": 7,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "PHI",
+   "as": 1,
+   "h": "DET",
+   "hs": 2,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "WPG",
+   "as": 3,
+   "h": "CHI",
+   "hs": 4,
+   "state": "OFF",
+   "last": "OT"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "SJS",
+   "as": 3,
+   "h": "NSH",
+   "hs": 2,
+   "state": "OFF",
+   "last": "SO"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "STL",
+   "as": 4,
+   "h": "MIN",
+   "hs": 5,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "UTA",
+   "as": 4,
+   "h": "EDM",
+   "hs": 2,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-15",
+   "a": "CGY",
+   "as": 2,
+   "h": "VGK",
+   "hs": 6,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-16",
+   "a": "PIT",
+   "as": 2,
+   "h": "COL",
+   "hs": 5,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-16",
+   "a": "BOS",
+   "as": 4,
+   "h": "ANA",
+   "hs": 2,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "NJD",
+   "as": 2,
+   "h": "WSH",
+   "hs": 4,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "CAR",
+   "as": 3,
+   "h": "WPG",
+   "hs": 2,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "VAN",
+   "as": 2,
+   "h": "TBL",
+   "hs": 4,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "SEA",
+   "as": 3,
+   "h": "FLA",
+   "hs": 8,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "NYI",
+   "as": 4,
+   "h": "TOR",
+   "hs": 1,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "BUF",
+   "as": 3,
+   "h": "MTL",
+   "hs": 4,
+   "state": "OFF",
+   "last": "OT"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "SJS",
+   "as": 3,
+   "h": "DET",
+   "hs": 4,
+   "state": "OFF",
+   "last": "SO"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "OTT",
+   "as": 1,
+   "h": "PHI",
+   "hs": 3,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "NYR",
+   "as": 0,
+   "h": "CBJ",
+   "hs": 1,
+   "state": "OFF",
+   "last": "OT"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "DAL",
+   "as": 4,
+   "h": "CHI",
+   "hs": 0,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "STL",
+   "as": 2,
+   "h": "NSH",
+   "hs": 5,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "BOS",
+   "as": 4,
+   "h": "LAK",
+   "hs": 1,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "EDM",
+   "as": 6,
+   "h": "UTA",
+   "hs": 2,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-17",
+   "a": "PIT",
+   "as": 2,
+   "h": "VGK",
+   "hs": 6,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-18",
+   "a": "CBJ",
+   "as": 1,
+   "h": "MIN",
+   "hs": 2,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-18",
+   "a": "CAR",
+   "as": 2,
+   "h": "CGY",
+   "hs": 3,
+   "state": "OFF",
+   "last": "REG"
+  },
+  {
+   "d": "2026-10-19",
+   "a": "ANA",
+   "as": null,
+   "h": "NYR",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-19",
+   "a": "COL",
+   "as": null,
+   "h": "PHI",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-19",
+   "a": "SJS",
+   "as": null,
+   "h": "TOR",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-19",
+   "a": "PIT",
+   "as": null,
+   "h": "UTA",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "SJS",
+   "as": null,
+   "h": "MTL",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "COL",
+   "as": null,
+   "h": "NJD",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "ANA",
+   "as": null,
+   "h": "NYI",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "LAK",
+   "as": null,
+   "h": "WSH",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "TOR",
+   "as": null,
+   "h": "CBJ",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "WPG",
+   "as": null,
+   "h": "STL",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "BOS",
+   "as": null,
+   "h": "DAL",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "MIN",
+   "as": null,
+   "h": "EDM",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "DET",
+   "as": null,
+   "h": "SEA",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "CAR",
+   "as": null,
+   "h": "VAN",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-20",
+   "a": "TBL",
+   "as": null,
+   "h": "VGK",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-21",
+   "a": "PHI",
+   "as": null,
+   "h": "BUF",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-21",
+   "a": "FLA",
+   "as": null,
+   "h": "OTT",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "NSH",
+   "as": null,
+   "h": "BOS",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "NYR",
+   "as": null,
+   "h": "TOR",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "SJS",
+   "as": null,
+   "h": "OTT",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "ANA",
+   "as": null,
+   "h": "NJD",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "FLA",
+   "as": null,
+   "h": "PIT",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "LAK",
+   "as": null,
+   "h": "NYI",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "VGK",
+   "as": null,
+   "h": "STL",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "WPG",
+   "as": null,
+   "h": "DAL",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "MIN",
+   "as": null,
+   "h": "CGY",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "CAR",
+   "as": null,
+   "h": "EDM",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "UTA",
+   "as": null,
+   "h": "SEA",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-22",
+   "a": "DET",
+   "as": null,
+   "h": "VAN",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-23",
+   "a": "MTL",
+   "as": null,
+   "h": "CHI",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-23",
+   "a": "TBL",
+   "as": null,
+   "h": "COL",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "ANA",
+   "as": null,
+   "h": "PHI",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "LAK",
+   "as": null,
+   "h": "NJD",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "SJS",
+   "as": null,
+   "h": "BOS",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "NYR",
+   "as": null,
+   "h": "OTT",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "NSH",
+   "as": null,
+   "h": "PIT",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "BUF",
+   "as": null,
+   "h": "WSH",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "VGK",
+   "as": null,
+   "h": "CBJ",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "CAR",
+   "as": null,
+   "h": "STL",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "TOR",
+   "as": null,
+   "h": "EDM",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "TBL",
+   "as": null,
+   "h": "UTA",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "DET",
+   "as": null,
+   "h": "CGY",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-24",
+   "a": "MIN",
+   "as": null,
+   "h": "SEA",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-25",
+   "a": "FLA",
+   "as": null,
+   "h": "CHI",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-25",
+   "a": "NYI",
+   "as": null,
+   "h": "DAL",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-25",
+   "a": "MTL",
+   "as": null,
+   "h": "WPG",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-25",
+   "a": "COL",
+   "as": null,
+   "h": "NSH",
+   "hs": null,
+   "state": "FUT",
+   "last": null
+  },
+  {
+   "d": "2026-10-25",
+   "a": "MIN",
+   "as": null,
+   "h": "VAN",
+   "hs": null,
+   "state": "FUT",
+   "last": null
   }
  ],
  "standings": {
+  "VGK": {
+   "gp": 10,
+   "w": 8,
+   "l": 2,
+   "otl": 0,
+   "pts": 16,
+   "gf": 42,
+   "ga": 24,
+   "rw": 6
+  },
   "CAR": {
+   "gp": 10,
+   "w": 7,
+   "l": 2,
+   "otl": 1,
+   "pts": 15,
+   "gf": 36,
+   "ga": 24,
+   "rw": 6
+  },
+  "BOS": {
+   "gp": 9,
+   "w": 7,
+   "l": 2,
+   "otl": 0,
+   "pts": 14,
+   "gf": 34,
+   "ga": 19,
+   "rw": 6
+  },
+  "EDM": {
    "gp": 8,
    "w": 6,
    "l": 1,
    "otl": 1,
    "pts": 13,
-   "gf": 31,
-   "ga": 19,
-   "rw": 5
-  },
-  "NYR": {
-   "gp": 8,
-   "w": 6,
-   "l": 2,
-   "otl": 0,
-   "pts": 12,
-   "gf": 27,
-   "ga": 14,
+   "gf": 37,
+   "ga": 24,
    "rw": 6
   },
-  "VGK": {
+  "MIN": {
+   "gp": 9,
+   "w": 6,
+   "l": 2,
+   "otl": 1,
+   "pts": 13,
+   "gf": 28,
+   "ga": 21,
+   "rw": 6
+  },
+  "NYR": {
+   "gp": 10,
+   "w": 6,
+   "l": 3,
+   "otl": 1,
+   "pts": 13,
+   "gf": 28,
+   "ga": 22,
+   "rw": 6
+  },
+  "TBL": {
    "gp": 8,
    "w": 6,
    "l": 2,
    "otl": 0,
    "pts": 12,
-   "gf": 30,
-   "ga": 20,
-   "rw": 4
-  },
-  "EDM": {
-   "gp": 6,
-   "w": 5,
-   "l": 0,
-   "otl": 1,
-   "pts": 11,
-   "gf": 29,
-   "ga": 18,
+   "gf": 25,
+   "ga": 21,
    "rw": 5
   },
   "UTA": {
-   "gp": 7,
-   "w": 5,
-   "l": 2,
-   "otl": 0,
-   "pts": 10,
-   "gf": 27,
-   "ga": 19,
-   "rw": 5
-  },
-  "BOS": {
-   "gp": 7,
-   "w": 5,
-   "l": 2,
-   "otl": 0,
-   "pts": 10,
-   "gf": 26,
-   "ga": 16,
-   "rw": 4
-  },
-  "SEA": {
-   "gp": 7,
-   "w": 5,
-   "l": 2,
-   "otl": 0,
-   "pts": 10,
-   "gf": 29,
-   "ga": 19,
-   "rw": 4
-  },
-  "OTT": {
-   "gp": 7,
-   "w": 5,
-   "l": 2,
-   "otl": 0,
-   "pts": 10,
-   "gf": 21,
-   "ga": 19,
-   "rw": 4
-  },
-  "WPG": {
-   "gp": 6,
-   "w": 4,
-   "l": 1,
-   "otl": 1,
-   "pts": 9,
-   "gf": 18,
-   "ga": 17,
-   "rw": 4
-  },
-  "COL": {
-   "gp": 7,
-   "w": 4,
-   "l": 2,
-   "otl": 1,
-   "pts": 9,
-   "gf": 31,
-   "ga": 22,
-   "rw": 4
-  },
-  "MIN": {
-   "gp": 7,
-   "w": 4,
-   "l": 2,
-   "otl": 1,
-   "pts": 9,
-   "gf": 21,
-   "ga": 16,
-   "rw": 4
-  },
-  "TBL": {
-   "gp": 6,
-   "w": 4,
-   "l": 2,
-   "otl": 0,
-   "pts": 8,
-   "gf": 17,
-   "ga": 16,
-   "rw": 4
-  },
-  "ANA": {
-   "gp": 6,
-   "w": 4,
-   "l": 2,
-   "otl": 0,
-   "pts": 8,
-   "gf": 20,
-   "ga": 17,
-   "rw": 3
-  },
-  "WSH": {
-   "gp": 7,
-   "w": 4,
+   "gp": 9,
+   "w": 6,
    "l": 3,
    "otl": 0,
-   "pts": 8,
+   "pts": 12,
+   "gf": 33,
+   "ga": 27,
+   "rw": 6
+  },
+  "OTT": {
+   "gp": 9,
+   "w": 6,
+   "l": 3,
+   "otl": 0,
+   "pts": 12,
    "gf": 24,
-   "ga": 22,
+   "ga": 23,
    "rw": 4
   },
   "FLA": {
-   "gp": 7,
-   "w": 3,
+   "gp": 9,
+   "w": 5,
    "l": 2,
    "otl": 2,
-   "pts": 8,
-   "gf": 19,
-   "ga": 20,
-   "rw": 2
-  },
-  "STL": {
-   "gp": 6,
-   "w": 3,
-   "l": 2,
-   "otl": 1,
-   "pts": 7,
-   "gf": 21,
-   "ga": 18,
+   "pts": 12,
+   "gf": 30,
+   "ga": 25,
    "rw": 3
   },
-  "TOR": {
-   "gp": 7,
-   "w": 3,
+  "COL": {
+   "gp": 8,
+   "w": 5,
+   "l": 2,
+   "otl": 1,
+   "pts": 11,
+   "gf": 36,
+   "ga": 24,
+   "rw": 5
+  },
+  "SEA": {
+   "gp": 9,
+   "w": 5,
    "l": 3,
    "otl": 1,
-   "pts": 7,
-   "gf": 24,
-   "ga": 23,
-   "rw": 2
+   "pts": 11,
+   "gf": 35,
+   "ga": 31,
+   "rw": 4
   },
-  "BUF": {
-   "gp": 7,
-   "w": 3,
-   "l": 3,
-   "otl": 1,
-   "pts": 7,
-   "gf": 19,
-   "ga": 26,
-   "rw": 2
-  },
-  "DAL": {
-   "gp": 7,
-   "w": 3,
-   "l": 3,
-   "otl": 1,
-   "pts": 7,
-   "gf": 16,
-   "ga": 13,
-   "rw": 2
-  },
-  "PIT": {
-   "gp": 7,
-   "w": 3,
-   "l": 3,
-   "otl": 1,
-   "pts": 7,
-   "gf": 25,
-   "ga": 22,
-   "rw": 1
-  },
-  "MTL": {
-   "gp": 7,
-   "w": 3,
-   "l": 3,
-   "otl": 1,
-   "pts": 7,
-   "gf": 23,
-   "ga": 27,
-   "rw": 1
-  },
-  "NYI": {
-   "gp": 6,
-   "w": 3,
+  "WSH": {
+   "gp": 8,
+   "w": 5,
    "l": 3,
    "otl": 0,
-   "pts": 6,
-   "gf": 19,
-   "ga": 15,
+   "pts": 10,
+   "gf": 28,
+   "ga": 24,
+   "rw": 5
+  },
+  "WPG": {
+   "gp": 8,
+   "w": 4,
+   "l": 2,
+   "otl": 2,
+   "pts": 10,
+   "gf": 23,
+   "ga": 24,
+   "rw": 4
+  },
+  "BUF": {
+   "gp": 9,
+   "w": 4,
+   "l": 3,
+   "otl": 2,
+   "pts": 10,
+   "gf": 27,
+   "ga": 34,
+   "rw": 2
+  },
+  "NYI": {
+   "gp": 8,
+   "w": 4,
+   "l": 3,
+   "otl": 1,
+   "pts": 9,
+   "gf": 24,
+   "ga": 18,
+   "rw": 4
+  },
+  "DAL": {
+   "gp": 8,
+   "w": 4,
+   "l": 3,
+   "otl": 1,
+   "pts": 9,
+   "gf": 20,
+   "ga": 13,
    "rw": 3
   },
   "NSH": {
-   "gp": 6,
-   "w": 2,
-   "l": 2,
-   "otl": 2,
-   "pts": 6,
-   "gf": 16,
-   "ga": 19,
-   "rw": 2
-  },
-  "NJD": {
-   "gp": 6,
+   "gp": 8,
    "w": 3,
+   "l": 2,
+   "otl": 3,
+   "pts": 9,
+   "gf": 23,
+   "ga": 24,
+   "rw": 3
+  },
+  "MTL": {
+   "gp": 8,
+   "w": 4,
    "l": 3,
-   "otl": 0,
-   "pts": 6,
-   "gf": 16,
-   "ga": 22,
+   "otl": 1,
+   "pts": 9,
+   "gf": 27,
+   "ga": 30,
    "rw": 1
   },
   "SJS": {
-   "gp": 6,
-   "w": 3,
+   "gp": 8,
+   "w": 4,
    "l": 3,
-   "otl": 0,
-   "pts": 6,
-   "gf": 16,
-   "ga": 23,
+   "otl": 1,
+   "pts": 9,
+   "gf": 22,
+   "ga": 29,
    "rw": 0
   },
-  "CBJ": {
-   "gp": 5,
-   "w": 2,
+  "ANA": {
+   "gp": 7,
+   "w": 4,
    "l": 3,
    "otl": 0,
-   "pts": 4,
-   "gf": 16,
+   "pts": 8,
+   "gf": 22,
    "ga": 21,
-   "rw": 1
+   "rw": 3
+  },
+  "NJD": {
+   "gp": 8,
+   "w": 4,
+   "l": 4,
+   "otl": 0,
+   "pts": 8,
+   "gf": 25,
+   "ga": 27,
+   "rw": 2
   },
   "DET": {
-   "gp": 6,
-   "w": 1,
+   "gp": 8,
+   "w": 3,
    "l": 3,
    "otl": 2,
-   "pts": 4,
-   "gf": 14,
-   "ga": 20,
+   "pts": 8,
+   "gf": 20,
+   "ga": 24,
+   "rw": 2
+  },
+  "TOR": {
+   "gp": 9,
+   "w": 3,
+   "l": 4,
+   "otl": 2,
+   "pts": 8,
+   "gf": 29,
+   "ga": 32,
+   "rw": 2
+  },
+  "STL": {
+   "gp": 8,
+   "w": 3,
+   "l": 4,
+   "otl": 1,
+   "pts": 7,
+   "gf": 27,
+   "ga": 28,
+   "rw": 3
+  },
+  "PIT": {
+   "gp": 9,
+   "w": 3,
+   "l": 5,
+   "otl": 1,
+   "pts": 7,
+   "gf": 29,
+   "ga": 33,
+   "rw": 1
+  },
+  "CBJ": {
+   "gp": 7,
+   "w": 3,
+   "l": 4,
+   "otl": 0,
+   "pts": 6,
+   "gf": 18,
+   "ga": 23,
    "rw": 1
   },
   "CHI": {
-   "gp": 7,
-   "w": 2,
-   "l": 5,
+   "gp": 9,
+   "w": 3,
+   "l": 6,
    "otl": 0,
-   "pts": 4,
-   "gf": 17,
-   "ga": 29,
+   "pts": 6,
+   "gf": 21,
+   "ga": 36,
    "rw": 2
   },
   "VAN": {
+   "gp": 10,
+   "w": 2,
+   "l": 7,
+   "otl": 1,
+   "pts": 5,
+   "gf": 30,
+   "ga": 45,
+   "rw": 1
+  },
+  "PHI": {
+   "gp": 10,
+   "w": 1,
+   "l": 6,
+   "otl": 3,
+   "pts": 5,
+   "gf": 14,
+   "ga": 34,
+   "rw": 1
+  },
+  "CGY": {
    "gp": 8,
    "w": 2,
    "l": 6,
    "otl": 0,
    "pts": 4,
-   "gf": 26,
-   "ga": 38,
-   "rw": 1
-  },
-  "PHI": {
-   "gp": 8,
-   "w": 0,
-   "l": 5,
-   "otl": 3,
-   "pts": 3,
-   "gf": 10,
-   "ga": 31,
-   "rw": 0
+   "gf": 17,
+   "ga": 37,
+   "rw": 2
   },
   "LAK": {
-   "gp": 5,
+   "gp": 6,
    "w": 0,
-   "l": 3,
+   "l": 4,
    "otl": 2,
    "pts": 2,
-   "gf": 11,
-   "ga": 21,
-   "rw": 0
-  },
-  "CGY": {
-   "gp": 6,
-   "w": 1,
-   "l": 5,
-   "otl": 0,
-   "pts": 2,
    "gf": 12,
-   "ga": 29,
-   "rw": 1
+   "ga": 25,
+   "rw": 0
   }
  }
 }
