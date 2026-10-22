@@ -16,6 +16,6 @@ for t,pl in sorted(by.items()):
         d[k]={"n":m,"who":[{"name":r["skaterFullName"],"gp":r["gamesPlayed"],"g":r["goals"],"a":r["assists"],"p":r["points"]} for r in pl if r[key]==m]}
     out["teams"][t]=d
 lg=sorted(rows,key=lambda r:-r["points"])[:5]
-out["league"]={k:sorted(((r["skaterFullName"],r["teamAbbrevs"],r[key]) for r in rows),key=lambda x:-x[2])[:5] for k,key in (("g","goals"),("a","assists"),("p","points"))}
+out["league"]={k:sorted(((r["skaterFullName"],r["teamAbbrevs"],r[key]) for r in rows),key=lambda x:-x[2])[:25] for k,key in (("g","goals"),("a","assists"),("p","points"))}
 import datetime; out["asof"]=datetime.datetime.utcnow().isoformat()
 json.dump(out,open("data/allleaders.json","w"),indent=1); print(len(out["teams"]))
