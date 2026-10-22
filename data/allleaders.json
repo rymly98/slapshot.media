@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-22T10:27:40.498812",
+ "asof": "2026-10-22T10:31:10.995858",
  "teams": {
   "ANA": {
    "g": {
@@ -1398,6 +1398,106 @@
     "Kyle Connor",
     "WPG",
     8
+   ],
+   [
+    "Leon Draisaitl",
+    "EDM",
+    8
+   ],
+   [
+    "Evan Bouchard",
+    "EDM",
+    7
+   ],
+   [
+    "Alexis Lafreni\u00e8re",
+    "NYR",
+    7
+   ],
+   [
+    "Nick Schmaltz",
+    "UTA",
+    7
+   ],
+   [
+    "Brady Tkachuk",
+    "FLA",
+    7
+   ],
+   [
+    "Brandon Hagel",
+    "TBL",
+    7
+   ],
+   [
+    "Vasily Podkolzin",
+    "EDM",
+    7
+   ],
+   [
+    "Andrei Svechnikov",
+    "CAR",
+    6
+   ],
+   [
+    "Sebastian Aho",
+    "CAR",
+    6
+   ],
+   [
+    "Cole Caufield",
+    "MTL",
+    6
+   ],
+   [
+    "Alex DeBrincat",
+    "DET",
+    6
+   ],
+   [
+    "Logan Stankoven",
+    "CAR",
+    6
+   ],
+   [
+    "Nathan MacKinnon",
+    "COL",
+    6
+   ],
+   [
+    "Tim St\u00fctzle",
+    "OTT",
+    6
+   ],
+   [
+    "William Nylander",
+    "TOR",
+    6
+   ],
+   [
+    "Mark Jankowski",
+    "CAR",
+    6
+   ],
+   [
+    "Cole Perfetti",
+    "WPG",
+    6
+   ],
+   [
+    "Connor McDavid",
+    "EDM",
+    6
+   ],
+   [
+    "Carter Verhaeghe",
+    "FLA",
+    6
+   ],
+   [
+    "Matvei Michkov",
+    "PHI",
+    6
    ]
   ],
   "a": [
@@ -1425,6 +1525,106 @@
     "Evan Bouchard",
     "EDM",
     11
+   ],
+   [
+    "Seth Jones",
+    "FLA",
+    10
+   ],
+   [
+    "Jackson Blake",
+    "CAR",
+    10
+   ],
+   [
+    "Nathan MacKinnon",
+    "COL",
+    10
+   ],
+   [
+    "Adam Fox",
+    "NYR",
+    10
+   ],
+   [
+    "Auston Matthews",
+    "TOR",
+    10
+   ],
+   [
+    "Mitch Marner",
+    "VGK",
+    10
+   ],
+   [
+    "Erik Karlsson",
+    "PIT",
+    10
+   ],
+   [
+    "Nikita Kucherov",
+    "TBL",
+    9
+   ],
+   [
+    "Macklin Celebrini",
+    "SJS",
+    9
+   ],
+   [
+    "Leo Carlsson",
+    "ANA",
+    9
+   ],
+   [
+    "Clayton Keller",
+    "UTA",
+    9
+   ],
+   [
+    "William Nylander",
+    "TOR",
+    9
+   ],
+   [
+    "Sebastian Aho",
+    "CAR",
+    8
+   ],
+   [
+    "Matthew Schaefer",
+    "NYI",
+    8
+   ],
+   [
+    "Tim St\u00fctzle",
+    "OTT",
+    8
+   ],
+   [
+    "Chandler Stephenson",
+    "SEA",
+    8
+   ],
+   [
+    "David Pastrnak",
+    "BOS",
+    8
+   ],
+   [
+    "Elias Pettersson",
+    "VAN",
+    8
+   ],
+   [
+    "Mikhail Sergachev",
+    "UTA",
+    8
+   ],
+   [
+    "Roman Josi",
+    "NSH",
+    8
    ]
   ],
   "p": [
@@ -1452,6 +1652,106 @@
     "Kirill Kaprizov",
     "MIN",
     17
+   ],
+   [
+    "Nathan MacKinnon",
+    "COL",
+    16
+   ],
+   [
+    "Leon Draisaitl",
+    "EDM",
+    16
+   ],
+   [
+    "Mark Stone",
+    "VGK",
+    15
+   ],
+   [
+    "William Nylander",
+    "TOR",
+    15
+   ],
+   [
+    "Matthew Tkachuk",
+    "FLA",
+    15
+   ],
+   [
+    "Macklin Celebrini",
+    "SJS",
+    14
+   ],
+   [
+    "Sebastian Aho",
+    "CAR",
+    14
+   ],
+   [
+    "Tim St\u00fctzle",
+    "OTT",
+    14
+   ],
+   [
+    "Nikita Kucherov",
+    "TBL",
+    13
+   ],
+   [
+    "Quinn Hughes",
+    "MIN",
+    13
+   ],
+   [
+    "Alexis Lafreni\u00e8re",
+    "NYR",
+    13
+   ],
+   [
+    "Nick Schmaltz",
+    "UTA",
+    13
+   ],
+   [
+    "Clayton Keller",
+    "UTA",
+    13
+   ],
+   [
+    "Nick Suzuki",
+    "MTL",
+    12
+   ],
+   [
+    "David Pastrnak",
+    "BOS",
+    12
+   ],
+   [
+    "Brandon Hagel",
+    "TBL",
+    12
+   ],
+   [
+    "Mitch Marner",
+    "VGK",
+    12
+   ],
+   [
+    "Vasily Podkolzin",
+    "EDM",
+    12
+   ],
+   [
+    "Andrei Svechnikov",
+    "CAR",
+    11
+   ],
+   [
+    "Seth Jones",
+    "FLA",
+    11
    ]
   ]
  }
