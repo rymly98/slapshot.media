@@ -248,12 +248,18 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .prh span:nth-child(3){text-align:left;color:#fff;font-size:16px}
 .pcut{border-top:2px solid #E0475B;margin:2px 0;font-family:var(--display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#E0475B;text-align:right;padding-top:2px}
 .bksvg{width:100%;height:auto;display:block;margin-top:6px}
+.bksvg .bk-out{opacity:.38}
+.bksvg .bk-cup{fill:#fff;font-family:var(--display);font-size:20px;text-anchor:middle;letter-spacing:.06em}
+.bksvg .bk-cup2{fill:#F5B316;font-family:var(--display);font-size:11px;text-anchor:middle;letter-spacing:.14em}
+.bksvg .bk-ch{fill:#fff;font-family:var(--display);font-size:26px;text-anchor:middle}
+.bksvg .bk-ring{fill:rgba(245,179,22,.10);stroke:#F5B316;stroke-width:2}
+.bksvg .bk-c.bk-f{stroke:#F5B316;stroke-width:1.6;fill:none}
 .bksvg .bk-h{fill:#FFB81C;font-family:var(--display);font-size:15px;letter-spacing:.1em;text-anchor:middle}
 .bksvg .bk-b{fill:rgba(0,0,0,.35);stroke:rgba(255,255,255,.18);stroke-width:1}
 .bksvg .bk-sep{stroke:rgba(255,255,255,.1);stroke-width:1}
 .bksvg .bk-s{fill:#FFB81C;font-family:var(--display);font-size:9.5px}
 .bksvg .bk-p{fill:#fff;font-family:var(--display);font-size:11px;letter-spacing:.04em;text-anchor:end}
-.bksvg .bk-c{fill:none;stroke:rgba(255,255,255,.28);stroke-width:1.3}
+.bksvg .bk-c{fill:none;stroke:rgba(255,255,255,.75);stroke-width:1.6}
 .bksvg .bk-e{fill:rgba(0,0,0,.2);stroke:rgba(255,255,255,.22);stroke-width:1;stroke-dasharray:3 3}
 .bksvg .bk-q{fill:#8d8f96;font-family:var(--display);font-size:10px;text-anchor:middle}
 .bksvg .bk-f{fill:#8E1F2C;stroke:#E0475B;stroke-width:1.5}
@@ -261,6 +267,20 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .bksvg .bk-ft2{fill:#FFB81C;font-family:var(--display);font-size:10px;letter-spacing:.1em;text-anchor:middle}
 #playoffs.poin .pob{animation:poin .5s ease-out .1s both}
 .pob{margin-top:0}.poseg{margin-top:12px}.pstd{margin-top:10px}
+.pdsvg{width:100%;height:auto;display:block;margin-top:8px}
+.pdsvg .pd-h{fill:#fff;font-family:var(--display);font-size:14px;text-anchor:middle;letter-spacing:.03em}
+.pdsvg .pd-v{fill:#fff;font-family:var(--display);font-size:14px}
+.pdsvg .pd-b{stroke:rgba(255,255,255,.25);stroke-width:.6}
+.pod{padding:16px 10px 12px}
+.pdhow{margin-top:12px;padding:16px}.pdhow p{margin:8px 0 0;font-size:14px;line-height:1.45;color:#d9d9dc}.pdhow b{color:#fff}
+.pdt{font-family:var(--display);font-size:22px;text-transform:uppercase;text-shadow:2px 2px 0 var(--maroon-deep)}
+.pdx{background:rgba(245,179,22,.10);border-left:3px solid #F5B316;padding:8px 10px;border-radius:0 8px 8px 0}.pdx b{color:#F5B316!important}
+.pjg{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:4px 12px 14px}
+.pjc{background:rgba(0,0,0,.25);border-radius:10px;padding:8px}
+.pjh{font-family:var(--display);font-size:15px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;color:#E0475B}
+.pjr{display:grid;grid-template-columns:24px 1fr auto;align-items:center;gap:6px;padding:3px 0;border-top:1px solid var(--line)}
+.pjr img{width:22px;height:22px;object-fit:contain}.pjr b{font-family:var(--display);font-weight:400;font-size:18px}.pjr span{font-size:11px;color:var(--muted)}
+@media (min-width:620px){.pjg{grid-template-columns:repeat(4,1fr)}}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -425,6 +445,7 @@ td{white-space:nowrap}
     <button class="tab" role="tab" id="tab-race" aria-controls="race" aria-selected="false" type="button">The Race</button>
     <button class="tab" role="tab" id="tab-stand" aria-controls="stand" aria-selected="false" type="button">Standings</button>
     <button class="tab" role="tab" id="tab-po" aria-controls="po" aria-selected="false" type="button">Playoffs</button>
+    <button class="tab" role="tab" id="tab-pod" aria-controls="pod" aria-selected="false" type="button">Playoff Odds</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
@@ -448,6 +469,11 @@ td{white-space:nowrap}
   <section id="po" role="tabpanel" aria-labelledby="tab-po" class="list" hidden>
     <div class="head2"><h2>Playoffs</h2><span class="muted" id="poasof">NHL.com</span></div>
     <div id="playoffs"></div>
+  </section>
+
+  <section id="pod" role="tabpanel" aria-labelledby="tab-pod" class="list" hidden>
+    <div class="head2"><h2>Playoff Odds</h2><button type="button" class="shareb" data-share="podds" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+    <div id="podds"></div>
   </section>
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
@@ -747,27 +773,35 @@ function poSeed(conf){
   const opp={};opp[divs[0]]=firstBetter?rest[1]:rest[0];opp[divs[1]]=firstBetter?rest[0]:rest[1];
   return {divs,by,rest,opp};
 }
+function serP(x,y){const X=S[x],Y=S[y];if(!X||!Y)return .5;const gx=(X[3]+Y[4])/2,gy=(Y[3]+X[4])/2,p=gx/(gx+gy);
+  const f=(w,l)=>w===4?1:l===4?0:p*f(w+1,l)+(1-p)*f(w,l+1);return f(0,0);}
+function pick(x,y){return serP(x,y)>=.5?x:y;}
 function bracketSvg(){
-  const W=420,H=430,bw=78,bh=46,top=44,slot=(H-top-6)/4,r2w=30,r2h=26;
-  const box=(x,y,w,h,cls)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="7" class="${cls}"/>`;
-  let g="";
-  const side=(conf,left)=>{const {divs,by,rest,opp}=poSeed(conf),wcs=r=>rest[0]&&r[0]===rest[0][0]?"WC1":"WC2";
-    const ms=divs.flatMap(d=>[[by[d][0],d+"1",opp[d],wcs(opp[d])],[by[d][1],d+"2",by[d][2],d+"3"]]);
-    const x1=left?4:W-4-bw,xr2=left?92:W-92-r2w,xcf=left?132:W-132-r2w,inner=left?x1+bw:x1,cy=[];
-    g+=`<text x="${x1+bw/2}" y="20" class="bk-h">${conf==="E"?"EAST":"WEST"}</text>`;
-    ms.forEach(([h,hs,l,ls],i)=>{const y=top+slot*i+(slot-bh)/2;cy.push(y+bh/2);g+=box(x1,y,bw,bh,"bk-b");
-      [[h,hs],[l,ls]].forEach(([r,sd],j)=>{const ry=y+j*23;if(j)g+=`<line x1="${x1+4}" x2="${x1+bw-4}" y1="${y+23}" y2="${y+23}" class="bk-sep"/>`;
-        g+=`<image href="tl/${r[0]}.png" x="${x1+4}" y="${ry+3}" width="17" height="17"/><text x="${x1+24}" y="${ry+15.5}" class="bk-s">${sd}</text><text x="${x1+bw-5}" y="${ry+15.5}" class="bk-p">${r[0]}</text>`;});});
-    const r2=[(cy[0]+cy[1])/2,(cy[2]+cy[3])/2],cf=(r2[0]+r2[1])/2,edge=(x,inward)=>inward;
-    const conn=(ya,yb,ym,xa,xb)=>{const xm=(xa+xb)/2;return `<path d="M${xa},${ya}H${xm}V${yb}M${xa},${yb}H${xm}M${xm},${ym}H${xb}" class="bk-c"/>`;};
-    const r2in=left?xr2:xr2+r2w,r2out=left?xr2+r2w:xr2,cfin=left?xcf:xcf+r2w,cfout=left?xcf+r2w:xcf;
-    g+=conn(cy[0],cy[1],r2[0],inner,r2in)+conn(cy[2],cy[3],r2[1],inner,r2in)+conn(r2[0],r2[1],cf,r2out,cfin);
-    r2.forEach(y=>{g+=box(xr2,y-r2h/2,r2w,r2h,"bk-e")+`<text x="${xr2+r2w/2}" y="${y+4}" class="bk-q">R2</text>`;});
-    g+=box(xcf,cf-r2h/2,r2w,r2h,"bk-e")+`<text x="${xcf+r2w/2}" y="${cf+4}" class="bk-q">CF</text>`;
-    g+=`<path d="M${cfout},${cf}H${left?W/2-38:W/2+38}" class="bk-c"/>`;return cf;};
-  const cf=side("W",true);side("E",false);
-  g+=box(W/2-38,cf-34,76,68,"bk-f")+`<text x="${W/2}" y="${cf-6}" class="bk-ft">STANLEY</text><text x="${W/2}" y="${cf+8}" class="bk-ft">CUP</text><text x="${W/2}" y="${cf+22}" class="bk-ft2">FINAL</text>`;
-  return `<svg viewBox="0 0 ${W} ${H}" class="bksvg" role="img" aria-label="NHL playoff bracket if the playoffs started today">${g}</svg>`;
+  const W=440,H=560,L=34,top=56,bot=520,sp=(bot-top)/7;
+  const X={W:[6,62,118,174],E:[W-6-L,W-62-L,W-118-L,W-174-L]};
+  let g="",champ={};
+  const logo=(t,x,y,s,dim)=>`<image href="tl/${t}.png" x="${x}" y="${y-s/2}" width="${s}" height="${s}"${dim?' class="bk-out"':''}/>`;
+  const side=c=>{const {divs,by,opp}=poSeed(c),left=c==="W",xs=X[c];
+    const r1=[[by[divs[0]][0][0],opp[divs[0]][0]],[by[divs[0]][1][0],by[divs[0]][2][0]],[by[divs[1]][0][0],opp[divs[1]][0]],[by[divs[1]][1][0],by[divs[1]][2][0]]];
+    let ys=r1.flat().map((t,i)=>top+i*sp),teams=r1.flat();
+    g+=`<text x="${left?xs[0]:xs[0]+L}" y="26" class="bk-h" style="text-anchor:${left?'start':'end'}">${c==="E"?"EAST":"WEST"}</text>`;
+    for(let rd=0;rd<3;rd++){
+      const nt=[],ny=[];
+      for(let i=0;i<teams.length;i+=2){
+        const a=teams[i],b=teams[i+1],ya=ys[i],yb=ys[i+1],w=pick(a,b),ym=(ya+yb)/2;
+        g+=logo(a,xs[rd],ya,L,w!==a)+logo(b,xs[rd],yb,L,w!==b);
+        const xo=left?xs[rd]+L+3:xs[rd]-3,xn=left?xs[rd+1]-3:xs[rd+1]+L+3,xm=(xo+xn)/2;
+        g+=`<path d="M${xo},${ya}H${xm}V${yb}H${xo}M${xm},${ym}H${xn}" class="bk-c"/>`;
+        nt.push(w);ny.push(ym);}
+      teams=nt;ys=ny;}
+    g+=logo(teams[0],xs[3],ys[0],L+6,false);champ[c]={t:teams[0],y:ys[0]};};
+  side("W");side("E");
+  const ch=pick(champ.W.t,champ.E.t),cy=Math.max(champ.W.y,champ.E.y);
+  g+=`<path d="M${X.W[3]+L+9},${champ.W.y}H${W/2}V${cy+40}M${X.E[3]-3},${champ.E.y}H${W/2}" class="bk-c bk-f"/>`;
+  g+=`<text x="${W/2}" y="${cy-62}" class="bk-cup">STANLEY CUP</text><text x="${W/2}" y="${cy-46}" class="bk-cup2">FINAL</text>`;
+  g+=`<circle cx="${W/2}" cy="${cy+90}" r="42" class="bk-ring"/>`+logo(ch,W/2-35,cy+90,70,false);
+  g+=`<text x="${W/2}" y="${cy+156}" class="bk-ch">${(NICKN[ch]||ch).toUpperCase()}</text><text x="${W/2}" y="${cy+174}" class="bk-cup2">PREDICTED CHAMPION</text>`;
+  return `<svg viewBox="0 0 ${W} ${H-6}" class="bksvg" role="img" aria-label="Playoff bracket if the playoffs started today, with Slapshot model picks">${g}</svg>`;
 }
 function renderPlayoffs(){
   const el=document.getElementById("playoffs");if(!el)return;
@@ -778,20 +812,45 @@ function renderPlayoffs(){
   let tbl=divs.map(d=>head(DIVN[d])+by[d].slice(0,3).map((r,i)=>row(r,d+(i+1),"in")).join("")).join("");
   tbl+=head("Wild Card")+rest.map((r,i)=>(i===2?'<div class="pcut">Playoff line</div>':"")+row(r,i<2?"WC"+(i+1):(cut-r[7]>0?"−"+(cut-r[7]):"Tied"),i<2?"in":"out")).join("");
   const seg=`<div class="seg poseg" role="group" aria-label="Conference standings">${["E","W"].map(c=>`<button class="segb" type="button" data-pc="${c}" aria-pressed="${PC===c}">${c==="E"?"East":"West"}</button>`).join("")}</div>`;
-  el.innerHTML=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">League-wide bracket · seed &amp; team</div>${bracketSvg()}
+  el.innerHTML=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">Slapshot model picks every series</div>${bracketSvg()}
     <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>${seg}<div class="stb pstd">${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · − = points back of the last spot · tiebreakers from NHL.com</div></div>
 `;
   el.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;renderPlayoffs();}));
   el.classList.remove("poin");void el.offsetWidth;el.classList.add("poin");
 }
 
+let PO=null;
+function poddsSvg(){
+  const W=440,top=34,rh=26,H=top+16*rh+8;let g="";
+  ["E","W"].forEach((c,ci)=>{const x0=ci?226:4,ts=ST.t.filter(r=>r[1]===c).map(r=>r[0]).sort((a,b)=>PO.t[b][0]-PO.t[a][0]||PO.t[b][2]-PO.t[a][2]);
+    g+=`<text x="${x0+105}" y="18" class="pd-h">${c==="E"?"EASTERN":"WESTERN"} CONFERENCE</text>`;
+    ts.forEach((t,i)=>{const y=top+i*rh,v=PO.t[t][0],bw=Math.max(2,v/100*150),col=colors[t]||"#888";
+      g+=`<image href="tl/${t}.png" x="${x0}" y="${y}" width="22" height="22"/><rect x="${x0+26}" y="${y+2}" width="${bw}" height="18" rx="2" fill="${col}" class="pd-b"/>`+
+         `<text x="${x0+30+bw}" y="${y+16}" class="pd-v">${v>=99.5?">99":v<0.5?"<1":Math.round(v)}%</text>`;});});
+  return `<svg viewBox="0 0 ${W} ${H}" class="pdsvg" role="img" aria-label="Playoff odds by team">${g}</svg>`;
+}
+function renderPodds(){
+  const el=document.getElementById("podds");if(!el)return;
+  if(!PO||!ST){el.innerHTML='<p class="muted">Loads with the morning update.</p>';return;}
+  const dt=new Date(PO.asof+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric"});
+  const ex=(()=>{const g=(days.tue||[]).slice().sort((x,y)=>Math.max(y.hp,y.ap)-Math.max(x.hp,x.ap))[0];return g?`${NICKN[g.hp>=g.ap?g.h:g.a]} ${Math.max(g.hp,g.ap).toFixed(0)}% tonight → 0.23 + 1.77 × ${(Math.max(g.hp,g.ap)/100).toFixed(2)} = <b>${(0.23+1.77*Math.max(g.hp,g.ap)/100).toFixed(2)} pts</b>`:"";})();
+  const proj=["P","C","M","A"].map(d=>`<div class="pjc"><div class="pjh">${DIVN[d]}</div>${ST.t.filter(r=>r[2]===d).map(r=>r[0]).sort((a,b)=>PO.t[b][2]-PO.t[a][2]).map(t=>`<div class="pjr"><img src="tl/${t}.png" alt="${t}"><b>${PO.t[t][2]}</b><span>${Math.round(PO.t[t][1])}% div</span></div>`).join("")}</div>`).join("");
+  el.innerHTML=`<div class="stb pod"><div class="pos">Via the Slapshot model · through ${dt}</div>${poddsSvg()}</div>
+  <div class="stb pdhow"><div class="pdt">How we get it</div>
+   <p>We play out <b>every remaining game ${PO.sims.toLocaleString()} times</b>. Each game's winner comes from our win % — this season's goals for and against, the same formula as our daily odds.</p>
+   <p>About <b>${Math.round(PO.ot*100)}%</b> of games go to OT, where the loser still gets a point. So every game is worth <b>0.23 + 1.77 × win %</b> points.</p>
+   ${ex?`<p class="pdx">${ex}</p>`:""}
+   <p>Each simulated season, the top 3 in every division plus 2 wild cards per conference make it. <b>Playoff odds = how often a team got in.</b></p></div>
+  <details class="rdrop"><summary><span class="rd-t">Projected points</span><span class="rd-s">Final total · % to win the division</span></summary><div class="pjg">${proj}</div></details>`;
+}
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
   if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
   document.getElementById("daylabel").textContent=d.label||"";
   if(d.RG&&d.RG.g)RG=d.RG;if(d.ST&&d.ST.t&&d.ST.t.length>=32){ST=d.ST;const dt=new Date(ST.asof+"T12:00:00");
     document.getElementById("stasof").textContent="Through "+new Date(RG&&RG.thru?RG.thru+"T12:00:00":dt).toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
-  renderGames();renderRecord();renderStandings();renderPlayoffs();
+  if(d.PO&&d.PO.t)PO=d.PO;
+  renderGames();renderRecord();renderStandings();renderPlayoffs();renderPodds();
   if(d.updated){const u=document.getElementById("upd");if(u){const [dt,tm]=d.updated.split(" ");u.textContent="Updated "+new Date(dt+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+", "+d.updated.slice(11)+" · ";}}
   if(ST){const pa=document.getElementById("poasof");if(pa)pa.textContent=document.getElementById("stasof").textContent;}
 }).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();renderStandings();});
@@ -877,6 +936,8 @@ const POSTERS={
     drawChart(tmp);const sv=tmp.querySelector("svg");if(sv)drawSvg(x,sv,30,y2+10,1020,SHH-180-(y2+10));tmp.remove();shFoot(x);return c;},
   playoffs(){const [c,x]=shCanvas();if(!ST)return null;const y=shHead(x,"IF THE PLAYOFFS STARTED TODAY","NHL BRACKET","THROUGH "+(RG?new Date(RG.thru+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric"}).toUpperCase():""));
     const sv=document.querySelector("#playoffs .bksvg");if(sv)drawSvg(x,sv,20,y+30,1040,SHH-170-(y+30));shFoot(x);return c;},
+  podds(){const [c,x]=shCanvas();if(!PO||!ST)return null;const y=shHead(x,"VIA THE SLAPSHOT MODEL","PLAYOFF ODDS","THROUGH "+new Date(PO.asof+"T12:00:00").toLocaleDateString("en-US",{month:"long",day:"numeric"}).toUpperCase());
+    const sv=document.querySelector("#podds .pdsvg");if(sv)drawSvg(x,sv,30,y+20,1020,SHH-160-(y+20));shFoot(x);return c;},
   record(){const [c,x]=shCanvas(),last=[...new Set(R.map(r=>r.d))].sort().pop();if(!last)return null;
     const rows=R.filter(r=>r.d===last),t=tally(rows,"s");
     const y=shHead(x,new Date(last+"T12:00:00").toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric"}).toUpperCase(),`LAST NIGHT ${t.w}–${t.l}`,"SLAPSHOT.MEDIA PICKS")+30;

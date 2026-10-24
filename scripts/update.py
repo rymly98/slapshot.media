@@ -245,6 +245,56 @@ def add_race(data):
     return rg["thru"], len(rg["g"])
 
 
+def add_playoff_odds(data, sims=10000):
+    """Playoff odds: play out every remaining game `sims` times with the model's win % (this season's GF/GA),
+    OT/SO at this season's league rate (loser gets a point). Top 3 per division + 2 wild cards per conference."""
+    import random
+    S, ST = data.get("S"), data.get("ST")
+    if not S or not ST or len(S) < 32:
+        raise RuntimeError("needs team stats + standings")
+    rows = {r[0]: r for r in ST["t"]}
+    teams = list(rows)
+    sched = {}
+    for t in teams:
+        for g in get(f"https://api-web.nhle.com/v1/club-schedule-season/{t}/now").get("games", []):
+            if g.get("gameType") == 2 and g.get("gameState") in ("FUT", "PRE"):
+                sched[g["id"]] = (g["awayTeam"]["abbrev"], g["homeTeam"]["abbrev"])
+    games = []
+    for a, h in sched.values():
+        if a in S and h in S:
+            ag = (S[a][3] + S[h][4]) / 2; hg = (S[h][3] + S[a][4]) / 2
+            games.append((a, h, ag / (ag + hg)))
+    gp = sum(r[3] for r in rows.values()) / 2
+    ot = (sum(r[6] for r in rows.values()) / gp) if gp else 0.23
+    base = {t: rows[t][7] for t in teams}; rwb = {t: (rows[t][11] or 0) for t in teams}
+    made = dict.fromkeys(teams, 0); divw = dict.fromkeys(teams, 0); ptsum = dict.fromkeys(teams, 0.0)
+    rng = random.Random(2027)
+    confs = {}
+    for t in teams:
+        confs.setdefault(rows[t][1], {}).setdefault(rows[t][2], []).append(t)
+    for _ in range(sims):
+        pts = dict(base); rw = dict(rwb)
+        for a, h, p in games:
+            awin = rng.random() < p
+            if rng.random() < ot:
+                pts[a] += 2 if awin else 1; pts[h] += 1 if awin else 2
+            else:
+                if awin: pts[a] += 2; rw[a] += 1
+                else: pts[h] += 2; rw[h] += 1
+        key = {t: (pts[t], rw[t], rng.random()) for t in teams}
+        for t in teams: ptsum[t] += pts[t]
+        for divs in confs.values():
+            inn = []
+            for ts in divs.values():
+                top = sorted(ts, key=lambda t: key[t], reverse=True)[:3]
+                inn += top; divw[top[0]] += 1
+            rest = sorted([t for ts in divs.values() for t in ts if t not in inn], key=lambda t: key[t], reverse=True)
+            for t in inn + rest[:2]: made[t] += 1
+    data["PO"] = {"asof": datetime.now(ET).date().isoformat(), "sims": sims, "games": len(games), "ot": round(ot, 3),
+                  "t": {t: [round(made[t] / sims * 100, 1), round(divw[t] / sims * 100, 1), round(ptsum[t] / sims)] for t in teams}}
+    return len(games)
+
+
 def main():
     mode = sys.argv[1] if len(sys.argv) > 1 else ("morning" if datetime.now(ET).hour < 12 else "evening")
     data = json.load(open(DATA))
@@ -285,6 +335,10 @@ def main():
             notes.append("race thru %s (%d games)" % add_race(data))
         except Exception as e:
             notes.append(f"race skipped: {e}")
+        try:
+            notes.append(f"playoff odds over {add_playoff_odds(data)} games")
+        except Exception as e:
+            notes.append(f"playoff odds skipped: {e}")
 
     try:
         hit = refresh_lines(data)
