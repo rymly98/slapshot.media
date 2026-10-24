@@ -329,6 +329,11 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .tn2-f.ok i{color:#3DDC84}.tn2-f.no{border-color:#E0475B}.tn2-f.no i{color:#E0475B}.tn2-f.na i{color:var(--muted)}
 .tn2-f .pe{font-family:var(--num);font-weight:700;font-size:12px;color:var(--muted);height:30px;display:grid;place-items:center}
 .tn2-key{display:flex;gap:16px;font-size:12.5px;color:var(--muted)}.tn2-key i{font-style:normal;font-weight:700}.tn2-key .ok{color:#3DDC84}.tn2-key .no{color:#E0475B}
+.secth{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-top:6px}
+.secth-t{font-family:var(--display);font-size:24px;text-transform:uppercase;line-height:1.05;text-shadow:2px 2px 0 var(--maroon-deep)}
+.secth-s{font-size:13px;color:var(--muted);margin-top:3px}
+.shareb.sm{flex:none}
+.logwrap{background:var(--panel);border:1px solid var(--line);border-radius:10px}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -528,48 +533,43 @@ td{white-space:nowrap}
 
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
-    <div class="head2"><h2>Our Record</h2></div>
-    <div class="subseg" role="group" data-g="rc"><button type="button" data-sub="rec" aria-pressed="true">Our record</button><button type="button" data-sub="vg" aria-pressed="false">The Race</button><button type="button" data-sub="tn" aria-pressed="false">Tonight</button><button type="button" data-sub="log" aria-pressed="false">Game log</button></div>
+    <div class="head2"><h2>Our Record</h2><button type="button" class="shareb" data-share="record" aria-label="Share record as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+    <div class="subseg" role="group" data-g="rc"><button type="button" data-sub="rec" aria-pressed="true">Record</button><button type="button" data-sub="tn" aria-pressed="false">Tonight</button><button type="button" data-sub="log" aria-pressed="false">Game log</button></div>
+
     <div class="subp" data-p="rec">
-    <div class="subbar"><button type="button" class="shareb" data-share="record" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
-    <div class="qrec rec-top" id="rectop"></div>
-
-    <div class="lastnight">
-      <div class="ln-h"><span class="ln-t">Last night</span><span class="ln-s" id="lndate"></span></div>
-      <div id="lastnight"></div>
+      <div class="qrec rec-top" id="rectop"></div>
+      <div class="lastnight">
+        <div class="ln-h"><span class="ln-t">Last night</span><span class="ln-s" id="lndate"></span></div>
+        <div id="lastnight"></div>
+      </div>
+      <div class="secth"><div><div class="secth-t">The Race</div><div class="secth-s">We pick every game. So do our friends in Vegas, New York &amp; Boston.</div></div><button type="button" class="shareb sm" data-share="race" aria-label="Share the race as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+      <div class="rboard" id="rboard"></div>
+      <div class="chartcard big">
+        <div class="ch-t">Win % over the season</div>
+        <div class="chartwrap" id="chart"></div>
+      </div>
     </div>
 
-    </div>
-    <div class="subp" data-p="vg" hidden>
-    <div class="subbar"><button type="button" class="shareb" data-share="race" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
-    <p class="recblurb top">Every morning we pick every game. So do our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b>. Here's who's winning.</p>
-    <div class="rboard" id="rboard"></div>
-    <div class="chartcard big">
-      <div class="ch-t">Win % over the season</div>
-      <div class="chartwrap" id="chart"></div>
-    </div>
-    </div>
     <div class="subp" data-p="tn" hidden>
-      <div class="tn2-head"><div class="tn2-t">Tonight's picks</div><div class="tn2-s">Our pick vs our friends in Vegas, New York &amp; Boston</div><div class="tn2-sum" id="tnsum"></div></div>
+      <div class="secth"><div><div class="secth-t">Tonight's picks</div><div class="secth-s">Our pick vs our friends in Vegas, New York &amp; Boston</div></div></div>
+      <div class="tn2-sum" id="tnsum"></div>
       <div class="tonight">
         <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>New York</span><span>Boston</span></div>
         <div id="tonight"></div>
         <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
       </div>
     </div>
+
     <div class="subp" data-p="log" hidden>
-    <details class="rdrop" open>
-      <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Every pick, every game</span></summary>
-      <div class="tablewrap">
+      <div class="secth"><div><div class="secth-t">Game log</div><div class="secth-s" id="disagree">Every pick, every game</div></div></div>
+      <div class="tablewrap logwrap">
         <table>
           <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>New York</th><th>Boston</th><th>Final</th></tr></thead>
           <tbody id="log"></tbody>
         </table>
       </div>
-    </details>
     </div>
   </section>
-
 
   <section id="about" class="list" hidden>
     <button type="button" class="howback" data-back>← Back</button>
@@ -938,7 +938,7 @@ function showTab(id,save){id=OLD[id]||id;if(!PANES.includes(id))id="tue";
 document.querySelectorAll(".subseg").forEach(g=>{const sec=g.closest("section");g.querySelectorAll("[data-sub]").forEach(b=>b.addEventListener("click",()=>{
   const k=b.dataset.sub;g.querySelectorAll("[data-sub]").forEach(x=>x.setAttribute("aria-pressed",x===b));
   sec.querySelectorAll(".subp").forEach(p=>p.hidden=p.dataset.p!==k);
-  if(k==="vg")drawChart();if(k==="race")renderStandings(true);
+  if(k==="rec")drawChart();if(k==="race")renderStandings(true);
   if(window.gtag)gtag("event","sub_view",{sub:k});}));});
 tabs.forEach(t=>t.addEventListener("click",()=>showTab(t.getAttribute("aria-controls"),true)));
 document.querySelectorAll("[data-how]").forEach(b=>b.addEventListener("click",()=>{showTab("about",false);scrollTo(0,0);}));
