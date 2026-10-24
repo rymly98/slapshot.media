@@ -551,8 +551,11 @@ td{white-space:nowrap}
     </div>
     <div class="subp" data-p="tn" hidden>
       <div class="tn2-head"><div class="tn2-t">Tonight's picks</div><div class="tn2-s">Our pick vs our friends in Vegas, New York &amp; Boston</div><div class="tn2-sum" id="tnsum"></div></div>
-      <div id="tonight"></div>
-      <div class="tn2-key"><span><i class="ok">✓</i> agrees with us</span><span><i class="no">✗</i> goes the other way</span></div>
+      <div class="tonight">
+        <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>New York</span><span>Boston</span></div>
+        <div id="tonight"></div>
+        <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
+      </div>
     </div>
     <div class="subp" data-p="log" hidden>
     <details class="rdrop" open>
@@ -677,18 +680,17 @@ const SRC=[["s","Slapshot","#e66767"],["V","Vegas","#3987e5"],["E","New York","#
 function tally(rows,k){let w=0,l=0;for(const r of rows){if(!r[k])continue;r[k]===r.w?w++:l++;}return{w,l,p:w+l?w/(w+l)*100:null};}
 function renderTonight(){
   const el=document.getElementById("tonight"); if(!el)return;
-  const img=t=>`<img src="tl/${t}.png" alt="${t}">`,F=[["V","Vegas"],["E","New York"],["B","Boston"]];
-  let alone=0,split=0;
+  const img=t=>`<img src="tl/${t}.png" alt="${t}">`;let alone=0,split=0;
   el.innerHTML=days.tue.map(g=>{
-    const me=g.hp===g.ap?null:(g.hp>g.ap?g.h:g.a),pct=Math.max(g.hp,g.ap).toFixed(1);
-    const fr=F.map(([k,n])=>{const x=g.b&&g.b[k];const p=x&&x[0]!=="Pick'em"?x[0]:null;return {n,p,st:!p||!me?"na":p===me?"ok":"no"};});
-    const nos=fr.filter(f=>f.st==="no").length,tag=nos===3?'<span class="tn2-tag alone">We\'re alone</span>':nos?'<span class="tn2-tag split">Split</span>':'<span class="tn2-tag agree">All agree</span>';
+    const me=g.hp===g.ap?null:(g.hp>g.ap?g.h:g.a);
+    const nos=["V","E","B"].filter(k=>{const x=g.b&&g.b[k];return me&&x&&x[0]!=="Pick'em"&&x[0]!==me;}).length;
     if(nos===3)alone++;else if(nos)split++;
-    return `<div class="tn2${nos===3?" is-alone":""}">
-      <div class="tn2-top"><div class="tn2-game">${img(g.a)}<span>@</span>${img(g.h)}<em>${g.t||""}</em></div>${tag}</div>
-      <div class="tn2-row"><div class="tn2-me"><small>Our pick</small>${me?img(me):""}<b>${me?pct+"%":"Toss-up"}</b></div>
-      <div class="tn2-fr">${fr.map(f=>`<div class="tn2-f ${f.st}"><small>${f.n}</small>${f.p?img(f.p):'<span class="pe">Tie</span>'}<i>${f.st==="ok"?"✓":f.st==="no"?"✗":"–"}</i></div>`).join("")}</div></div></div>`;
-  }).join("")||'<p class="muted">No games today.</p>';
+    const cell=(k)=>{const x=g.b&&g.b[k]; if(!x)return `<div class="tn-pick"><span class="pe">—</span></div>`;
+      if(x[0]==="Pick'em")return `<div class="tn-pick"><span class="pe">Tie</span></div>`;
+      return `<div class="tn-pick${me&&x[0]!==me?" beef":""}">${img(x[0])}</div>`;};
+    return `<div class="tn-row"><div class="tn-game">${img(g.a)}@${img(g.h)}</div>
+      <div class="tn-pick me">${me?img(me):'<span class="pe">Toss-up</span>'}</div>${cell("V")}${cell("E")}${cell("B")}</div>`;
+  }).join("");
   const sm=document.getElementById("tnsum");if(sm)sm.innerHTML=days.tue.length?`<span><b>${days.tue.length}</b> games</span><span><b>${split}</b> split</span><span class="g"><b>${alone}</b> we're alone</span>`:"";
 }
 function recStrip(){const last=[...new Set(R.map(r=>r.d))].sort().pop();
