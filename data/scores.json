@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-23T10:18:43.905850",
+ "asof": "2026-10-24T03:07:31.195486",
  "games": [
   {
    "d": "2026-09-29",
@@ -1650,6 +1650,146 @@
    "state": "OFF",
    "last": "REG",
    "utc": "2026-10-23T02:00:00Z"
+  },
+  {
+   "d": "2026-10-23",
+   "a": "MTL",
+   "as": 4,
+   "h": "CHI",
+   "hs": 1,
+   "state": "FINAL",
+   "last": "REG",
+   "utc": "2026-10-24T00:00:00Z"
+  },
+  {
+   "d": "2026-10-23",
+   "a": "TBL",
+   "as": 2,
+   "h": "COL",
+   "hs": 4,
+   "state": "LIVE",
+   "last": null,
+   "utc": "2026-10-24T01:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "ANA",
+   "as": null,
+   "h": "PHI",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T17:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "LAK",
+   "as": null,
+   "h": "NJD",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T19:30:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "SJS",
+   "as": null,
+   "h": "BOS",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T23:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "NYR",
+   "as": null,
+   "h": "OTT",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T23:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "NSH",
+   "as": null,
+   "h": "PIT",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T23:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "BUF",
+   "as": null,
+   "h": "WSH",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T23:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "VGK",
+   "as": null,
+   "h": "CBJ",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T23:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "CAR",
+   "as": null,
+   "h": "STL",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T23:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "TOR",
+   "as": null,
+   "h": "EDM",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-24T23:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "TBL",
+   "as": null,
+   "h": "UTA",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-25T01:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "DET",
+   "as": null,
+   "h": "CGY",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-25T02:00:00Z"
+  },
+  {
+   "d": "2026-10-24",
+   "a": "MIN",
+   "as": null,
+   "h": "SEA",
+   "hs": null,
+   "state": "FUT",
+   "last": null,
+   "utc": "2026-10-25T02:00:00Z"
   }
  ],
  "standings": {
@@ -1803,6 +1943,16 @@
    "ga": 31,
    "rw": 4
   },
+  "MTL": {
+   "gp": 10,
+   "w": 5,
+   "l": 3,
+   "otl": 2,
+   "pts": 12,
+   "gf": 34,
+   "ga": 35,
+   "rw": 2
+  },
   "FLA": {
    "gp": 11,
    "w": 5,
@@ -1862,16 +2012,6 @@
    "gf": 30,
    "ga": 29,
    "rw": 5
-  },
-  "MTL": {
-   "gp": 9,
-   "w": 4,
-   "l": 3,
-   "otl": 2,
-   "pts": 10,
-   "gf": 30,
-   "ga": 34,
-   "rw": 1
   },
   "BUF": {
    "gp": 10,
@@ -1954,13 +2094,13 @@
    "rw": 3
   },
   "CHI": {
-   "gp": 9,
+   "gp": 10,
    "w": 3,
-   "l": 6,
+   "l": 7,
    "otl": 0,
    "pts": 6,
-   "gf": 21,
-   "ga": 36,
+   "gf": 22,
+   "ga": 40,
    "rw": 2
   },
   "VAN": {
