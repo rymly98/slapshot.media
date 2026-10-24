@@ -249,6 +249,7 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .pcut{border-top:2px solid #E0475B;margin:2px 0;font-family:var(--display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#E0475B;text-align:right;padding-top:2px}
 .bksvg{width:100%;height:auto;display:block;margin-top:6px}
 .bksvg .bk-out{opacity:.38}
+.bksvg .bk-slot{fill:rgba(255,255,255,.05);stroke:rgba(255,255,255,.22);stroke-width:1.2}
 .bksvg .bk-cup{fill:#fff;font-family:var(--display);font-size:20px;text-anchor:middle;letter-spacing:.06em}
 .bksvg .bk-cup2{fill:#F5B316;font-family:var(--display);font-size:11px;text-anchor:middle;letter-spacing:.14em}
 .bksvg .bk-ch{fill:#fff;font-family:var(--display);font-size:26px;text-anchor:middle}
@@ -789,18 +790,17 @@ function bracketSvg(){
       const nt=[],ny=[];
       for(let i=0;i<teams.length;i+=2){
         const a=teams[i],b=teams[i+1],ya=ys[i],yb=ys[i+1],w=pick(a,b),ym=(ya+yb)/2;
-        g+=logo(a,xs[rd],ya,L,w!==a)+logo(b,xs[rd],yb,L,w!==b);
+        if(rd===0)g+=logo(a,xs[rd],ya,L,false)+logo(b,xs[rd],yb,L,false);else g+=`<rect x="${xs[rd]+3}" y="${ya-L/2+3}" width="${L-6}" height="${L-6}" rx="6" class="bk-slot"/><rect x="${xs[rd]+3}" y="${yb-L/2+3}" width="${L-6}" height="${L-6}" rx="6" class="bk-slot"/>`;
         const xo=left?xs[rd]+L+3:xs[rd]-3,xn=left?xs[rd+1]-3:xs[rd+1]+L+3,xm=(xo+xn)/2;
         g+=`<path d="M${xo},${ya}H${xm}V${yb}H${xo}M${xm},${ym}H${xn}" class="bk-c"/>`;
         nt.push(w);ny.push(ym);}
       teams=nt;ys=ny;}
-    g+=logo(teams[0],xs[3],ys[0],L+6,false);champ[c]={t:teams[0],y:ys[0]};};
+    g+=`<rect x="${xs[3]}" y="${ys[0]-L/2}" width="${L}" height="${L}" rx="8" class="bk-slot"/>`;champ[c]={t:teams[0],y:ys[0]};};
   side("W");side("E");
-  const ch=pick(champ.W.t,champ.E.t),cy=Math.max(champ.W.y,champ.E.y);
-  g+=`<path d="M${X.W[3]+L+9},${champ.W.y}H${W/2}V${cy+40}M${X.E[3]-3},${champ.E.y}H${W/2}" class="bk-c bk-f"/>`;
-  g+=`<text x="${W/2}" y="${cy-62}" class="bk-cup">STANLEY CUP</text><text x="${W/2}" y="${cy-46}" class="bk-cup2">FINAL</text>`;
-  g+=`<circle cx="${W/2}" cy="${cy+90}" r="42" class="bk-ring"/>`+logo(ch,W/2-35,cy+90,70,false);
-  g+=`<text x="${W/2}" y="${cy+156}" class="bk-ch">${(NICKN[ch]||ch).toUpperCase()}</text><text x="${W/2}" y="${cy+174}" class="bk-cup2">PREDICTED CHAMPION</text>`;
+  const cy=champ.W.y;
+  g+=`<path d="M${X.W[3]+L+3},${cy}H${X.E[3]-3}" class="bk-c bk-f"/>`;
+  g+=`<text x="${W/2}" y="${cy-30}" class="bk-cup">STANLEY CUP</text><text x="${W/2}" y="${cy-14}" class="bk-cup2">FINAL</text>`;
+  g+=`<circle cx="${W/2}" cy="${cy+56}" r="34" class="bk-ring"/><text x="${W/2}" y="${cy+66}" class="bk-cup" style="font-size:30px;fill:#F5B316">?</text>`;
   return `<svg viewBox="0 0 ${W} ${H-6}" class="bksvg" role="img" aria-label="Playoff bracket if the playoffs started today, with Slapshot model picks">${g}</svg>`;
 }
 function renderPlayoffs(){
@@ -812,7 +812,7 @@ function renderPlayoffs(){
   let tbl=divs.map(d=>head(DIVN[d])+by[d].slice(0,3).map((r,i)=>row(r,d+(i+1),"in")).join("")).join("");
   tbl+=head("Wild Card")+rest.map((r,i)=>(i===2?'<div class="pcut">Playoff line</div>':"")+row(r,i<2?"WC"+(i+1):(cut-r[7]>0?"−"+(cut-r[7]):"Tied"),i<2?"in":"out")).join("");
   const seg=`<div class="seg poseg" role="group" aria-label="Conference standings">${["E","W"].map(c=>`<button class="segb" type="button" data-pc="${c}" aria-pressed="${PC===c}">${c==="E"?"East":"West"}</button>`).join("")}</div>`;
-  el.innerHTML=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">Slapshot model picks every series</div>${bracketSvg()}
+  el.innerHTML=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">First-round matchups</div>${bracketSvg()}
     <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>${seg}<div class="stb pstd">${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · − = points back of the last spot · tiebreakers from NHL.com</div></div>
 `;
   el.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;renderPlayoffs();}));
