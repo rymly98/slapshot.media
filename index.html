@@ -282,6 +282,15 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .pjr{display:grid;grid-template-columns:24px 1fr auto;align-items:center;gap:6px;padding:3px 0;border-top:1px solid var(--line)}
 .pjr img{width:22px;height:22px;object-fit:contain}.pjr b{font-family:var(--display);font-weight:400;font-size:18px}.pjr span{font-size:11px;color:var(--muted)}
 @media (min-width:620px){.pjg{grid-template-columns:repeat(4,1fr)}}
+.howlink{font:inherit;font-family:var(--num);font-size:15px;letter-spacing:.04em;color:var(--muted);background:none;border:0;padding:6px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;justify-self:center}
+.howlink:hover{color:#fff}.howlink.ft{font-size:16px}
+.howback{font:inherit;font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;justify-self:start}
+.subh{margin-top:14px}
+.tabs{flex-wrap:nowrap!important}.tab{flex:1 1 0;min-width:0;white-space:nowrap}
+@media (max-width:620px){.tab{padding:9px 2px!important;font-size:15px!important;letter-spacing:.01em!important}}@media (max-width:400px){.tab{font-size:13.5px!important}.tabs{gap:3px!important}}@media (max-width:370px){.tab{font-size:12.5px!important;padding:9px 1px!important}}
+.prw,.prh{grid-template-columns:34px 26px minmax(0,1fr) 30px 36px 74px!important}
+.prw .pq{text-align:right;font-family:var(--display);font-size:18px;color:#F5B316}
+.prh span:last-child{text-align:right}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -440,18 +449,16 @@ td{white-space:nowrap}
 <div class="wrap">
 
   <div class="tabs" role="tablist" aria-label="Sections">
-    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Todays Odds</button>
-    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">Our Model</button>
-    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
-    <button class="tab" role="tab" id="tab-race" aria-controls="race" aria-selected="false" type="button">The Race</button>
+    <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Today</button>
     <button class="tab" role="tab" id="tab-stand" aria-controls="stand" aria-selected="false" type="button">Standings</button>
     <button class="tab" role="tab" id="tab-po" aria-controls="po" aria-selected="false" type="button">Playoffs</button>
-    <button class="tab" role="tab" id="tab-pod" aria-controls="pod" aria-selected="false" type="button">Playoff Odds</button>
+    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
     <div class="head2" hidden><h2>Todays Odds</h2><span class="muted" id="daylabel">Loading…</span></div>
     <div class="qc" id="quick"></div>
+    <button type="button" class="howlink" data-how>How our model works →</button>
   </section>
 
 
@@ -465,20 +472,20 @@ td{white-space:nowrap}
         <option value="L">Whole NHL</option>
       </select></label>
     <div id="standings"></div>
+    <div class="head2 subh"><h2>Wild Card Race</h2><span class="muted">Playoff % from our model</span></div>
+    <div id="wcrace"></div>
   </section>
 
   <section id="po" role="tabpanel" aria-labelledby="tab-po" class="list" hidden>
-    <div class="head2"><h2>Playoffs</h2><span class="muted" id="poasof">NHL.com</span></div>
-    <div id="playoffs"></div>
-  </section>
-
-  <section id="pod" role="tabpanel" aria-labelledby="tab-pod" class="list" hidden>
     <div class="head2"><h2>Playoff Odds</h2><button type="button" class="shareb" data-share="podds" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
     <div id="podds"></div>
+    <div id="playoffs"></div>
+    <div id="poddsx"></div>
   </section>
 
+
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
-    <div class="head2"><h2>Record</h2><button type="button" class="shareb" data-share="record" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+    <div class="head2"><h2>Our Record</h2><button type="button" class="shareb" data-share="record" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
     <div class="qrec rec-top" id="rectop"></div>
 
     <div class="lastnight">
@@ -486,19 +493,7 @@ td{white-space:nowrap}
       <div id="lastnight"></div>
     </div>
 
-    <details class="rdrop">
-      <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Every pick, every game</span></summary>
-      <div class="tablewrap">
-        <table>
-          <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>New York</th><th>Boston</th><th>Final</th></tr></thead>
-          <tbody id="log"></tbody>
-        </table>
-      </div>
-    </details>
-  </section>
-
-  <section id="race" role="tabpanel" aria-labelledby="tab-race" class="list" hidden>
-    <div class="head2"><h2>The Race</h2><button type="button" class="shareb" data-share="race" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+    <div class="head2 subh"><h2>Us vs Vegas</h2><button type="button" class="shareb" data-share="race" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
     <p class="recblurb top">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right.</p>
     <div class="rboard" id="rboard"></div>
     <div class="chartcard big">
@@ -513,9 +508,21 @@ td{white-space:nowrap}
         <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
       </div>
     </details>
+
+    <details class="rdrop">
+      <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Every pick, every game</span></summary>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>New York</th><th>Boston</th><th>Final</th></tr></thead>
+          <tbody id="log"></tbody>
+        </table>
+      </div>
+    </details>
   </section>
 
-  <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
+
+  <section id="about" class="list" hidden>
+    <button type="button" class="howback" data-back>← Back</button>
     <div class="head2"><h2>The Slapshot.Media Model</h2></div>
     <div class="why"><p>All team stats come from <b>NHL.com</b>.</p></div>
 
@@ -539,6 +546,7 @@ td{white-space:nowrap}
     <a href="https://www.tiktok.com/@slapshot.media" target="_blank" rel="noopener">TikTok</a>
   </div>
   <p class="follow">Odds posted daily · <b>@SLAPSHOT.MEDIA</b></p>
+  <p class="follow"><button type="button" class="howlink ft" data-how>How our model works</button></p>
   <p class="fine"><span id="upd"></span>Not affiliated with the NHL.</p>
 </div>
 
@@ -763,7 +771,6 @@ function renderStandings(anim){
   if(anim&&el.firstChild){el.classList.add("fading");setTimeout(draw,220);}else draw();
 }
 document.getElementById("racepick").addEventListener("change",e=>{SV=e.target.value;RSEL=null;renderStandings(true);});
-document.getElementById("tab-stand").addEventListener("click",()=>renderStandings(true));
 let PC="E";
 function poSeed(conf){
   const ord=t=>ST.t.findIndex(r=>r[0]===t),rows=ST.t.filter(r=>r[1]===conf),divs=conf==="E"?["A","M"]:["C","P"];
@@ -807,14 +814,17 @@ function renderPlayoffs(){
   const el=document.getElementById("playoffs");if(!el)return;
   if(!ST){el.innerHTML='<p class="muted">Loads with the morning update.</p>';return;}
   const {divs,by,rest}=poSeed(PC),cut=rest[1]?rest[1][7]:0;
-  const row=(r,seed,cls)=>`<div class="prw ${cls||""}"><span class="ps">${seed}</span><img src="tl/${r[0]}.png" alt="${r[0]}"><span class="pn">${NICKN[r[0]]}</span><span class="pg">${r[3]}</span><span class="pp">${r[7]}</span></div>`;
-  const head=t=>`<div class="prh"><span></span><span></span><span>${t}</span><span>GP</span><span>PTS</span></div>`;
+  const pc=t=>{if(!PO||!PO.t[t])return"";const v=PO.t[t][0];return v>=99.5?">99%":v<0.5?"<1%":Math.round(v)+"%";};
+  const row=(r,seed,cls)=>`<div class="prw ${cls||""}"><span class="ps">${seed}</span><img src="tl/${r[0]}.png" alt="${r[0]}"><span class="pn">${NICKN[r[0]]}</span><span class="pg">${r[3]}</span><span class="pp">${r[7]}</span><span class="pq">${pc(r[0])}</span></div>`;
+  const head=t=>`<div class="prh"><span></span><span></span><span>${t}</span><span>GP</span><span>PTS</span><span>ODDS</span></div>`;
   let tbl=divs.map(d=>head(DIVN[d])+by[d].slice(0,3).map((r,i)=>row(r,d+(i+1),"in")).join("")).join("");
   tbl+=head("Wild Card")+rest.map((r,i)=>(i===2?'<div class="pcut">Playoff line</div>':"")+row(r,i<2?"WC"+(i+1):(cut-r[7]>0?"−"+(cut-r[7]):"Tied"),i<2?"in":"out")).join("");
   const seg=`<div class="seg poseg" role="group" aria-label="Conference standings">${["E","W"].map(c=>`<button class="segb" type="button" data-pc="${c}" aria-pressed="${PC===c}">${c==="E"?"East":"West"}</button>`).join("")}</div>`;
   el.innerHTML=`<div class="stb pob"><div class="pot">If the playoffs started today</div><div class="pos">First-round matchups</div>${bracketSvg()}
-    <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>${seg}<div class="stb pstd">${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · − = points back of the last spot · tiebreakers from NHL.com</div></div>
-`;
+    <button type="button" class="shareb wide" data-share="playoffs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share bracket</button></div>`;
+  const wc=document.getElementById("wcrace");
+  if(wc){wc.innerHTML=`${seg}<div class="stb pstd">${tbl}<div class="stn">Top 3 in each division + 2 wild cards make it · − = points back of the last spot · Playoff % = how often they make it in 10,000 simulated seasons</div></div>`;
+    wc.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;renderPlayoffs();}));}
   el.querySelectorAll("[data-pc]").forEach(b=>b.addEventListener("click",()=>{PC=b.dataset.pc;renderPlayoffs();}));
   el.classList.remove("poin");void el.offsetWidth;el.classList.add("poin");
 }
@@ -836,7 +846,8 @@ function renderPodds(){
   const ex=(()=>{const g=(days.tue||[]).slice().sort((x,y)=>Math.max(y.hp,y.ap)-Math.max(x.hp,x.ap))[0];return g?`${NICKN[g.hp>=g.ap?g.h:g.a]} ${Math.max(g.hp,g.ap).toFixed(0)}% tonight → 0.23 + 1.77 × ${(Math.max(g.hp,g.ap)/100).toFixed(2)} = <b>${(0.23+1.77*Math.max(g.hp,g.ap)/100).toFixed(2)} pts</b>`:"";})();
   const proj=["P","C","M","A"].map(d=>`<div class="pjc"><div class="pjh">${DIVN[d]}</div>${ST.t.filter(r=>r[2]===d).map(r=>r[0]).sort((a,b)=>PO.t[b][2]-PO.t[a][2]).map(t=>`<div class="pjr"><img src="tl/${t}.png" alt="${t}"><b>${PO.t[t][2]}</b><span>${Math.round(PO.t[t][1])}% div</span></div>`).join("")}</div>`).join("");
   el.innerHTML=`<div class="stb pod"><div class="pos">Via the Slapshot model · through ${dt}</div>${poddsSvg()}</div>
-  <div class="stb pdhow"><div class="pdt">How we get it</div>
+  `;
+  const ex2=document.getElementById("poddsx");if(ex2)ex2.innerHTML=`<div class="stb pdhow"><div class="pdt">How we get it</div>
    <p>We play out <b>every remaining game ${PO.sims.toLocaleString()} times</b>. Each game's winner comes from our win % — this season's goals for and against, the same formula as our daily odds.</p>
    <p>About <b>${Math.round(PO.ot*100)}%</b> of games go to OT, where the loser still gets a point. So every game is worth <b>0.23 + 1.77 × win %</b> points.</p>
    ${ex?`<p class="pdx">${ex}</p>`:""}
@@ -850,17 +861,25 @@ fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   if(d.RG&&d.RG.g)RG=d.RG;if(d.ST&&d.ST.t&&d.ST.t.length>=32){ST=d.ST;const dt=new Date(ST.asof+"T12:00:00");
     document.getElementById("stasof").textContent="Through "+new Date(RG&&RG.thru?RG.thru+"T12:00:00":dt).toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
   if(d.PO&&d.PO.t)PO=d.PO;
-  renderGames();renderRecord();renderStandings();renderPlayoffs();renderPodds();
+  renderGames();renderRecord();renderStandings();renderPodds();renderPlayoffs();
   if(d.updated){const u=document.getElementById("upd");if(u){const [dt,tm]=d.updated.split(" ");u.textContent="Updated "+new Date(dt+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+", "+d.updated.slice(11)+" · ";}}
   if(ST){const pa=document.getElementById("poasof");if(pa)pa.textContent=document.getElementById("stasof").textContent;}
 }).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();renderStandings();});
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
-const tabs=[...document.querySelectorAll(".tab")];
-tabs.forEach(t=>t.addEventListener("click",()=>{
-  tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on;});
-  if(t.id==="tab-race")drawChart();
-  if(window.gtag)gtag("event","tab_view",{tab:t.textContent.trim()});
-}));
+const tabs=[...document.querySelectorAll(".tab")],PANES=["tue","stand","po","record","about"],OLD={race:"record",pod:"po",today:"tue"};
+let LASTTAB="tue";
+function showTab(id,save){id=OLD[id]||id;if(!PANES.includes(id))id="tue";
+  PANES.forEach(p=>{const e=document.getElementById(p);if(e)e.hidden=p!==id;});
+  tabs.forEach(x=>x.setAttribute("aria-selected",x.getAttribute("aria-controls")===id));
+  if(id!=="about")LASTTAB=id;
+  if(id==="record")drawChart();
+  if(id==="stand")renderStandings(true);
+  if(save){try{localStorage.setItem("ss_tab",id)}catch(e){}history.replaceState(null,"",id==="tue"?location.pathname:"#"+id);}
+  if(window.gtag)gtag("event","tab_view",{tab:id});}
+tabs.forEach(t=>t.addEventListener("click",()=>showTab(t.getAttribute("aria-controls"),true)));
+document.querySelectorAll("[data-how]").forEach(b=>b.addEventListener("click",()=>{showTab("about",false);scrollTo(0,0);}));
+document.querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",()=>showTab(LASTTAB,false)));
+{let st=location.hash.slice(1);if(!st){try{st=localStorage.getItem("ss_tab")||""}catch(e){}}if(st&&st!=="tue")showTab(st,false);}
 /* ===== Share: one tap turns a section into a 1080x1350 post image ===== */
 const LOGO={};
 function preloadLogos(){Object.keys(colors).forEach(t=>{if(!LOGO[t]){const i=new Image();i.src=`tl/${t}.png`;LOGO[t]=i;}});}
