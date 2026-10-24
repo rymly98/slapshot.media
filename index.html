@@ -495,13 +495,26 @@ td{white-space:nowrap}
     <button class="tab" role="tab" id="tab-tue" aria-controls="tue" aria-selected="true" type="button">Today</button>
     <button class="tab" role="tab" id="tab-stand" aria-controls="stand" aria-selected="false" type="button">Standings</button>
     <button class="tab" role="tab" id="tab-po" aria-controls="po" aria-selected="false" type="button">Playoffs</button>
-    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">Record</button>
+    <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">The Race</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
     <div class="head2" hidden><h2>Todays Odds</h2><span class="muted" id="daylabel">Loading…</span></div>
+    <div class="subseg" role="group" data-g="td"><button type="button" data-sub="od" aria-pressed="true">Our odds</button><button type="button" data-sub="tn" aria-pressed="false">Vs our friends</button></div>
+    <div class="subp" data-p="od">
     <div class="qc" id="quick"></div>
     <button type="button" class="howlink" data-how>How our model works →</button>
+    </div>
+    <div class="subp" data-p="tn" hidden>
+      <div class="secth"><div><div class="secth-t">Tonight's picks</div><div class="secth-s">Our pick vs our friends in Vegas, New York &amp; Boston</div></div></div>
+      <div class="tn2-sum" id="tnsum"></div>
+      <div class="tonight">
+        <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>New York</span><span>Boston</span></div>
+        <div id="tonight"></div>
+        <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
+      </div>
+    </div>
+
   </section>
 
 
@@ -533,42 +546,26 @@ td{white-space:nowrap}
 
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
-    <div class="head2"><h2>Our Record</h2><button type="button" class="shareb" data-share="record" aria-label="Share record as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
-    <div class="subseg" role="group" data-g="rc"><button type="button" data-sub="rec" aria-pressed="true">Record</button><button type="button" data-sub="tn" aria-pressed="false">Tonight</button><button type="button" data-sub="log" aria-pressed="false">Game log</button></div>
-
-    <div class="subp" data-p="rec">
-      <div class="qrec rec-top" id="rectop"></div>
-      <div class="lastnight">
-        <div class="ln-h"><span class="ln-t">Last night</span><span class="ln-s" id="lndate"></span></div>
-        <div id="lastnight"></div>
-      </div>
-      <div class="secth"><div><div class="secth-t">The Race</div><div class="secth-s">We pick every game. So do our friends in Vegas, New York &amp; Boston.</div></div><button type="button" class="shareb sm" data-share="race" aria-label="Share the race as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
-      <div class="rboard" id="rboard"></div>
-      <div class="chartcard big">
-        <div class="ch-t">Win % over the season</div>
-        <div class="chartwrap" id="chart"></div>
-      </div>
+    <div class="head2"><h2>The Race</h2><button type="button" class="shareb" data-share="race" aria-label="Share the race as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+    <p class="recblurb top">We pick every game. So do our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b>. Here's who's winning.</p>
+    <div class="rboard" id="rboard"></div>
+    <div class="lastnight">
+      <div class="ln-h"><span class="ln-t">Last night</span><span class="ln-s" id="lndate"></span></div>
+      <div id="lastnight"></div>
     </div>
-
-    <div class="subp" data-p="tn" hidden>
-      <div class="secth"><div><div class="secth-t">Tonight's picks</div><div class="secth-s">Our pick vs our friends in Vegas, New York &amp; Boston</div></div></div>
-      <div class="tn2-sum" id="tnsum"></div>
-      <div class="tonight">
-        <div class="tn-row tn-cols"><span></span><span>Slapshot</span><span>Vegas</span><span>New York</span><span>Boston</span></div>
-        <div id="tonight"></div>
-        <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
-      </div>
+    <div class="chartcard big">
+      <div class="ch-t">Win % over the season</div>
+      <div class="chartwrap" id="chart"></div>
     </div>
-
-    <div class="subp" data-p="log" hidden>
-      <div class="secth"><div><div class="secth-t">Game log</div><div class="secth-s" id="disagree">Every pick, every game</div></div></div>
-      <div class="tablewrap logwrap">
+    <details class="rdrop">
+      <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Every pick, every game</span></summary>
+      <div class="tablewrap">
         <table>
           <thead><tr><th>Date</th><th>Game</th><th>Slapshot</th><th>Vegas</th><th>New York</th><th>Boston</th><th>Final</th></tr></thead>
           <tbody id="log"></tbody>
         </table>
       </div>
-    </div>
+    </details>
   </section>
 
   <section id="about" class="list" hidden>
@@ -714,7 +711,7 @@ function renderRace(){
     const back=r.t.p==null||i===0?"—":(top-r.t.p).toFixed(1);
     return `<div class="rst${r.k==="s"?" me":""}"><span class="rk">${i+1}</span><span class="nm"><i style="background:${r.c}"></i>${r.n}</span><span class="wl">${r.t.w}–${r.t.l}</span><span class="pc">${r.t.p==null?"—":r.t.p.toFixed(1)+"%"}</span><span class="bk">${back}</span></div>`}).join("");
 }
-function renderRecord(){renderLastNight();renderRace();document.getElementById("rectop").innerHTML=recStrip();renderTonight();
+function renderRecord(){renderLastNight();renderRace();{const rt=document.getElementById("rectop");if(rt)rt.innerHTML=recStrip();}renderTonight();
   const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
   (document.getElementById("scoreboard")||{}).innerHTML=SRC.map(([k,n],i)=>{const t=tally(R,k);
     return `<div class="card${i?"":" mine"}"><span class="who">${n}</span><span class="rec">${t.w}–${t.l}</span><span class="muted">Win % ${t.p==null?"—":t.p.toFixed(1)+"%"}</span></div>`}).join("");
