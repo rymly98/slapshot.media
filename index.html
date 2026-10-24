@@ -296,6 +296,17 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .prw,.prh{grid-template-columns:34px 26px minmax(0,1fr) 30px 36px 74px!important}
 .prw .pq{text-align:right;font-family:var(--display);font-size:18px;color:#F5B316}
 .prh span:last-child{text-align:right}
+.subseg{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);margin-top:-6px}
+.subseg::-webkit-scrollbar{display:none}
+.subseg button{font:inherit;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:8px 10px 9px;cursor:pointer;margin-bottom:-1px}
+.subseg button[aria-pressed="true"]{color:#fff;border-bottom-color:#E0475B}
+.subseg button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.subseg button{flex:1 1 auto}
+@media (max-width:480px){.subseg{gap:0}.subseg button{font-size:15px;padding:8px 4px 9px;letter-spacing:.02em}}
+@media (max-width:370px){.subseg button{font-size:13.5px}}
+.subp{display:grid;gap:22px}.subp[hidden]{display:none}
+.subbar{display:flex;justify-content:flex-end;margin-bottom:-12px}
+.pjcard{padding:16px 6px 6px}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -469,6 +480,8 @@ td{white-space:nowrap}
 
   <section id="stand" role="tabpanel" aria-labelledby="tab-stand" class="list" hidden>
     <div class="head2"><h2>Standings</h2><span class="muted" id="stasof">Points · NHL.com</span></div>
+    <div class="subseg" role="group" data-g="st"><button type="button" data-sub="race" aria-pressed="true">Points race</button><button type="button" data-sub="wc" aria-pressed="false">Wild card</button></div>
+    <div class="subp" data-p="race">
     <label class="rsel"><span class="sr">Pick standings</span>
       <select id="racepick">
         <option value="A">Atlantic Division</option><option value="M">Metropolitan Division</option>
@@ -477,20 +490,26 @@ td{white-space:nowrap}
         <option value="L">Whole NHL</option>
       </select></label>
     <div id="standings"></div>
-    <div class="head2 subh"><h2>Wild Card Race</h2><span class="muted">Playoff % from our model</span></div>
+    </div>
+    <div class="subp" data-p="wc" hidden>
     <div id="wcrace"></div>
+    </div>
   </section>
 
   <section id="po" role="tabpanel" aria-labelledby="tab-po" class="list" hidden>
-    <div class="head2"><h2>Playoff Odds</h2><button type="button" class="shareb" data-share="podds" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
-    <div id="podds"></div>
-    <div id="playoffs"></div>
-    <div id="poddsx"></div>
+    <div class="head2"><h2>Playoffs</h2><span class="muted" id="poasof">NHL.com</span></div>
+    <div class="subseg" role="group" data-g="po"><button type="button" data-sub="odds" aria-pressed="true">Odds</button><button type="button" data-sub="br" aria-pressed="false">Bracket</button><button type="button" data-sub="pj" aria-pressed="false">Projections</button></div>
+    <div class="subp" data-p="odds"><div class="subbar"><button type="button" class="shareb" data-share="podds" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div><div id="podds"></div><div id="poddsx"></div></div>
+    <div class="subp" data-p="br" hidden><div id="playoffs"></div></div>
+    <div class="subp" data-p="pj" hidden><div id="pproj"></div></div>
   </section>
 
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
-    <div class="head2"><h2>Our Record</h2><button type="button" class="shareb" data-share="record" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+    <div class="head2"><h2>Our Record</h2></div>
+    <div class="subseg" role="group" data-g="rc"><button type="button" data-sub="rec" aria-pressed="true">Our record</button><button type="button" data-sub="vg" aria-pressed="false">Us vs Vegas</button><button type="button" data-sub="log" aria-pressed="false">Game log</button></div>
+    <div class="subp" data-p="rec">
+    <div class="subbar"><button type="button" class="shareb" data-share="record" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
     <div class="qrec rec-top" id="rectop"></div>
 
     <div class="lastnight">
@@ -498,7 +517,9 @@ td{white-space:nowrap}
       <div id="lastnight"></div>
     </div>
 
-    <div class="head2 subh"><h2>Us vs Vegas</h2><button type="button" class="shareb" data-share="race" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
+    </div>
+    <div class="subp" data-p="vg" hidden>
+    <div class="subbar"><button type="button" class="shareb" data-share="race" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
     <p class="recblurb top">Every morning by 6am, we ask our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b> who they like, and we make our picks too. Next morning, we see who got it right.</p>
     <div class="rboard" id="rboard"></div>
     <div class="chartcard big">
@@ -513,8 +534,9 @@ td{white-space:nowrap}
         <div class="tn-key"><i class="dot"></i> a friend disagrees with us · Tie = no pick, doesn't count</div>
       </div>
     </details>
-
-    <details class="rdrop">
+    </div>
+    <div class="subp" data-p="log" hidden>
+    <details class="rdrop" open>
       <summary><span class="rd-t">Game log</span><span class="rd-s" id="disagree">Every pick, every game</span></summary>
       <div class="tablewrap">
         <table>
@@ -523,6 +545,7 @@ td{white-space:nowrap}
         </table>
       </div>
     </details>
+    </div>
   </section>
 
 
@@ -862,7 +885,8 @@ function renderPodds(){
    <div class="pds"><span>2</span><p><b>We play out the rest of the season ${N.toLocaleString()} times.</b> Upsets happen in some, not in others, like real life.</p></div>
    <div class="pds"><span>3</span><p><b>We count how often each team gets in.</b> ${NICKN[top]}: ${cnt(top)} of ${N.toLocaleString()} seasons = ${pc(top)}%.</p></div>
    <p class="pdnote">Top 3 in each division + 2 wild cards per conference make it. OT losses count as a point (about ${Math.round(PO.ot*100)}% of games go to OT).</p></div>
-  <details class="rdrop"><summary><span class="rd-t">Projected points</span><span class="rd-s">Final total · % to win the division</span></summary><div class="pjg">${proj}</div></details>`;
+`;
+  const pj=document.getElementById("pproj");if(pj)pj.innerHTML=`<div class="stb pjcard"><div class="pot">Projected points</div><div class="pos">Final total · % to win the division · through ${dt}</div><div class="pjg">${proj}</div></div>`;
 }
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
@@ -886,6 +910,11 @@ function showTab(id,save){id=OLD[id]||id;if(!PANES.includes(id))id="tue";
   if(id==="stand")renderStandings(true);
   if(save){try{localStorage.setItem("ss_tab",id)}catch(e){}history.replaceState(null,"",id==="tue"?location.pathname:"#"+id);}
   if(window.gtag)gtag("event","tab_view",{tab:id});}
+document.querySelectorAll(".subseg").forEach(g=>{const sec=g.closest("section");g.querySelectorAll("[data-sub]").forEach(b=>b.addEventListener("click",()=>{
+  const k=b.dataset.sub;g.querySelectorAll("[data-sub]").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  sec.querySelectorAll(".subp").forEach(p=>p.hidden=p.dataset.p!==k);
+  if(k==="vg")drawChart();if(k==="race")renderStandings(true);
+  if(window.gtag)gtag("event","sub_view",{sub:k});}));});
 tabs.forEach(t=>t.addEventListener("click",()=>showTab(t.getAttribute("aria-controls"),true)));
 document.querySelectorAll("[data-how]").forEach(b=>b.addEventListener("click",()=>{showTab("about",false);scrollTo(0,0);}));
 document.querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",()=>showTab(LASTTAB,false)));
