@@ -274,6 +274,11 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .pdsvg .pd-b{stroke:rgba(255,255,255,.25);stroke-width:.6}
 .pod{padding:16px 10px 12px}
 .pdhow{margin-top:12px;padding:16px}.pdhow p{margin:8px 0 0;font-size:14px;line-height:1.45;color:#d9d9dc}.pdhow b{color:#fff}
+.pdbig{font-size:17px!important;color:#fff!important;font-weight:600}
+.pdm{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.pdm div{display:flex;flex-direction:column;align-items:center;gap:2px;background:rgba(0,0,0,.28);border-radius:12px;padding:10px 4px;text-align:center}
+.pdm img{width:38px;height:38px;object-fit:contain}.pdm b{font-family:var(--display);font-weight:400;font-size:28px;color:#F5B316;line-height:1.1}.pdm span{font-size:12.5px;color:var(--muted);line-height:1.25}
+.pdt2{margin-top:20px}
+.pds{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;margin-top:10px}.pds span{width:30px;height:30px;border-radius:50%;background:#E0475B;color:#fff;display:grid;place-items:center;font-family:var(--display);font-size:17px}.pds p{margin:3px 0 0!important}.pdhow .fx{margin-top:8px}.pdnote{font-size:12.5px!important;color:var(--muted)!important;margin-top:12px!important}
 .pdt{font-family:var(--display);font-size:22px;text-transform:uppercase;text-shadow:2px 2px 0 var(--maroon-deep)}
 .pdx{background:rgba(245,179,22,.10);border-left:3px solid #F5B316;padding:8px 10px;border-radius:0 8px 8px 0}.pdx b{color:#F5B316!important}
 .pjg{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:4px 12px 14px}
@@ -847,11 +852,16 @@ function renderPodds(){
   const proj=["P","C","M","A"].map(d=>`<div class="pjc"><div class="pjh">${DIVN[d]}</div>${ST.t.filter(r=>r[2]===d).map(r=>r[0]).sort((a,b)=>PO.t[b][2]-PO.t[a][2]).map(t=>`<div class="pjr"><img src="tl/${t}.png" alt="${t}"><b>${PO.t[t][2]}</b><span>${Math.round(PO.t[t][1])}% div</span></div>`).join("")}</div>`).join("");
   el.innerHTML=`<div class="stb pod"><div class="pos">Via the Slapshot model · through ${dt}</div>${poddsSvg()}</div>
   `;
-  const ex2=document.getElementById("poddsx");if(ex2)ex2.innerHTML=`<div class="stb pdhow"><div class="pdt">How we get it</div>
-   <p>We play out <b>every remaining game ${PO.sims.toLocaleString()} times</b>. Each game's winner comes from our win % — this season's goals for and against, the same formula as our daily odds.</p>
-   <p>About <b>${Math.round(PO.ot*100)}%</b> of games go to OT, where the loser still gets a point. So every game is worth <b>0.23 + 1.77 × win %</b> points.</p>
-   ${ex?`<p class="pdx">${ex}</p>`:""}
-   <p>Each simulated season, the top 3 in every division plus 2 wild cards per conference make it. <b>Playoff odds = how often a team got in.</b></p></div>
+  const tl=Object.keys(PO.t),top=tl.sort((x,y)=>PO.t[y][0]-PO.t[x][0])[0],mid=tl.slice().sort((x,y)=>Math.abs(PO.t[x][0]-50)-Math.abs(PO.t[y][0]-50))[0],bot=tl.slice().sort((x,y)=>PO.t[x][0]-PO.t[y][0])[0];
+  const N=PO.sims,cnt=t=>Math.round(PO.t[t][0]/100*N).toLocaleString(),pc=t=>Math.round(PO.t[t][0]);
+  const ex2=document.getElementById("poddsx");if(ex2)ex2.innerHTML=`<div class="stb pdhow"><div class="pdt">What the % means</div>
+   <p class="pdbig">The chance a team makes the playoffs.</p>
+   <div class="pdm"><div><img src="tl/${top}.png" alt=""><b>${pc(top)}%</b><span>${NICKN[top]}<br>basically in</span></div><div><img src="tl/${mid}.png" alt=""><b>${pc(mid)}%</b><span>${NICKN[mid]}<br>coin flip</span></div><div><img src="tl/${bot}.png" alt=""><b>${pc(bot)}%</b><span>${NICKN[bot]}<br>long shot</span></div></div>
+   <div class="pdt pdt2">How we get it</div>
+   <div class="pds"><span>1</span><p><b>Every game gets odds</b> from the same model as our daily picks.</p></div>
+   <div class="pds"><span>2</span><p><b>We play out the rest of the season ${N.toLocaleString()} times.</b> Upsets happen in some, not in others, like real life.</p></div>
+   <div class="pds"><span>3</span><p><b>We count how often each team gets in.</b> ${NICKN[top]}: ${cnt(top)} of ${N.toLocaleString()} seasons = ${pc(top)}%.</p></div>
+   <p class="pdnote">Top 3 in each division + 2 wild cards per conference make it. OT losses count as a point (about ${Math.round(PO.ot*100)}% of games go to OT).</p></div>
   <details class="rdrop"><summary><span class="rd-t">Projected points</span><span class="rd-s">Final total · % to win the division</span></summary><div class="pjg">${proj}</div></details>`;
 }
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
