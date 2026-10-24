@@ -302,7 +302,7 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .subseg button[aria-pressed="true"]{color:#fff;border-bottom-color:#E0475B}
 .subseg button:focus-visible{outline:3px solid #fff;outline-offset:2px}
 .subseg button{flex:1 1 auto}
-@media (max-width:480px){.subseg{gap:0}.subseg button{font-size:15px;padding:8px 4px 9px;letter-spacing:.02em}}
+@media (max-width:480px){.subseg button{white-space:normal;line-height:1.05}.subseg{gap:0}.subseg button{font-size:15px;padding:8px 4px 9px;letter-spacing:.02em}}
 @media (max-width:370px){.subseg button{font-size:13.5px}}
 .subp{display:grid;gap:22px}.subp[hidden]{display:none}
 .subbar{display:flex;justify-content:flex-end;margin-bottom:-12px}
@@ -480,7 +480,7 @@ td{white-space:nowrap}
 
   <section id="stand" role="tabpanel" aria-labelledby="tab-stand" class="list" hidden>
     <div class="head2"><h2>Standings</h2><span class="muted" id="stasof">Points · NHL.com</span></div>
-    <div class="subseg" role="group" data-g="st"><button type="button" data-sub="race" aria-pressed="true">Points race</button><button type="button" data-sub="wc" aria-pressed="false">Wild card</button></div>
+    <div class="subseg" role="group" data-g="st"><button type="button" data-sub="race" aria-pressed="true">Points race</button><button type="button" data-sub="wc" aria-pressed="false">Current standings</button><button type="button" data-sub="pj" aria-pressed="false">Projections</button></div>
     <div class="subp" data-p="race">
     <label class="rsel"><span class="sr">Pick standings</span>
       <select id="racepick">
@@ -494,14 +494,14 @@ td{white-space:nowrap}
     <div class="subp" data-p="wc" hidden>
     <div id="wcrace"></div>
     </div>
+    <div class="subp" data-p="pj" hidden><div id="pproj"></div></div>
   </section>
 
   <section id="po" role="tabpanel" aria-labelledby="tab-po" class="list" hidden>
     <div class="head2"><h2>Playoffs</h2><span class="muted" id="poasof">NHL.com</span></div>
-    <div class="subseg" role="group" data-g="po"><button type="button" data-sub="odds" aria-pressed="true">Odds</button><button type="button" data-sub="br" aria-pressed="false">Bracket</button><button type="button" data-sub="pj" aria-pressed="false">Projections</button></div>
+    <div class="subseg" role="group" data-g="po"><button type="button" data-sub="odds" aria-pressed="true">Odds</button><button type="button" data-sub="br" aria-pressed="false">Bracket</button></div>
     <div class="subp" data-p="odds"><div class="subbar"><button type="button" class="shareb" data-share="podds" aria-label="Share as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div><div id="podds"></div><div id="poddsx"></div></div>
     <div class="subp" data-p="br" hidden><div id="playoffs"></div></div>
-    <div class="subp" data-p="pj" hidden><div id="pproj"></div></div>
   </section>
 
 
@@ -552,7 +552,7 @@ td{white-space:nowrap}
   <section id="about" class="list" hidden>
     <button type="button" class="howback" data-back>← Back</button>
     <div class="head2"><h2>The Slapshot.Media Model</h2></div>
-    <div class="why"><p>All team stats come from <b>NHL.com</b>.</p></div>
+    <div class="why"><p>All team stats come from <b>NHL.com</b>. We use <b>real goals</b> scored and allowed, not expected goals (xG). What actually went in the net.</p></div>
 
     <div class="fx">
       <div class="fxrow"><span class="fxn">1</span><div><b>Away goals</b><p>(Away team's <u>road</u> goals for per game + Home team's <u>home</u> goals against per game) ÷ 2</p></div></div>
