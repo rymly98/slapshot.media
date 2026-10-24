@@ -291,8 +291,8 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .howlink:hover{color:#fff}.howlink.ft{font-size:16px}
 .howback{font:inherit;font-family:var(--display);font-size:16px;text-transform:uppercase;letter-spacing:.04em;color:#fff;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;justify-self:start}
 .subh{margin-top:14px}
-.tabs{flex-wrap:nowrap!important}.tab{flex:1 1 0;min-width:0;white-space:nowrap}
-@media (max-width:620px){.tab{padding:9px 2px!important;font-size:15px!important;letter-spacing:.01em!important}}@media (max-width:400px){.tab{font-size:13.5px!important}.tabs{gap:3px!important}}@media (max-width:370px){.tab{font-size:12.5px!important;padding:9px 1px!important}}
+.tabs{flex-wrap:nowrap!important}.tab{flex:1 1 auto!important;min-width:0;white-space:nowrap}
+@media (max-width:620px){.tab{padding:9px 6px!important;font-size:15px!important;letter-spacing:.01em!important}}@media (max-width:440px){.tab{font-size:14px!important;padding:9px 4px!important}}@media (max-width:400px){.tab{font-size:13px!important}.tabs{gap:3px!important}}@media (max-width:370px){.tab{font-size:12.5px!important;padding:9px 3px!important}}
 .prw,.prh{grid-template-columns:34px 26px minmax(0,1fr) 30px 36px 74px!important}
 .prw .pq{text-align:right;font-family:var(--display);font-size:18px;color:#F5B316}
 .prh span:last-child{text-align:right}
@@ -496,6 +496,7 @@ td{white-space:nowrap}
     <button class="tab" role="tab" id="tab-stand" aria-controls="stand" aria-selected="false" type="button">Standings</button>
     <button class="tab" role="tab" id="tab-po" aria-controls="po" aria-selected="false" type="button">Playoffs</button>
     <button class="tab" role="tab" id="tab-record" aria-controls="record" aria-selected="false" type="button">The Race</button>
+    <button class="tab" role="tab" id="tab-about" aria-controls="about" aria-selected="false" type="button">Model</button>
   </div>
 
   <section id="tue" role="tabpanel" aria-labelledby="tab-tue" class="list">
@@ -503,7 +504,6 @@ td{white-space:nowrap}
     <div class="subseg" role="group" data-g="td"><button type="button" data-sub="od" aria-pressed="true">Our odds</button><button type="button" data-sub="tn" aria-pressed="false">Vs our friends</button></div>
     <div class="subp" data-p="od">
     <div class="qc" id="quick"></div>
-    <button type="button" class="howlink" data-how>How our model works →</button>
     </div>
     <div class="subp" data-p="tn" hidden>
       <div class="secth"><div><div class="secth-t">Tonight's picks</div><div class="secth-s">Our pick vs our friends in Vegas, New York &amp; Boston</div></div></div>
@@ -568,8 +568,7 @@ td{white-space:nowrap}
     </details>
   </section>
 
-  <section id="about" class="list" hidden>
-    <button type="button" class="howback" data-back>← Back</button>
+  <section id="about" role="tabpanel" aria-labelledby="tab-about" class="list" hidden>
     <div class="head2"><h2>The Slapshot.Media Model</h2></div>
     <div class="why"><p>All team stats come from <b>NHL.com</b>. We use <b>real goals</b> scored and allowed, not expected goals (xG). What actually went in the net.</p></div>
 
@@ -593,7 +592,6 @@ td{white-space:nowrap}
     <a href="https://www.tiktok.com/@slapshot.media" target="_blank" rel="noopener">TikTok</a>
   </div>
   <p class="follow">Odds posted daily · <b>@SLAPSHOT.MEDIA</b></p>
-  <p class="follow"><button type="button" class="howlink ft" data-how>How our model works</button></p>
   <p class="fine"><span id="upd"></span>Not affiliated with the NHL.</p>
 </div>
 
