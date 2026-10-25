@@ -8,6 +8,9 @@ if req.get("names"):
     rows=get("https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=true&isGame=false&limit=-1&cayenneExp=seasonId=20252026%20and%20gameTypeId=2")["data"]
     for n in req["names"]:
         ids+= [r["playerId"] for r in rows if r["skaterFullName"].lower()==n.lower()][:1]
+for team,name in req.get("roster",[]):
+    ro=get(f"https://api-web.nhle.com/v1/roster/{team}/current")
+    ids+=[p["id"] for k in ("forwards","defensemen","goalies") for p in ro.get(k,[]) if f'{p["firstName"]["default"]} {p["lastName"]["default"]}'.lower()==name.lower()][:1]
 for pid in ids:
     d=get(f"https://api-web.nhle.com/v1/player/{pid}/landing")
     out[str(pid)]={"name":d["firstName"]["default"]+" "+d["lastName"]["default"],"birthDate":d.get("birthDate"),"team":d.get("currentTeamAbbrev"),
