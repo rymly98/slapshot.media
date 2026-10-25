@@ -1,37 +1,41 @@
 {
  "checks": [
   [
-   "Nov model (season overall) 2026-10-18",
+   "Nov model (season overall) 2026-10-24",
    "OK",
    [
-    "CBJ@MIN 44.1-55.9",
-    "CAR@CGY 66.9-33.1"
+    "ANA@PHI 54.1-45.9",
+    "LAK@NJD 43.4-56.6",
+    "SJS@BOS 40.9-59.1",
+    "NYR@OTT 50.2-49.8"
    ]
   ],
   [
-   "Dec model (home/road) 2026-10-18",
+   "Dec model (home/road) 2026-10-24",
    "OK",
    [
-    "CBJ@MIN 36.4-63.6",
-    "CAR@CGY 70.1-29.9"
+    "ANA@PHI 56.5-43.5",
+    "LAK@NJD 41.9-58.1",
+    "SJS@BOS 37.2-62.8",
+    "NYR@OTT 41.0-59.0"
    ]
   ],
   [
    "Future day standings fallback",
    "OK",
-   2
+   11
   ],
   [
    "Full morning update (scratch copy)",
    "OK",
    {
-    "gameday": "2026-10-18",
-    "games": 2,
-    "race_thru": "2026-10-17",
+    "gameday": "2026-10-24",
+    "games": 12,
+    "race_thru": "2026-10-23",
     "standings_teams": 32
    }
   ]
  ],
  "ok": true,
- "ran": "2026-10-18 17:52 ET"
+ "ran": "2026-10-24 23:05 ET"
 }
