@@ -561,14 +561,19 @@ td{white-space:nowrap}
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
     <div class="head2"><h2>The Race</h2><button type="button" class="shareb" data-share="race" aria-label="Share the race as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
-    <div class="rboard" id="rboard"></div>
+    <div class="subseg" role="group" data-g="rc"><button type="button" data-sub="lb" aria-pressed="true">Leaderboard</button><button type="button" data-sub="ln" aria-pressed="false">Last night</button><button type="button" data-sub="ch" aria-pressed="false">Season chart</button></div>
+    <div class="subp" data-p="lb"><div class="rboard" id="rboard"></div></div>
+    <div class="subp" data-p="ln" hidden>
     <div class="lastnight">
       <div class="ln-h"><span class="ln-t">Last night</span><span class="ln-s" id="lndate"></span></div>
       <div id="lastnight"></div>
     </div>
+    </div>
+    <div class="subp" data-p="ch" hidden>
     <div class="chartcard big">
       <div class="ch-t">Win % over the season</div>
       <div class="chartwrap" id="chart"></div>
+    </div>
     </div>
   </section>
 
@@ -950,7 +955,7 @@ function showTab(id,save){id=OLD[id]||id;if(!PANES.includes(id))id="tue";
 document.querySelectorAll(".subseg").forEach(g=>{const sec=g.closest("section");g.querySelectorAll("[data-sub]").forEach(b=>b.addEventListener("click",()=>{
   const k=b.dataset.sub;g.querySelectorAll("[data-sub]").forEach(x=>x.setAttribute("aria-pressed",x===b));
   sec.querySelectorAll(".subp").forEach(p=>p.hidden=p.dataset.p!==k);
-  if(k==="rec")drawChart();if(k==="race")renderStandings(true);
+  if(k==="ch")drawChart();if(k==="race")renderStandings(true);
   if(window.gtag)gtag("event","sub_view",{sub:k});}));});
 tabs.forEach(t=>t.addEventListener("click",()=>showTab(t.getAttribute("aria-controls"),true)));
 document.querySelectorAll("[data-how]").forEach(b=>b.addEventListener("click",()=>{showTab("about",false);scrollTo(0,0);}));
