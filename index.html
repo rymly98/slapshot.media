@@ -334,6 +334,20 @@ h2{font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppe
 .secth-s{font-size:13px;color:var(--muted);margin-top:3px}
 .shareb.sm{flex:none}
 .logwrap{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+.rboard{padding:18px 16px 14px!important}
+.rh{text-align:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.rh-k{font-family:var(--num);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rh-big{font-family:var(--display);font-size:84px;line-height:.95;text-transform:uppercase;text-shadow:4px 4px 0 var(--maroon-deep)}
+.rh-s{font-family:var(--display);font-size:22px;color:#F5B316;text-transform:uppercase;letter-spacing:.02em}
+.rh-r{font-size:13.5px;color:var(--muted);margin-top:4px}
+.rbars{display:grid;gap:12px;margin-top:14px}
+.rbr{display:grid;grid-template-columns:128px 1fr;align-items:center;gap:10px;padding:6px 8px;border-radius:10px}
+.rbr.me{background:var(--maroon-soft);outline:1px solid var(--maroon)}
+.rbn{font-family:var(--display);font-size:18px;white-space:nowrap;text-transform:uppercase;display:grid;grid-template-columns:18px 1fr;column-gap:6px;line-height:1.05}
+.rbn span{grid-row:span 2;color:var(--muted);font-size:17px;align-self:center}.rbn small{font-family:var(--num);font-size:12px;color:var(--muted);letter-spacing:.04em}
+.rbt{display:flex;align-items:center;gap:8px}.rbf{height:22px;border-radius:6px;transition:width .5s ease}
+.rbt b{font-family:var(--display);font-weight:400;font-size:20px;white-space:nowrap}
+.rnote{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px}
 .gbg{margin-top:10px;scroll-margin-top:12px}
 html{scroll-behavior:smooth}
 .qjump{justify-self:center;border:0;cursor:pointer;font-family:var(--display);font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:#fff;text-decoration:none;background:var(--maroon);border-radius:8px;padding:9px 18px;margin-top:4px}
@@ -547,7 +561,6 @@ td{white-space:nowrap}
 
   <section id="record" role="tabpanel" aria-labelledby="tab-record" class="list" hidden>
     <div class="head2"><h2>The Race</h2><button type="button" class="shareb" data-share="race" aria-label="Share the race as image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Share</button></div>
-    <p class="recblurb top">We pick every game. So do our friends in <b>Vegas</b>, <b>New York</b> and <b>Boston</b>. Here's who's winning.</p>
     <div class="rboard" id="rboard"></div>
     <div class="lastnight">
       <div class="ln-h"><span class="ln-t">Last night</span><span class="ln-s" id="lndate"></span></div>
@@ -704,10 +717,14 @@ function renderLastNight(){
 }
 function renderRace(){
   const el=document.getElementById("rboard"); if(!el)return;
-  const rows=SRC.map(([k,n,c])=>({k,n,c,t:tally(R,k)})).sort((a,b)=>(b.t.p??-1)-(a.t.p??-1)),top=rows[0].t.p;
-  el.innerHTML=`<div class="rst-h"><span></span><span></span><span>W–L</span><span>Win %</span><span>Back</span></div>`+rows.map((r,i)=>{
-    const back=r.t.p==null||i===0?"—":(top-r.t.p).toFixed(1);
-    return `<div class="rst${r.k==="s"?" me":""}"><span class="rk">${i+1}</span><span class="nm"><i style="background:${r.c}"></i>${r.n}</span><span class="wl">${r.t.w}–${r.t.l}</span><span class="pc">${r.t.p==null?"—":r.t.p.toFixed(1)+"%"}</span><span class="bk">${back}</span></div>`}).join("");
+  const rows=SRC.map(([k,n,c])=>({k,n,c,t:tally(R,k)})).sort((a,b)=>(b.t.p??-1)-(a.t.p??-1));
+  const me=rows.findIndex(x=>x.k==="s"),mt=rows[me].t,top=rows[0].t.p,ord=["1st","2nd","3rd","4th"][me];
+  const sub=mt.p==null?"Results start after opening night":me===0?`Leading by ${(mt.p-rows[1].t.p).toFixed(1)}%`:`${(top-mt.p).toFixed(1)}% behind ${rows[0].n}`;
+  const ps=rows.map(x=>x.t.p).filter(v=>v!=null),lo=Math.max(0,Math.floor(Math.min(...ps)/5)*5-5),hi=Math.ceil(Math.max(...ps)/5)*5;
+  el.innerHTML=`<div class="rh"><div class="rh-k">Slapshot model this season</div><div class="rh-big">${mt.w}–${mt.l}</div><div class="rh-s">${mt.p==null?"—":mt.p.toFixed(1)+"% right"}</div><div class="rh-r">${sub}</div></div>
+  <div class="rbars">${rows.map((x,i)=>{const w=x.t.p==null?0:Math.max(4,(x.t.p-lo)/(hi-lo)*100);
+    return `<div class="rbr${x.k==="s"?" me":""}"><div class="rbn"><span>${i+1}</span>${x.n}<small>${x.t.w}–${x.t.l}</small></div><div class="rbt"><div class="rbf" style="width:${w}%;background:${x.c}"></div><b>${x.t.p==null?"—":x.t.p.toFixed(1)+"%"}</b></div></div>`}).join("")}</div>
+  <div class="rnote">We pick every game. So do our friends in Vegas, New York &amp; Boston.</div>`;
 }
 function renderRecord(){renderLastNight();renderRace();{const rt=document.getElementById("rectop");if(rt)rt.innerHTML=recStrip();}renderTonight();
   const last=[...new Set(R.map(r=>r.d))].sort().pop(),ty=tally(R.filter(r=>r.d===last),"s"),ts=tally(R,"s");
