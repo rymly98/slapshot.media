@@ -36,30 +36,6 @@
   "ppp": 6
  },
  {
-  "team": "TOR",
-  "id": 8479318,
-  "name": "Auston Matthews",
-  "pos": "C",
-  "gp": 12,
-  "g": 8,
-  "a": 10,
-  "p": 18,
-  "pm": 5,
-  "ppp": 7
- },
- {
-  "team": "TOR",
-  "id": 8477939,
-  "name": "William Nylander",
-  "pos": "R",
-  "gp": 12,
-  "g": 6,
-  "a": 10,
-  "p": 16,
-  "pm": -3,
-  "ppp": 6
- },
- {
   "team": "EDM",
   "id": 8481617,
   "name": "Vasily Podkolzin",
@@ -72,78 +48,6 @@
   "ppp": 6
  },
  {
-  "team": "TOR",
-  "id": 8480893,
-  "name": "Kirill Marchenko",
-  "pos": "R",
-  "gp": 12,
-  "g": 6,
-  "a": 6,
-  "p": 12,
-  "pm": -4,
-  "ppp": 7
- },
- {
-  "team": "TOR",
-  "id": 8484158,
-  "name": "Easton Cowan",
-  "pos": "R",
-  "gp": 12,
-  "g": 5,
-  "a": 6,
-  "p": 11,
-  "pm": 1,
-  "ppp": 1
- },
- {
-  "team": "TOR",
-  "id": 8478458,
-  "name": "Jack Roslovic",
-  "pos": "C",
-  "gp": 12,
-  "g": 4,
-  "a": 6,
-  "p": 10,
-  "pm": 0,
-  "ppp": 1
- },
- {
-  "team": "TOR",
-  "id": 8476853,
-  "name": "Morgan Rielly",
-  "pos": "D",
-  "gp": 12,
-  "g": 0,
-  "a": 8,
-  "p": 8,
-  "pm": -4,
-  "ppp": 1
- },
- {
-  "team": "TOR",
-  "id": 8486067,
-  "name": "Gavin McKenna",
-  "pos": "L",
-  "gp": 12,
-  "g": 3,
-  "a": 4,
-  "p": 7,
-  "pm": -6,
-  "ppp": 3
- },
- {
-  "team": "TOR",
-  "id": 8475166,
-  "name": "John Tavares",
-  "pos": "C",
-  "gp": 7,
-  "g": 2,
-  "a": 5,
-  "p": 7,
-  "pm": -5,
-  "ppp": 4
- },
- {
   "team": "EDM",
   "id": 8478472,
   "name": "Mathieu Joseph",
@@ -154,42 +58,6 @@
   "p": 5,
   "pm": -2,
   "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8477426,
-  "name": "Nick Paul",
-  "pos": "L",
-  "gp": 12,
-  "g": 2,
-  "a": 3,
-  "p": 5,
-  "pm": -2,
-  "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8476925,
-  "name": "Colton Sissons",
-  "pos": "C",
-  "gp": 12,
-  "g": 2,
-  "a": 3,
-  "p": 5,
-  "pm": 0,
-  "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8478178,
-  "name": "Darren Raddysh",
-  "pos": "D",
-  "gp": 12,
-  "g": 0,
-  "a": 5,
-  "p": 5,
-  "pm": -2,
-  "ppp": 3
  },
  {
   "team": "EDM",
@@ -264,18 +132,6 @@
   "ppp": 0
  },
  {
-  "team": "TOR",
-  "id": 8479520,
-  "name": "Brandon Duhaime",
-  "pos": "L",
-  "gp": 12,
-  "g": 1,
-  "a": 2,
-  "p": 3,
-  "pm": 1,
-  "ppp": 0
- },
- {
   "team": "EDM",
   "id": 8476454,
   "name": "Ryan Nugent-Hopkins",
@@ -288,47 +144,11 @@
   "ppp": 2
  },
  {
-  "team": "TOR",
-  "id": 8476927,
-  "name": "Teddy Blueger",
-  "pos": "C",
-  "gp": 12,
-  "g": 1,
-  "a": 1,
-  "p": 2,
-  "pm": -2,
-  "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8479442,
-  "name": "Troy Stecher",
-  "pos": "D",
-  "gp": 12,
-  "g": 1,
-  "a": 1,
-  "p": 2,
-  "pm": 1,
-  "ppp": 0
- },
- {
   "team": "EDM",
   "id": 8483455,
   "name": "Isaac Howard",
   "pos": "L",
   "gp": 10,
-  "g": 0,
-  "a": 2,
-  "p": 2,
-  "pm": 0,
-  "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8479772,
-  "name": "Zack MacEwen",
-  "pos": "R",
-  "gp": 6,
   "g": 0,
   "a": 2,
   "p": 2,
@@ -369,30 +189,6 @@
   "a": 0,
   "p": 1,
   "pm": -5,
-  "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8483565,
-  "name": "Nick Blankenburg",
-  "pos": "D",
-  "gp": 6,
-  "g": 1,
-  "a": 0,
-  "p": 1,
-  "pm": -3,
-  "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8483546,
-  "name": "Marshall Rifai",
-  "pos": "D",
-  "gp": 2,
-  "g": 1,
-  "a": 0,
-  "p": 1,
-  "pm": 0,
   "ppp": 0
  },
  {
@@ -444,39 +240,27 @@
   "ppp": 0
  },
  {
-  "team": "TOR",
-  "id": 8475171,
-  "name": "Oliver Ekman-Larsson",
-  "pos": "D",
-  "gp": 12,
-  "g": 0,
-  "a": 1,
-  "p": 1,
-  "pm": -2,
-  "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8476931,
-  "name": "Jake McCabe",
-  "pos": "D",
-  "gp": 12,
-  "g": 0,
-  "a": 1,
-  "p": 1,
-  "pm": -1,
-  "ppp": 0
- },
- {
-  "team": "TOR",
-  "id": 8475690,
-  "name": "Chris Tanev",
-  "pos": "D",
+  "team": "EDM",
+  "id": 8482703,
+  "name": "Colton Dach",
+  "pos": "C",
   "gp": 6,
   "g": 0,
-  "a": 1,
-  "p": 1,
-  "pm": 1,
+  "a": 0,
+  "p": 0,
+  "pm": -5,
+  "ppp": 0
+ },
+ {
+  "team": "EDM",
+  "id": 8479368,
+  "name": "Max Jones",
+  "pos": "L",
+  "gp": 5,
+  "g": 0,
+  "a": 0,
+  "p": 0,
+  "pm": -4,
   "ppp": 0
  }
 ]
