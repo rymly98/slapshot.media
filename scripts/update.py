@@ -185,8 +185,16 @@ def add_leaders(data):
         pl = [by_id[i] for i in ids if i in by_id]
         if not pl:
             continue
-        name = lambda r: r["skaterFullName"].split(" ", 1)[-1]
-        top = lambda k: (lambda r: [name(r), r[k]])(max(pl, key=lambda r: (r[k], r["points"])))
+        last = lambda r: r["skaterFullName"].split(" ", 1)[-1]
+        dup = {l for l in map(last, pl) if sum(last(x) == l for x in pl) > 1}
+        name = lambda r: (r["skaterFullName"][0] + ". " + last(r)) if last(r) in dup else last(r)
+
+        def top(k):
+            # every player tied for the team lead is listed (up to 3), best points first
+            hi = max(r[k] for r in pl)
+            tied = sorted([r for r in pl if r[k] == hi], key=lambda r: -r["points"])
+            names = " / ".join(name(r) for r in tied[:3]) + (f" +{len(tied) - 3}" if len(tied) > 3 else "")
+            return [names, hi]
         lead[t] = {"g": top("goals"), "a": top("assists"), "p": top("points")}
     for g in data["games"]:
         g["lead"] = {"a": lead.get(g["a"]), "h": lead.get(g["h"]), "season": lbl}

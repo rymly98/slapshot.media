@@ -360,7 +360,7 @@ html{scroll-behavior:smooth}
 .leaders{max-width:420px;margin:12px auto 4px}
 .lh{text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px}
 .lgrid{display:grid;grid-template-columns:1fr auto 1fr;row-gap:8px;column-gap:12px;align-items:center}
-.lv{font-size:15px;color:#E6E7EA}.lv.r{text-align:right}.lv b{font-family:var(--num);font-size:19px;color:#fff}
+.lv{font-size:15px;color:#E6E7EA;display:flex;flex-direction:column;line-height:1.15}.lv.r{text-align:right;align-items:flex-end}.lv b{font-family:var(--num);font-size:21px;color:#fff}.lv small{font-size:14px;color:#E6E7EA}
 .datacard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:6px}
 .datacard .dh{font-family:var(--display);font-size:18px;text-transform:uppercase;letter-spacing:.04em}
 .dr{display:grid;grid-template-columns:auto 1fr;gap:10px;font-size:14px;color:var(--muted);align-items:baseline}
@@ -681,7 +681,7 @@ function gxBody(g){
     ["GF/G",A[3].toFixed(2),H[3].toFixed(2),A[3],H[3],true],["GA/G",A[4].toFixed(2),H[4].toFixed(2),A[4],H[4],false],
     ["PP%",A[5].toFixed(1)+"%",H[5].toFixed(1)+"%",A[5],H[5],true],["PK%",A[6].toFixed(1)+"%",H[6].toFixed(1)+"%",A[6],H[6],true]];
   const tie=g.hp===g.ap, homeFav=g.hp>g.ap, pick=tie?"Toss-up":(homeFav?g.h:g.a), pct=tie?"50.0%":(homeFav?g.hp:g.ap).toFixed(1)+"%";
-  const L=g.lead, lr=(k,n)=>`<span class="lv">${L.a[k][0]} <b>${L.a[k][1]}</b></span><span class="nl">${n}</span><span class="lv r">${L.h[k][0]} <b>${L.h[k][1]}</b></span>`;
+  const L=g.lead, lr=(k,n)=>`<span class="lv"><b>${L.a[k][1]}</b><small>${L.a[k][0].replace(/ \/ /g,"<br>")}</small></span><span class="nl">${n}</span><span class="lv r"><b>${L.h[k][1]}</b><small>${L.h[k][0].replace(/ \/ /g,"<br>")}</small></span>`;
   return `<div class="gxb">
     <div class="pick me"><span class="who">Slapshot pick</span><span class="val">${pick} ${pct}</span></div>
     <div class="gxp">Projected goals: ${g.a} ${g.ag.toFixed(2)} – ${g.h} ${g.hg.toFixed(2)} · <b>Total ${(g.ag+g.hg).toFixed(2)}</b></div>
