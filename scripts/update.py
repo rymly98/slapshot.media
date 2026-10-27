@@ -316,7 +316,8 @@ def main():
         n = log_results(data, y)
         notes.append(f"logged {n} result(s) for {y}")
         gd = next_game_day(today, picks)
-        if gd and gd != data.get("gameday"):
+        stale = bool(gd) and gd in picks and [(g["a"], g["ap"]) for g in data.get("games", [])] != [(g["a"], g["ap"]) for g in picks[gd]]
+        if gd and (gd != data.get("gameday") or stale):
             games = games_for(gd, picks)
             for g in games:
                 g["b"] = {}
