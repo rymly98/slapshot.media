@@ -62,7 +62,7 @@ def model_games(day, split=None):
         a = t["teamAbbrev"]["default"] if isinstance(t["teamAbbrev"], dict) else t["teamAbbrev"]
         st[a] = t
     if split is None:
-        split = datetime.strptime(day, "%Y-%m-%d").month not in (10, 11)   # Oct 26 - Nov: overall; Dec on: splits
+        split = datetime.strptime(day, "%Y-%m-%d").month not in (11,)
     out = []
     for g in sched:
         a, h = g["awayTeam"]["abbrev"], g["homeTeam"]["abbrev"]
@@ -81,12 +81,7 @@ def model_games(day, split=None):
     return out
 
 
-SWITCH = "2026-10-26"   # Ryan switched to this season's overall GF/GA a week early (decided Oct 25)
-
-
 def games_for(day, picks):
-    if day >= SWITCH:
-        return model_games(day)
     if day in picks:
         return [dict(g) for g in picks[day]]
     if day > max(picks):
