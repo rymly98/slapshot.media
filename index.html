@@ -949,7 +949,7 @@ fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
     document.getElementById("stasof").textContent="Through "+new Date(RG&&RG.thru?RG.thru+"T12:00:00":dt).toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
   if(d.PO&&d.PO.t)PO=d.PO;
   renderGames();renderRecord();renderStandings();renderPodds();renderPlayoffs();
-  if(d.updated){const u=document.getElementById("upd");if(u){const [dt,tm]=d.updated.split(" ");u.textContent="Updated "+new Date(dt+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+", "+d.updated.slice(11)+" · ";}}
+  if(d.updated){const u=document.getElementById("upd");if(u){const [dt,tm]=d.updated.split(" ");u.textContent="Updated "+new Date(dt+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · ";}}
   if(ST){const pa=document.getElementById("poasof");if(pa)pa.textContent=document.getElementById("stasof").textContent;}
 }).catch(()=>{document.getElementById("quick").innerHTML='<p class="muted">Couldn\'t load today\'s odds. Refresh to try again.</p>';renderRecord();renderStandings();});
 let rz;addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(drawChart,150)});
