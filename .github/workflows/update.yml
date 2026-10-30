@@ -3,7 +3,7 @@ name: Daily site update
 on:
   schedule:
     - cron: "53 8 * * *"    # 4:53am ET (EDT). In winter (EST) this runs at 3:53am.
-    # Backups: GitHub sometimes drops scheduled runs. Re-runs are safe (the script skips work already done).
+    # Backups: only run if the morning update hasn't already succeeded today (see "Already done today?" step).
     - cron: "37 9 * * *"    # 5:37am ET (EDT)
     - cron: "17 10 * * *"   # 6:17am ET (EDT)
     - cron: "7 11 * * *"    # 7:07am ET (EDT)
@@ -34,11 +34,26 @@ jobs:
         with:
           ref: main
 
+      - name: Already done today?
+        id: gate
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, datetime, zoneinfo
+          today = datetime.datetime.now(zoneinfo.ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+          try: lr = json.load(open("data/last-run.json"))
+          except Exception: lr = {}
+          done = "${{ github.event_name }}" == "schedule" and lr.get("date") == today and not str(lr.get("result","")).startswith("FAILED")
+          print("skip=" + ("true" if done else "false"))
+          PY
+          cat "$GITHUB_OUTPUT"
+
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.skip != 'true'
         with:
           python-version: "3.12"
 
       - name: Update data.json
+        if: steps.gate.outputs.skip != 'true'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
@@ -48,7 +63,7 @@ jobs:
           python scripts/update.py "$MODE" > result.txt 2>&1 || echo "FAILED: $(tail -1 result.txt)" >> result.txt; cat result.txt
 
       - name: Publish
-        if: always()
+        if: always() && steps.gate.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -71,7 +86,7 @@ jobs:
           echo "Uploaded to GitHub."
 
       - name: Flag failures
-        if: always()
+        if: always() && steps.gate.outputs.skip != 'true'
         run: |
           cat result.txt
           if grep -q FAILED result.txt; then echo "::error::$(cat result.txt)"; exit 1; fi
