@@ -1,41 +1,62 @@
 {
  "checks": [
   [
-   "Nov model (season overall) 2026-10-25",
+   "Nov model (season overall) 2026-10-31",
    "OK",
    [
-    "FLA@CHI 56.5-43.5",
-    "NYI@DAL 46.0-54.0",
-    "MTL@WPG 50.8-49.2",
-    "COL@NSH 57.5-42.5"
+    "CHI@BOS 37.5-62.5",
+    "STL@DET 50.7-49.3",
+    "TBL@NSH 53.7-46.3",
+    "EDM@NYI 52.3-47.7"
    ]
   ],
   [
-   "Dec model (home/road) 2026-10-25",
+   "Dec model (home/road) 2026-10-31",
    "OK",
    [
-    "FLA@CHI 51.3-48.7",
-    "NYI@DAL 41.6-58.4",
-    "MTL@WPG 53.3-46.7",
-    "COL@NSH 53.4-46.6"
+    "CHI@BOS 25.2-74.8",
+    "STL@DET 48.7-51.3",
+    "TBL@NSH 46.9-53.1",
+    "EDM@NYI 55.4-44.6"
+   ]
+  ],
+  [
+   "Blend model (Feb-Apr + this season) 2026-10-31",
+   "OK",
+   [
+    "CHI@BOS 33.9-66.1",
+    "STL@DET 53.2-46.8",
+    "TBL@NSH 47.8-52.2",
+    "EDM@NYI 54.0-46.0"
+   ]
+  ],
+  [
+   "Blend model 2026-11-01",
+   "OK",
+   [
+    "WPG@CAR 42.8-57.2",
+    "MIN@WSH 45.2-54.8",
+    "UTA@PHI 55.0-45.0",
+    "EDM@NYR 49.5-50.5",
+    "OTT@ANA 53.1-46.9"
    ]
   ],
   [
    "Future day standings fallback",
    "OK",
-   4
+   11
   ],
   [
    "Full morning update (scratch copy)",
    "OK",
    {
-    "gameday": "2026-10-25",
-    "games": 5,
-    "race_thru": "2026-10-24",
+    "gameday": "2026-10-31",
+    "games": 10,
+    "race_thru": "2026-10-30",
     "standings_teams": 32
    }
   ]
  ],
  "ok": true,
- "ran": "2026-10-25 20:48 ET"
+ "ran": "2026-10-31 09:28 ET"
 }
