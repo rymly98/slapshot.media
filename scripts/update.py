@@ -50,8 +50,26 @@ def label(day, n, opening=False):
 
 
 # ---------- model (only used after the saved October picks run out) ----------
-def model_games(day, split=None):
-    """Formula from the playbook. November: overall GF/GP, GA/GP. December on: home/road splits."""
+BASE_FILE = os.path.join(ROOT, "data", "scores-2025-26.json")
+BASE_FROM = "2026-02-01"   # last season Feb-Apr, blended with every game this season (tested Oct 31: best of all options)
+
+
+def blend_base():
+    """Last season's Feb-Apr home/road totals per team: {team: {"h": [gf, ga, gp], "r": [gf, ga, gp]}}."""
+    b = {}
+    for g in json.load(open(BASE_FILE))["games"]:
+        if g["d"] < BASE_FROM or g.get("as") is None or g.get("state") not in ("OFF", "FINAL"):
+            continue
+        a, h = g["a"], g["h"]
+        b.setdefault(a, {"h": [0, 0, 0], "r": [0, 0, 0]}); b.setdefault(h, {"h": [0, 0, 0], "r": [0, 0, 0]})
+        b[a]["r"][0] += g["as"]; b[a]["r"][1] += g["hs"]; b[a]["r"][2] += 1
+        b[h]["h"][0] += g["hs"]; b[h]["h"][1] += g["as"]; b[h]["h"][2] += 1
+    return b
+
+
+def model_games(day, split="blend"):
+    """Formula from the playbook. Default ("blend"): home/road GF/GA from last season's Feb-Apr plus every game
+    this season, so this season's games count more and more as the year goes on. split=True/False kept for tests."""
     sched = [g for g in get(f"https://api-web.nhle.com/v1/score/{day}").get("games", [])
              if g.get("gameType", 2) == 2]
     if not sched:
@@ -61,13 +79,18 @@ def model_games(day, split=None):
     for t in get(f"https://api-web.nhle.com/v1/standings/{sday}")["standings"]:
         a = t["teamAbbrev"]["default"] if isinstance(t["teamAbbrev"], dict) else t["teamAbbrev"]
         st[a] = t
-    if split is None:
-        split = datetime.strptime(day, "%Y-%m-%d").month not in (11,)
+    base = blend_base() if split == "blend" else {}
+    z = {"h": [0, 0, 0], "r": [0, 0, 0]}
     out = []
     for g in sched:
         a, h = g["awayTeam"]["abbrev"], g["homeTeam"]["abbrev"]
         A, H = st[a], st[h]
-        if split:
+        if split == "blend":
+            ba, bh = base.get(a, z)["r"], base.get(h, z)["h"]
+            rg, hgp = max(ba[2] + A["roadGamesPlayed"], 1), max(bh[2] + H["homeGamesPlayed"], 1)
+            a_gf = (ba[0] + A["roadGoalsFor"]) / rg; a_ga = (ba[1] + A["roadGoalsAgainst"]) / rg
+            h_gf = (bh[0] + H["homeGoalsFor"]) / hgp; h_ga = (bh[1] + H["homeGoalsAgainst"]) / hgp
+        elif split:
             a_gf = A["roadGoalsFor"] / max(A["roadGamesPlayed"], 1); a_ga = A["roadGoalsAgainst"] / max(A["roadGamesPlayed"], 1)
             h_gf = H["homeGoalsFor"] / max(H["homeGamesPlayed"], 1); h_ga = H["homeGoalsAgainst"] / max(H["homeGamesPlayed"], 1)
         else:

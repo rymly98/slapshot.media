@@ -19,6 +19,8 @@ def model(split):
     return [f'{x["a"]}@{x["h"]} {x["ap"]}-{x["hp"]}' for x in g[:4]]
 check(f"Nov model (season overall) {day}",lambda: model(False))
 check(f"Dec model (home/road) {day}",lambda: model(True))
+check(f"Blend model (Feb-Apr + this season) {day}",lambda: model("blend"))
+for _d in ("2026-11-01",): check(f"Blend model {_d}",lambda d=_d: [f'{x["a"]}@{x["h"]} {x["ap"]}-{x["hp"]}' for x in U.model_games(d)])
 check("Future day standings fallback",lambda: len(U.model_games((today+timedelta(days=3)).isoformat())))
 tmp=tempfile.mkdtemp(); shutil.copy(U.DATA,os.path.join(tmp,"data.json")); U.DATA=os.path.join(tmp,"data.json")
 def full():
