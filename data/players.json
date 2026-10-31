@@ -57,6 +57,39 @@
     }
    },
    {
+    "assists": 0,
+    "avgToi": "11:37",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 2,
+    "goals": 1,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 0,
+    "plusMinus": 0,
+    "points": 1,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 0,
+    "season": 20132014,
+    "sequence": 1,
+    "shootingPctg": 0.3333,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 3,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
     "assists": 36,
     "avgToi": "14:57",
     "faceoffWinningPctg": 0.0,
@@ -90,6 +123,39 @@
     }
    },
    {
+    "assists": 12,
+    "avgToi": "16:59",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 3,
+    "gamesPlayed": 26,
+    "goals": 10,
+    "leagueAbbrev": "NHL",
+    "otGoals": 2,
+    "pim": 14,
+    "plusMinus": 7,
+    "points": 22,
+    "powerPlayGoals": 3,
+    "powerPlayPoints": 8,
+    "season": 20142015,
+    "sequence": 1,
+    "shootingPctg": 0.1754,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 57,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
     "assists": 36,
     "avgToi": "18:13",
     "faceoffWinningPctg": 0.0,
@@ -110,6 +176,39 @@
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
     "shots": 209,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 8,
+    "avgToi": "20:09",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 17,
+    "goals": 11,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 8,
+    "plusMinus": 13,
+    "points": 19,
+    "powerPlayGoals": 3,
+    "powerPlayPoints": 4,
+    "season": 20152016,
+    "sequence": 1,
+    "shootingPctg": 0.2157,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 51,
     "teamCommonName": {
      "default": "Lightning"
     },
@@ -189,6 +288,39 @@
     }
    },
    {
+    "assists": 10,
+    "avgToi": "17:55",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 3,
+    "gamesPlayed": 17,
+    "goals": 7,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 10,
+    "plusMinus": -6,
+    "points": 17,
+    "powerPlayGoals": 2,
+    "powerPlayPoints": 9,
+    "season": 20172018,
+    "sequence": 1,
+    "shootingPctg": 0.1148,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 61,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
     "assists": 87,
     "avgToi": "19:58",
     "faceoffWinningPctg": 0.0,
@@ -209,6 +341,39 @@
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
     "shots": 246,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 2,
+    "avgToi": "21:51",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 3,
+    "goals": 0,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 19,
+    "plusMinus": -4,
+    "points": 2,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 1,
+    "season": 20182019,
+    "sequence": 1,
+    "shootingPctg": 0.0,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 9,
     "teamCommonName": {
      "default": "Lightning"
     },
@@ -255,6 +420,72 @@
     }
    },
    {
+    "assists": 27,
+    "avgToi": "21:40",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 1,
+    "gamesPlayed": 25,
+    "goals": 7,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 22,
+    "plusMinus": 15,
+    "points": 34,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 12,
+    "season": 20192020,
+    "sequence": 1,
+    "shootingPctg": 0.076,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 92,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 24,
+    "avgToi": "18:18",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 23,
+    "goals": 8,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 14,
+    "plusMinus": 6,
+    "points": 32,
+    "powerPlayGoals": 4,
+    "powerPlayPoints": 19,
+    "season": 20202021,
+    "sequence": 1,
+    "shootingPctg": 0.129,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 62,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
     "assists": 44,
     "avgToi": "19:59",
     "faceoffWinningPctg": 1.0,
@@ -275,6 +506,39 @@
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
     "shots": 156,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 19,
+    "avgToi": "20:44",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 1,
+    "gamesPlayed": 23,
+    "goals": 8,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 14,
+    "plusMinus": 7,
+    "points": 27,
+    "powerPlayGoals": 6,
+    "powerPlayPoints": 11,
+    "season": 20212022,
+    "sequence": 1,
+    "shootingPctg": 0.104,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 77,
     "teamCommonName": {
      "default": "Lightning"
     },
@@ -321,6 +585,39 @@
     }
    },
    {
+    "assists": 5,
+    "avgToi": "20:16",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 6,
+    "goals": 1,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 11,
+    "plusMinus": 0,
+    "points": 6,
+    "powerPlayGoals": 1,
+    "powerPlayPoints": 4,
+    "season": 20222023,
+    "sequence": 1,
+    "shootingPctg": 0.047619,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 21,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
     "assists": 100,
     "avgToi": "21:40",
     "faceoffWinningPctg": 0.5,
@@ -341,6 +638,39 @@
     "shorthandedGoals": 0,
     "shorthandedPoints": 0,
     "shots": 306,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 7,
+    "avgToi": "21:26",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 5,
+    "goals": 0,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 2,
+    "plusMinus": -1,
+    "points": 7,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 3,
+    "season": 20232024,
+    "sequence": 1,
+    "shootingPctg": 0.0,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 9,
     "teamCommonName": {
      "default": "Lightning"
     },
@@ -387,6 +717,39 @@
     }
    },
    {
+    "assists": 4,
+    "avgToi": "22:59",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 5,
+    "goals": 0,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 2,
+    "plusMinus": 0,
+    "points": 4,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 1,
+    "season": 20242025,
+    "sequence": 1,
+    "shootingPctg": 0.0,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 7,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
     "assists": 86,
     "avgToi": "20:20",
     "faceoffWinningPctg": 0.0,
@@ -407,6 +770,39 @@
     "shorthandedGoals": 1,
     "shorthandedPoints": 1,
     "shots": 231,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 5,
+    "avgToi": "21:20",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 3,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 7,
+    "goals": 1,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 10,
+    "plusMinus": 2,
+    "points": 6,
+    "powerPlayGoals": 0,
+    "powerPlayPoints": 4,
+    "season": 20252026,
+    "sequence": 1,
+    "shootingPctg": 0.032258,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 31,
     "teamCommonName": {
      "default": "Lightning"
     },
