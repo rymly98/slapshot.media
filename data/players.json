@@ -1,354 +1,456 @@
 {
- "8479973": {
-  "name": "Stuart Skinner",
-  "birthDate": "1998-11-01",
-  "team": "WPG",
-  "position": "G",
+ "8476453": {
+  "name": "Nikita Kucherov",
+  "birthDate": "1993-06-17",
+  "team": "TBL",
+  "position": "R",
   "career": {
-   "assists": 3,
-   "gamesPlayed": 231,
-   "gamesStarted": 225,
-   "goals": 0,
-   "goalsAgainst": 616,
-   "goalsAgainstAvg": 2.768684,
-   "losses": 72,
-   "otLosses": 26,
-   "pim": 0,
-   "savePctg": 0.902396,
-   "shotsAgainst": 6301,
-   "shutouts": 9,
-   "timeOnIce": "13349:17",
-   "wins": 124
+   "assists": 734,
+   "avgToi": "19:08",
+   "faceoffWinningPctg": 0.44,
+   "gameWinningGoals": 65,
+   "gamesPlayed": 891,
+   "goals": 405,
+   "otGoals": 9,
+   "pim": 442,
+   "plusMinus": 202,
+   "points": 1139,
+   "powerPlayGoals": 105,
+   "powerPlayPoints": 406,
+   "shootingPctg": 0.1474,
+   "shorthandedGoals": 1,
+   "shorthandedPoints": 1,
+   "shots": 2746
   },
   "seasons": [
    {
-    "assists": 0,
+    "assists": 9,
+    "avgToi": "13:07",
+    "faceoffWinningPctg": 1.0,
     "gameTypeId": 2,
-    "gamesPlayed": 1,
-    "gamesStarted": 1,
-    "goals": 0,
-    "goalsAgainst": 5,
-    "goalsAgainstAvg": 5.026529,
+    "gameWinningGoals": 3,
+    "gamesPlayed": 52,
+    "goals": 9,
     "leagueAbbrev": "NHL",
-    "losses": 0,
-    "otLosses": 0,
-    "savePctg": 0.868421,
-    "season": 20202021,
+    "otGoals": 0,
+    "pim": 14,
+    "plusMinus": 3,
+    "points": 18,
+    "powerPlayGoals": 3,
+    "powerPlayPoints": 4,
+    "season": 20132014,
     "sequence": 1,
-    "shotsAgainst": 38,
-    "shutouts": 0,
+    "shootingPctg": 0.0882,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 102,
     "teamCommonName": {
-     "default": "Oilers"
+     "default": "Lightning"
     },
     "teamName": {
-     "default": "Edmonton Oilers",
-     "fr": "Oilers d'Edmonton"
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Edmonton",
-     "fr": "d'Edmonton"
-    },
-    "timeOnIce": "59:41",
-    "wins": 1
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
    },
    {
-    "assists": 0,
+    "assists": 36,
+    "avgToi": "14:57",
+    "faceoffWinningPctg": 0.0,
     "gameTypeId": 2,
-    "gamesPlayed": 13,
-    "gamesStarted": 12,
-    "goals": 0,
-    "goalsAgainst": 32,
-    "goalsAgainstAvg": 2.615267,
+    "gameWinningGoals": 2,
+    "gamesPlayed": 82,
+    "goals": 29,
     "leagueAbbrev": "NHL",
-    "losses": 6,
-    "otLosses": 0,
-    "savePctg": 0.912807,
+    "otGoals": 0,
+    "pim": 37,
+    "plusMinus": 38,
+    "points": 65,
+    "powerPlayGoals": 2,
+    "powerPlayPoints": 15,
+    "season": 20142015,
+    "sequence": 1,
+    "shootingPctg": 0.1518,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 191,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 36,
+    "avgToi": "18:13",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 2,
+    "gameWinningGoals": 4,
+    "gamesPlayed": 77,
+    "goals": 30,
+    "leagueAbbrev": "NHL",
+    "otGoals": 1,
+    "pim": 30,
+    "plusMinus": 9,
+    "points": 66,
+    "powerPlayGoals": 9,
+    "powerPlayPoints": 25,
+    "season": 20152016,
+    "sequence": 1,
+    "shootingPctg": 0.1435,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 209,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 45,
+    "avgToi": "19:26",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 2,
+    "gameWinningGoals": 7,
+    "gamesPlayed": 74,
+    "goals": 40,
+    "leagueAbbrev": "NHL",
+    "otGoals": 1,
+    "pim": 38,
+    "plusMinus": 13,
+    "points": 85,
+    "powerPlayGoals": 17,
+    "powerPlayPoints": 32,
+    "season": 20162017,
+    "sequence": 1,
+    "shootingPctg": 0.1626,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 246,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 61,
+    "avgToi": "19:49",
+    "faceoffWinningPctg": 0.6,
+    "gameTypeId": 2,
+    "gameWinningGoals": 7,
+    "gamesPlayed": 80,
+    "goals": 39,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 42,
+    "plusMinus": 15,
+    "points": 100,
+    "powerPlayGoals": 8,
+    "powerPlayPoints": 36,
+    "season": 20172018,
+    "sequence": 1,
+    "shootingPctg": 0.1398,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 279,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 87,
+    "avgToi": "19:58",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 2,
+    "gameWinningGoals": 8,
+    "gamesPlayed": 82,
+    "goals": 41,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 62,
+    "plusMinus": 24,
+    "points": 128,
+    "powerPlayGoals": 15,
+    "powerPlayPoints": 48,
+    "season": 20182019,
+    "sequence": 1,
+    "shootingPctg": 0.1667,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 246,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 52,
+    "avgToi": "18:52",
+    "faceoffWinningPctg": 0.0,
+    "gameTypeId": 2,
+    "gameWinningGoals": 6,
+    "gamesPlayed": 68,
+    "goals": 33,
+    "leagueAbbrev": "NHL",
+    "otGoals": 3,
+    "pim": 38,
+    "plusMinus": 26,
+    "points": 85,
+    "powerPlayGoals": 4,
+    "powerPlayPoints": 25,
+    "season": 20192020,
+    "sequence": 1,
+    "shootingPctg": 0.157,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 210,
+    "teamCommonName": {
+     "default": "Lightning"
+    },
+    "teamName": {
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
+    },
+    "teamPlaceNameWithPreposition": {
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
+   },
+   {
+    "assists": 44,
+    "avgToi": "19:59",
+    "faceoffWinningPctg": 1.0,
+    "gameTypeId": 2,
+    "gameWinningGoals": 1,
+    "gamesPlayed": 47,
+    "goals": 25,
+    "leagueAbbrev": "NHL",
+    "otGoals": 0,
+    "pim": 22,
+    "plusMinus": 1,
+    "points": 69,
+    "powerPlayGoals": 9,
+    "powerPlayPoints": 30,
     "season": 20212022,
     "sequence": 1,
-    "shotsAgainst": 367,
-    "shutouts": 1,
+    "shootingPctg": 0.16,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 156,
     "teamCommonName": {
-     "default": "Oilers"
+     "default": "Lightning"
     },
     "teamName": {
-     "default": "Edmonton Oilers",
-     "fr": "Oilers d'Edmonton"
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Edmonton",
-     "fr": "d'Edmonton"
-    },
-    "timeOnIce": "734:09",
-    "wins": 6
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
    },
    {
-    "assists": 2,
+    "assists": 83,
+    "avgToi": "20:08",
+    "faceoffWinningPctg": 1.0,
     "gameTypeId": 2,
-    "gamesPlayed": 50,
-    "gamesStarted": 48,
-    "goals": 0,
-    "goalsAgainst": 133,
-    "goalsAgainstAvg": 2.748798,
+    "gameWinningGoals": 4,
+    "gamesPlayed": 82,
+    "goals": 30,
     "leagueAbbrev": "NHL",
-    "losses": 14,
-    "otLosses": 5,
-    "savePctg": 0.914063,
+    "otGoals": 0,
+    "pim": 36,
+    "plusMinus": -2,
+    "points": 113,
+    "powerPlayGoals": 8,
+    "powerPlayPoints": 50,
     "season": 20222023,
     "sequence": 1,
-    "shotsAgainst": 1536,
-    "shutouts": 1,
+    "shootingPctg": 0.110701,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 271,
     "teamCommonName": {
-     "default": "Oilers"
+     "default": "Lightning"
     },
     "teamName": {
-     "default": "Edmonton Oilers",
-     "fr": "Oilers d'Edmonton"
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Edmonton",
-     "fr": "d'Edmonton"
-    },
-    "timeOnIce": "2903:05",
-    "wins": 29
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
    },
    {
-    "assists": 0,
+    "assists": 100,
+    "avgToi": "21:40",
+    "faceoffWinningPctg": 0.5,
     "gameTypeId": 2,
-    "gamesPlayed": 59,
-    "gamesStarted": 57,
-    "goals": 0,
-    "goalsAgainst": 147,
-    "goalsAgainstAvg": 2.623943,
+    "gameWinningGoals": 6,
+    "gamesPlayed": 81,
+    "goals": 44,
     "leagueAbbrev": "NHL",
-    "losses": 16,
-    "otLosses": 5,
-    "savePctg": 0.905344,
+    "otGoals": 1,
+    "pim": 22,
+    "plusMinus": 8,
+    "points": 144,
+    "powerPlayGoals": 13,
+    "powerPlayPoints": 53,
     "season": 20232024,
     "sequence": 1,
-    "shotsAgainst": 1553,
-    "shutouts": 2,
+    "shootingPctg": 0.143791,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 306,
     "teamCommonName": {
-     "default": "Oilers"
+     "default": "Lightning"
     },
     "teamName": {
-     "default": "Edmonton Oilers",
-     "fr": "Oilers d'Edmonton"
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Edmonton",
-     "fr": "d'Edmonton"
-    },
-    "timeOnIce": "3361:21",
-    "wins": 36
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
    },
    {
-    "assists": 0,
+    "assists": 84,
+    "avgToi": "21:11",
+    "faceoffWinningPctg": 0.5,
     "gameTypeId": 2,
-    "gamesPlayed": 51,
-    "gamesStarted": 50,
-    "goals": 0,
-    "goalsAgainst": 138,
-    "goalsAgainstAvg": 2.81398,
+    "gameWinningGoals": 9,
+    "gamesPlayed": 78,
+    "goals": 37,
     "leagueAbbrev": "NHL",
-    "losses": 18,
-    "otLosses": 4,
-    "savePctg": 0.895849,
+    "otGoals": 1,
+    "pim": 45,
+    "plusMinus": 22,
+    "points": 121,
+    "powerPlayGoals": 8,
+    "powerPlayPoints": 46,
     "season": 20242025,
     "sequence": 1,
-    "shotsAgainst": 1325,
-    "shutouts": 3,
+    "shootingPctg": 0.139623,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 265,
     "teamCommonName": {
-     "default": "Oilers"
+     "default": "Lightning"
     },
     "teamName": {
-     "default": "Edmonton Oilers",
-     "fr": "Oilers d'Edmonton"
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Edmonton",
-     "fr": "d'Edmonton"
-    },
-    "timeOnIce": "2942:27",
-    "wins": 26
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
    },
    {
-    "assists": 0,
+    "assists": 86,
+    "avgToi": "20:20",
+    "faceoffWinningPctg": 0.0,
     "gameTypeId": 2,
-    "gamesPlayed": 23,
-    "gamesStarted": 23,
-    "goals": 0,
-    "goalsAgainst": 62,
-    "goalsAgainstAvg": 2.825352,
+    "gameWinningGoals": 8,
+    "gamesPlayed": 76,
+    "goals": 44,
     "leagueAbbrev": "NHL",
-    "losses": 8,
-    "otLosses": 4,
-    "pim": 0,
-    "savePctg": 0.891228,
+    "otGoals": 2,
+    "pim": 50,
+    "plusMinus": 43,
+    "points": 130,
+    "powerPlayGoals": 8,
+    "powerPlayPoints": 37,
     "season": 20252026,
     "sequence": 1,
-    "shotsAgainst": 570,
-    "shutouts": 2,
+    "shootingPctg": 0.190476,
+    "shorthandedGoals": 1,
+    "shorthandedPoints": 1,
+    "shots": 231,
     "teamCommonName": {
-     "default": "Oilers"
+     "default": "Lightning"
     },
     "teamName": {
-     "default": "Edmonton Oilers",
-     "fr": "Oilers d'Edmonton"
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Edmonton",
-     "fr": "d'Edmonton"
-    },
-    "timeOnIce": "1316:39",
-    "wins": 11
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
    },
    {
-    "assists": 1,
+    "assists": 11,
+    "avgToi": "20:45",
+    "faceoffWinningPctg": 1.0,
     "gameTypeId": 2,
-    "gamesPlayed": 27,
-    "gamesStarted": 27,
-    "goals": 0,
-    "goalsAgainst": 80,
-    "goalsAgainstAvg": 2.990095,
+    "gameWinningGoals": 0,
+    "gamesPlayed": 12,
+    "goals": 4,
     "leagueAbbrev": "NHL",
-    "losses": 9,
-    "otLosses": 5,
-    "pim": 0,
-    "savePctg": 0.885222,
-    "season": 20252026,
-    "sequence": 2,
-    "shotsAgainst": 697,
-    "shutouts": 0,
-    "teamCommonName": {
-     "default": "Penguins"
-    },
-    "teamName": {
-     "default": "Pittsburgh Penguins",
-     "fr": "Penguins de Pittsburgh"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Pittsburgh",
-     "fr": "de Pittsburgh"
-    },
-    "timeOnIce": "1605:18",
-    "wins": 12
-   },
-   {
-    "assists": 0,
-    "gameTypeId": 2,
-    "gamesPlayed": 7,
-    "gamesStarted": 7,
-    "goals": 0,
-    "goalsAgainst": 19,
-    "goalsAgainstAvg": 2.672188,
-    "leagueAbbrev": "NHL",
-    "losses": 1,
-    "otLosses": 3,
-    "pim": 0,
-    "savePctg": 0.911628,
+    "otGoals": 0,
+    "pim": 6,
+    "plusMinus": 2,
+    "points": 15,
+    "powerPlayGoals": 1,
+    "powerPlayPoints": 5,
     "season": 20262027,
     "sequence": 1,
-    "shotsAgainst": 215,
-    "shutouts": 0,
+    "shootingPctg": 0.117647,
+    "shorthandedGoals": 0,
+    "shorthandedPoints": 0,
+    "shots": 34,
     "teamCommonName": {
-     "default": "Jets"
+     "default": "Lightning"
     },
     "teamName": {
-     "default": "Winnipeg Jets",
-     "fr": "Jets de Winnipeg"
+     "default": "Tampa Bay Lightning",
+     "fr": "Lightning de Tampa Bay"
     },
     "teamPlaceNameWithPreposition": {
-     "default": "Winnipeg",
-     "fr": "de Winnipeg"
-    },
-    "timeOnIce": "426:37",
-    "wins": 3
-   }
-  ]
- },
- "8484170": {
-  "name": "Jacob Fowler",
-  "birthDate": "2004-11-24",
-  "team": "MTL",
-  "position": "G",
-  "career": {
-   "assists": 0,
-   "gamesPlayed": 22,
-   "gamesStarted": 22,
-   "goals": 0,
-   "goalsAgainst": 51,
-   "goalsAgainstAvg": 2.317889,
-   "losses": 7,
-   "otLosses": 2,
-   "pim": 0,
-   "savePctg": 0.908766,
-   "shotsAgainst": 559,
-   "shutouts": 2,
-   "timeOnIce": "1320:10",
-   "wins": 13
-  },
-  "seasons": [
-   {
-    "assists": 0,
-    "gameTypeId": 2,
-    "gamesPlayed": 17,
-    "gamesStarted": 17,
-    "goals": 0,
-    "goalsAgainst": 41,
-    "goalsAgainstAvg": 2.433957,
-    "leagueAbbrev": "NHL",
-    "losses": 6,
-    "otLosses": 2,
-    "pim": 0,
-    "savePctg": 0.908482,
-    "season": 20252026,
-    "sequence": 1,
-    "shotsAgainst": 448,
-    "shutouts": 1,
-    "teamCommonName": {
-     "default": "Canadiens"
-    },
-    "teamName": {
-     "default": "Montr\u00e9al Canadiens",
-     "fr": "Canadiens de Montr\u00e9al"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Montr\u00e9al",
-     "fr": "de Montr\u00e9al"
-    },
-    "timeOnIce": "1010:42",
-    "wins": 9
-   },
-   {
-    "assists": 0,
-    "gameTypeId": 2,
-    "gamesPlayed": 5,
-    "gamesStarted": 5,
-    "goals": 0,
-    "goalsAgainst": 10,
-    "goalsAgainstAvg": 1.938819,
-    "leagueAbbrev": "NHL",
-    "losses": 1,
-    "otLosses": 0,
-    "pim": 0,
-    "savePctg": 0.90991,
-    "season": 20262027,
-    "sequence": 1,
-    "shotsAgainst": 111,
-    "shutouts": 1,
-    "teamCommonName": {
-     "default": "Canadiens"
-    },
-    "teamName": {
-     "default": "Montr\u00e9al Canadiens",
-     "fr": "Canadiens de Montr\u00e9al"
-    },
-    "teamPlaceNameWithPreposition": {
-     "default": "Montr\u00e9al",
-     "fr": "de Montr\u00e9al"
-    },
-    "timeOnIce": "309:28",
-    "wins": 4
+     "default": "Tampa Bay",
+     "fr": "de Tampa Bay"
+    }
    }
   ]
  }
