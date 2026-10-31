@@ -15,6 +15,6 @@ for pid in ids:
     d=get(f"https://api-web.nhle.com/v1/player/{pid}/landing")
     out[str(pid)]={"name":d["firstName"]["default"]+" "+d["lastName"]["default"],"birthDate":d.get("birthDate"),"team":d.get("currentTeamAbbrev"),
       "position":d.get("position"),"career":d.get("careerTotals",{}).get("regularSeason"),
-      "seasons":[s for s in d.get("seasonTotals",[]) if s.get("leagueAbbrev")=="NHL" and s.get("gameTypeId")==2]}
+      "seasons":[s for s in d.get("seasonTotals",[]) if s.get("leagueAbbrev")=="NHL" and s.get("gameTypeId") in (2,3)]}
 json.dump(out,open("data/players.json","w"),indent=1)
 print({k:(v["name"],v["career"]) for k,v in out.items()})
