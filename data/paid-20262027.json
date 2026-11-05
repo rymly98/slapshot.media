@@ -2,91 +2,91 @@
  "Leo Carlsson": {
   "playerId": 8484153,
   "teamAbbrevs": null,
-  "gamesPlayed": 8,
-  "goals": 2,
-  "assists": 7,
-  "points": 9,
+  "gamesPlayed": 15,
+  "goals": 5,
+  "assists": 17,
+  "points": 22,
   "plusMinus": -4
  },
  "Kirill Kaprizov": {
   "playerId": 8478864,
   "teamAbbrevs": null,
-  "gamesPlayed": 9,
-  "goals": 10,
-  "assists": 5,
-  "points": 15,
-  "plusMinus": 6
+  "gamesPlayed": 17,
+  "goals": 15,
+  "assists": 11,
+  "points": 26,
+  "plusMinus": 12
  },
  "Connor Bedard": {
   "playerId": 8484144,
   "teamAbbrevs": null,
-  "gamesPlayed": 3,
-  "goals": 1,
-  "assists": 2,
-  "points": 3,
-  "plusMinus": 0
+  "gamesPlayed": 10,
+  "goals": 4,
+  "assists": 8,
+  "points": 12,
+  "plusMinus": -2
  },
  "Leon Draisaitl": {
   "playerId": 8477934,
   "teamAbbrevs": null,
-  "gamesPlayed": 8,
-  "goals": 6,
-  "assists": 8,
-  "points": 14,
+  "gamesPlayed": 16,
+  "goals": 13,
+  "assists": 16,
+  "points": 29,
   "plusMinus": 15
  },
  "Adam Fantilli": {
   "playerId": 8484166,
   "teamAbbrevs": null,
-  "gamesPlayed": 7,
-  "goals": 2,
-  "assists": 1,
-  "points": 3,
-  "plusMinus": 1
+  "gamesPlayed": 13,
+  "goals": 4,
+  "assists": 2,
+  "points": 6,
+  "plusMinus": 2
  },
  "Jack Eichel": {
   "playerId": 8478403,
   "teamAbbrevs": null,
-  "gamesPlayed": 10,
-  "goals": 5,
-  "assists": 13,
-  "points": 18,
-  "plusMinus": 8
+  "gamesPlayed": 17,
+  "goals": 7,
+  "assists": 15,
+  "points": 22,
+  "plusMinus": 6
  },
  "Cutter Gauthier": {
   "playerId": 8483445,
   "teamAbbrevs": null,
-  "gamesPlayed": 7,
-  "goals": 2,
-  "assists": 3,
-  "points": 5,
-  "plusMinus": -3
+  "gamesPlayed": 14,
+  "goals": 10,
+  "assists": 5,
+  "points": 15,
+  "plusMinus": -6
  },
  "Auston Matthews": {
   "playerId": 8479318,
   "teamAbbrevs": null,
-  "gamesPlayed": 10,
-  "goals": 7,
-  "assists": 9,
-  "points": 16,
-  "plusMinus": 2
+  "gamesPlayed": 17,
+  "goals": 11,
+  "assists": 15,
+  "points": 26,
+  "plusMinus": 9
  },
  "Nathan MacKinnon": {
   "playerId": 8477492,
   "teamAbbrevs": null,
-  "gamesPlayed": 9,
-  "goals": 6,
-  "assists": 10,
-  "points": 16,
-  "plusMinus": 2
+  "gamesPlayed": 16,
+  "goals": 9,
+  "assists": 18,
+  "points": 27,
+  "plusMinus": 5
  },
  "Connor McDavid": {
   "playerId": 8478402,
   "teamAbbrevs": null,
-  "gamesPlayed": 8,
-  "goals": 6,
-  "assists": 17,
-  "points": 23,
-  "plusMinus": 19
+  "gamesPlayed": 16,
+  "goals": 9,
+  "assists": 31,
+  "points": 40,
+  "plusMinus": 20
  }
 }
