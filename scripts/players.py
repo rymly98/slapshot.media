@@ -20,4 +20,12 @@ for pid in ids:
       "position":d.get("position"),"bio":{k:d.get(k) for k in ("birthCity","birthStateProvince","birthCountry","heightInInches","weightInPounds","headshot")},"career":d.get("careerTotals",{}).get("regularSeason"),
       "seasons":[s for s in d.get("seasonTotals",[]) if s.get("leagueAbbrev")=="NHL" and s.get("gameTypeId") in (2,3)]}
 json.dump(out,open("data/players.json","w"),indent=1)
+import os
+os.makedirs("tl/hist",exist_ok=True)
+for day,ab,name in req.get("logos",[]):
+    for t in get(f"https://api-web.nhle.com/v1/standings/{day}")["standings"]:
+        a=t["teamAbbrev"]["default"] if isinstance(t["teamAbbrev"],dict) else t["teamAbbrev"]
+        if a==ab:
+            u=t["teamLogo"]; print(name,u)
+            open(f"tl/hist/{name}.svg","wb").write(urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"slapshot"}),timeout=30).read())
 print({k:(v["name"],v["career"]) for k,v in out.items()})
