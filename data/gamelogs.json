@@ -1,0 +1,3180 @@
+{
+ "players": {
+  "8476945": [
+   {
+    "gameId": 2026020279,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-11-08",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Maple Leafs"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 23,
+    "goalsAgainst": 0,
+    "savePctg": 1.0,
+    "shutouts": 1,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "TOR",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020254,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-11-05",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Blues"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 32,
+    "goalsAgainst": 4,
+    "savePctg": 0.875,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "61:00",
+    "opponentAbbrev": "STL",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020239,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-11-03",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Oilers"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 21,
+    "goalsAgainst": 3,
+    "savePctg": 0.857143,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "65:00",
+    "opponentAbbrev": "EDM",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020214,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-10-30",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Golden Knights"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 21,
+    "goalsAgainst": 2,
+    "savePctg": 0.904762,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "VGK",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020193,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-10-27",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Stars"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 18,
+    "goalsAgainst": 1,
+    "savePctg": 0.944444,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "DAL",
+    "season": 20262027
+   },
+   {
+    "gameId": 2025021290,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-04-13",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Golden Knights"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 38,
+    "goalsAgainst": 6,
+    "savePctg": 0.842105,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "VGK",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021272,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-04-11",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Flyers"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 20,
+    "goalsAgainst": 5,
+    "savePctg": 0.75,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "40:00",
+    "opponentAbbrev": "PHI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021253,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-04-09",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Blues"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 22,
+    "goalsAgainst": 2,
+    "savePctg": 0.909091,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "STL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021230,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-04-06",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Kraken"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 24,
+    "goalsAgainst": 2,
+    "savePctg": 0.916667,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "SEA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021215,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-04-04",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Blue Jackets"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 16,
+    "goalsAgainst": 1,
+    "savePctg": 0.9375,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:58",
+    "opponentAbbrev": "CBJ",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021198,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-04-02",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Stars"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 21,
+    "goalsAgainst": 3,
+    "savePctg": 0.857143,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:19",
+    "opponentAbbrev": "DAL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021186,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-03-31",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Blackhawks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 21,
+    "goalsAgainst": 3,
+    "savePctg": 0.857143,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:33",
+    "opponentAbbrev": "CHI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021162,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-03-28",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Avalanche"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 23,
+    "goalsAgainst": 2,
+    "savePctg": 0.913043,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "COL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021145,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-26",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Avalanche"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 35,
+    "goalsAgainst": 3,
+    "savePctg": 0.914286,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:53",
+    "opponentAbbrev": "COL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021131,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-24",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Golden Knights"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 27,
+    "goalsAgainst": 1,
+    "savePctg": 0.962963,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "VGK",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021099,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-03-21",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Penguins"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 32,
+    "goalsAgainst": 4,
+    "savePctg": 0.875,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "65:00",
+    "opponentAbbrev": "PIT",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021083,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-03-19",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Bruins"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 27,
+    "goalsAgainst": 6,
+    "savePctg": 0.777778,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "BOS",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021071,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-17",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Predators"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 23,
+    "goalsAgainst": 3,
+    "savePctg": 0.869565,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "63:09",
+    "opponentAbbrev": "NSH",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021045,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-14",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Avalanche"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 29,
+    "goalsAgainst": 1,
+    "savePctg": 0.965517,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:41",
+    "opponentAbbrev": "COL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021036,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-12",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Rangers"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 16,
+    "goalsAgainst": 5,
+    "savePctg": 0.6875,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:34",
+    "opponentAbbrev": "NYR",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021022,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-10",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Ducks"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 34,
+    "goalsAgainst": 3,
+    "savePctg": 0.911765,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:18",
+    "opponentAbbrev": "ANA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020996,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-07",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Canucks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 23,
+    "goalsAgainst": 2,
+    "savePctg": 0.913043,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "61:17",
+    "opponentAbbrev": "VAN",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020980,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-05",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Lightning"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 27,
+    "goalsAgainst": 1,
+    "savePctg": 0.962963,
+    "shutouts": 0,
+    "pim": 2,
+    "toi": "59:47",
+    "opponentAbbrev": "TBL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020964,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-03",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Blackhawks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 19,
+    "goalsAgainst": 2,
+    "savePctg": 0.894737,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "61:18",
+    "opponentAbbrev": "CHI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020950,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-03-01",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Sharks"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 33,
+    "goalsAgainst": 2,
+    "savePctg": 0.939394,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "61:30",
+    "opponentAbbrev": "SJS",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020933,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-02-27",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Ducks"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 40,
+    "goalsAgainst": 5,
+    "savePctg": 0.875,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "64:09",
+    "opponentAbbrev": "ANA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020895,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-02-04",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Canadiens"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 26,
+    "goalsAgainst": 4,
+    "savePctg": 0.846154,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "54:30",
+    "opponentAbbrev": "MTL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020882,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-02-02",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Stars"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 28,
+    "goalsAgainst": 4,
+    "savePctg": 0.857143,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "61:09",
+    "opponentAbbrev": "DAL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020847,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-29",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Lightning"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 36,
+    "goalsAgainst": 3,
+    "savePctg": 0.916667,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:24",
+    "opponentAbbrev": "TBL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020835,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-27",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Devils"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 29,
+    "goalsAgainst": 3,
+    "savePctg": 0.896552,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:37",
+    "opponentAbbrev": "NJD",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020815,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-24",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Red Wings"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 30,
+    "goalsAgainst": 4,
+    "savePctg": 0.866667,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:49",
+    "opponentAbbrev": "DET",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020799,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-22",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Panthers"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 20,
+    "goalsAgainst": 1,
+    "savePctg": 0.95,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "64:47",
+    "opponentAbbrev": "FLA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020776,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-19",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Blackhawks"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 23,
+    "goalsAgainst": 1,
+    "savePctg": 0.956522,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:37",
+    "opponentAbbrev": "CHI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020762,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-17",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Maple Leafs"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 37,
+    "goalsAgainst": 4,
+    "savePctg": 0.891892,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "63:08",
+    "opponentAbbrev": "TOR",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020744,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-15",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Wild"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 34,
+    "goalsAgainst": 2,
+    "savePctg": 0.941176,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:42",
+    "opponentAbbrev": "MIN",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020732,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-13",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Islanders"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 27,
+    "goalsAgainst": 4,
+    "savePctg": 0.851852,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:48",
+    "opponentAbbrev": "NYI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020711,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-11",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Devils"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 27,
+    "goalsAgainst": 3,
+    "savePctg": 0.888889,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "NJD",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020690,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-08",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Oilers"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 30,
+    "goalsAgainst": 4,
+    "savePctg": 0.866667,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:46",
+    "opponentAbbrev": "EDM",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020673,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-06",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Golden Knights"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 31,
+    "goalsAgainst": 4,
+    "savePctg": 0.870968,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "64:47",
+    "opponentAbbrev": "VGK",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020650,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-03",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Senators",
+     "fr": "S\u00e9nateurs"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 27,
+    "goalsAgainst": 4,
+    "savePctg": 0.851852,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:21",
+    "opponentAbbrev": "OTT",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020626,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-12-31",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Red Wings"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 19,
+    "goalsAgainst": 2,
+    "savePctg": 0.894737,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:32",
+    "opponentAbbrev": "DET",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020609,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-29",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Oilers"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 20,
+    "goalsAgainst": 2,
+    "savePctg": 0.9,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:24",
+    "opponentAbbrev": "EDM",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020594,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-27",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Wild"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 19,
+    "goalsAgainst": 4,
+    "savePctg": 0.789474,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:05",
+    "opponentAbbrev": "MIN",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020569,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-12-21",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Mammoth"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 22,
+    "goalsAgainst": 4,
+    "savePctg": 0.818182,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:13",
+    "opponentAbbrev": "UTA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020546,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-12-19",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Avalanche"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 26,
+    "goalsAgainst": 3,
+    "savePctg": 0.884615,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:00",
+    "opponentAbbrev": "COL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020531,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-12-17",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Blues"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 26,
+    "goalsAgainst": 1,
+    "savePctg": 0.961538,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:43",
+    "opponentAbbrev": "STL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020516,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-15",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Senators",
+     "fr": "S\u00e9nateurs"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 31,
+    "goalsAgainst": 3,
+    "savePctg": 0.903226,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "62:11",
+    "opponentAbbrev": "OTT",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020503,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-13",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Capitals"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 25,
+    "goalsAgainst": 1,
+    "savePctg": 0.96,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "WSH",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020294,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-15",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Flames"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 34,
+    "goalsAgainst": 3,
+    "savePctg": 0.911765,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "64:56",
+    "opponentAbbrev": "CGY",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020278,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-13",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Kraken"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 17,
+    "goalsAgainst": 4,
+    "savePctg": 0.764706,
+    "shutouts": 0,
+    "pim": 2,
+    "toi": "58:04",
+    "opponentAbbrev": "SEA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020263,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-11",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Canucks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 33,
+    "goalsAgainst": 3,
+    "savePctg": 0.909091,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "VAN",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020230,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-07",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Sharks"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 28,
+    "goalsAgainst": 2,
+    "savePctg": 0.928571,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:13",
+    "opponentAbbrev": "SJS",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020212,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-04",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Kings"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 25,
+    "goalsAgainst": 2,
+    "savePctg": 0.92,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:12",
+    "opponentAbbrev": "LAK",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020174,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-30",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Blackhawks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 24,
+    "goalsAgainst": 3,
+    "savePctg": 0.875,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "CHI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020157,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-10-28",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Wild"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 35,
+    "goalsAgainst": 3,
+    "savePctg": 0.914286,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:45",
+    "opponentAbbrev": "MIN",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020143,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-26",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Mammoth"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 32,
+    "goalsAgainst": 3,
+    "savePctg": 0.90625,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:07",
+    "opponentAbbrev": "UTA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020120,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-23",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Kraken"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 26,
+    "goalsAgainst": 1,
+    "savePctg": 0.961538,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:36",
+    "opponentAbbrev": "SEA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020096,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-10-20",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Flames"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 33,
+    "goalsAgainst": 1,
+    "savePctg": 0.969697,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "CGY",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020084,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-18",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Predators"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 31,
+    "goalsAgainst": 1,
+    "savePctg": 0.967742,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:51",
+    "opponentAbbrev": "NSH",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020066,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-10-16",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Flyers"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 17,
+    "goalsAgainst": 2,
+    "savePctg": 0.882353,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "PHI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020022,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-11",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Kings"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 32,
+    "goalsAgainst": 2,
+    "savePctg": 0.9375,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "LAK",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020017,
+    "teamAbbrev": "WPG",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-09",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Jets"
+    },
+    "opponentCommonName": {
+     "default": "Stars"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 37,
+    "goalsAgainst": 5,
+    "savePctg": 0.864865,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:44",
+    "opponentAbbrev": "DAL",
+    "season": 20252026
+   }
+  ],
+  "8474596": [
+   {
+    "gameId": 2026020270,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-11-07",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Islanders"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 23,
+    "goalsAgainst": 4,
+    "savePctg": 0.826087,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "61:09",
+    "opponentAbbrev": "NYI",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020201,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-10-28",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Avalanche"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 45,
+    "goalsAgainst": 5,
+    "savePctg": 0.888889,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "COL",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020169,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-10-24",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Kings"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 13,
+    "goalsAgainst": 1,
+    "savePctg": 0.923077,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "LAK",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020142,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-10-20",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Avalanche"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 34,
+    "goalsAgainst": 3,
+    "savePctg": 0.911765,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "COL",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020121,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-10-17",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Capitals"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 25,
+    "goalsAgainst": 4,
+    "savePctg": 0.84,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "WSH",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020090,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-10-13",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Red Wings"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 27,
+    "goalsAgainst": 4,
+    "savePctg": 0.851852,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "61:05",
+    "opponentAbbrev": "DET",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020071,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-10-10",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Canucks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 21,
+    "goalsAgainst": 1,
+    "savePctg": 0.952381,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "VAN",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020047,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-10-06",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Mammoth"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 31,
+    "goalsAgainst": 5,
+    "savePctg": 0.83871,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:29",
+    "opponentAbbrev": "UTA",
+    "season": 20262027
+   },
+   {
+    "gameId": 2026020009,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-10-01",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Flyers"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 25,
+    "goalsAgainst": 2,
+    "savePctg": 0.92,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "63:23",
+    "opponentAbbrev": "PHI",
+    "season": 20262027
+   },
+   {
+    "gameId": 2025021265,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-04-11",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Red Wings"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 28,
+    "goalsAgainst": 3,
+    "savePctg": 0.892857,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "DET",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021251,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-04-09",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Penguins"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 29,
+    "goalsAgainst": 4,
+    "savePctg": 0.862069,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:15",
+    "opponentAbbrev": "PIT",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021212,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-04-04",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Canadiens"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 29,
+    "goalsAgainst": 3,
+    "savePctg": 0.896552,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "64:53",
+    "opponentAbbrev": "MTL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021194,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-04-02",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Capitals"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 32,
+    "goalsAgainst": 3,
+    "savePctg": 0.90625,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "WSH",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021171,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-29",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Blackhawks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 31,
+    "goalsAgainst": 3,
+    "savePctg": 0.903226,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "CHI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021130,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-03-24",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Stars"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 27,
+    "goalsAgainst": 4,
+    "savePctg": 0.851852,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "DAL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021095,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-03-20",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Capitals"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 27,
+    "goalsAgainst": 1,
+    "savePctg": 0.962963,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:21",
+    "opponentAbbrev": "WSH",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025021050,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-03-14",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Kings"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 31,
+    "goalsAgainst": 4,
+    "savePctg": 0.870968,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "LAK",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020910,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-02-25",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Sabres"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 30,
+    "goalsAgainst": 2,
+    "savePctg": 0.933333,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "56:44",
+    "opponentAbbrev": "BUF",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020905,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-02-05",
+    "goals": 0,
+    "assists": 1,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Islanders"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 13,
+    "goalsAgainst": 2,
+    "savePctg": 0.846154,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:59",
+    "opponentAbbrev": "NYI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020866,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-31",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Senators",
+     "fr": "S\u00e9nateurs"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 33,
+    "goalsAgainst": 3,
+    "savePctg": 0.909091,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:17",
+    "opponentAbbrev": "OTT",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020835,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-27",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Jets"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 26,
+    "goalsAgainst": 4,
+    "savePctg": 0.846154,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "57:33",
+    "opponentAbbrev": "WPG",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020786,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-20",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Oilers"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 23,
+    "goalsAgainst": 1,
+    "savePctg": 0.956522,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "EDM",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020711,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-11",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Jets"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 22,
+    "goalsAgainst": 4,
+    "savePctg": 0.818182,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:09",
+    "opponentAbbrev": "WPG",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020687,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2026-01-08",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Penguins"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 29,
+    "goalsAgainst": 4,
+    "savePctg": 0.862069,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:57",
+    "opponentAbbrev": "PIT",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020660,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2026-01-04",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Hurricanes"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 29,
+    "goalsAgainst": 3,
+    "savePctg": 0.931034,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "55:44",
+    "opponentAbbrev": "CAR",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020627,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-12-31",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Blue Jackets"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 35,
+    "goalsAgainst": 2,
+    "savePctg": 0.942857,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:41",
+    "opponentAbbrev": "CBJ",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020592,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-27",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Capitals"
+    },
+    "gamesStarted": 1,
+    "decision": "O",
+    "shotsAgainst": 33,
+    "goalsAgainst": 4,
+    "savePctg": 0.878788,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "63:48",
+    "opponentAbbrev": "WSH",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020565,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-21",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Sabres"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 24,
+    "goalsAgainst": 2,
+    "savePctg": 0.916667,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "56:07",
+    "opponentAbbrev": "BUF",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020533,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-12-17",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Golden Knights"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 37,
+    "goalsAgainst": 1,
+    "savePctg": 0.972973,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "65:00",
+    "opponentAbbrev": "VGK",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020495,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-13",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Ducks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 31,
+    "goalsAgainst": 1,
+    "savePctg": 0.967742,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "ANA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020481,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-11",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Lightning"
+    },
+    "gamesStarted": 0,
+    "decision": "L",
+    "shotsAgainst": 28,
+    "goalsAgainst": 5,
+    "savePctg": 0.821429,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "52:02",
+    "opponentAbbrev": "TBL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020443,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-12-06",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Bruins"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 21,
+    "goalsAgainst": 3,
+    "savePctg": 0.857143,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:32",
+    "opponentAbbrev": "BOS",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020406,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-12-01",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Blue Jackets"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 25,
+    "goalsAgainst": 5,
+    "savePctg": 0.8,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "54:27",
+    "opponentAbbrev": "CBJ",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020379,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-28",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Sabres"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 42,
+    "goalsAgainst": 0,
+    "savePctg": 1.0,
+    "shutouts": 1,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "BUF",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020339,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-22",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Flyers"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 29,
+    "goalsAgainst": 6,
+    "savePctg": 0.793103,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:32",
+    "opponentAbbrev": "PHI",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020323,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-20",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Panthers"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 24,
+    "goalsAgainst": 1,
+    "savePctg": 0.958333,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:27",
+    "opponentAbbrev": "FLA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020288,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-15",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Capitals"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 31,
+    "goalsAgainst": 2,
+    "savePctg": 0.935484,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "65:00",
+    "opponentAbbrev": "WSH",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020231,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-11-08",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Penguins"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 34,
+    "goalsAgainst": 1,
+    "savePctg": 0.970588,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "65:00",
+    "opponentAbbrev": "PIT",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020197,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-11-02",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Ducks"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 28,
+    "goalsAgainst": 3,
+    "savePctg": 0.892857,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "58:22",
+    "opponentAbbrev": "ANA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020176,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-10-30",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Sharks"
+    },
+    "gamesStarted": 1,
+    "decision": "L",
+    "shotsAgainst": 28,
+    "goalsAgainst": 5,
+    "savePctg": 0.821429,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "SJS",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020140,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-26",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Avalanche"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 24,
+    "goalsAgainst": 3,
+    "savePctg": 0.875,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "61:53",
+    "opponentAbbrev": "COL",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020124,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-24",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Sharks"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 17,
+    "goalsAgainst": 1,
+    "savePctg": 0.941176,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "59:51",
+    "opponentAbbrev": "SJS",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020098,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-10-21",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Maple Leafs"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 25,
+    "goalsAgainst": 2,
+    "savePctg": 0.92,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "TOR",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020078,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-18",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Oilers"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 30,
+    "goalsAgainst": 3,
+    "savePctg": 0.9,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "EDM",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020064,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "H",
+    "gameDate": "2025-10-16",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Panthers"
+    },
+    "gamesStarted": 1,
+    "decision": "W",
+    "shotsAgainst": 22,
+    "goalsAgainst": 1,
+    "savePctg": 0.954545,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "60:00",
+    "opponentAbbrev": "FLA",
+    "season": 20252026
+   },
+   {
+    "gameId": 2025020045,
+    "teamAbbrev": "NJD",
+    "homeRoadFlag": "R",
+    "gameDate": "2025-10-13",
+    "goals": 0,
+    "assists": 0,
+    "commonName": {
+     "default": "Devils"
+    },
+    "opponentCommonName": {
+     "default": "Blue Jackets"
+    },
+    "gamesStarted": 1,
+    "shotsAgainst": 24,
+    "goalsAgainst": 1,
+    "savePctg": 0.958333,
+    "shutouts": 0,
+    "pim": 0,
+    "toi": "40:00",
+    "opponentAbbrev": "CBJ",
+    "season": 20252026
+   }
+  ]
+ },
+ "standings": [
+  {
+   "teamAbbrev": {
+    "default": "CAR"
+   },
+   "gamesPlayed": 19,
+   "goalFor": 78,
+   "goalAgainst": 45,
+   "wins": 14,
+   "losses": 3,
+   "otLosses": 2,
+   "points": 30,
+   "homeGamesPlayed": 8,
+   "homeGoalsFor": 34,
+   "homeGoalsAgainst": 15,
+   "roadGamesPlayed": 11,
+   "roadGoalsFor": 44,
+   "roadGoalsAgainst": 30
+  },
+  {
+   "teamAbbrev": {
+    "default": "MIN"
+   },
+   "gamesPlayed": 19,
+   "goalFor": 63,
+   "goalAgainst": 43,
+   "wins": 12,
+   "losses": 3,
+   "otLosses": 4,
+   "points": 28,
+   "homeGamesPlayed": 7,
+   "homeGoalsFor": 25,
+   "homeGoalsAgainst": 17,
+   "roadGamesPlayed": 12,
+   "roadGoalsFor": 38,
+   "roadGoalsAgainst": 26
+  },
+  {
+   "teamAbbrev": {
+    "default": "BOS"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 68,
+   "goalAgainst": 41,
+   "wins": 13,
+   "losses": 4,
+   "otLosses": 1,
+   "points": 27,
+   "homeGamesPlayed": 9,
+   "homeGoalsFor": 39,
+   "homeGoalsAgainst": 17,
+   "roadGamesPlayed": 9,
+   "roadGoalsFor": 29,
+   "roadGoalsAgainst": 24
+  },
+  {
+   "teamAbbrev": {
+    "default": "EDM"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 75,
+   "goalAgainst": 55,
+   "wins": 12,
+   "losses": 3,
+   "otLosses": 3,
+   "points": 27,
+   "homeGamesPlayed": 10,
+   "homeGoalsFor": 37,
+   "homeGoalsAgainst": 37,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 38,
+   "roadGoalsAgainst": 18
+  },
+  {
+   "teamAbbrev": {
+    "default": "NJD"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 66,
+   "goalAgainst": 51,
+   "wins": 13,
+   "losses": 5,
+   "otLosses": 0,
+   "points": 26,
+   "homeGamesPlayed": 10,
+   "homeGoalsFor": 38,
+   "homeGoalsAgainst": 25,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 28,
+   "roadGoalsAgainst": 26
+  },
+  {
+   "teamAbbrev": {
+    "default": "VGK"
+   },
+   "gamesPlayed": 19,
+   "goalFor": 64,
+   "goalAgainst": 51,
+   "wins": 12,
+   "losses": 5,
+   "otLosses": 2,
+   "points": 26,
+   "homeGamesPlayed": 9,
+   "homeGoalsFor": 34,
+   "homeGoalsAgainst": 26,
+   "roadGamesPlayed": 10,
+   "roadGoalsFor": 30,
+   "roadGoalsAgainst": 25
+  },
+  {
+   "teamAbbrev": {
+    "default": "MTL"
+   },
+   "gamesPlayed": 17,
+   "goalFor": 61,
+   "goalAgainst": 53,
+   "wins": 11,
+   "losses": 3,
+   "otLosses": 3,
+   "points": 25,
+   "homeGamesPlayed": 9,
+   "homeGoalsFor": 32,
+   "homeGoalsAgainst": 34,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 29,
+   "roadGoalsAgainst": 19
+  },
+  {
+   "teamAbbrev": {
+    "default": "TBL"
+   },
+   "gamesPlayed": 17,
+   "goalFor": 63,
+   "goalAgainst": 53,
+   "wins": 11,
+   "losses": 4,
+   "otLosses": 2,
+   "points": 24,
+   "homeGamesPlayed": 8,
+   "homeGoalsFor": 32,
+   "homeGoalsAgainst": 16,
+   "roadGamesPlayed": 9,
+   "roadGoalsFor": 31,
+   "roadGoalsAgainst": 37
+  },
+  {
+   "teamAbbrev": {
+    "default": "OTT"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 58,
+   "goalAgainst": 54,
+   "wins": 11,
+   "losses": 6,
+   "otLosses": 1,
+   "points": 23,
+   "homeGamesPlayed": 8,
+   "homeGoalsFor": 27,
+   "homeGoalsAgainst": 24,
+   "roadGamesPlayed": 10,
+   "roadGoalsFor": 31,
+   "roadGoalsAgainst": 30
+  },
+  {
+   "teamAbbrev": {
+    "default": "DAL"
+   },
+   "gamesPlayed": 17,
+   "goalFor": 49,
+   "goalAgainst": 41,
+   "wins": 10,
+   "losses": 5,
+   "otLosses": 2,
+   "points": 22,
+   "homeGamesPlayed": 10,
+   "homeGoalsFor": 29,
+   "homeGoalsAgainst": 28,
+   "roadGamesPlayed": 7,
+   "roadGoalsFor": 20,
+   "roadGoalsAgainst": 13
+  },
+  {
+   "teamAbbrev": {
+    "default": "COL"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 72,
+   "goalAgainst": 56,
+   "wins": 10,
+   "losses": 6,
+   "otLosses": 2,
+   "points": 22,
+   "homeGamesPlayed": 10,
+   "homeGoalsFor": 46,
+   "homeGoalsAgainst": 26,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 26,
+   "roadGoalsAgainst": 30
+  },
+  {
+   "teamAbbrev": {
+    "default": "NSH"
+   },
+   "gamesPlayed": 17,
+   "goalFor": 52,
+   "goalAgainst": 51,
+   "wins": 8,
+   "losses": 4,
+   "otLosses": 5,
+   "points": 21,
+   "homeGamesPlayed": 11,
+   "homeGoalsFor": 36,
+   "homeGoalsAgainst": 30,
+   "roadGamesPlayed": 6,
+   "roadGoalsFor": 16,
+   "roadGoalsAgainst": 21
+  },
+  {
+   "teamAbbrev": {
+    "default": "NYR"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 55,
+   "goalAgainst": 52,
+   "wins": 10,
+   "losses": 7,
+   "otLosses": 1,
+   "points": 21,
+   "homeGamesPlayed": 10,
+   "homeGoalsFor": 39,
+   "homeGoalsAgainst": 23,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 16,
+   "roadGoalsAgainst": 29
+  },
+  {
+   "teamAbbrev": {
+    "default": "ANA"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 69,
+   "goalAgainst": 66,
+   "wins": 10,
+   "losses": 7,
+   "otLosses": 1,
+   "points": 21,
+   "homeGamesPlayed": 8,
+   "homeGoalsFor": 31,
+   "homeGoalsAgainst": 33,
+   "roadGamesPlayed": 10,
+   "roadGoalsFor": 38,
+   "roadGoalsAgainst": 33
+  },
+  {
+   "teamAbbrev": {
+    "default": "UTA"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 63,
+   "goalAgainst": 63,
+   "wins": 10,
+   "losses": 7,
+   "otLosses": 1,
+   "points": 21,
+   "homeGamesPlayed": 6,
+   "homeGoalsFor": 24,
+   "homeGoalsAgainst": 21,
+   "roadGamesPlayed": 12,
+   "roadGoalsFor": 39,
+   "roadGoalsAgainst": 42
+  },
+  {
+   "teamAbbrev": {
+    "default": "FLA"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 56,
+   "goalAgainst": 55,
+   "wins": 9,
+   "losses": 7,
+   "otLosses": 2,
+   "points": 20,
+   "homeGamesPlayed": 6,
+   "homeGoalsFor": 25,
+   "homeGoalsAgainst": 19,
+   "roadGamesPlayed": 12,
+   "roadGoalsFor": 31,
+   "roadGoalsAgainst": 36
+  },
+  {
+   "teamAbbrev": {
+    "default": "SEA"
+   },
+   "gamesPlayed": 16,
+   "goalFor": 57,
+   "goalAgainst": 57,
+   "wins": 9,
+   "losses": 6,
+   "otLosses": 1,
+   "points": 19,
+   "homeGamesPlayed": 8,
+   "homeGoalsFor": 28,
+   "homeGoalsAgainst": 27,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 29,
+   "roadGoalsAgainst": 30
+  },
+  {
+   "teamAbbrev": {
+    "default": "BUF"
+   },
+   "gamesPlayed": 17,
+   "goalFor": 50,
+   "goalAgainst": 57,
+   "wins": 8,
+   "losses": 6,
+   "otLosses": 3,
+   "points": 19,
+   "homeGamesPlayed": 9,
+   "homeGoalsFor": 21,
+   "homeGoalsAgainst": 27,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 29,
+   "roadGoalsAgainst": 30
+  },
+  {
+   "teamAbbrev": {
+    "default": "WSH"
+   },
+   "gamesPlayed": 15,
+   "goalFor": 53,
+   "goalAgainst": 51,
+   "wins": 9,
+   "losses": 6,
+   "otLosses": 0,
+   "points": 18,
+   "homeGamesPlayed": 11,
+   "homeGoalsFor": 41,
+   "homeGoalsAgainst": 39,
+   "roadGamesPlayed": 4,
+   "roadGoalsFor": 12,
+   "roadGoalsAgainst": 12
+  },
+  {
+   "teamAbbrev": {
+    "default": "TOR"
+   },
+   "gamesPlayed": 19,
+   "goalFor": 64,
+   "goalAgainst": 64,
+   "wins": 8,
+   "losses": 9,
+   "otLosses": 2,
+   "points": 18,
+   "homeGamesPlayed": 11,
+   "homeGoalsFor": 28,
+   "homeGoalsAgainst": 36,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 36,
+   "roadGoalsAgainst": 28
+  },
+  {
+   "teamAbbrev": {
+    "default": "NYI"
+   },
+   "gamesPlayed": 16,
+   "goalFor": 47,
+   "goalAgainst": 49,
+   "wins": 7,
+   "losses": 6,
+   "otLosses": 3,
+   "points": 17,
+   "homeGamesPlayed": 9,
+   "homeGoalsFor": 28,
+   "homeGoalsAgainst": 27,
+   "roadGamesPlayed": 7,
+   "roadGoalsFor": 19,
+   "roadGoalsAgainst": 22
+  },
+  {
+   "teamAbbrev": {
+    "default": "CGY"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 46,
+   "goalAgainst": 63,
+   "wins": 8,
+   "losses": 9,
+   "otLosses": 1,
+   "points": 17,
+   "homeGamesPlayed": 10,
+   "homeGoalsFor": 33,
+   "homeGoalsAgainst": 33,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 13,
+   "roadGoalsAgainst": 30
+  },
+  {
+   "teamAbbrev": {
+    "default": "WPG"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 49,
+   "goalAgainst": 63,
+   "wins": 7,
+   "losses": 8,
+   "otLosses": 3,
+   "points": 17,
+   "homeGamesPlayed": 9,
+   "homeGoalsFor": 26,
+   "homeGoalsAgainst": 28,
+   "roadGamesPlayed": 9,
+   "roadGoalsFor": 23,
+   "roadGoalsAgainst": 35
+  },
+  {
+   "teamAbbrev": {
+    "default": "DET"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 49,
+   "goalAgainst": 56,
+   "wins": 7,
+   "losses": 8,
+   "otLosses": 3,
+   "points": 17,
+   "homeGamesPlayed": 10,
+   "homeGoalsFor": 29,
+   "homeGoalsAgainst": 31,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 20,
+   "roadGoalsAgainst": 25
+  },
+  {
+   "teamAbbrev": {
+    "default": "STL"
+   },
+   "gamesPlayed": 17,
+   "goalFor": 50,
+   "goalAgainst": 53,
+   "wins": 7,
+   "losses": 8,
+   "otLosses": 2,
+   "points": 16,
+   "homeGamesPlayed": 7,
+   "homeGoalsFor": 19,
+   "homeGoalsAgainst": 16,
+   "roadGamesPlayed": 10,
+   "roadGoalsFor": 31,
+   "roadGoalsAgainst": 37
+  },
+  {
+   "teamAbbrev": {
+    "default": "SJS"
+   },
+   "gamesPlayed": 19,
+   "goalFor": 48,
+   "goalAgainst": 69,
+   "wins": 7,
+   "losses": 11,
+   "otLosses": 1,
+   "points": 15,
+   "homeGamesPlayed": 8,
+   "homeGoalsFor": 18,
+   "homeGoalsAgainst": 27,
+   "roadGamesPlayed": 11,
+   "roadGoalsFor": 30,
+   "roadGoalsAgainst": 42
+  },
+  {
+   "teamAbbrev": {
+    "default": "CBJ"
+   },
+   "gamesPlayed": 15,
+   "goalFor": 40,
+   "goalAgainst": 47,
+   "wins": 7,
+   "losses": 8,
+   "otLosses": 0,
+   "points": 14,
+   "homeGamesPlayed": 9,
+   "homeGoalsFor": 27,
+   "homeGoalsAgainst": 26,
+   "roadGamesPlayed": 6,
+   "roadGoalsFor": 13,
+   "roadGoalsAgainst": 21
+  },
+  {
+   "teamAbbrev": {
+    "default": "PIT"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 58,
+   "goalAgainst": 65,
+   "wins": 6,
+   "losses": 10,
+   "otLosses": 2,
+   "points": 14,
+   "homeGamesPlayed": 8,
+   "homeGoalsFor": 24,
+   "homeGoalsAgainst": 24,
+   "roadGamesPlayed": 10,
+   "roadGoalsFor": 34,
+   "roadGoalsAgainst": 41
+  },
+  {
+   "teamAbbrev": {
+    "default": "PHI"
+   },
+   "gamesPlayed": 19,
+   "goalFor": 42,
+   "goalAgainst": 65,
+   "wins": 4,
+   "losses": 10,
+   "otLosses": 5,
+   "points": 13,
+   "homeGamesPlayed": 10,
+   "homeGoalsFor": 26,
+   "homeGoalsAgainst": 36,
+   "roadGamesPlayed": 9,
+   "roadGoalsFor": 16,
+   "roadGoalsAgainst": 29
+  },
+  {
+   "teamAbbrev": {
+    "default": "LAK"
+   },
+   "gamesPlayed": 15,
+   "goalFor": 45,
+   "goalAgainst": 52,
+   "wins": 5,
+   "losses": 8,
+   "otLosses": 2,
+   "points": 12,
+   "homeGamesPlayed": 7,
+   "homeGoalsFor": 20,
+   "homeGoalsAgainst": 25,
+   "roadGamesPlayed": 8,
+   "roadGoalsFor": 25,
+   "roadGoalsAgainst": 27
+  },
+  {
+   "teamAbbrev": {
+    "default": "CHI"
+   },
+   "gamesPlayed": 18,
+   "goalFor": 39,
+   "goalAgainst": 76,
+   "wins": 4,
+   "losses": 13,
+   "otLosses": 1,
+   "points": 9,
+   "homeGamesPlayed": 9,
+   "homeGoalsFor": 22,
+   "homeGoalsAgainst": 30,
+   "roadGamesPlayed": 9,
+   "roadGoalsFor": 17,
+   "roadGoalsAgainst": 46
+  },
+  {
+   "teamAbbrev": {
+    "default": "VAN"
+   },
+   "gamesPlayed": 19,
+   "goalFor": 55,
+   "goalAgainst": 87,
+   "wins": 3,
+   "losses": 15,
+   "otLosses": 1,
+   "points": 7,
+   "homeGamesPlayed": 8,
+   "homeGoalsFor": 26,
+   "homeGoalsAgainst": 37,
+   "roadGamesPlayed": 11,
+   "roadGoalsFor": 29,
+   "roadGoalsAgainst": 50
+  }
+ ]
+}
