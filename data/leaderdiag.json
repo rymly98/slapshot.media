@@ -1,0 +1,366 @@
+{
+ "summary_rows": 100,
+ "summary_total": 784,
+ "teams": {
+  "OTT": {
+   "roster": 24,
+   "found_in_summary": 5,
+   "club_keys": [
+    "playerId",
+    "headshot",
+    "firstName",
+    "lastName",
+    "positionCode",
+    "gamesPlayed",
+    "goals",
+    "assists",
+    "points",
+    "plusMinus",
+    "penaltyMinutes",
+    "powerPlayGoals",
+    "shorthandedGoals",
+    "gameWinningGoals",
+    "overtimeGoals",
+    "shots",
+    "shootingPctg",
+    "avgTimeOnIcePerGame",
+    "avgShiftsPerGame",
+    "faceoffWinPctg"
+   ],
+   "club_top_goals": [
+    [
+     "Drake Batherson",
+     8480208,
+     12,
+     10,
+     22,
+     true
+    ],
+    [
+     "Tim St\u00fctzle",
+     8482116,
+     11,
+     17,
+     28,
+     true
+    ],
+    [
+     "Shane Pinto",
+     8481596,
+     9,
+     8,
+     17,
+     true
+    ],
+    [
+     "Michael Amadio",
+     8478020,
+     7,
+     6,
+     13,
+     true
+    ]
+   ]
+  },
+  "MIN": {
+   "roster": 21,
+   "found_in_summary": 0,
+   "club_keys": [
+    "playerId",
+    "headshot",
+    "firstName",
+    "lastName",
+    "positionCode",
+    "gamesPlayed",
+    "goals",
+    "assists",
+    "points",
+    "plusMinus",
+    "penaltyMinutes",
+    "powerPlayGoals",
+    "shorthandedGoals",
+    "gameWinningGoals",
+    "overtimeGoals",
+    "shots",
+    "shootingPctg",
+    "avgTimeOnIcePerGame",
+    "avgShiftsPerGame",
+    "faceoffWinPctg"
+   ],
+   "club_top_goals": [
+    [
+     "Kirill Kaprizov",
+     8478864,
+     18,
+     25,
+     43,
+     true
+    ],
+    [
+     "Matt Boldy",
+     8481557,
+     13,
+     14,
+     27,
+     true
+    ],
+    [
+     "Danila Yurov",
+     8483525,
+     9,
+     2,
+     11,
+     true
+    ],
+    [
+     "Maxim Shabanov",
+     8485702,
+     9,
+     5,
+     14,
+     true
+    ]
+   ]
+  },
+  "CBJ": {
+   "roster": 22,
+   "found_in_summary": 1,
+   "club_keys": [
+    "playerId",
+    "headshot",
+    "firstName",
+    "lastName",
+    "positionCode",
+    "gamesPlayed",
+    "goals",
+    "assists",
+    "points",
+    "plusMinus",
+    "penaltyMinutes",
+    "powerPlayGoals",
+    "shorthandedGoals",
+    "gameWinningGoals",
+    "overtimeGoals",
+    "shots",
+    "shootingPctg",
+    "avgTimeOnIcePerGame",
+    "avgShiftsPerGame",
+    "faceoffWinPctg"
+   ],
+   "club_top_goals": [
+    [
+     "Kent Johnson",
+     8482660,
+     9,
+     12,
+     21,
+     true
+    ],
+    [
+     "Adam Fantilli",
+     8484166,
+     6,
+     3,
+     9,
+     true
+    ],
+    [
+     "Matthew Knies",
+     8482720,
+     5,
+     7,
+     12,
+     true
+    ],
+    [
+     "Zach Werenski",
+     8478460,
+     4,
+     14,
+     18,
+     true
+    ]
+   ]
+  },
+  "VGK": {
+   "roster": 21,
+   "found_in_summary": 1,
+   "club_keys": [
+    "playerId",
+    "headshot",
+    "firstName",
+    "lastName",
+    "positionCode",
+    "gamesPlayed",
+    "goals",
+    "assists",
+    "points",
+    "plusMinus",
+    "penaltyMinutes",
+    "powerPlayGoals",
+    "shorthandedGoals",
+    "gameWinningGoals",
+    "overtimeGoals",
+    "shots",
+    "shootingPctg",
+    "avgTimeOnIcePerGame",
+    "avgShiftsPerGame",
+    "faceoffWinPctg"
+   ],
+   "club_top_goals": [
+    [
+     "Mark Stone",
+     8475913,
+     11,
+     11,
+     22,
+     true
+    ],
+    [
+     "Tomas Hertl",
+     8476881,
+     9,
+     9,
+     18,
+     true
+    ],
+    [
+     "Jack Eichel",
+     8478403,
+     9,
+     20,
+     29,
+     true
+    ],
+    [
+     "Victor Olofsson",
+     8478109,
+     8,
+     4,
+     12,
+     true
+    ]
+   ]
+  },
+  "NYI": {
+   "roster": 22,
+   "found_in_summary": 1,
+   "club_keys": [
+    "playerId",
+    "headshot",
+    "firstName",
+    "lastName",
+    "positionCode",
+    "gamesPlayed",
+    "goals",
+    "assists",
+    "points",
+    "plusMinus",
+    "penaltyMinutes",
+    "powerPlayGoals",
+    "shorthandedGoals",
+    "gameWinningGoals",
+    "overtimeGoals",
+    "shots",
+    "shootingPctg",
+    "avgTimeOnIcePerGame",
+    "avgShiftsPerGame",
+    "faceoffWinPctg"
+   ],
+   "club_top_goals": [
+    [
+     "Bo Horvat",
+     8477500,
+     9,
+     12,
+     21,
+     true
+    ],
+    [
+     "Simon Holmstrom",
+     8481601,
+     9,
+     8,
+     17,
+     true
+    ],
+    [
+     "Matthew Schaefer",
+     8485366,
+     9,
+     15,
+     24,
+     true
+    ],
+    [
+     "Victor Eklund",
+     8485388,
+     7,
+     4,
+     11,
+     true
+    ]
+   ]
+  },
+  "PIT": {
+   "roster": 24,
+   "found_in_summary": 2,
+   "club_keys": [
+    "playerId",
+    "headshot",
+    "firstName",
+    "lastName",
+    "positionCode",
+    "gamesPlayed",
+    "goals",
+    "assists",
+    "points",
+    "plusMinus",
+    "penaltyMinutes",
+    "powerPlayGoals",
+    "shorthandedGoals",
+    "gameWinningGoals",
+    "overtimeGoals",
+    "shots",
+    "shootingPctg",
+    "avgTimeOnIcePerGame",
+    "avgShiftsPerGame",
+    "faceoffWinPctg"
+   ],
+   "club_top_goals": [
+    [
+     "Rickard Rakell",
+     8476483,
+     8,
+     5,
+     13,
+     true
+    ],
+    [
+     "Tommy Novak",
+     8478438,
+     8,
+     7,
+     15,
+     true
+    ],
+    [
+     "Nick Robertson",
+     8481582,
+     7,
+     0,
+     7,
+     true
+    ],
+    [
+     "Evgeni Malkin",
+     8471215,
+     6,
+     12,
+     18,
+     true
+    ]
+   ]
+  }
+ }
+}
