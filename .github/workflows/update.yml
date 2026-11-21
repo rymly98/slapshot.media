@@ -16,7 +16,7 @@ on:
         description: "morning (results + new game day + lines) or evening (lines only)"
         default: morning
         type: choice
-        options: [morning, evening]
+        options: [morning, evening, leaders]
 
 permissions:
   contents: write

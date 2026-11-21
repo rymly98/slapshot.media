@@ -197,20 +197,19 @@ def leader_season(day):
 
 def add_leaders(data):
     sid, lbl = leader_season(data["gameday"])
-    rows = get("https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=true&isGame=false&limit=-1"
-               f"&cayenneExp=seasonId={sid}%20and%20gameTypeId=2")["data"]
-    by_id = {r["playerId"]: r for r in rows}
     teams = {t for g in data["games"] for t in (g["a"], g["h"])}
     lead = {}
     for t in teams:
+        # per-team feed: every skater who has played for this team (the league-wide summary feed caps at 100 rows)
+        sk = get(f"https://api-web.nhle.com/v1/club-stats/{t}/{sid}/2").get("skaters", [])
         ro = get(f"https://api-web.nhle.com/v1/roster/{t}/current")
-        ids = [p["id"] for k in ("forwards", "defensemen") for p in ro.get(k, [])]
-        pl = [by_id[i] for i in ids if i in by_id]
+        ids = {p["id"] for k in ("forwards", "defensemen") for p in ro.get(k, [])}
+        pl = [s for s in sk if s["playerId"] in ids] or sk
         if not pl:
             continue
-        last = lambda r: r["skaterFullName"].split(" ", 1)[-1]
+        last = lambda r: r["lastName"]["default"]
         dup = {l for l in map(last, pl) if sum(last(x) == l for x in pl) > 1}
-        name = lambda r: (r["skaterFullName"][0] + ". " + last(r)) if last(r) in dup else last(r)
+        name = lambda r: (r["firstName"]["default"][0] + ". " + last(r)) if last(r) in dup else last(r)
 
         def top(k):
             # every player tied for the team lead is listed (up to 3), best points first
@@ -349,7 +348,7 @@ def main():
             data["label"] = label(gd, len(games), opening=(gd == "2026-09-29"))
             notes.append(f"loaded {len(games)} game(s) for {gd}")
 
-    if mode == "morning" or any("lead" not in g for g in data["games"]):
+    if mode in ("morning", "leaders") or any("lead" not in g for g in data["games"]):
         try:
             notes.append(f"leaders for {add_leaders(data)} team(s)")
         except Exception as e:
@@ -372,11 +371,12 @@ def main():
         except Exception as e:
             notes.append(f"playoff odds skipped: {e}")
 
-    try:
-        hit = refresh_lines(data)
-        notes.append(f"lines found for {hit}/{len(data['games'])} game(s)")
-    except Exception as e:  # keep going; the site still shows the games
-        notes.append(f"LINES FAILED: {e}")
+    if mode != "leaders":  # a leaders-only rerun never touches the lines logged that morning
+        try:
+            hit = refresh_lines(data)
+            notes.append(f"lines found for {hit}/{len(data['games'])} game(s)")
+        except Exception as e:  # keep going; the site still shows the games
+            notes.append(f"LINES FAILED: {e}")
 
     changed = json.dumps(data, sort_keys=True) != before
     if changed:
