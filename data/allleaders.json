@@ -1,92 +1,107 @@
 {
- "asof": "2026-11-22T11:01:04.721942",
+ "asof": "2026-11-22T11:04:49.380018",
  "teams": {
   "ANA": {
    "g": {
-    "n": 4,
+    "n": 21,
     "who": [
      {
-      "name": "Jeff Malott",
+      "first": "Cutter",
+      "last": "Gauthier",
       "gp": 23,
-      "g": 4,
-      "a": 3,
-      "p": 7
+      "g": 21,
+      "a": 9,
+      "p": 30
      }
     ]
    },
    "a": {
-    "n": 3,
+    "n": 24,
     "who": [
      {
-      "name": "Jeff Malott",
-      "gp": 23,
-      "g": 4,
-      "a": 3,
-      "p": 7
+      "first": "Jackson",
+      "last": "LaCombe",
+      "gp": 24,
+      "g": 1,
+      "a": 24,
+      "p": 25
      }
     ]
    },
    "p": {
-    "n": 7,
+    "n": 30,
     "who": [
      {
-      "name": "Jeff Malott",
+      "first": "Cutter",
+      "last": "Gauthier",
       "gp": 23,
-      "g": 4,
-      "a": 3,
-      "p": 7
+      "g": 21,
+      "a": 9,
+      "p": 30
      }
     ]
    }
   },
   "BOS": {
    "g": {
-    "n": 8,
+    "n": 11,
     "who": [
      {
-      "name": "Fraser Minten",
+      "first": "David",
+      "last": "Pastrnak",
       "gp": 23,
-      "g": 8,
-      "a": 6,
-      "p": 14
+      "g": 11,
+      "a": 20,
+      "p": 31
+     },
+     {
+      "first": "Elias",
+      "last": "Lindholm",
+      "gp": 23,
+      "g": 11,
+      "a": 11,
+      "p": 22
      }
     ]
    },
    "a": {
-    "n": 9,
+    "n": 20,
     "who": [
      {
-      "name": "JJ Peterka",
+      "first": "David",
+      "last": "Pastrnak",
       "gp": 23,
-      "g": 6,
-      "a": 9,
-      "p": 15
+      "g": 11,
+      "a": 20,
+      "p": 31
      }
     ]
    },
    "p": {
-    "n": 15,
+    "n": 31,
     "who": [
      {
-      "name": "JJ Peterka",
+      "first": "David",
+      "last": "Pastrnak",
       "gp": 23,
-      "g": 6,
-      "a": 9,
-      "p": 15
+      "g": 11,
+      "a": 20,
+      "p": 31
      }
     ]
    }
   },
   "BUF": {
    "g": {
-    "n": 3,
+    "n": 15,
     "who": [
      {
-      "name": "Zach Benson",
+      "first": "Tage",
+      "last": "Thompson",
       "gp": 23,
-      "g": 3,
-      "a": 15,
-      "p": 18
+      "g": 15,
+      "a": 11,
+      "p": 26
      }
     ]
    },
@@ -94,7 +109,8 @@
     "n": 15,
     "who": [
      {
-      "name": "Zach Benson",
+      "first": "Zach",
+      "last": "Benson",
       "gp": 23,
       "g": 3,
       "a": 15,
@@ -103,14 +119,15 @@
     ]
    },
    "p": {
-    "n": 18,
+    "n": 26,
     "who": [
      {
-      "name": "Zach Benson",
+      "first": "Tage",
+      "last": "Thompson",
       "gp": 23,
-      "g": 3,
-      "a": 15,
-      "p": 18
+      "g": 15,
+      "a": 11,
+      "p": 26
      }
     ]
    }
@@ -120,18 +137,20 @@
     "n": 13,
     "who": [
      {
-      "name": "Andrei Svechnikov",
-      "gp": 23,
-      "g": 13,
-      "a": 10,
-      "p": 23
-     },
-     {
-      "name": "Sebastian Aho",
+      "first": "Sebastian",
+      "last": "Aho",
       "gp": 23,
       "g": 13,
       "a": 19,
       "p": 32
+     },
+     {
+      "first": "Andrei",
+      "last": "Svechnikov",
+      "gp": 23,
+      "g": 13,
+      "a": 10,
+      "p": 23
      }
     ]
    },
@@ -139,7 +158,8 @@
     "n": 19,
     "who": [
      {
-      "name": "Sebastian Aho",
+      "first": "Sebastian",
+      "last": "Aho",
       "gp": 23,
       "g": 13,
       "a": 19,
@@ -151,7 +171,8 @@
     "n": 32,
     "who": [
      {
-      "name": "Sebastian Aho",
+      "first": "Sebastian",
+      "last": "Aho",
       "gp": 23,
       "g": 13,
       "a": 19,
@@ -162,736 +183,486 @@
   },
   "CBJ": {
    "g": {
-    "n": 4,
+    "n": 9,
     "who": [
      {
-      "name": "Cole Sillinger",
+      "first": "Kent",
+      "last": "Johnson",
       "gp": 21,
-      "g": 4,
-      "a": 5,
-      "p": 9
+      "g": 9,
+      "a": 13,
+      "p": 22
      }
     ]
    },
    "a": {
-    "n": 5,
+    "n": 15,
     "who": [
      {
-      "name": "Cole Sillinger",
+      "first": "Zach",
+      "last": "Werenski",
       "gp": 21,
-      "g": 4,
-      "a": 5,
-      "p": 9
+      "g": 5,
+      "a": 15,
+      "p": 20
      }
     ]
    },
    "p": {
-    "n": 9,
+    "n": 22,
     "who": [
      {
-      "name": "Cole Sillinger",
+      "first": "Kent",
+      "last": "Johnson",
       "gp": 21,
-      "g": 4,
-      "a": 5,
-      "p": 9
+      "g": 9,
+      "a": 13,
+      "p": 22
      }
     ]
    }
   },
   "CGY": {
    "g": {
-    "n": 4,
+    "n": 7,
     "who": [
      {
-      "name": "Aydar Suniev",
-      "gp": 21,
-      "g": 4,
-      "a": 3,
-      "p": 7
+      "first": "Joel",
+      "last": "Farabee",
+      "gp": 24,
+      "g": 7,
+      "a": 11,
+      "p": 18
      }
     ]
    },
    "a": {
-    "n": 8,
+    "n": 11,
     "who": [
      {
-      "name": "Zayne Parekh",
+      "first": "Joel",
+      "last": "Farabee",
       "gp": 24,
-      "g": 2,
-      "a": 8,
-      "p": 10
+      "g": 7,
+      "a": 11,
+      "p": 18
+     },
+     {
+      "first": "Matt",
+      "last": "Coronato",
+      "gp": 24,
+      "g": 5,
+      "a": 11,
+      "p": 16
      }
     ]
    },
    "p": {
-    "n": 10,
+    "n": 18,
     "who": [
      {
-      "name": "Zayne Parekh",
+      "first": "Joel",
+      "last": "Farabee",
       "gp": 24,
-      "g": 2,
-      "a": 8,
-      "p": 10
+      "g": 7,
+      "a": 11,
+      "p": 18
      }
     ]
    }
   },
   "CHI": {
    "g": {
-    "n": 2,
+    "n": 11,
     "who": [
      {
-      "name": "Ryan Greene",
-      "gp": 23,
-      "g": 2,
-      "a": 2,
-      "p": 4
+      "first": "Frank",
+      "last": "Nazar",
+      "gp": 21,
+      "g": 11,
+      "a": 3,
+      "p": 14
      }
     ]
    },
    "a": {
-    "n": 2,
+    "n": 15,
     "who": [
      {
-      "name": "Ryan Greene",
-      "gp": 23,
+      "first": "Sam",
+      "last": "Rinzel",
+      "gp": 22,
       "g": 2,
-      "a": 2,
-      "p": 4
+      "a": 15,
+      "p": 17
      }
     ]
    },
    "p": {
-    "n": 4,
+    "n": 18,
     "who": [
      {
-      "name": "Ryan Greene",
-      "gp": 23,
-      "g": 2,
-      "a": 2,
-      "p": 4
+      "first": "Connor",
+      "last": "Bedard",
+      "gp": 15,
+      "g": 7,
+      "a": 11,
+      "p": 18
      }
     ]
    }
   },
   "COL": {
    "g": {
-    "n": 8,
+    "n": 15,
     "who": [
      {
-      "name": "Gabriel Landeskog",
+      "first": "Artturi",
+      "last": "Lehkonen",
       "gp": 23,
-      "g": 8,
+      "g": 15,
       "a": 6,
-      "p": 14
+      "p": 21
      }
     ]
    },
    "a": {
-    "n": 6,
+    "n": 20,
     "who": [
      {
-      "name": "Gabriel Landeskog",
-      "gp": 23,
-      "g": 8,
-      "a": 6,
-      "p": 14
+      "first": "Nathan",
+      "last": "MacKinnon",
+      "gp": 20,
+      "g": 10,
+      "a": 20,
+      "p": 30
      }
     ]
    },
    "p": {
-    "n": 14,
+    "n": 30,
     "who": [
      {
-      "name": "Gabriel Landeskog",
-      "gp": 23,
-      "g": 8,
-      "a": 6,
-      "p": 14
+      "first": "Nathan",
+      "last": "MacKinnon",
+      "gp": 20,
+      "g": 10,
+      "a": 20,
+      "p": 30
      }
     ]
    }
   },
   "DAL": {
    "g": {
-    "n": 3,
+    "n": 10,
     "who": [
      {
-      "name": "Thomas Harley",
+      "first": "Mikko",
+      "last": "Rantanen",
       "gp": 22,
-      "g": 3,
-      "a": 12,
-      "p": 15
+      "g": 10,
+      "a": 17,
+      "p": 27
+     },
+     {
+      "first": "Jason",
+      "last": "Robertson",
+      "gp": 22,
+      "g": 10,
+      "a": 16,
+      "p": 26
      }
     ]
    },
    "a": {
-    "n": 12,
+    "n": 17,
     "who": [
      {
-      "name": "Thomas Harley",
+      "first": "Mikko",
+      "last": "Rantanen",
       "gp": 22,
-      "g": 3,
-      "a": 12,
-      "p": 15
+      "g": 10,
+      "a": 17,
+      "p": 27
      }
     ]
    },
    "p": {
-    "n": 15,
+    "n": 27,
     "who": [
      {
-      "name": "Thomas Harley",
+      "first": "Mikko",
+      "last": "Rantanen",
       "gp": 22,
-      "g": 3,
-      "a": 12,
-      "p": 15
+      "g": 10,
+      "a": 17,
+      "p": 27
      }
     ]
    }
   },
   "DET": {
    "g": {
-    "n": 2,
+    "n": 9,
     "who": [
      {
-      "name": "Anton Johansson",
+      "first": "Lucas",
+      "last": "Raymond",
       "gp": 23,
-      "g": 2,
-      "a": 4,
-      "p": 6
+      "g": 9,
+      "a": 13,
+      "p": 22
      }
     ]
    },
    "a": {
-    "n": 4,
+    "n": 13,
     "who": [
      {
-      "name": "Anton Johansson",
+      "first": "Lucas",
+      "last": "Raymond",
       "gp": 23,
-      "g": 2,
-      "a": 4,
-      "p": 6
+      "g": 9,
+      "a": 13,
+      "p": 22
      }
     ]
    },
    "p": {
-    "n": 6,
+    "n": 22,
     "who": [
      {
-      "name": "Anton Johansson",
+      "first": "Lucas",
+      "last": "Raymond",
       "gp": 23,
-      "g": 2,
-      "a": 4,
-      "p": 6
+      "g": 9,
+      "a": 13,
+      "p": 22
      }
     ]
    }
   },
   "EDM": {
    "g": {
-    "n": 2,
+    "n": 22,
     "who": [
      {
-      "name": "Alex Formenton",
+      "first": "Leon",
+      "last": "Draisaitl",
       "gp": 25,
-      "g": 2,
-      "a": 3,
-      "p": 5
+      "g": 22,
+      "a": 24,
+      "p": 46
      }
     ]
    },
    "a": {
-    "n": 3,
+    "n": 44,
     "who": [
      {
-      "name": "Alex Formenton",
+      "first": "Connor",
+      "last": "McDavid",
       "gp": 25,
-      "g": 2,
-      "a": 3,
-      "p": 5
+      "g": 13,
+      "a": 44,
+      "p": 57
      }
     ]
    },
    "p": {
-    "n": 5,
+    "n": 57,
     "who": [
      {
-      "name": "Alex Formenton",
+      "first": "Connor",
+      "last": "McDavid",
       "gp": 25,
-      "g": 2,
-      "a": 3,
-      "p": 5
+      "g": 13,
+      "a": 44,
+      "p": 57
      }
     ]
    }
   },
   "FLA": {
    "g": {
-    "n": 3,
+    "n": 12,
     "who": [
      {
-      "name": "Seth Jones",
+      "first": "Sam",
+      "last": "Reinhart",
       "gp": 24,
-      "g": 3,
-      "a": 22,
-      "p": 25
+      "g": 12,
+      "a": 11,
+      "p": 23
      }
     ]
    },
    "a": {
-    "n": 22,
+    "n": 25,
     "who": [
      {
-      "name": "Seth Jones",
+      "first": "Matthew",
+      "last": "Tkachuk",
       "gp": 24,
-      "g": 3,
-      "a": 22,
-      "p": 25
+      "g": 7,
+      "a": 25,
+      "p": 32
      }
     ]
    },
    "p": {
-    "n": 25,
+    "n": 32,
     "who": [
      {
-      "name": "Seth Jones",
+      "first": "Matthew",
+      "last": "Tkachuk",
       "gp": 24,
-      "g": 3,
-      "a": 22,
-      "p": 25
+      "g": 7,
+      "a": 25,
+      "p": 32
      }
     ]
    }
   },
   "LAK": {
    "g": {
-    "n": 6,
+    "n": 8,
     "who": [
      {
-      "name": "Quinton Byfield",
-      "gp": 19,
-      "g": 6,
-      "a": 2,
-      "p": 8
+      "first": "Artemi",
+      "last": "Panarin",
+      "gp": 17,
+      "g": 8,
+      "a": 11,
+      "p": 19
      }
     ]
    },
    "a": {
-    "n": 4,
+    "n": 11,
     "who": [
      {
-      "name": "Erik Haula",
+      "first": "Artemi",
+      "last": "Panarin",
+      "gp": 17,
+      "g": 8,
+      "a": 11,
+      "p": 19
+     },
+     {
+      "first": "Brandt",
+      "last": "Clarke",
       "gp": 21,
-      "g": 4,
-      "a": 4,
-      "p": 8
+      "g": 3,
+      "a": 11,
+      "p": 14
      }
     ]
    },
    "p": {
-    "n": 8,
+    "n": 19,
     "who": [
      {
-      "name": "Erik Haula",
-      "gp": 21,
-      "g": 4,
-      "a": 4,
-      "p": 8
-     },
-     {
-      "name": "Quinton Byfield",
-      "gp": 19,
-      "g": 6,
-      "a": 2,
-      "p": 8
+      "first": "Artemi",
+      "last": "Panarin",
+      "gp": 17,
+      "g": 8,
+      "a": 11,
+      "p": 19
      }
     ]
    }
   },
   "MIN": {
    "g": {
-    "n": 8,
+    "n": 18,
     "who": [
      {
-      "name": "Quinn Hughes",
-      "gp": 24,
-      "g": 8,
-      "a": 26,
-      "p": 34
+      "first": "Kirill",
+      "last": "Kaprizov",
+      "gp": 25,
+      "g": 18,
+      "a": 27,
+      "p": 45
      }
     ]
    },
    "a": {
-    "n": 26,
+    "n": 27,
     "who": [
      {
-      "name": "Quinn Hughes",
-      "gp": 24,
-      "g": 8,
-      "a": 26,
-      "p": 34
+      "first": "Kirill",
+      "last": "Kaprizov",
+      "gp": 25,
+      "g": 18,
+      "a": 27,
+      "p": 45
      }
     ]
    },
    "p": {
-    "n": 34,
+    "n": 45,
     "who": [
      {
-      "name": "Quinn Hughes",
-      "gp": 24,
-      "g": 8,
-      "a": 26,
-      "p": 34
+      "first": "Kirill",
+      "last": "Kaprizov",
+      "gp": 25,
+      "g": 18,
+      "a": 27,
+      "p": 45
      }
     ]
    }
   },
   "MTL": {
    "g": {
-    "n": 2,
-    "who": [
-     {
-      "name": "Owen Beck",
-      "gp": 10,
-      "g": 2,
-      "a": 2,
-      "p": 4
-     },
-     {
-      "name": "Oliver Kapanen",
-      "gp": 17,
-      "g": 2,
-      "a": 2,
-      "p": 4
-     }
-    ]
-   },
-   "a": {
-    "n": 2,
-    "who": [
-     {
-      "name": "Owen Beck",
-      "gp": 10,
-      "g": 2,
-      "a": 2,
-      "p": 4
-     },
-     {
-      "name": "Oliver Kapanen",
-      "gp": 17,
-      "g": 2,
-      "a": 2,
-      "p": 4
-     }
-    ]
-   },
-   "p": {
-    "n": 4,
-    "who": [
-     {
-      "name": "Owen Beck",
-      "gp": 10,
-      "g": 2,
-      "a": 2,
-      "p": 4
-     },
-     {
-      "name": "Oliver Kapanen",
-      "gp": 17,
-      "g": 2,
-      "a": 2,
-      "p": 4
-     }
-    ]
-   }
-  },
-  "NSH": {
-   "g": {
-    "n": 1,
-    "who": [
-     {
-      "name": "Nicolas Hague",
-      "gp": 15,
-      "g": 1,
-      "a": 3,
-      "p": 4
-     }
-    ]
-   },
-   "a": {
-    "n": 8,
-    "who": [
-     {
-      "name": "Brady Skjei",
-      "gp": 23,
-      "g": 0,
-      "a": 8,
-      "p": 8
-     }
-    ]
-   },
-   "p": {
-    "n": 8,
-    "who": [
-     {
-      "name": "Brady Skjei",
-      "gp": 23,
-      "g": 0,
-      "a": 8,
-      "p": 8
-     }
-    ]
-   }
-  },
-  "NYI": {
-   "g": {
-    "n": 9,
-    "who": [
-     {
-      "name": "Bo Horvat",
-      "gp": 22,
-      "g": 9,
-      "a": 12,
-      "p": 21
-     }
-    ]
-   },
-   "a": {
     "n": 12,
     "who": [
      {
-      "name": "Bo Horvat",
-      "gp": 22,
-      "g": 9,
-      "a": 12,
-      "p": 21
-     }
-    ]
-   },
-   "p": {
-    "n": 21,
-    "who": [
-     {
-      "name": "Bo Horvat",
-      "gp": 22,
-      "g": 9,
-      "a": 12,
-      "p": 21
-     }
-    ]
-   }
-  },
-  "NYR": {
-   "g": {
-    "n": 7,
-    "who": [
-     {
-      "name": "Gabe Perreault",
-      "gp": 22,
-      "g": 7,
-      "a": 4,
-      "p": 11
-     },
-     {
-      "name": "Oliver Bjorkstrand",
-      "gp": 22,
-      "g": 7,
-      "a": 4,
-      "p": 11
-     }
-    ]
-   },
-   "a": {
-    "n": 6,
-    "who": [
-     {
-      "name": "Noah Laba",
-      "gp": 22,
-      "g": 0,
-      "a": 6,
-      "p": 6
-     },
-     {
-      "name": "Pavel Dorofeyev",
-      "gp": 21,
-      "g": 6,
-      "a": 6,
-      "p": 12
-     }
-    ]
-   },
-   "p": {
-    "n": 12,
-    "who": [
-     {
-      "name": "Pavel Dorofeyev",
-      "gp": 21,
-      "g": 6,
-      "a": 6,
-      "p": 12
-     }
-    ]
-   }
-  },
-  "OTT": {
-   "g": {
-    "n": 3,
-    "who": [
-     {
-      "name": "Ridly Greig",
-      "gp": 20,
-      "g": 3,
-      "a": 3,
-      "p": 6
-     }
-    ]
-   },
-   "a": {
-    "n": 9,
-    "who": [
-     {
-      "name": "Fabian Zetterlund",
+      "first": "Cole",
+      "last": "Caufield",
       "gp": 24,
-      "g": 2,
-      "a": 9,
-      "p": 11
+      "g": 12,
+      "a": 8,
+      "p": 20
      }
     ]
    },
-   "p": {
-    "n": 11,
+   "a": {
+    "n": 19,
     "who": [
      {
-      "name": "Fabian Zetterlund",
+      "first": "Lane",
+      "last": "Hutson",
       "gp": 24,
-      "g": 2,
-      "a": 9,
-      "p": 11
-     }
-    ]
-   }
-  },
-  "PHI": {
-   "g": {
-    "n": 5,
-    "who": [
-     {
-      "name": "Denver Barkey",
-      "gp": 22,
       "g": 5,
-      "a": 8,
-      "p": 13
-     }
-    ]
-   },
-   "a": {
-    "n": 8,
-    "who": [
-     {
-      "name": "Denver Barkey",
-      "gp": 22,
-      "g": 5,
-      "a": 8,
-      "p": 13
+      "a": 19,
+      "p": 24
      }
     ]
    },
    "p": {
-    "n": 13,
+    "n": 24,
     "who": [
      {
-      "name": "Denver Barkey",
-      "gp": 22,
+      "first": "Lane",
+      "last": "Hutson",
+      "gp": 24,
       "g": 5,
-      "a": 8,
-      "p": 13
+      "a": 19,
+      "p": 24
      }
     ]
    }
   },
-  "PIT": {
-   "g": {
-    "n": 0,
-    "who": [
-     {
-      "name": "Trevor van Riemsdyk",
-      "gp": 7,
-      "g": 0,
-      "a": 1,
-      "p": 1
-     }
-    ]
-   },
-   "a": {
-    "n": 1,
-    "who": [
-     {
-      "name": "Trevor van Riemsdyk",
-      "gp": 7,
-      "g": 0,
-      "a": 1,
-      "p": 1
-     }
-    ]
-   },
-   "p": {
-    "n": 1,
-    "who": [
-     {
-      "name": "Trevor van Riemsdyk",
-      "gp": 7,
-      "g": 0,
-      "a": 1,
-      "p": 1
-     }
-    ]
-   }
-  },
-  "SEA": {
-   "g": {
-    "n": 0,
-    "who": [
-     {
-      "name": "Jani Nyman",
-      "gp": 4,
-      "g": 0,
-      "a": 0,
-      "p": 0
-     }
-    ]
-   },
-   "a": {
-    "n": 0,
-    "who": [
-     {
-      "name": "Jani Nyman",
-      "gp": 4,
-      "g": 0,
-      "a": 0,
-      "p": 0
-     }
-    ]
-   },
-   "p": {
-    "n": 0,
-    "who": [
-     {
-      "name": "Jani Nyman",
-      "gp": 4,
-      "g": 0,
-      "a": 0,
-      "p": 0
-     }
-    ]
-   }
-  },
-  "SJS": {
+  "NJD": {
    "g": {
     "n": 10,
     "who": [
      {
-      "name": "Macklin Celebrini",
+      "first": "Jack",
+      "last": "Hughes",
       "gp": 23,
       "g": 10,
       "a": 19,
@@ -903,7 +674,8 @@
     "n": 19,
     "who": [
      {
-      "name": "Macklin Celebrini",
+      "first": "Jack",
+      "last": "Hughes",
       "gp": 23,
       "g": 10,
       "a": 19,
@@ -915,7 +687,352 @@
     "n": 29,
     "who": [
      {
-      "name": "Macklin Celebrini",
+      "first": "Jack",
+      "last": "Hughes",
+      "gp": 23,
+      "g": 10,
+      "a": 19,
+      "p": 29
+     }
+    ]
+   }
+  },
+  "NSH": {
+   "g": {
+    "n": 12,
+    "who": [
+     {
+      "first": "Steven",
+      "last": "Stamkos",
+      "gp": 23,
+      "g": 12,
+      "a": 12,
+      "p": 24
+     }
+    ]
+   },
+   "a": {
+    "n": 21,
+    "who": [
+     {
+      "first": "Roman",
+      "last": "Josi",
+      "gp": 23,
+      "g": 2,
+      "a": 21,
+      "p": 23
+     }
+    ]
+   },
+   "p": {
+    "n": 25,
+    "who": [
+     {
+      "first": "Filip",
+      "last": "Forsberg",
+      "gp": 23,
+      "g": 9,
+      "a": 16,
+      "p": 25
+     }
+    ]
+   }
+  },
+  "NYI": {
+   "g": {
+    "n": 10,
+    "who": [
+     {
+      "first": "Simon",
+      "last": "Holmstrom",
+      "gp": 22,
+      "g": 10,
+      "a": 8,
+      "p": 18
+     }
+    ]
+   },
+   "a": {
+    "n": 17,
+    "who": [
+     {
+      "first": "Matthew",
+      "last": "Schaefer",
+      "gp": 22,
+      "g": 9,
+      "a": 17,
+      "p": 26
+     }
+    ]
+   },
+   "p": {
+    "n": 26,
+    "who": [
+     {
+      "first": "Matthew",
+      "last": "Schaefer",
+      "gp": 22,
+      "g": 9,
+      "a": 17,
+      "p": 26
+     }
+    ]
+   }
+  },
+  "NYR": {
+   "g": {
+    "n": 10,
+    "who": [
+     {
+      "first": "Alexis",
+      "last": "Lafreni\u00e8re",
+      "gp": 22,
+      "g": 10,
+      "a": 12,
+      "p": 22
+     }
+    ]
+   },
+   "a": {
+    "n": 22,
+    "who": [
+     {
+      "first": "Adam",
+      "last": "Fox",
+      "gp": 22,
+      "g": 2,
+      "a": 22,
+      "p": 24
+     }
+    ]
+   },
+   "p": {
+    "n": 24,
+    "who": [
+     {
+      "first": "Adam",
+      "last": "Fox",
+      "gp": 22,
+      "g": 2,
+      "a": 22,
+      "p": 24
+     }
+    ]
+   }
+  },
+  "OTT": {
+   "g": {
+    "n": 13,
+    "who": [
+     {
+      "first": "Tim",
+      "last": "St\u00fctzle",
+      "gp": 24,
+      "g": 13,
+      "a": 18,
+      "p": 31
+     }
+    ]
+   },
+   "a": {
+    "n": 18,
+    "who": [
+     {
+      "first": "Tim",
+      "last": "St\u00fctzle",
+      "gp": 24,
+      "g": 13,
+      "a": 18,
+      "p": 31
+     }
+    ]
+   },
+   "p": {
+    "n": 31,
+    "who": [
+     {
+      "first": "Tim",
+      "last": "St\u00fctzle",
+      "gp": 24,
+      "g": 13,
+      "a": 18,
+      "p": 31
+     }
+    ]
+   }
+  },
+  "PHI": {
+   "g": {
+    "n": 11,
+    "who": [
+     {
+      "first": "Matvei",
+      "last": "Michkov",
+      "gp": 26,
+      "g": 11,
+      "a": 9,
+      "p": 20
+     }
+    ]
+   },
+   "a": {
+    "n": 12,
+    "who": [
+     {
+      "first": "Jamie",
+      "last": "Drysdale",
+      "gp": 26,
+      "g": 3,
+      "a": 12,
+      "p": 15
+     }
+    ]
+   },
+   "p": {
+    "n": 20,
+    "who": [
+     {
+      "first": "Matvei",
+      "last": "Michkov",
+      "gp": 26,
+      "g": 11,
+      "a": 9,
+      "p": 20
+     }
+    ]
+   }
+  },
+  "PIT": {
+   "g": {
+    "n": 8,
+    "who": [
+     {
+      "first": "Tommy",
+      "last": "Novak",
+      "gp": 22,
+      "g": 8,
+      "a": 8,
+      "p": 16
+     },
+     {
+      "first": "Rickard",
+      "last": "Rakell",
+      "gp": 22,
+      "g": 8,
+      "a": 5,
+      "p": 13
+     }
+    ]
+   },
+   "a": {
+    "n": 16,
+    "who": [
+     {
+      "first": "Erik",
+      "last": "Karlsson",
+      "gp": 22,
+      "g": 3,
+      "a": 16,
+      "p": 19
+     }
+    ]
+   },
+   "p": {
+    "n": 19,
+    "who": [
+     {
+      "first": "Erik",
+      "last": "Karlsson",
+      "gp": 22,
+      "g": 3,
+      "a": 16,
+      "p": 19
+     }
+    ]
+   }
+  },
+  "SEA": {
+   "g": {
+    "n": 8,
+    "who": [
+     {
+      "first": "Berkly",
+      "last": "Catton",
+      "gp": 20,
+      "g": 8,
+      "a": 9,
+      "p": 17
+     },
+     {
+      "first": "Frederick",
+      "last": "Gaudreau",
+      "gp": 20,
+      "g": 8,
+      "a": 4,
+      "p": 12
+     }
+    ]
+   },
+   "a": {
+    "n": 12,
+    "who": [
+     {
+      "first": "Brandon",
+      "last": "Montour",
+      "gp": 19,
+      "g": 3,
+      "a": 12,
+      "p": 15
+     }
+    ]
+   },
+   "p": {
+    "n": 17,
+    "who": [
+     {
+      "first": "Berkly",
+      "last": "Catton",
+      "gp": 20,
+      "g": 8,
+      "a": 9,
+      "p": 17
+     }
+    ]
+   }
+  },
+  "SJS": {
+   "g": {
+    "n": 10,
+    "who": [
+     {
+      "first": "Macklin",
+      "last": "Celebrini",
+      "gp": 23,
+      "g": 10,
+      "a": 19,
+      "p": 29
+     }
+    ]
+   },
+   "a": {
+    "n": 19,
+    "who": [
+     {
+      "first": "Macklin",
+      "last": "Celebrini",
+      "gp": 23,
+      "g": 10,
+      "a": 19,
+      "p": 29
+     }
+    ]
+   },
+   "p": {
+    "n": 29,
+    "who": [
+     {
+      "first": "Macklin",
+      "last": "Celebrini",
       "gp": 23,
       "g": 10,
       "a": 19,
@@ -926,59 +1043,64 @@
   },
   "STL": {
    "g": {
-    "n": 5,
+    "n": 13,
     "who": [
      {
-      "name": "Dalibor Dvorsky",
+      "first": "Jimmy",
+      "last": "Snuggerud",
       "gp": 23,
-      "g": 5,
-      "a": 2,
-      "p": 7
-     },
-     {
-      "name": "Pavel Buchnevich",
-      "gp": 22,
-      "g": 5,
+      "g": 13,
       "a": 5,
-      "p": 10
+      "p": 18
      }
     ]
    },
    "a": {
-    "n": 5,
+    "n": 18,
     "who": [
      {
-      "name": "Pavel Buchnevich",
-      "gp": 22,
+      "first": "Robert",
+      "last": "Thomas",
+      "gp": 23,
       "g": 5,
-      "a": 5,
-      "p": 10
+      "a": 18,
+      "p": 23
      }
     ]
    },
    "p": {
-    "n": 10,
+    "n": 23,
     "who": [
      {
-      "name": "Pavel Buchnevich",
-      "gp": 22,
+      "first": "Robert",
+      "last": "Thomas",
+      "gp": 23,
       "g": 5,
-      "a": 5,
-      "p": 10
+      "a": 18,
+      "p": 23
      }
     ]
    }
   },
   "TBL": {
    "g": {
-    "n": 9,
+    "n": 13,
     "who": [
      {
-      "name": "Nikita Kucherov",
+      "first": "Jake",
+      "last": "Guentzel",
       "gp": 22,
-      "g": 9,
-      "a": 22,
-      "p": 31
+      "g": 13,
+      "a": 14,
+      "p": 27
+     },
+     {
+      "first": "Brandon",
+      "last": "Hagel",
+      "gp": 20,
+      "g": 13,
+      "a": 11,
+      "p": 24
      }
     ]
    },
@@ -986,7 +1108,8 @@
     "n": 22,
     "who": [
      {
-      "name": "Nikita Kucherov",
+      "first": "Nikita",
+      "last": "Kucherov",
       "gp": 22,
       "g": 9,
       "a": 22,
@@ -998,7 +1121,8 @@
     "n": 31,
     "who": [
      {
-      "name": "Nikita Kucherov",
+      "first": "Nikita",
+      "last": "Kucherov",
       "gp": 22,
       "g": 9,
       "a": 22,
@@ -1009,256 +1133,254 @@
   },
   "TOR": {
    "g": {
-    "n": 4,
+    "n": 14,
     "who": [
      {
-      "name": "Teddy Blueger",
+      "first": "Auston",
+      "last": "Matthews",
       "gp": 25,
-      "g": 4,
-      "a": 3,
-      "p": 7
+      "g": 14,
+      "a": 19,
+      "p": 33
      }
     ]
    },
    "a": {
-    "n": 12,
+    "n": 19,
     "who": [
      {
-      "name": "Morgan Rielly",
-      "gp": 21,
-      "g": 0,
-      "a": 12,
-      "p": 12
+      "first": "Auston",
+      "last": "Matthews",
+      "gp": 25,
+      "g": 14,
+      "a": 19,
+      "p": 33
      }
     ]
    },
    "p": {
-    "n": 12,
+    "n": 33,
     "who": [
      {
-      "name": "Morgan Rielly",
-      "gp": 21,
-      "g": 0,
-      "a": 12,
-      "p": 12
+      "first": "Auston",
+      "last": "Matthews",
+      "gp": 25,
+      "g": 14,
+      "a": 19,
+      "p": 33
      }
     ]
    }
   },
   "UTA": {
    "g": {
-    "n": 5,
+    "n": 12,
     "who": [
      {
-      "name": "Dmitri Simashev",
-      "gp": 24,
-      "g": 5,
-      "a": 2,
-      "p": 7
+      "first": "Logan",
+      "last": "Cooley",
+      "gp": 21,
+      "g": 12,
+      "a": 13,
+      "p": 25
      }
     ]
    },
    "a": {
-    "n": 9,
+    "n": 24,
     "who": [
      {
-      "name": "Kailer Yamamoto",
-      "gp": 15,
-      "g": 3,
-      "a": 9,
-      "p": 12
+      "first": "Clayton",
+      "last": "Keller",
+      "gp": 23,
+      "g": 5,
+      "a": 24,
+      "p": 29
      }
     ]
    },
    "p": {
-    "n": 12,
+    "n": 29,
     "who": [
      {
-      "name": "Kailer Yamamoto",
-      "gp": 15,
-      "g": 3,
-      "a": 9,
-      "p": 12
+      "first": "Clayton",
+      "last": "Keller",
+      "gp": 23,
+      "g": 5,
+      "a": 24,
+      "p": 29
      }
     ]
    }
   },
   "VAN": {
    "g": {
-    "n": 4,
+    "n": 8,
     "who": [
      {
-      "name": "Paul Cotter",
-      "gp": 24,
-      "g": 4,
-      "a": 4,
-      "p": 8
+      "first": "Brock",
+      "last": "Boeser",
+      "gp": 25,
+      "g": 8,
+      "a": 19,
+      "p": 27
      }
     ]
    },
    "a": {
-    "n": 4,
+    "n": 19,
     "who": [
      {
-      "name": "Paul Cotter",
-      "gp": 24,
-      "g": 4,
-      "a": 4,
-      "p": 8
+      "first": "Brock",
+      "last": "Boeser",
+      "gp": 25,
+      "g": 8,
+      "a": 19,
+      "p": 27
      }
     ]
    },
    "p": {
-    "n": 8,
+    "n": 27,
     "who": [
      {
-      "name": "Paul Cotter",
-      "gp": 24,
-      "g": 4,
-      "a": 4,
-      "p": 8
+      "first": "Brock",
+      "last": "Boeser",
+      "gp": 25,
+      "g": 8,
+      "a": 19,
+      "p": 27
      }
     ]
    }
   },
   "VGK": {
    "g": {
-    "n": 8,
+    "n": 11,
     "who": [
      {
-      "name": "Brett Howden",
+      "first": "Mark",
+      "last": "Stone",
       "gp": 25,
-      "g": 8,
-      "a": 4,
-      "p": 12
-     },
-     {
-      "name": "Victor Olofsson",
-      "gp": 12,
-      "g": 8,
-      "a": 4,
-      "p": 12
+      "g": 11,
+      "a": 12,
+      "p": 23
      }
     ]
    },
    "a": {
-    "n": 9,
+    "n": 23,
     "who": [
      {
-      "name": "Brayden McNabb",
-      "gp": 25,
-      "g": 0,
-      "a": 9,
-      "p": 9
+      "first": "Mitch",
+      "last": "Marner",
+      "gp": 23,
+      "g": 4,
+      "a": 23,
+      "p": 27
      }
     ]
    },
    "p": {
-    "n": 12,
+    "n": 31,
     "who": [
      {
-      "name": "Brett Howden",
+      "first": "Jack",
+      "last": "Eichel",
       "gp": 25,
-      "g": 8,
-      "a": 4,
-      "p": 12
-     },
-     {
-      "name": "Victor Olofsson",
-      "gp": 12,
-      "g": 8,
-      "a": 4,
-      "p": 12
+      "g": 9,
+      "a": 22,
+      "p": 31
      }
     ]
    }
   },
   "WPG": {
    "g": {
-    "n": 2,
+    "n": 19,
     "who": [
      {
-      "name": "Mario Ferraro",
+      "first": "Kyle",
+      "last": "Connor",
       "gp": 24,
-      "g": 2,
-      "a": 0,
-      "p": 2
+      "g": 19,
+      "a": 11,
+      "p": 30
      }
     ]
    },
    "a": {
-    "n": 1,
+    "n": 22,
     "who": [
      {
-      "name": "Vladislav Namestnikov",
-      "gp": 6,
-      "g": 0,
-      "a": 1,
-      "p": 1
-     },
-     {
-      "name": "Isak Ros\u00e9n",
-      "gp": 19,
-      "g": 1,
-      "a": 1,
-      "p": 2
+      "first": "Mark",
+      "last": "Scheifele",
+      "gp": 24,
+      "g": 8,
+      "a": 22,
+      "p": 30
      }
     ]
    },
    "p": {
-    "n": 2,
+    "n": 30,
     "who": [
      {
-      "name": "Mario Ferraro",
+      "first": "Mark",
+      "last": "Scheifele",
       "gp": 24,
-      "g": 2,
-      "a": 0,
-      "p": 2
+      "g": 8,
+      "a": 22,
+      "p": 30
      },
      {
-      "name": "Isak Ros\u00e9n",
-      "gp": 19,
-      "g": 1,
-      "a": 1,
-      "p": 2
+      "first": "Kyle",
+      "last": "Connor",
+      "gp": 24,
+      "g": 19,
+      "a": 11,
+      "p": 30
      }
     ]
    }
   },
   "WSH": {
    "g": {
-    "n": 5,
+    "n": 14,
     "who": [
      {
-      "name": "Jordan Kyrou",
+      "first": "Alex",
+      "last": "Tuch",
       "gp": 21,
-      "g": 5,
-      "a": 9,
-      "p": 14
+      "g": 14,
+      "a": 3,
+      "p": 17
      }
     ]
    },
    "a": {
-    "n": 12,
+    "n": 14,
     "who": [
      {
-      "name": "Jakob Chychrun",
+      "first": "Dylan",
+      "last": "Strome",
       "gp": 21,
-      "g": 3,
-      "a": 12,
-      "p": 15
+      "g": 4,
+      "a": 14,
+      "p": 18
      }
     ]
    },
    "p": {
-    "n": 15,
+    "n": 18,
     "who": [
      {
-      "name": "Jakob Chychrun",
+      "first": "Dylan",
+      "last": "Strome",
       "gp": 21,
-      "g": 3,
-      "a": 12,
-      "p": 15
+      "g": 4,
+      "a": 14,
+      "p": 18
      }
     ]
    }
@@ -1267,8 +1389,53 @@
  "league": {
   "g": [
    [
-    "Andrei Svechnikov",
-    "CAR",
+    "Leon Draisaitl",
+    "EDM",
+    22
+   ],
+   [
+    "Cutter Gauthier",
+    "ANA",
+    21
+   ],
+   [
+    "Kyle Connor",
+    "WPG",
+    19
+   ],
+   [
+    "Kirill Kaprizov",
+    "MIN",
+    18
+   ],
+   [
+    "Tage Thompson",
+    "BUF",
+    15
+   ],
+   [
+    "Artturi Lehkonen",
+    "COL",
+    15
+   ],
+   [
+    "Auston Matthews",
+    "TOR",
+    14
+   ],
+   [
+    "Matt Boldy",
+    "MIN",
+    14
+   ],
+   [
+    "Alex Tuch",
+    "WSH",
+    14
+   ],
+   [
+    "Connor McDavid",
+    "EDM",
     13
    ],
    [
@@ -1277,130 +1444,140 @@
     13
    ],
    [
-    "Macklin Celebrini",
-    "SJS",
-    10
+    "Tim St\u00fctzle",
+    "OTT",
+    13
    ],
    [
-    "Bo Horvat",
-    "NYI",
-    9
-   ],
-   [
-    "Nikita Kucherov",
+    "Jake Guentzel",
     "TBL",
-    9
+    13
    ],
    [
-    "Quinn Hughes",
-    "MIN",
-    8
+    "Brandon Hagel",
+    "TBL",
+    13
    ],
    [
-    "Brett Howden",
-    "VGK",
-    8
-   ],
-   [
-    "Gabriel Landeskog",
-    "COL",
-    8
-   ],
-   [
-    "Fraser Minten",
-    "BOS",
-    8
-   ],
-   [
-    "Victor Olofsson",
-    "VGK",
-    8
-   ],
-   [
-    "Gabe Perreault",
-    "NYR",
-    7
-   ],
-   [
-    "Oliver Bjorkstrand",
-    "NYR",
-    7
-   ],
-   [
-    "Nikolaj Ehlers",
+    "Andrei Svechnikov",
     "CAR",
-    6
+    13
    ],
    [
-    "William Karlsson",
-    "VGK",
-    6
+    "Vasily Podkolzin",
+    "EDM",
+    13
    ],
    [
-    "Quinton Byfield",
-    "LAK",
-    6
-   ],
-   [
-    "Pavel Dorofeyev",
-    "NYR",
-    6
-   ],
-   [
-    "JJ Peterka",
-    "BOS",
-    6
-   ],
-   [
-    "Dalibor Dvorsky",
+    "Jimmy Snuggerud",
     "STL",
-    5
+    13
    ],
    [
-    "Dmitri Simashev",
+    "Evan Bouchard",
+    "EDM",
+    12
+   ],
+   [
+    "Beckett Sennecke",
+    "ANA",
+    12
+   ],
+   [
+    "Logan Cooley",
     "UTA",
-    5
+    12
    ],
    [
-    "Denver Barkey",
-    "PHI",
-    5
+    "Steven Stamkos",
+    "NSH",
+    12
    ],
    [
-    "Brayden Point",
-    "TBL",
-    5
+    "Jack Quinn",
+    "BUF",
+    12
    ],
    [
-    "Jordan Kyrou",
-    "WSH",
-    5
+    "Sam Reinhart",
+    "FLA",
+    12
    ],
    [
-    "Pavel Buchnevich",
-    "STL",
-    5
+    "Drake Batherson",
+    "OTT",
+    12
    ],
    [
-    "Jayden Struble",
-    "MTL,NSH",
-    4
-   ],
-   [
-    "Taylor Hall",
-    "CAR",
-    4
+    "Cole Caufield",
+    "MTL",
+    12
    ]
   ],
   "a": [
+   [
+    "Connor McDavid",
+    "EDM",
+    44
+   ],
+   [
+    "Kirill Kaprizov",
+    "MIN",
+    27
+   ],
+   [
+    "Evan Bouchard",
+    "EDM",
+    26
+   ],
    [
     "Quinn Hughes",
     "MIN",
     26
    ],
    [
+    "Matthew Tkachuk",
+    "FLA",
+    25
+   ],
+   [
+    "Leon Draisaitl",
+    "EDM",
+    24
+   ],
+   [
+    "Clayton Keller",
+    "UTA",
+    24
+   ],
+   [
+    "Jackson LaCombe",
+    "ANA",
+    24
+   ],
+   [
+    "Mitch Marner",
+    "VGK",
+    23
+   ],
+   [
     "Nikita Kucherov",
     "TBL",
+    22
+   ],
+   [
+    "Jack Eichel",
+    "VGK",
+    22
+   ],
+   [
+    "Mark Scheifele",
+    "WPG",
+    22
+   ],
+   [
+    "Leo Carlsson",
+    "ANA",
     22
    ],
    [
@@ -1409,8 +1586,28 @@
     22
    ],
    [
-    "Macklin Celebrini",
-    "SJS",
+    "Adam Fox",
+    "NYR",
+    22
+   ],
+   [
+    "Roman Josi",
+    "NSH",
+    21
+   ],
+   [
+    "David Pastrnak",
+    "BOS",
+    20
+   ],
+   [
+    "Nathan MacKinnon",
+    "COL",
+    20
+   ],
+   [
+    "Auston Matthews",
+    "TOR",
     19
    ],
    [
@@ -1419,111 +1616,61 @@
     19
    ],
    [
-    "Nikolaj Ehlers",
-    "CAR",
-    16
+    "Jack Hughes",
+    "NJD",
+    19
    ],
    [
-    "Zach Benson",
-    "BUF",
-    15
+    "Macklin Celebrini",
+    "SJS",
+    19
    ],
    [
-    "Brayden Point",
-    "TBL",
-    13
+    "Brock Boeser",
+    "VAN",
+    19
    ],
    [
-    "Bo Horvat",
-    "NYI",
-    12
+    "Lane Hutson",
+    "MTL",
+    19
    ],
    [
-    "Thomas Harley",
-    "DAL",
-    12
-   ],
-   [
-    "Jakob Chychrun",
-    "WSH",
-    12
-   ],
-   [
-    "Morgan Rielly",
-    "TOR",
-    12
-   ],
-   [
-    "Andrei Svechnikov",
-    "CAR",
-    10
-   ],
-   [
-    "Peyton Krebs",
-    "BUF",
-    10
-   ],
-   [
-    "Jordan Kyrou",
-    "WSH",
-    9
-   ],
-   [
-    "Kailer Yamamoto",
-    "UTA",
-    9
-   ],
-   [
-    "Fabian Zetterlund",
+    "Tim St\u00fctzle",
     "OTT",
-    9
-   ],
-   [
-    "Brayden McNabb",
-    "VGK",
-    9
-   ],
-   [
-    "JJ Peterka",
-    "BOS",
-    9
-   ],
-   [
-    "Erik Cernak",
-    "TBL",
-    8
-   ],
-   [
-    "Denver Barkey",
-    "PHI",
-    8
-   ],
-   [
-    "Brady Skjei",
-    "NSH",
-    8
-   ],
-   [
-    "Zayne Parekh",
-    "CGY",
-    8
-   ],
-   [
-    "Ilya Protas",
-    "WSH",
-    7
-   ],
-   [
-    "Nils Lundkvist",
-    "DAL",
-    7
+    18
    ]
   ],
   "p": [
    [
+    "Connor McDavid",
+    "EDM",
+    57
+   ],
+   [
+    "Leon Draisaitl",
+    "EDM",
+    46
+   ],
+   [
+    "Kirill Kaprizov",
+    "MIN",
+    45
+   ],
+   [
+    "Evan Bouchard",
+    "EDM",
+    38
+   ],
+   [
     "Quinn Hughes",
     "MIN",
     34
+   ],
+   [
+    "Auston Matthews",
+    "TOR",
+    33
    ],
    [
     "Sebastian Aho",
@@ -1531,9 +1678,64 @@
     32
    ],
    [
+    "Matthew Tkachuk",
+    "FLA",
+    32
+   ],
+   [
+    "David Pastrnak",
+    "BOS",
+    31
+   ],
+   [
+    "Tim St\u00fctzle",
+    "OTT",
+    31
+   ],
+   [
     "Nikita Kucherov",
     "TBL",
     31
+   ],
+   [
+    "Jack Eichel",
+    "VGK",
+    31
+   ],
+   [
+    "Cutter Gauthier",
+    "ANA",
+    30
+   ],
+   [
+    "Nathan MacKinnon",
+    "COL",
+    30
+   ],
+   [
+    "Mark Scheifele",
+    "WPG",
+    30
+   ],
+   [
+    "Kyle Connor",
+    "WPG",
+    30
+   ],
+   [
+    "Leo Carlsson",
+    "ANA",
+    29
+   ],
+   [
+    "Matt Boldy",
+    "MIN",
+    29
+   ],
+   [
+    "Jack Hughes",
+    "NJD",
+    29
    ],
    [
     "Macklin Celebrini",
@@ -1541,109 +1743,29 @@
     29
    ],
    [
-    "Seth Jones",
-    "FLA",
-    25
-   ],
-   [
-    "Andrei Svechnikov",
-    "CAR",
-    23
-   ],
-   [
-    "Nikolaj Ehlers",
-    "CAR",
-    22
-   ],
-   [
-    "Bo Horvat",
-    "NYI",
-    21
-   ],
-   [
-    "Brayden Point",
-    "TBL",
-    18
-   ],
-   [
-    "Zach Benson",
-    "BUF",
-    18
-   ],
-   [
-    "Thomas Harley",
-    "DAL",
-    15
-   ],
-   [
-    "Jakob Chychrun",
-    "WSH",
-    15
-   ],
-   [
-    "JJ Peterka",
-    "BOS",
-    15
-   ],
-   [
-    "Jordan Kyrou",
-    "WSH",
-    14
-   ],
-   [
-    "Gabriel Landeskog",
-    "COL",
-    14
-   ],
-   [
-    "Fraser Minten",
-    "BOS",
-    14
-   ],
-   [
-    "Denver Barkey",
-    "PHI",
-    13
-   ],
-   [
-    "Brett Howden",
-    "VGK",
-    12
-   ],
-   [
-    "Kailer Yamamoto",
+    "Clayton Keller",
     "UTA",
-    12
+    29
    ],
    [
-    "Pavel Dorofeyev",
-    "NYR",
-    12
+    "Mikko Rantanen",
+    "DAL",
+    27
    ],
    [
-    "Victor Olofsson",
+    "Jake Guentzel",
+    "TBL",
+    27
+   ],
+   [
+    "Brock Boeser",
+    "VAN",
+    27
+   ],
+   [
+    "Mitch Marner",
     "VGK",
-    12
-   ],
-   [
-    "Morgan Rielly",
-    "TOR",
-    12
-   ],
-   [
-    "William Karlsson",
-    "VGK",
-    11
-   ],
-   [
-    "Gabe Perreault",
-    "NYR",
-    11
-   ],
-   [
-    "Peyton Krebs",
-    "BUF",
-    11
+    27
    ]
   ]
  }
