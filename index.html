@@ -865,7 +865,7 @@ function poSeed(conf){
 function serP(x,y){
   /* the model since Nov 26: this season's home/road splits; the team with more points gets home ice in games 1, 2, 5, 7 */
   if(typeof SP==="object"&&SP&&SP[x]&&SP[y]){
-    const pts=t=>{const r=ST&&ST.t.find(r=>r[0]===t);return r?r[7]:0;},xHome=pts(x)>=pts(y);
+    const ix=t=>ST?ST.t.findIndex(r=>r[0]===t):0,pts=t=>{const r=ST&&ST.t.find(r=>r[0]===t);return r?r[7]:0;},xHome=pts(x)>pts(y)||(pts(x)===pts(y)&&ix(x)<=ix(y));
     const g=(h,a)=>{const hg=(SP[h][0]+SP[a][3])/2,ag=(SP[a][2]+SP[h][1])/2;return hg/(hg+ag);};
     const pxh=g(x,y),pxa=1-g(y,x),hm=[1,1,0,0,1,0,1];
     const memo={},f=(w,l)=>{if(w===4)return 1;if(l===4)return 0;const k=w+","+l;if(k in memo)return memo[k];
