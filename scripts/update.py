@@ -250,6 +250,10 @@ def add_standings(data):
           r.get("regulationWins"), round(r.get("pointPctg") or 0, 3)] for r in rows]
     if len(t) >= 32:
         data["ST"] = {"asof": rows[0].get("date") or datetime.now(ET).date().isoformat(), "t": t}
+        # home/road splits per game (the model since Nov 26): [home GF, home GA, road GF, road GA]
+        pg = lambda n, d: round(n / d, 3) if d else 0
+        data["SP"] = {r["teamAbbrev"]["default"]: [pg(r["homeGoalsFor"], r["homeGamesPlayed"]), pg(r["homeGoalsAgainst"], r["homeGamesPlayed"]),
+                                                   pg(r["roadGoalsFor"], r["roadGamesPlayed"]), pg(r["roadGoalsAgainst"], r["roadGamesPlayed"])] for r in rows}
     return len(t)
 
 
@@ -276,7 +280,7 @@ def add_race(data):
 
 
 def add_playoff_odds(data, sims=10000):
-    """Playoff odds: play out every remaining game `sims` times with the model's win % (this season's GF/GA),
+    """Playoff odds: play out every remaining game `sims` times with the model's win % (this season's home/road GF/GA),
     OT/SO at this season's league rate (loser gets a point). Top 3 per division + 2 wild cards per conference."""
     import random
     S, ST = data.get("S"), data.get("ST")
@@ -289,9 +293,13 @@ def add_playoff_odds(data, sims=10000):
         for g in get(f"https://api-web.nhle.com/v1/club-schedule-season/{t}/now").get("games", []):
             if g.get("gameType") == 2 and g.get("gameState") in ("FUT", "PRE"):
                 sched[g["id"]] = (g["awayTeam"]["abbrev"], g["homeTeam"]["abbrev"])
+    SP = data.get("SP") or {}
     games = []
     for a, h in sched.values():
-        if a in S and h in S:
+        if a in SP and h in SP:   # the model since Nov 26: this season's home/road splits
+            ag = (SP[a][2] + SP[h][1]) / 2; hg = (SP[h][0] + SP[a][3]) / 2
+            games.append((a, h, ag / (ag + hg)))
+        elif a in S and h in S:
             ag = (S[a][3] + S[h][4]) / 2; hg = (S[h][3] + S[a][4]) / 2
             games.append((a, h, ag / (ag + hg)))
     gp = sum(r[3] for r in rows.values()) / 2

@@ -631,7 +631,7 @@ const colors={ANA:"#F47A38",DET:"#CE1126",WPG:"#041E42",FLA:"#0B2A5B",CAR:"#CE11
 let days={tue:[]};
 const logo=t=>`<img class="logo" src="tl/${t}.png" alt="${t}" width="104" height="104">`;
 /* Fallback: 2025-26 regular season, NHL stats: W, L, OTL, GF/G, GA/G, PP%, PK%. The morning update replaces this with this season's numbers (data.json S). */
-let SSEASON="2025-26";
+let SSEASON="2025-26";let SP=null;
 let S={WSH:[43,30,9,3.18,2.90,17.8,80.1],NJD:[42,37,3,2.76,3.09,22.0,79.3],VGK:[39,26,17,3.22,2.95,24.6,81.4],VAN:[25,49,8,2.56,3.83,21.8,71.5],
  ANA:[43,33,6,3.23,3.51,18.6,76.4],STL:[37,33,12,2.80,3.10,17.6,76.7],DAL:[50,20,12,3.33,2.71,28.6,80.3],DET:[41,31,10,2.91,3.10,22.6,77.1],
  OTT:[44,27,11,3.35,2.99,24.0,75.7],WPG:[35,35,12,2.79,3.12,18.5,77.6],COL:[55,16,11,3.63,2.40,17.1,84.6],NSH:[38,34,10,2.95,3.26,23.1,81.7],
@@ -862,7 +862,16 @@ function poSeed(conf){
   const opp={};opp[divs[0]]=firstBetter?rest[1]:rest[0];opp[divs[1]]=firstBetter?rest[0]:rest[1];
   return {divs,by,rest,opp};
 }
-function serP(x,y){const X=S[x],Y=S[y];if(!X||!Y)return .5;const gx=(X[3]+Y[4])/2,gy=(Y[3]+X[4])/2,p=gx/(gx+gy);
+function serP(x,y){
+  /* the model since Nov 26: this season's home/road splits; the team with more points gets home ice in games 1, 2, 5, 7 */
+  if(typeof SP==="object"&&SP&&SP[x]&&SP[y]){
+    const pts=t=>{const r=ST&&ST.t.find(r=>r[0]===t);return r?r[7]:0;},xHome=pts(x)>=pts(y);
+    const g=(h,a)=>{const hg=(SP[h][0]+SP[a][3])/2,ag=(SP[a][2]+SP[h][1])/2;return hg/(hg+ag);};
+    const pxh=g(x,y),pxa=1-g(y,x),hm=[1,1,0,0,1,0,1];
+    const memo={},f=(w,l)=>{if(w===4)return 1;if(l===4)return 0;const k=w+","+l;if(k in memo)return memo[k];
+      const home=hm[w+l]===1?xHome:!xHome,p=home?pxh:pxa;return memo[k]=p*f(w+1,l)+(1-p)*f(w,l+1);};
+    return f(0,0);}
+  const X=S[x],Y=S[y];if(!X||!Y)return .5;const gx=(X[3]+Y[4])/2,gy=(Y[3]+X[4])/2,p=gx/(gx+gy);
   const f=(w,l)=>w===4?1:l===4?0:p*f(w+1,l)+(1-p)*f(w,l+1);return f(0,0);}
 function pick(x,y){return serP(x,y)>=.5?x:y;}
 function bracketSvg(){
@@ -943,7 +952,7 @@ function renderPodds(){
 }
 fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   days.tue=d.games||[];R.length=0;R.push(...(d.R||[]));
-  if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}
+  if(d.S&&Object.keys(d.S).length>=32){S=d.S;SSEASON=d.Sseason||SSEASON;}if(d.SP&&Object.keys(d.SP).length>=32)SP=d.SP;
   document.getElementById("daylabel").textContent=d.label||"";
   if(d.RG&&d.RG.g)RG=d.RG;if(d.ST&&d.ST.t&&d.ST.t.length>=32){ST=d.ST;const dt=new Date(ST.asof+"T12:00:00");
     document.getElementById("stasof").textContent="Through "+new Date(RG&&RG.thru?RG.thru+"T12:00:00":dt).toLocaleDateString("en-US",{month:"short",day:"numeric"})+" · NHL.com";}
