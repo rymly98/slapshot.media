@@ -338,9 +338,10 @@ def main():
         n = log_results(data, y)
         notes.append(f"logged {n} result(s) for {y}")
         gd = next_game_day(today, picks)
-        stale = bool(gd) and gd in picks and [(g["a"], g["ap"]) for g in data.get("games", [])] != [(g["a"], g["ap"]) for g in picks[gd]]
+        games = games_for(gd, picks) if gd else []
+        # reload when the day changes, or when the picks no longer match the model (e.g. after a model change)
+        stale = bool(gd) and [(g["a"], g["ap"]) for g in data.get("games", [])] != [(g["a"], g["ap"]) for g in games]
         if gd and (gd != data.get("gameday") or stale):
-            games = games_for(gd, picks)
             for g in games:
                 g["b"] = {}
             data["gameday"] = gd
