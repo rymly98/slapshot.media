@@ -51,7 +51,7 @@ def label(day, n, opening=False):
 
 # ---------- model (only used after the saved October picks run out) ----------
 BASE_FILE = os.path.join(ROOT, "data", "scores-2025-26.json")
-BASE_FROM = "2026-02-01"   # last season Feb-Apr, blended with every game this season (tested Oct 31: best of all options)
+BASE_FROM = "2026-02-01"   # last season Feb-Apr; used by the Nov 1-25 blend (kept for tests). From Nov 26: this season only
 
 
 def blend_base():
@@ -67,9 +67,9 @@ def blend_base():
     return b
 
 
-def model_games(day, split="blend"):
-    """Formula from the playbook. Default ("blend"): home/road GF/GA from last season's Feb-Apr plus every game
-    this season, so this season's games count more and more as the year goes on. split=True/False kept for tests."""
+def model_games(day, split=True):
+    """Formula from the playbook. Default (since Nov 26, 2026): this season's home/road GF/GA only.
+    split="blend" = last season's Feb-Apr plus this season (used Nov 1-25); split=False = overall GF/GA."""
     sched = [g for g in get(f"https://api-web.nhle.com/v1/score/{day}").get("games", [])
              if g.get("gameType", 2) == 2]
     if not sched:
